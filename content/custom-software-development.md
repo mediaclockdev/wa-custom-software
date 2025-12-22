@@ -35,7 +35,7 @@ services:
   title: Our Custom Software Development Services
   description: We offer a variety of software development services designed to </br> tackle real business problems and increase the efficiency of operations.
   list:
-    - icon: monitor
+    - icon: tool
       title: Custom Software Development
       content: We design and develop fully customised software solutions built around
         your business needs. From workflow automation to enterprise systems, we
@@ -72,13 +72,13 @@ services:
         performance, stability, and data integrity — essential foundations for
         modern custom software environments.
 
-    - icon: layout
+    - icon: pen-tool
       title: UI/UX Design
       content: Great software begins with great design. We create clean, intuitive, and
         user-friendly interfaces that improve accessibility, usability, and
         overall user satisfaction.
 
-    - icon: pen-tool
+    - icon: layers
       title: Solution Architecture & Prototyping
       content: Before writing a single line of code, we create prototypes,
         architectural models, and functional plans to ensure the solution aligns
@@ -90,7 +90,7 @@ services:
         security layers, and infrastructure to ensure long-term stability,
         improved performance, and future scalability.
 
-    - icon: briefcase
+    - icon: users
       title: Consulting & CTO Services
       content: We provide strategic guidance, technical leadership, and full project
         management support, helping you plan, manage, and execute software
