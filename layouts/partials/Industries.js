@@ -30,7 +30,7 @@ const Industries = ({ industries }) => {
     <section className="section bg-theme-light">
       <div className="container">
         {/* Header */}
-        <div className="animate text-center max-w-3xl mx-auto">
+        <div className=" text-center max-w-3xl mx-auto">
           <p className="uppercase tracking-wider text-sm font-medium">
             {industries.subtitle}
           </p>
@@ -45,7 +45,7 @@ const Industries = ({ industries }) => {
             return (
               <div
                 key={i}
-                className="animate group rounded-2xl bg-white p-8 text-center shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+                className=" group rounded-2xl bg-white p-8 text-center shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
               >
                 {/* Icon */}
                 <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary text-2xl transition group-hover:bg-primary group-hover:text-white">
