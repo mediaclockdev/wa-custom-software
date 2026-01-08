@@ -9,7 +9,12 @@ import { useLayoutEffect, useRef } from "react";
 import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-const HomeBanner = ({ banner: bannerData, brands }) => {
+const HomeBanner = ({
+  banner: bannerData,
+  brands,
+  showCircles = true,
+  variant = "default",
+}) => {
   const bannerRef = useRef(null);
 
   useLayoutEffect(() => {
@@ -21,16 +26,16 @@ const HomeBanner = ({ banner: bannerData, brands }) => {
       const bannerContent = banner.querySelector(".banner-content");
       const header = document.querySelector(".header");
 
-      // ✅ SAFE HEADER HEIGHT
       const headerHeight = header?.clientHeight || 0;
 
-      const tl = gsap.timeline();
-
-      tl.fromTo(
-        ".banner-title",
-        { y: 20, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.5, delay: 0.5 }
-      )
+      /* INTRO ANIMATION (ALL PAGES) */
+      gsap
+        .timeline()
+        .fromTo(
+          ".banner-title",
+          { y: 20, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.6, delay: 0.4 }
+        )
         .fromTo(
           ".banner-btn",
           { y: 20, opacity: 0 },
@@ -40,65 +45,140 @@ const HomeBanner = ({ banner: bannerData, brands }) => {
         .fromTo(
           ".banner-img",
           { y: 20, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.5 },
-          ">-.5"
+          { y: 0, opacity: 1, duration: 0.6 },
+          ">-0.4"
         );
 
-      // 🔥 PARALLAX (SAFE)
+      /* PARALLAX (ALL PAGES) */
       if (bannerBg && bannerContent) {
         const position =
           (banner.offsetHeight - bannerBg.offsetHeight) * 0.4;
 
-        gsap.timeline({
-          ease: "none",
+        const parallaxTl = gsap.timeline({
           scrollTrigger: {
             trigger: banner,
             start: `top ${headerHeight}`,
             scrub: true,
           },
-        })
+          ease: "none",
+        });
+
+        parallaxTl
           .fromTo(bannerBg, { y: 0 }, { y: -position })
-          .fromTo(bannerContent, { y: 0 }, { y: position }, "<")
-          .fromTo(
+          .fromTo(bannerContent, { y: 0 }, { y: position }, "<");
+
+        if (variant === "default") {
+          parallaxTl.fromTo(
             ".banner-bg .circle",
             { y: 0 },
             { y: position },
             "<"
           );
+        }
+      }
+
+      /* SERVICE PAGE – AMBIENT MOTION ONLY */
+      if (variant === "service") {
+        gsap.to(".service-gradient-mesh", {
+          backgroundPosition: "200% 200%",
+          duration: 30,
+          ease: "linear",
+          repeat: -1,
+        });
+
+        gsap.to(".orb-1", {
+          x: 80,
+          y: 60,
+          scale: 1.05,
+          duration: 20,
+          repeat: -1,
+          yoyo: true,
+          ease: "sine.inOut",
+        });
+
+        gsap.to(".orb-2", {
+          x: -70,
+          y: -50,
+          scale: 1.08,
+          duration: 24,
+          repeat: -1,
+          yoyo: true,
+          ease: "sine.inOut",
+        });
       }
     }, bannerRef);
 
     return () => ctx.revert();
-  }, []);
+  }, [variant]);
 
   return (
     <section ref={bannerRef} className="section banner pt-0">
       <div className="container-xl">
         <div className="relative">
-          <div className="bg-theme banner-bg col-12 absolute left-0 top-0">
-            <Circle className="circle left-[10%] top-12" width={32} height={32} fill={false} />
-            <Circle className="circle left-[2.5%] top-[29%]" width={85} height={85} />
-            <Circle className="circle bottom-[48%] left-[22%]" width={20} height={20} />
-            <Circle className="circle bottom-[37%] left-[15%]" width={47} height={47} fill={false} />
-            <Circle className="circle bottom-[13%] left-[6%]" width={62} height={62} fill={false} />
-            <Circle className="circle right-[12%] top-[15%]" width={20} height={20} />
-            <Circle className="circle right-[2%] top-[30%]" width={73} height={73} fill={false} />
-            <Circle className="circle right-[19%] top-[48%]" width={37} height={37} fill={false} />
-            <Circle className="circle right-[33%] top-[54%]" width={20} height={20} />
-            <Circle className="circle bottom-[20%] right-[3%]" width={65} height={65} />
+
+          {/* BACKGROUND */}
+          <div className="bg-theme banner-bg absolute inset-0 overflow-hidden">
+
+            {/* HOMEPAGE */}
+            {variant === "default" && showCircles && (
+              <>
+                <Circle className="circle left-[10%] top-12" width={32} height={32} fill={false} />
+                <Circle className="circle right-[15%] top-[20%]" width={70} height={70} />
+              </>
+            )}
+
+            {/* SERVICE PAGE */}
+            {variant === "service" && (
+              <>
+                {/* Gradient depth */}
+                <div className="service-gradient-mesh" />
+
+                {/* Coding background */}
+                <div className="code-background">
+                  <pre className="code-stream">
+                    {`const buildSoftware = () => {
+  return scalable && secure;
+}
+
+function deploy() {
+  CI.run();
+  CD.release();
+}
+
+if (performance > expectation) {
+  client.happy = true;
+}`}
+                  </pre>
+
+                  <pre className="code-stream delay">
+                    {`export async function api() {
+  const data = await fetch();
+  return data.json();
+}
+
+class System {
+  constructor() {
+    this.reliable = true;
+  }
+}`}
+                  </pre>
+                </div>
+              </>
+            )}
           </div>
 
+          {/* CONTENT */}
           <div className="row overflow-hidden rounded-2xl">
             <div className="col-12">
-              <div className="row relative justify-center pb-10">
-                <div className="banner-content col-10 pb-10 pt-20 text-center">
+              <div className="row justify-center pb-10 relative">
+                <div className="banner-content col-10 pt-20 pb-10 text-center">
                   {markdownify(
                     bannerData.title,
                     "h1",
                     "mb-8 banner-title opacity-0"
                   )}
                   <div className="banner-btn opacity-0">
-                    <Link className="btn btn-primary" href={bannerData.link.href}>
+                    <Link href={bannerData.link.href} className="btn btn-primary">
                       {bannerData.link.label}
                     </Link>
                   </div>
@@ -118,6 +198,7 @@ const HomeBanner = ({ banner: bannerData, brands }) => {
             </div>
           </div>
 
+          {/* BRANDS */}
           <div className="row border-y border-border py-5">
             <div className="col-12">
               <Swiper
@@ -129,23 +210,16 @@ const HomeBanner = ({ banner: bannerData, brands }) => {
                 autoplay={{ delay: 3000 }}
               >
                 {brands.map((brand, index) => (
-                  <SwiperSlide
-                    key={index}
-                    className="h-20 px-6 py-6 grayscale transition hover:grayscale-0"
-                  >
+                  <SwiperSlide key={index} className="h-20 px-6 grayscale hover:grayscale-0">
                     <div className="relative h-full">
-                      <ImageFallback
-                        src={brand}
-                        alt=""
-                        fill
-                        className="object-contain"
-                      />
+                      <ImageFallback src={brand} alt="" fill className="object-contain" />
                     </div>
                   </SwiperSlide>
                 ))}
               </Swiper>
             </div>
           </div>
+
         </div>
       </div>
     </section>

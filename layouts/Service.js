@@ -18,9 +18,11 @@ const Service = ({ data }) => {
   return (
     <>
       {/* HERO (same quality as homepage) */}
-      <HomeBanner
+      <HomeBanner 
         banner={frontmatter.banner}
         brands={frontmatter.brands}
+        showCircles={false}
+        variant="service"
       />
 
       {/* INTRO */}
