@@ -9,23 +9,24 @@
       "url": "/about"
     },
     {
-      "name": "Blog",
-      "url": "/posts"
+      "name": "Custom Software",
+      "url": "/custom-software-development"
     },
     {
-      "name": "Pages",
-      "url": "",
-      "hasChildren": true,
-      "children": [
-        {
-          "name": "Elements",
-          "url": "/elements"
-        },
-        {
-          "name": "Terms & Conditions",
-          "url": "/terms-policy"
-        }
-      ]
+      "name": "Web Development",
+      "url": "/web-development"
+    },
+    {
+      "name": "Mobile Apps",
+      "url": "/mobile-app-development"
+    },
+    {
+      "name": "Digital Marketing",
+      "url": "/digital-marketing-perth"
+    },
+    {
+      "name": "Blog",
+      "url": "/posts"
     },
     {
       "name": "Contact",
@@ -34,16 +35,24 @@
   ],
   "footer": [
     {
-      "name": "About",
-      "url": "/about"
+      "name": "Mobile App Development",
+      "url": "/mobile-app-development"
     },
     {
-      "name": "Blog",
-      "url": "/blog"
+      "name": "Android App Development",
+      "url": "/android-app-development"
     },
     {
-      "name": "Terms & Conditions",
-      "url": "/terms-policy"
+      "name": "iOS App Development",
+      "url": "/ios-app-development"
+    },
+    {
+      "name": "Web Design Perth",
+      "url": "/web-design-perth"
+    },
+    {
+      "name": "Digital Marketing",
+      "url": "/digital-marketing-perth"
     }
   ]
 }
