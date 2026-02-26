@@ -9,8 +9,7 @@ import TechStack from "@layouts/partials/TechStack";
 import Testimonial from "@layouts/partials/Testimonial";
 import Faq from "@layouts/partials/Faq";
 import ServiceFeatures from "@layouts/partials/ServiceFeatures";
-
-
+import Hero from "./service/Hero";
 
 const Service = ({ data }) => {
   const { frontmatter } = data;
@@ -18,19 +17,20 @@ const Service = ({ data }) => {
   return (
     <>
       {/* HERO (same quality as homepage) */}
-      <HomeBanner 
+      {/* <HomeBanner
         banner={frontmatter.banner}
         brands={frontmatter.brands}
         showCircles={false}
         variant="service"
-      />
+        slider={false}
+      /> */}
+      <Hero banner={frontmatter.banner} />
 
       {/* INTRO */}
-      <ServiceIntro intro={frontmatter.intro} />
+      {/* <ServiceIntro intro={frontmatter.intro} /> */}
 
       {/* SERVICES */}
       <ServiceFeatures services={frontmatter.services} />
-
 
       {/* WHY CHOOSE US */}
       <WhyChooseUs why={frontmatter.why} />
@@ -52,8 +52,6 @@ const Service = ({ data }) => {
 
       {/* FAQ */}
       <Faq faq={frontmatter.faq} />
-
-     
     </>
   );
 };

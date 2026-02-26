@@ -1,19 +1,10 @@
 "use client";
 
 import { markdownify } from "@lib/utils/textConverter";
-import {
-  FaMapMarkerAlt,
-  FaCogs,
-  FaBolt,
-  FaHandsHelping,
-} from "react-icons/fa";
+import { motion } from "framer-motion";
+import { FaMapMarkerAlt, FaCogs, FaBolt, FaHandsHelping } from "react-icons/fa";
 
-const icons = [
-  FaMapMarkerAlt,
-  FaCogs,
-  FaBolt,
-  FaHandsHelping,
-];
+const icons = [FaMapMarkerAlt, FaCogs, FaBolt, FaHandsHelping];
 
 const WhyChooseUs = ({ why }) => {
   const safeWhy = why ?? {
@@ -23,43 +14,62 @@ const WhyChooseUs = ({ why }) => {
   };
 
   return (
-    <section className="section bg-theme-light">
+    <section className="section ">
       <div className="container">
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto">
+        <div className="animate max-w-3xl mx-auto text-center">
           {safeWhy.subtitle && (
-            <p className="uppercase tracking-wider text-sm font-medium">
+            <p className="text-md sm:text-base uppercase tracking-wider font-medium">
               {safeWhy.subtitle}
             </p>
           )}
 
           {safeWhy.title &&
-            markdownify(safeWhy.title, "h2", "mt-4 section-title")}
+            markdownify(
+              safeWhy.title,
+              "h2",
+              "mt-2 section-title text-2xl sm:text-3xl md:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent leading-relaxed",
+            )}
         </div>
 
-        {/* Cards */}
         {Array.isArray(safeWhy.list) && safeWhy.list.length > 0 && (
-          <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {safeWhy.list.map((item, i) => {
               const Icon = icons[i] || FaCogs;
 
               return (
-                <div
+                <motion.div
                   key={i}
-                  className="group rounded-2xl bg-white p-8 text-center shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+                  whileHover={{ y: -6, scale: 1.02 }}
+                  transition={{ type: "spring", stiffness: 200 }}
+                  className="group animate relative rounded-3xl p-[2px] overflow-hidden cursor-pointer"
                 >
-                  <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary text-2xl transition group-hover:bg-primary group-hover:text-white">
-                    <Icon />
+                  <motion.div
+                    className="absolute -inset-[150%] rounded-full"
+                    animate={{ rotate: 360 }}
+                    transition={{
+                      duration: 4,
+                      ease: "linear",
+                      repeat: Infinity,
+                    }}
+                    style={{
+                      background: `conic-gradient(#24326A 0deg 300deg, #fe6019 300deg 330deg, #24326A 330deg 360deg)`,
+                    }}
+                  />
+
+                  <div className="relative rounded-3xl bg-white p-8 h-full">
+                    <div className="mb-5 text-primary">
+                      <Icon size={28} />
+                    </div>
+
+                    <h3 className="text-2xl mb-2 tracking-wide">
+                      {item.title}
+                    </h3>
+
+                    <p className="text-base text-text leading-relaxed tracking-wide">
+                      {item.content}
+                    </p>
                   </div>
-
-                  <h3 className="mb-3 text-lg font-semibold text-dark transition group-hover:text-primary">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-sm leading-relaxed text-text">
-                    {item.content}
-                  </p>
-                </div>
+                </motion.div>
               );
             })}
           </div>

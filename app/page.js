@@ -1,6 +1,3 @@
-
-
-
 import Cta from "@layouts/components/Cta";
 import GSAPWrapper from "@layouts/components/GSAPWrapper";
 import Features from "@layouts/partials/Features";
@@ -16,6 +13,7 @@ const Home = async () => {
   const { frontmatter } = homepage;
   const { banner, brands, features, intro, speciality, testimonial } =
     frontmatter;
+
   return (
     <GSAPWrapper>
       <SeoMeta title="Home" />

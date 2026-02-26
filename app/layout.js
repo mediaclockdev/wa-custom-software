@@ -3,13 +3,29 @@ import theme from "@config/theme.json";
 import ClientShell from "@layouts/components/ClientShell";
 import ClientOnly from "@layouts/components/ClientOnly";
 import "../styles/style.scss";
+import { Manrope } from "next/font/google";
+import localFont from "next/font/local";
+import PageWrapper from "@layouts/service/PageWrapper";
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
+  display: "swap",
+});
+
+export const satoshi = localFont({
+  src: "../fonts/Satoshi-Variable.woff2",
+  variable: "--font-satoshi",
+  display: "swap",
+});
 
 export default function RootLayout({ children }) {
   const pf = theme.fonts.font_family.primary;
   const sf = theme.fonts.font_family.secondary;
 
   return (
-    <html lang="en">
+    // <html lang="en">
+    <html lang="en" className={manrope.variable}>
       <head>
         <meta
           name="viewport"
@@ -18,7 +34,7 @@ export default function RootLayout({ children }) {
         <link rel="shortcut icon" href={config.site.favicon} />
         <meta name="theme-name" content="andromeda-light-nextjs" />
         <meta name="msapplication-TileColor" content="#000000" />
-        <link
+        {/* <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
@@ -28,12 +44,14 @@ export default function RootLayout({ children }) {
             sf ? "&family=" + sf : ""
           }&display=swap`}
           rel="stylesheet"
-        />
+        /> */}
       </head>
 
       <body>
         <ClientOnly>
-          <ClientShell>{children}</ClientShell>
+          <ClientShell>
+            {children}
+          </ClientShell>
         </ClientOnly>
       </body>
     </html>

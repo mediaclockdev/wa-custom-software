@@ -1,6 +1,5 @@
 "use client";
 
-
 import Social from "@components/Social";
 import config from "@config/config.json";
 import menu from "@config/menu.json";
@@ -36,7 +35,7 @@ const Footer = () => {
                 <li key={menu.name}>
                   <Link
                     href={menu.url}
-                    className=" hover:text-primary hover:underline"
+                    className=" hover:text-secondary hover:underline hover:underline-offset-3  transition-all duration-300"
                   >
                     {menu.name}
                   </Link>

@@ -5,8 +5,8 @@ seo_title: Perth’s Trusted Web Development Agency
 description: High-performance custom web development for Perth businesses.
 
 banner:
-  title: "Web Development </br> in Perth"
-  image: /images/service/custom-software-hero-removebg-preview2.png
+  title: "Website Design and </br> Development in Perth"
+  image: /images/hero.jpg
   link:
     label: Talk to Our Experts
     href: /contact
@@ -44,34 +44,39 @@ services:
     - icon: tool
       title: Custom Web Development
       content: We specialize in the creation of custom web applications and websites that go well beyond templates and one-size-fits-all solutions. Our designers create robust, secure and user-friendly systems designed specifically to meet the needs of your business. No matter if your task is straightforward or complex, we can provide solutions that improve efficiency and help sustain the long-term growth.
+      url: /images/choose/why1.jpg
 
     - icon: smartphone
       title: WordPress Web Development
       content: We are Perth WordPress specialists, we create and build unique WordPress websites that blend flexibility with security. Our designers create customized themes with powerful plugins, SEO friendly designs, and user-friendly backend systems that ensure your team is able to manage your content. We also optimize for performance security, speed, and speed.
+      url: /images/choose/why2.jpg
 
     - icon: cpu
       title: SaaS Platform Development
       content: We develop and design flexible SaaS applications that support businesses that depend heavily on multi-user platforms and subscription systems and cloud-based user interfaces. We offer SaaS solutions are built to handle massive amounts of traffic, provide complicated features, and ensure the stability of your users as their base expands.
+      url: /images/choose/why3.jpg
 
     - icon: layers
       title: Web & Mobile App Development 
       content: From enterprise-level apps to integrated systems tools we develop functional apps that feature smooth UX/UI designs, a robust backend architecture and seamless performance. We are focused on creating custom applications that aid organizations simplify tasks, enhance workflows and increase user engagement.
+      url: /images/choose/why4.jpg
 
     - icon: cloud
       title: E-Commerce Website Development
-      content: We design fully customized eCommerce websites that are designed to increase sales and give customers a seamless shopping experience. Our eCommerce builds feature safe checkouts, speedy loading cart integrations, product pages and real-time inventory features and easy-to-use interfaces. We optimize the customer experience to maximize conversions. 
+      content: We design fully customized eCommerce websites that are designed to increase sales and give customers a seamless shopping experience. Our eCommerce builds feature safe checkouts, speedy loading cart integrations, product pages and real-time inventory features and easy-to-use interfaces. We optimize the customer experience to maximize conversions.
+      url: /images/choose/why5.jpg
 
     - icon: database
       title: Responsive Web Design
       content: Each website we design is responsive, ensuring constant performance across all devices, including tablets, desktops as well as smartphones. With a focus on visual appeal and mobile first designs our clients can expand their reach and offer seamless user experience.
+      url: /images/choose/why6.jpg
 
     - icon: pen-tool
       title: UI/UX Design
       content: Great software begins with great design. We create clean, intuitive, and
         user-friendly interfaces that improve accessibility, usability, and
         overall user satisfaction.
-
-  
+      url: /images/choose/why1.jpg
 
 
 why:
@@ -133,11 +138,25 @@ technologies:
   subtitle: TECHNOLOGY STACK
   title: Technologies We Use
   list:
-    - JavaScript, Python, C#, PHP
-    - React, Angular, .NET, Laravel, Django
-    - Swift, Kotlin, Flutter
-    - MySQL, PostgreSQL, MongoDB, SQL Server
-    - AWS, Azure, Google Cloud
+    - JavaScript
+    - Python
+    - C#
+    - PHP
+    - React
+    - Angular
+    - .NET
+    - Laravel
+    - Django
+    - Swift
+    - Kotlin
+    - Flutter
+    - MySQL
+    - PostgreSQL
+    - MongoDB
+    - SQL Server
+    - AWS
+    - Azure
+    - Google Cloud
 
 testimonial:
   subtitle: CLIENT FEEDBACK

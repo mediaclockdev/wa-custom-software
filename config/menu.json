@@ -9,20 +9,25 @@
       "url": "/about"
     },
     {
-      "name": "Custom Software",
-      "url": "/custom-software-development"
-    },
-    {
-      "name": "Web Development",
-      "url": "/web-development"
-    },
-    {
-      "name": "Mobile Apps",
-      "url": "/mobile-app-development"
-    },
-    {
-      "name": "Digital Marketing",
-      "url": "/digital-marketing-perth"
+      "name": "Services",
+      "children": [
+        {
+          "name": "Custom Software",
+          "url": "/custom-software-development"
+        },
+        {
+          "name": "Web Development",
+          "url": "/web-development"
+        },
+        {
+          "name": "Mobile Apps",
+          "url": "/mobile-app-development"
+        },
+        {
+          "name": "Digital Marketing",
+          "url": "/digital-marketing-perth"
+        }
+      ]
     },
     {
       "name": "Blog",

@@ -27,7 +27,7 @@ const Industries = ({ industries }) => {
   if (!industries) return null;
 
   return (
-    <section className="section bg-theme-light">
+    <section className="section bg-gradient-to-b from-theme-light to-white">
       <div className="container">
         {/* Header */}
         <div className=" text-center max-w-3xl mx-auto">
@@ -48,8 +48,8 @@ const Industries = ({ industries }) => {
                 className=" group rounded-2xl bg-white p-8 text-center shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
               >
                 {/* Icon */}
-                <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary text-2xl transition group-hover:bg-primary group-hover:text-white">
-                  <Icon />
+                <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-secondary/10 text-secondary text-2xl transition group-hover:bg-primary group-hover:text-white">
+                  <Icon size={26} />
                 </div>
 
                 {/* Title */}
