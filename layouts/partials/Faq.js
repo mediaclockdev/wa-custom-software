@@ -10,11 +10,15 @@ const Faq = ({ faq }) => {
   if (!faq) return null;
 
   return (
-    <section className="section ">
-      <div className="container max-w-5xl">
+    <section className="section min-h-dvh flex items-center bg-gradient-to-b from-theme-light/80 via-white to-theme-light/40">
+      <div className="container ">
         {/* Title */}
         <div className="text-center">
-          {markdownify(faq.title, "h2", "section-title")}
+          {markdownify(
+            faq.title,
+            "h2",
+            "mt-2 text-2xl sm:text-3xl md:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent leading-relaxed section-title",
+          )}
         </div>
 
         <div className="mt-16 space-y-6">
@@ -32,13 +36,6 @@ const Faq = ({ faq }) => {
                     : "bg-white hover:shadow-sm border-slate-200"
                 }`}
               >
-                {/* <div
-                  className={`h-1 w-full transition-all duration-300 ${
-                    isActive
-                      ? "bg-gradient-to-r from-primary to-purple-500"
-                      : "bg-transparent"
-                  }`}
-                /> */}
                 <motion.div
                   initial={false}
                   animate={{ scaleX: isActive ? 1 : 0 }}

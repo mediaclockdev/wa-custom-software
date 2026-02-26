@@ -14,7 +14,7 @@ const WhyChooseUs = ({ why }) => {
   };
 
   return (
-    <section className="section ">
+    <section className="section min-h-dvh flex items-center bg-gradient-to-b from-theme-light/80 via-white to-theme-light/40">
       <div className="container">
         <div className="animate max-w-3xl mx-auto text-center">
           {safeWhy.subtitle && (

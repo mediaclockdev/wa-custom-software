@@ -9,7 +9,7 @@ const Process = ({ process }) => {
   if (!process) return null;
 
   return (
-    <section className="section bg-gradient-to-b from-theme-light/50 via-white to-white">
+    <section className="section min-h-dvh flex items-center">
       <div className="container-xl">
         <div className="animate text-center max-w-3xl mx-auto">
           <p className="text-md sm:text-base uppercase tracking-wider font-medium">
