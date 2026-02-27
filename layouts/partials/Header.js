@@ -78,7 +78,7 @@ const Header = () => {
     <>
       <header
         ref={headerRef}
-        className={`my-2 mb-auto container-xl sticky top-2 z-50 transition-all duration-300 ${direction === 1 ? "-translate-y-full" : "translate-y-0"}`}
+        className={`my-2 mb-auto container sticky top-2 z-50 transition-all duration-300 ${direction === 1 ? "-translate-y-full" : "translate-y-0"}`}
       >
         <nav className="navbar w-full bg-white py-2 px-4 rounded-full border border-slate-300  relative">
           {/* Logo */}

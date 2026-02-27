@@ -28,7 +28,7 @@ const steps = [
 export default function ServiceProcess() {
   return (
     <section className="section">
-      <div className="container-xl">
+      <div className="container">
         <h2 className="mb-16 text-center section-title">
           Our Development Process
         </h2>

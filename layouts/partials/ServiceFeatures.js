@@ -1,12 +1,18 @@
 "use client";
 import { markdownify } from "@lib/utils/textConverter";
 import React, { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import Image from "next/image";
 
 const Cards = ({ item, index, range, targetScale, progress }) => {
   const container = useRef(null);
-  const scale = useTransform(progress, range, [1, targetScale]);
+  // const scale = useTransform(progress, range, [1, targetScale]);
+  const rawScale = useTransform(progress, range, [1, targetScale]);
+  const scale = useSpring(rawScale, {
+    stiffness: 120,
+    damping: 25,
+    mass: 0.6,
+  });
 
   return (
     <div
@@ -73,7 +79,8 @@ const ServiceFeatures = ({ services }) => {
                 <Cards
                   item={item}
                   index={index}
-                  range={[0.14 * index, 1]}
+                  // range={[0.14 * index, 1]}
+                  range={[index / services.list.length, 1]}
                   targetScale={targetScale}
                   progress={scrollYProgress}
                 />

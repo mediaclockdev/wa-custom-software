@@ -115,7 +115,7 @@ const HomeBanner = ({
 
   return (
     <section ref={bannerRef} className="section banner pt-0">
-      <div className="container-xl">
+      <div className="container">
         <div className="relative">
           {/* BACKGROUND */}
           <div className="bg-theme banner-bg absolute inset-0 overflow-hidden">

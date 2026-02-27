@@ -16,7 +16,7 @@ const industries = [
 export default function IndustriesSlider() {
   return (
     <section className="section border-y">
-      <div className="container-xl">
+      <div className="container">
         <h2 className="mb-12 text-center section-title">
           Industries We Serve
         </h2>

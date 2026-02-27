@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useState } from "react";
 import ButtonLink from "@layouts/components/ui/ButtonLink";
+import { AnimatedText } from "./AnimatedText";
 
 export default function Hero({ banner }) {
   // Motion values (no React state)
@@ -34,6 +35,27 @@ export default function Hero({ banner }) {
 
   const parts = banner?.title?.split(/<\/?br\s*\/?>/i);
 
+  const container = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.05, // controls speed between letters
+      },
+    },
+  };
+
+  const letter = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.4,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-bg-light to-white py-10 lg:py-18 min-h-[calc(100dvh-50px)] flex items-center">
       <div className="container mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-12 items-center">
@@ -47,18 +69,14 @@ export default function Hero({ banner }) {
             className="text-4xl lg:text-6xl font-bold leading-tight text-gray-900"
           >
             {parts?.map((part, i) => {
-              // Last line gets gradient effect
               if (i === parts.length - 1) {
                 return (
-                  <motion.span
+                  <span
                     key={i}
-                    initial={{ backgroundPosition: "200% 0" }}
-                    animate={{ backgroundPosition: "0% 0" }}
-                    transition={{ duration: 2, ease: "easeOut" }}
                     className="block bg-gradient-to-r from-primary via-blue-400 to-primary bg-[length:200%_100%] bg-clip-text text-transparent"
                   >
-                    {part}
-                  </motion.span>
+                    <AnimatedText text={part} />
+                  </span>
                 );
               }
 
@@ -70,7 +88,6 @@ export default function Hero({ banner }) {
             })}
           </motion.h1>
 
-          {/* Subtext */}
           <motion.p
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -99,23 +116,7 @@ export default function Hero({ banner }) {
 
         {/* RIGHT SIDE */}
         <div className="relative flex justify-center items-center perspective">
-          {/* Animated Gradient Orb */}
           <motion.div
-            animate={{
-              scale: [1, 1.3, 1],
-              opacity: [0.3, 0.6, 0.3],
-              rotate: [0, 180, 360],
-            }}
-            transition={{
-              duration: 12,
-              repeat: Infinity,
-              ease: "linear",
-            }}
-            className="absolute w-[430px] h-[430px] bg-gradient-to-tr from-primary via-blue-400 to-purple-400 rounded-full blur-3xl"
-          />
-
-          <motion.div
-            // animate={{ y: [0, -25, 0] }}
             animate={{
               y: [0, -15, 0, 15, 0],
               x: [0, 10, 0, -10, 0],
@@ -132,13 +133,13 @@ export default function Hero({ banner }) {
                 rotateX,
                 rotateY,
               }}
-              className="relative transform-gpu"
+              className="relative transform-gpu cursor-pointer"
             >
               <Image
                 src={banner?.image}
                 alt="Web Development"
-                width={600}
-                height={600}
+                width={700}
+                height={700}
                 className="rounded-xl shadow-sm"
               />
             </motion.div>

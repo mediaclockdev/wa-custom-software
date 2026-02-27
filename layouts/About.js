@@ -154,7 +154,7 @@ const About = ({ data }) => {
         </div>
 
         {/* Video */}
-        <div className="container-xl relative">
+        <div className="container relative">
           <div className="bg-theme absolute left-0 top-0 w-full">
             <Circle
               className="left-[7%] top-[21%]"

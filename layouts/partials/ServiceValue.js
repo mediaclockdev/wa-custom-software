@@ -10,7 +10,7 @@ const ServiceValue = ({ value }) => {
 
   return (
     <section className="section min-h-dvh flex items-center bg-gradient-to-b from-theme-light/80 via-white to-theme-light/40">
-      <div className="container-xl">
+      <div className="container">
         <div className="animate text-center max-w-3xl mx-auto">
           <p className="uppercase tracking-wider text-sm font-medium">
             {value.subtitle}
@@ -29,7 +29,7 @@ const ServiceValue = ({ value }) => {
             return (
               <div
                 key={i}
-                className="group cursor-pointer relative flex flex-col md:flex-row items-start gap-6 rounded-2xl bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-lg overflow-hidden border border-slate-200 hover:border-transparent"
+                className="group cursor-pointer relative flex flex-col md:flex-row items-start gap-6 rounded-2xl bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-lg overflow-hidden ring-1 ring-slate-200 hover:ring-0"
               >
                 <span className="pointer-events-none absolute inset-0 rounded-2xl">
                   <span className="absolute inset-0 rounded-2xl border border-primary opacity-0 transition-opacity duration-200 group-hover:opacity-100"></span>

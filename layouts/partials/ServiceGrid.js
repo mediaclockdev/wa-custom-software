@@ -35,7 +35,7 @@ const services = [
 export default function ServiceList() {
   return (
     <section className="section bg-theme-light">
-      <div className="container-xl">
+      <div className="container">
         <div className="service-list-header text-center mb-14">
           <h2 className="mb-4">Our Custom Software Development Services</h2>
           <p className="max-w-2xl mx-auto">

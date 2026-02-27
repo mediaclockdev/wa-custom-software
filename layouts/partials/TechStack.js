@@ -2,49 +2,7 @@
 
 import { motion } from "framer-motion";
 import { markdownify } from "@lib/utils/textConverter";
-import {
-  SiJavascript,
-  SiPython,
-  SiPhp,
-  SiReact,
-  SiAngular,
-  SiBattledotnet,
-  SiLaravel,
-  SiDjango,
-  SiSwift,
-  SiKotlin,
-  SiFlutter,
-  SiMysql,
-  SiPostgresql,
-  SiMongodb,
-  SiGooglecloud,
-} from "react-icons/si";
-import { FaAws } from "react-icons/fa";
-import { VscAzure } from "react-icons/vsc";
-import { DiMsqlServer } from "react-icons/di";
-import { PiFileCSharp } from "react-icons/pi";
-
-const iconMap = {
-  JavaScript: SiJavascript,
-  Python: SiPython,
-  "C#": PiFileCSharp,
-  PHP: SiPhp,
-  React: SiReact,
-  Angular: SiAngular,
-  ".NET": SiBattledotnet,
-  Laravel: SiLaravel,
-  Django: SiDjango,
-  Swift: SiSwift,
-  Kotlin: SiKotlin,
-  Flutter: SiFlutter,
-  MySQL: SiMysql,
-  PostgreSQL: SiPostgresql,
-  MongoDB: SiMongodb,
-  "SQL Server": DiMsqlServer,
-  AWS: FaAws,
-  Azure: VscAzure,
-  "Google Cloud": SiGooglecloud,
-};
+import { IconMap } from "@lib/service/IconMap";
 
 const containerVariants = {
   hidden: {},
@@ -84,7 +42,7 @@ const TechStack = ({ technologies }) => {
   if (!technologies) return null;
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-white via-slate-50 to-white min-h-dvh flex items-center">
+    <section className="relative overflow-hidden bg-gradient-to-b from-white via-slate-50 to-white min-h-dvh flex items-center my-10">
       <div className="hidden md:block absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl opacity-30" />
       <div className="hidden md:block absolute bottom-10 right-10 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl opacity-30" />
 
@@ -109,7 +67,7 @@ const TechStack = ({ technologies }) => {
           className="mt-12 sm:mt-16 md:mt-20 grid gap-5 sm:gap-6 md:gap-10 grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
         >
           {technologies.list.map((tech, i) => {
-            const Icon = iconMap[tech];
+            const Icon = IconMap[tech];
 
             return (
               <motion.div
@@ -120,16 +78,15 @@ const TechStack = ({ technologies }) => {
               >
                 <div className="absolute -inset-1 rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100 transition duration-300 bg-primary/10 blur-lg" />
 
-                {/* Card */}
                 <motion.div
                   {...floatingAnimation}
-                  className="relative flex flex-col items-center justify-center rounded-xl sm:rounded-2xl bg-white/90 border border-slate-200 p-5 sm:p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300"
+                  className="relative flex flex-col items-center justify-center rounded-xl sm:rounded-2xl bg-white/90 border border-slate-200 p-5 sm:p-6 md:p-8 shadow-sm  transition-all duration-300"
                 >
                   {Icon && (
                     <Icon className="text-3xl sm:text-4xl text-primary transition-colors duration-300 group-hover:text-purple-600" />
                   )}
 
-                  <span className="mt-2 sm:mt-3 text-sm sm:text-base font-semibold text-slate-700 tracking-wide">
+                  <span className="mt-2 sm:mt-3 text-sm sm:text-base font-semibold text-slate-700 tracking-wide truncate overflow-hidden text-ellipsis whitespace-nowrap w-full text-center">
                     {tech}
                   </span>
                 </motion.div>

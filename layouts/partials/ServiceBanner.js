@@ -34,7 +34,7 @@ const ServiceBanner = ({ banner }) => {
 
   return (
     <section ref={bannerRef} className="section banner pt-0 service-banner">
-      <div className="container-xl">
+      <div className="container">
         <div className="relative overflow-hidden rounded-2xl">
 
           {/* BACKGROUND */}
