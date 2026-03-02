@@ -72,7 +72,7 @@ services:
         Great software begins with great design. We create clean, intuitive, and
         user-friendly interfaces that improve accessibility, usability, and
         overall user satisfaction.
-      url: /images/choose/why1.jpg
+      url: /images/service/choose/why1.jpg
 
 why:
   subtitle: WHY CHOOSE US

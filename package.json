@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "@emotion/is-prop-valid": "^1.4.0",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.9.1",
     "disqus-react": "^1.1.5",
     "feather-icons-react": "^0.7.0",
     "framer-motion": "^12.34.3",

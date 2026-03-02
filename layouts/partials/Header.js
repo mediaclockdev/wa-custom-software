@@ -115,7 +115,10 @@ const Header = () => {
                         className={`flex items-center gap-1 text-base cursor-pointer ${isParentActive ? "text-primary bg-[#FAF5F3] font-medium rounded-full px-4 py-2 border border-slate-300" : "text-gray-700 hover:bg-gray-50 rounded-full px-4 py-2 transition-all duration-300"}`}
                       >
                         {item.name}
-                        <FaAngleDown className="transition-transform duration-200 group-hover:rotate-180" size={16} />
+                        <FaAngleDown
+                          className="transition-transform duration-200 group-hover:rotate-180"
+                          size={16}
+                        />
                       </span>
 
                       {/* Desktop Dropdown */}

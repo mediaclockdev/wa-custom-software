@@ -222,7 +222,7 @@ class System {
                   modules={[Autoplay]}
                   autoplay={{ delay: 3000 }}
                 >
-                  {brands.map((brand, index) => (
+                  {brands?.map((brand, index) => (
                     <SwiperSlide
                       key={index}
                       className="h-20 px-6 grayscale hover:grayscale-0"

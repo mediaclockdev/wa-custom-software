@@ -5,8 +5,9 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useState } from "react";
 import ButtonLink from "@layouts/components/ui/ButtonLink";
 import { AnimatedText } from "./AnimatedText";
+import ParticlesComponent from "@layouts/components/ParticlesBackground";
 
-export default function Hero({ banner }) {
+export default function Hero({ banner, isParticle = false }) {
   // Motion values (no React state)
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -35,33 +36,12 @@ export default function Hero({ banner }) {
 
   const parts = banner?.title?.split(/<\/?br\s*\/?>/i);
 
-  const container = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.05, // controls speed between letters
-      },
-    },
-  };
-
-  const letter = {
-    hidden: { opacity: 0, y: 40 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.4,
-        ease: "easeOut",
-      },
-    },
-  };
-
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-bg-light to-white py-10 lg:py-18 min-h-[calc(100dvh-50px)] flex items-center">
+      {isParticle ? <ParticlesComponent /> : null}
       <div className="container mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-12 items-center">
         {/* LEFT SIDE */}
-        <div className="z-10">
-          {/* Heading */}
+        <div className="z-10 flex flex-col items-start gap-5">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -92,26 +72,17 @@ export default function Hero({ banner }) {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.7 }}
-            className="mt-6 text-lg text-text max-w-xl"
+            className="mt-3 text-lg text-text max-w-xl"
           >
             High-performance web development, scalable solutions, and stunning
             UI/UX to help your brand stand out in the digital world.
           </motion.p>
 
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.7 }}
-            className="mt-8 flex gap-4"
-          >
-            {/* Primary CTA with pulse effect */}
-            <ButtonLink
-              animate={false}
-              href={banner?.link?.href}
-              title={banner?.link?.label}
-            />
-          </motion.div>
+          <ButtonLink
+            animate={false}
+            href={banner?.link?.href}
+            title={banner?.link?.label}
+          />
         </div>
 
         {/* RIGHT SIDE */}
@@ -123,7 +94,6 @@ export default function Hero({ banner }) {
             }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
           >
-            {/* 3D Tilt + Floating Image */}
             <motion.div
               onMouseMove={handleMouseMove}
               onMouseLeave={handleLeave}

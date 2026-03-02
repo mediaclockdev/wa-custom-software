@@ -11,12 +11,12 @@ const ShortIntro = ({ intro }) => {
         <div className="relative px-4 py-[70px]">
           <div className="text-center">
             <div className="animate">
-              <p>{intro.subtitle}</p>
-              {markdownify(intro.title, "h2", "mt-4 section-title")}
-              {markdownify(intro.description, "p", "mt-10")}
+              <p>{intro?.subtitle}</p>
+              {markdownify(intro?.title, "h2", "mt-4 section-title")}
+              {markdownify(intro?.description, "p", "mt-10")}
             </div>
             <div className="mx-auto mt-10 h-full max-h-[394px] w-full max-w-[716px]">
-              <VideoPopup id={intro.video_id} thumbnail={intro.thumbnail} />
+              <VideoPopup id={intro?.video_id} thumbnail={intro?.thumbnail} />
             </div>
           </div>
           <div className="bg-theme absolute left-0 top-0 w-full">

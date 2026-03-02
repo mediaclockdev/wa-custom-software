@@ -8,6 +8,7 @@ import Logo from "@layouts/components/Logo";
 import { markdownify } from "@lib/utils/textConverter";
 import Link from "next/link";
 import { motion } from "framer-motion";
+// import ParticlesComponent from "@layouts/components/ParticlesBackground";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
