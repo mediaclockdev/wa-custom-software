@@ -13,9 +13,9 @@ const Testimonial = ({ testimonial }) => {
     <section className="section pt-0">
       <div className="container">
         <div className="animate text-center">
-          <p>{testimonial.subtitle}</p>
-          {markdownify(testimonial.title, "h2", "mt-4 section-title")}
-          {markdownify(testimonial.description, "p", "mt-10")}
+          <p>{testimonial?.subtitle}</p>
+          {markdownify(testimonial?.title, "h2", "mt-4 section-title")}
+          {markdownify(testimonial?.description, "p", "mt-10")}
         </div>
         <div className="animate row mt-10 items-center justify-center">
           <div className="xl:col-11">
@@ -45,7 +45,7 @@ const Testimonial = ({ testimonial }) => {
                     }}
                     className="testimonial-slider mx-auto max-w-[420px] cursor-pointer lg:max-w-[480px]"
                   >
-                    {testimonial.list.map((item, index) => (
+                    {testimonial?.list.map((item, index) => (
                       <SwiperSlide
                         className="text-center"
                         key={"testimonial-" + index}
@@ -55,19 +55,19 @@ const Testimonial = ({ testimonial }) => {
                           {markdownify(
                             item.content,
                             "p",
-                            "text-[17px] lg:text-lg text-body mt-4 md:mt-5 xl:mt-8"
+                            "text-[17px] lg:text-lg text-body mt-4 md:mt-5 xl:mt-8",
                           )}
                           <div className="mt-7 inline-block rounded-md bg-body p-7 shadow-[0_10px_50px_rgba(0,0,0,.08)] md:mt-5 lg:mt-8 xl:mt-5">
                             <ImageFallback
                               className="mx-auto rounded-full"
-                              src={item.avatar}
+                              src={item?.avatar}
                               width={90}
                               height={90}
                               priority={true}
-                              alt={item.author}
+                              alt={item?.author}
                             />
-                            <h6>{item.author}</h6>
-                            <p>{item.profession}</p>
+                            <h6>{item?.author}</h6>
+                            <p>{item?.profession}</p>
                           </div>
                         </div>
                       </SwiperSlide>

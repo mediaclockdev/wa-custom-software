@@ -14,8 +14,11 @@ const HomeBanner = ({
   brands,
   showCircles = true,
   variant = "default",
+  slider = true,
 }) => {
   const bannerRef = useRef(null);
+
+  console.log("Banner ", bannerData);
 
   useLayoutEffect(() => {
     if (!bannerRef.current) return;
@@ -34,25 +37,24 @@ const HomeBanner = ({
         .fromTo(
           ".banner-title",
           { y: 20, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.6, delay: 0.4 }
+          { y: 0, opacity: 1, duration: 0.6, delay: 0.4 },
         )
         .fromTo(
           ".banner-btn",
           { y: 20, opacity: 0 },
           { y: 0, opacity: 1, duration: 0.5 },
-          ">-0.4"
+          ">-0.4",
         )
         .fromTo(
           ".banner-img",
           { y: 20, opacity: 0 },
           { y: 0, opacity: 1, duration: 0.6 },
-          ">-0.4"
+          ">-0.4",
         );
 
       /* PARALLAX (ALL PAGES) */
       if (bannerBg && bannerContent) {
-        const position =
-          (banner.offsetHeight - bannerBg.offsetHeight) * 0.4;
+        const position = (banner.offsetHeight - bannerBg.offsetHeight) * 0.4;
 
         const parallaxTl = gsap.timeline({
           scrollTrigger: {
@@ -72,7 +74,7 @@ const HomeBanner = ({
             ".banner-bg .circle",
             { y: 0 },
             { y: position },
-            "<"
+            "<",
           );
         }
       }
@@ -113,17 +115,24 @@ const HomeBanner = ({
 
   return (
     <section ref={bannerRef} className="section banner pt-0">
-      <div className="container-xl">
+      <div className="container">
         <div className="relative">
-
           {/* BACKGROUND */}
           <div className="bg-theme banner-bg absolute inset-0 overflow-hidden">
-
             {/* HOMEPAGE */}
             {variant === "default" && showCircles && (
               <>
-                <Circle className="circle left-[10%] top-12" width={32} height={32} fill={false} />
-                <Circle className="circle right-[15%] top-[20%]" width={70} height={70} />
+                <Circle
+                  className="circle left-[10%] top-12"
+                  width={32}
+                  height={32}
+                  fill={false}
+                />
+                <Circle
+                  className="circle right-[15%] top-[20%]"
+                  width={70}
+                  height={70}
+                />
               </>
             )}
 
@@ -145,9 +154,9 @@ function deploy() {
   CD.release();
 }
 
-if (performance > expectation) {
+      if (performance > expectation) {
   client.happy = true;
-}`}
+    }`}
                   </pre>
 
                   <pre className="code-stream delay">
@@ -175,16 +184,19 @@ class System {
                   {markdownify(
                     bannerData.title,
                     "h1",
-                    "mb-8 banner-title opacity-0"
+                    "mb-8 banner-title opacity-0",
                   )}
                   <div className="banner-btn opacity-0">
-                    <Link href={bannerData.link.href} className="btn btn-primary">
+                    <Link
+                      href={bannerData.link.href}
+                      className="btn btn-primary"
+                    >
                       {bannerData.link.label}
                     </Link>
                   </div>
                 </div>
 
-                <div className="col-10">
+                {/* <div className="col-10">
                   <ImageFallback
                     className="banner-img opacity-0"
                     src={bannerData.image}
@@ -193,33 +205,42 @@ class System {
                     priority
                     alt=""
                   />
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
 
           {/* BRANDS */}
-          <div className="row border-y border-border py-5">
-            <div className="col-12">
-              <Swiper
-                loop
-                slidesPerView={3}
-                breakpoints={{ 992: { slidesPerView: 5 } }}
-                spaceBetween={20}
-                modules={[Autoplay]}
-                autoplay={{ delay: 3000 }}
-              >
-                {brands.map((brand, index) => (
-                  <SwiperSlide key={index} className="h-20 px-6 grayscale hover:grayscale-0">
-                    <div className="relative h-full">
-                      <ImageFallback src={brand} alt="" fill className="object-contain" />
-                    </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
+          {slider && (
+            <div className="row border-y border-border py-5">
+              <div className="col-12">
+                <Swiper
+                  loop
+                  slidesPerView={3}
+                  breakpoints={{ 992: { slidesPerView: 5 } }}
+                  spaceBetween={20}
+                  modules={[Autoplay]}
+                  autoplay={{ delay: 3000 }}
+                >
+                  {brands?.map((brand, index) => (
+                    <SwiperSlide
+                      key={index}
+                      className="h-20 px-6 grayscale hover:grayscale-0"
+                    >
+                      <div className="relative h-full">
+                        <ImageFallback
+                          src={brand}
+                          alt=""
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
             </div>
-          </div>
-
+          )}
         </div>
       </div>
     </section>

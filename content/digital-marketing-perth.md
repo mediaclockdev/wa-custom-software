@@ -5,8 +5,8 @@ meta_title: Digital Marketing Agency in Perth
 description: Data-driven digital marketing services in Perth across SEO, PPC, content, social media, and conversion-focused web growth.
 
 banner:
-  title: "Digital Marketing </br> in Perth"
-  image: /images/service/custom-software-hero-removebg-preview2.png
+  title: "Digital Marketing </br> Agency in Perth"
+  image: /images/service/hero/digimarkbg.png
   link:
     label: Grow Your Business
     href: /contact
@@ -34,30 +34,47 @@ services:
     - icon: map-pin
       title: Local SEO Optimisation
       content: Improve visibility in Perth local search through Google Business Profile optimisation, suburb pages, and review strategy.
+      url: /images/service/choose/why1.jpg
+
     - icon: tool
       title: Technical SEO Audits
       content: Identify and resolve crawl, speed, mobile usability, and indexation issues that hold back rankings.
+      url: /images/service/choose/why2.jpg
+
     - icon: file-text
       title: On-Page SEO Enhancements
       content: Optimise meta data, internal linking, content structure, and schema for stronger search relevance.
+      url: /images/service/choose/why3.jpg
+
     - icon: search
       title: Keyword Research and SEO Strategy
       content: Build high-intent keyword strategies using competitor analysis and search demand insights.
+      url: /images/service/choose/why4.jpg
+
     - icon: edit-3
       title: Content Marketing and Blogging
       content: Publish SEO-focused, conversion-ready blog and landing content that builds authority and qualified traffic.
+      url: /images/service/choose/why5.jpg
+
     - icon: link
       title: Ethical Link Building
       content: Strengthen domain authority with white-hat backlink acquisition and spam link cleanup.
+      url: /images/service/choose/why6.jpg
+
     - icon: bar-chart-2
       title: PPC Management
       content: Manage Google Ads and Meta campaigns with conversion tracking, retargeting, and ROAS optimisation.
+      url: /images/service/choose/why1.jpg
+
     - icon: users
       title: Social Media Marketing
       content: Grow awareness and engagement with creative social content, paid social campaigns, and local audience targeting.
+      url: /images/service/choose/why2.jpg
+
     - icon: monitor
       title: Web Development for Marketing
       content: Build fast, mobile-first websites with SEO architecture, lead forms, and tracking integration.
+      url: /images/service/choose/why3.jpg
 
 why:
   subtitle: WHY CHOOSE US
@@ -113,11 +130,25 @@ technologies:
   subtitle: CHANNELS AND PLATFORMS
   title: Platforms We Use for Delivery and Reporting
   list:
-    - SEO - Google Search, Google Business Profile, structured data optimisation
-    - Paid Media - Google Ads, Meta Ads, retargeting workflows
-    - Content - service pages, landing pages, blog strategy
-    - Social - paid and organic social campaign execution
-    - Analytics - conversion tracking, performance dashboards, periodic strategy reviews
+    - SEO
+    - Google Search
+    - Google Business Profile
+    - Structured Data Optimisation
+    - Paid Media
+    - Google Ads
+    - Meta Ads
+    - Retargeting Workflows
+    - Content
+    - Service Pages
+    - Landing Pages
+    - Blog Strategy
+    - Social
+    - Paid Social Campaign Execution
+    - Organic Social Campaign Execution
+    - Analytics
+    - Conversion Tracking
+    - Performance Dashboards
+    - Periodic Strategy Reviews
 
 faq:
   title: Digital Marketing FAQs
@@ -132,5 +163,4 @@ faq:
       a: Yes. You receive detailed reports, dashboard visibility, and scheduled strategy reviews.
     - q: Do you work with specific industries only?
       a: We work across healthcare, e-commerce, education, real estate, local services, and other WA business sectors.
-
 ---

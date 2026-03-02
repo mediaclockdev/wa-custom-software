@@ -5,8 +5,8 @@ meta_title: Mobile App Development Company in Perth
 description: High-performance mobile app development for Perth and Western Australia businesses.
 
 banner:
-  title: "Mobile App Development </br> in Perth"
-  image: /images/service/custom-software-hero-removebg-preview2.png
+  title: "Mobile App </br> Development in Perth"
+  image: /images/service/hero/mobdevbg.png
   link:
     label: Talk to Our Experts
     href: /contact
@@ -34,24 +34,37 @@ services:
     - icon: smartphone
       title: Android App Development
       content: We build secure, high-performance Android apps using Kotlin and Java, engineered for reliability across modern Android devices.
+      url: /images/service/choose/why1.jpg
+
     - icon: tablet
       title: iPhone and iPad App Development
       content: Our iOS team delivers native apps in Swift and Objective-C with premium performance, polished UX, and App Store readiness.
+      url: /images/service/choose/why2.jpg
+
     - icon: layers
       title: Cross-Platform Flutter Development
       content: We create cross-platform apps with Flutter to reduce development time and maintain consistent UX across iOS and Android.
+      url: /images/service/choose/why3.jpg
+
     - icon: code
       title: Kotlin and Swift Engineering
       content: We use modern native frameworks and clean architecture patterns to build maintainable apps with long-term scalability.
+      url: /images/service/choose/why4.jpg
+
     - icon: pen-tool
       title: Mobile UI and UX Design
       content: Our designers craft intuitive, user-focused mobile interfaces in Figma and Sketch to improve adoption and engagement.
+      url: /images/service/choose/why5.jpg
+
     - icon: database
       title: Backend and API Integration
       content: We develop robust backend systems and integrate CRMs, ERPs, payment gateways, and third-party APIs for seamless data flow.
+      url: /images/service/choose/why6.jpg
+
     - icon: cpu
       title: AI and Intelligent Automation
       content: We embed AI-assisted workflows and automation features that reduce manual effort and improve operational efficiency.
+      url: /images/service/choose/why2.jpg
 
 why:
   subtitle: WHY CHOOSE US
@@ -109,11 +122,24 @@ technologies:
   subtitle: TECHNOLOGY STACK
   title: Mobile Technologies We Use
   list:
-    - Languages - Swift, Kotlin, Java, C#, TypeScript
-    - Frameworks - Flutter, Angular, AngularJS, Cordova, ASP.Net, Node.js
-    - Design Tools - Figma, Sketch
-    - Front-End - HTML, CSS
-    - Cloud and APIs - Firebase, AWS, Google Cloud, third-party integrations
+    - Swift
+    - Kotlin
+    - Java
+    - C#
+    - TypeScript
+    - Flutter
+    - Angular
+    - Cordova
+    - ASP.Net
+    - Node.js
+    - Figma
+    - Sketch
+    - HTML
+    - CSS
+    - Firebase
+    - AWS
+    - Google Cloud
+    - Third-party integrations
 
 faq:
   title: Mobile App Development FAQs
@@ -132,5 +158,4 @@ faq:
       a: Yes. We apply efficient coding patterns, optimised APIs, and device-level performance testing to ensure smooth operation on iOS and Android.
     - q: Can you support App Store and Google Play submissions?
       a: Yes. We handle release preparation, metadata, compliance checks, and submission support for both app stores.
-
 ---

@@ -21,3 +21,15 @@
   @import 'swiper/scss/pagination';
   @import './swiper.scss';
 }
+
+.perspective {
+  perspective: 1000px;
+}
+
+button, a, li {
+  cursor: pointer;
+}
+
+#tsparticles {
+  // z-index: -10;
+}

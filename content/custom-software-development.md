@@ -5,15 +5,14 @@ seo_title: Custom Software Development Perth
 description: High-performance custom software development for Perth businesses.
 
 banner:
-  title: "Custom Software Development </br> in Perth"
-  image: /images/service/custom-software-hero-removebg-preview2.png
+  title: "Custom Software </br> Development in Perth"
+  image: /images/service/hero/custdevbg.png
   link:
     label: Talk to Our Experts
     href: /contact
 
 brands:
   - /images/brands/01-colored.png
-  # - /images/brands/02-colored.png
   - /images/brands/03-colored.png
   - /images/brands/04-colored.png
   - /images/brands/05-colored.png
@@ -21,7 +20,7 @@ brands:
 intro:
   subtitle: PERTH SOFTWARE SPECIALISTS
   title: We Build High-Performance Custom Software
-  description: 
+  description:
     We are a Western Australia–based development company specialising in the
     delivery of high-performance, custom software solutions that meet the
     ever-changing demands of Perth businesses.Whether you are a new business bringing an idea to life, an established organisation looking to improve internal processes, or a company modernising an outdated system, our team develops secure, reliable, and effective software designed to support long-term business growth.</br> </br> With a dedicated local team and a strong commitment to quality, we work
@@ -29,7 +28,7 @@ intro:
     collaborative approach combines deep technical expertise with a strong
     understanding of Western Australia’s business environment, ensuring every
     solution delivers measurable results and a high return on investment.
-    
+
 services:
   subtitle: OUR SERVICES
   title: Our Custom Software Development Services
@@ -37,9 +36,11 @@ services:
   list:
     - icon: tool
       title: Custom Software Development
-      content: We design and develop fully customised software solutions built around
+      content:
+        We design and develop fully customised software solutions built around
         your business needs. From workflow automation to enterprise systems, we
         create reliable applications that scale as your organisation grows.
+      url: /images/service/choose/why1.jpg
 
     - icon: smartphone
       title: Web & Mobile App Development
@@ -47,57 +48,70 @@ services:
         applications tailored to the needs of your users. Whether you’re using
         iOS, Android, or cross-platform technologies, we deliver seamless
         functionality with a user-friendly design.
+      url: /images/service/choose/why2.jpg
 
     - icon: cpu
       title: AI & Intelligent Automation
-      content: By integrating AI-driven features and intelligent automation, we help
+      content:
+        By integrating AI-driven features and intelligent automation, we help
         reduce manual workloads, streamline business processes, and unlock
         smarter operational capabilities for Perth businesses.
+      url: /images/service/choose/why3.jpg
 
     - icon: layers
       title: Custom ERP & CRM Development
-      content: We build powerful ERP and CRM systems that centralise your data, improve
+      content:
+        We build powerful ERP and CRM systems that centralise your data, improve
         internal coordination, and support data-driven decision-making across
         your entire organisation.
+      url: /images/service/choose/why4.jpg
 
     - icon: cloud
       title: SaaS Application Development
-      content: For businesses launching cloud-based platforms, we develop scalable SaaS
+      content:
+        For businesses launching cloud-based platforms, we develop scalable SaaS
         applications with security, multi-tenancy, and long-term adaptability
         built into the core architecture.
+      url: /images/service/choose/why5.jpg
 
     - icon: database
       title: Database & Backend Development
-      content: Our experts build robust databases and backend systems that ensure high
+      content:
+        Our experts build robust databases and backend systems that ensure high
         performance, stability, and data integrity — essential foundations for
         modern custom software environments.
+      url: /images/service/choose/why6.jpg
 
     - icon: pen-tool
       title: UI/UX Design
-      content: Great software begins with great design. We create clean, intuitive, and
+      content:
+        Great software begins with great design. We create clean, intuitive, and
         user-friendly interfaces that improve accessibility, usability, and
         overall user satisfaction.
+      url: /images/service/choose/why1.jpg
 
     - icon: layers
       title: Solution Architecture & Prototyping
       content: Before writing a single line of code, we create prototypes,
         architectural models, and functional plans to ensure the solution aligns
         perfectly with your business goals and technical requirements.
+      url: /images/service/choose/why2.jpg
 
     - icon: refresh-cw
       title: Software Migration & Modernisation
-      content: If you’re upgrading legacy systems, we modernise architecture, UI/UX,
+      content:
+        If you’re upgrading legacy systems, we modernise architecture, UI/UX,
         security layers, and infrastructure to ensure long-term stability,
         improved performance, and future scalability.
+      url: /images/service/choose/why3.jpg
 
     - icon: users
       title: Consulting & CTO Services
-      content: We provide strategic guidance, technical leadership, and full project
+      content:
+        We provide strategic guidance, technical leadership, and full project
         management support, helping you plan, manage, and execute software
         projects with confidence.
-
-       
-
+      url: /images/service/choose/why4.jpg
 
 why:
   subtitle: WHY CHOOSE US
@@ -127,7 +141,6 @@ process:
     - title: Launch & Ongoing Maintenance
       content: We manage deployment, onboarding, and full post-launch support. This includes updates, security patches, and system enhancements to keep your software running smoothly.
 
-
 value:
   subtitle: BUSINESS VALUE
   title: Value-Driven Features That Support Your Business
@@ -143,7 +156,7 @@ industries:
   subtitle: INDUSTRIES
   title: Industries We Serve
   list:
-    - Mining & Resources 
+    - Mining & Resources
     - Logistics & Supply Chain
     - Healthcare & Medical Technology
     - Finance & Professional services
@@ -156,11 +169,25 @@ technologies:
   subtitle: TECHNOLOGY STACK
   title: Technologies We Use
   list:
-    - JavaScript, Python, C#, PHP
-    - React, Angular, .NET, Laravel, Django
-    - Swift, Kotlin, Flutter
-    - MySQL, PostgreSQL, MongoDB, SQL Server
-    - AWS, Azure, Google Cloud
+    - JavaScript
+    - Python
+    - C#
+    - PHP
+    - React
+    - Angular
+    - .NET
+    - Laravel
+    - Django
+    - Swift
+    - Kotlin
+    - Flutter
+    - MySQL
+    - PostgreSQL
+    - MongoDB
+    - SQL Server
+    - AWS
+    - Azure
+    - Google Cloud
 
 testimonial:
   subtitle: CLIENT FEEDBACK
@@ -192,5 +219,4 @@ faq:
       a: We work with sectors including mining, healthcare, logistics,construction, finance, education, and local WA startups.
     - q: Can you help modernise our outdated legacy systems?
       a: Yes. We specialise in migration, redesign, code refactoring, and complete system modernisation.
-
 ---

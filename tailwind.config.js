@@ -8,19 +8,19 @@ let h4 = h5 * font_scale;
 let h3 = h4 * font_scale;
 let h2 = h3 * font_scale;
 let h1 = h2 * font_scale;
-let fontPrimary, fontPrimaryType, fontSecondary, fontSecondaryType;
-if (theme.fonts.font_family.primary) {
-  fontPrimary = theme.fonts.font_family.primary
-    .replace(/\+/g, " ")
-    .replace(/:[ital,]*[ital@]*[wght@]*[0-9,;]+/gi, "");
-  fontPrimaryType = theme.fonts.font_family.primary_type;
-}
-if (theme.fonts.font_family.secondary) {
-  fontSecondary = theme.fonts.font_family.secondary
-    .replace(/\+/g, " ")
-    .replace(/:[ital,]*[ital@]*[wght@]*[0-9,;]+/gi, "");
-  fontSecondaryType = theme.fonts.font_family.secondary_type;
-}
+// let fontPrimary, fontPrimaryType, fontSecondary, fontSecondaryType;
+// if (theme.fonts.font_family.primary) {
+//   fontPrimary = theme.fonts.font_family.primary
+//     .replace(/\+/g, " ")
+//     .replace(/:[ital,]*[ital@]*[wght@]*[0-9,;]+/gi, "");
+//   fontPrimaryType = theme.fonts.font_family.primary_type;
+// }
+// if (theme.fonts.font_family.secondary) {
+//   fontSecondary = theme.fonts.font_family.secondary
+//     .replace(/\+/g, " ")
+//     .replace(/:[ital,]*[ital@]*[wght@]*[0-9,;]+/gi, "");
+//   fontSecondaryType = theme.fonts.font_family.secondary_type;
+// }
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -47,6 +47,7 @@ module.exports = {
         light: theme.colors.default.text_color.light,
         dark: theme.colors.default.text_color.dark,
         primary: theme.colors.default.theme_color.primary,
+        secondary: theme.colors.default.theme_color.secondary,
         body: theme.colors.default.theme_color.body,
         border: theme.colors.default.theme_color.border,
         "border-secondary": theme.colors.default.theme_color.border_secondary,
@@ -66,8 +67,23 @@ module.exports = {
         h6: h6 + "rem",
       },
       fontFamily: {
-        primary: [fontPrimary, fontPrimaryType],
-        secondary: [fontSecondary, fontSecondaryType],
+        // primary: ["var(--font-manrope)", "sans-serif"],
+        primary: ["var(--font-satoshi)", "sans-serif"],
+        secondary: ["var(--font-satoshi)", "sans-serif"],
+        // secondary: [fontSecondary, fontSecondaryType],
+      },
+      keyframes: {
+        ctaAttention: {
+          "0%": { transform: "rotate(0deg) translate(0, 0)" },
+          "20%": { transform: "rotate(-4deg) translate(-2px, -2px)" },
+          "40%": { transform: "rotate(4deg) translate(2px, 2px)" },
+          "60%": { transform: "rotate(-3deg) translate(-1px, 1px)" },
+          "80%": { transform: "rotate(2deg) translate(1px, -1px)" },
+          "100%": { transform: "rotate(0deg) translate(0, 0)" },
+        },
+      },
+      animation: {
+        "cta-attention": "ctaAttention 1s ease-in-out",
       },
     },
   },

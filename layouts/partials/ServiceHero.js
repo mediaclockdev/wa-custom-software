@@ -6,7 +6,7 @@ import { markdownify } from "@lib/utils/textConverter";
 export default function ServiceHero({ title }) {
   return (
     <section className="banner banner-single">
-      <div className="container-xl">
+      <div className="container">
         <div className="banner-wrapper relative text-center">
 
           {markdownify(title, "h1", "mb-6 banner-regular-title")}

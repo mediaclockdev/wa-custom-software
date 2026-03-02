@@ -17,7 +17,7 @@ const RegularPages = async ({ params }) => {
   const { content } = pageData;
 
   return (
-    <GSAPWrapper>
+      <GSAPWrapper>
       <SeoMeta
         title={title}
         description={description ? description : content.slice(0, 120)}
@@ -38,7 +38,7 @@ const RegularPages = async ({ params }) => {
       ) : (
         <Default data={pageData} />
       )}
-    </GSAPWrapper>
+      </GSAPWrapper>
   );
 };
 export default RegularPages;
