@@ -8,19 +8,6 @@ let h4 = h5 * font_scale;
 let h3 = h4 * font_scale;
 let h2 = h3 * font_scale;
 let h1 = h2 * font_scale;
-// let fontPrimary, fontPrimaryType, fontSecondary, fontSecondaryType;
-// if (theme.fonts.font_family.primary) {
-//   fontPrimary = theme.fonts.font_family.primary
-//     .replace(/\+/g, " ")
-//     .replace(/:[ital,]*[ital@]*[wght@]*[0-9,;]+/gi, "");
-//   fontPrimaryType = theme.fonts.font_family.primary_type;
-// }
-// if (theme.fonts.font_family.secondary) {
-//   fontSecondary = theme.fonts.font_family.secondary
-//     .replace(/\+/g, " ")
-//     .replace(/:[ital,]*[ital@]*[wght@]*[0-9,;]+/gi, "");
-//   fontSecondaryType = theme.fonts.font_family.secondary_type;
-// }
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -67,10 +54,7 @@ module.exports = {
         h6: h6 + "rem",
       },
       fontFamily: {
-        // primary: ["var(--font-manrope)", "sans-serif"],
-        primary: ["var(--font-satoshi)", "sans-serif"],
-        secondary: ["var(--font-satoshi)", "sans-serif"],
-        // secondary: [fontSecondary, fontSecondaryType],
+        primary: ["var(--font-instrument-sans)", "sans-serif"],
       },
       keyframes: {
         ctaAttention: {

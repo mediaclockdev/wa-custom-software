@@ -63,7 +63,7 @@ const ServiceFeatures = ({ services }) => {
           {markdownify(
             services.title,
             "h2",
-            "mt-2 text-2xl sm:text-3xl md:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent leading-relaxed",
+            "mt-2 text-2xl sm:text-3xl md:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent leading-relaxed pb-1",
           )}
           {markdownify(
             services.description,

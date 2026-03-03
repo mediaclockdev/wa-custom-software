@@ -72,10 +72,11 @@ export default function Hero({ banner, isParticle = false }) {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.7 }}
-            className="mt-3 text-lg text-text max-w-xl"
+            className="animate mt-3 text-lg text-text max-w-xl"
           >
-            High-performance web development, scalable solutions, and stunning
-            UI/UX to help your brand stand out in the digital world.
+            {banner?.content
+              ? banner.content
+              : "High-performance web development, scalable solutions, and stunning UI/UX to help your brand stand out in the digital world."}
           </motion.p>
 
           <ButtonLink

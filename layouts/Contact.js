@@ -1,3 +1,5 @@
+"use client";
+
 import config from "@config/config.json";
 import Banner from "./components/Banner";
 import ImageFallback from "./components/ImageFallback";
@@ -7,81 +9,111 @@ const Contact = ({ data }) => {
   const { title } = frontmatter;
 
   return (
-    <section className="section">
+    <section className="py-20">
       <Banner title={title} />
-      <div className="container">
-        <div className="section row items-center justify-center">
-          <div className="animate lg:col-5">
+
+      <div className="container mt-16">
+        <div className="grid items-center gap-12 lg:grid-cols-2">
+          {/* Left Image */}
+          <div className="flex justify-center">
             <ImageFallback
-              className="mx-auto lg:pr-10"
+              className="max-w-md w-full"
               src="/images/vectors/contact.png"
               width={497}
               height={397}
-              alt=""
+              alt="Contact illustration"
             />
           </div>
-          <div className="animate lg:col-5">
+
+          {/* Contact Form */}
+          <div>
             <form
               method="POST"
               action={config.params.contact_form_action}
-              className="contact-form rounded-xl p-6 shadow-[0_4px_25px_rgba(0,0,0,0.05)]"
+              className="rounded-2xl bg-white p-8 shadow-lg border border-gray-100"
             >
-              <h2 className="h4 mb-6">Send A Message</h2>
+              <h2 className="text-2xl font-semibold mb-8">
+                Let’s Start a Conversation
+              </h2>
+
+              {/* Name */}
               <div className="mb-6">
                 <label
-                  className="mb-2 block font-medium text-dark"
                   htmlFor="name"
+                  className="mb-2 block text-sm font-medium text-gray-700"
                 >
-                  Name
+                  Full Name
                 </label>
                 <input
-                  className="form-input w-full"
+                  id="name"
                   name="name"
-                  placeholder="Full Name"
                   type="text"
                   required
+                  placeholder="John Doe"
+                  className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition"
                 />
               </div>
+
+              {/* Email */}
               <div className="mb-6">
                 <label
-                  className="mb-2 block font-medium text-dark"
                   htmlFor="email"
+                  className="mb-2 block text-sm font-medium text-gray-700"
                 >
-                  Email
+                  Email Address
                 </label>
                 <input
-                  className="form-input w-full"
+                  id="email"
                   name="email"
-                  placeholder="Email Address"
                   type="email"
                   required
+                  placeholder="john@example.com"
+                  className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition"
                 />
               </div>
+
+              {/* Subject */}
               <div className="mb-6">
                 <label
-                  className="mb-2 block font-medium text-dark"
                   htmlFor="subject"
+                  className="mb-2 block text-sm font-medium text-gray-700"
                 >
                   Subject
                 </label>
                 <input
-                  className="form-input w-full"
+                  id="subject"
                   name="subject"
                   type="text"
                   required
+                  placeholder="Project Inquiry"
+                  className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition"
                 />
               </div>
-              <div className="mb-6">
+
+              {/* Message */}
+              <div className="mb-8">
                 <label
-                  className="mb-2 block font-medium text-dark"
                   htmlFor="message"
+                  className="mb-2 block text-sm font-medium text-gray-700"
                 >
                   Message
                 </label>
-                <textarea className="form-textarea w-full" rows="6" />
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  placeholder="Tell us about your project..."
+                  className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition resize-none"
+                />
               </div>
-              <button className="btn btn-primary block w-full">
-                Submit Now
+
+              {/* Button */}
+              <button
+                type="submit"
+                className="w-full rounded-lg bg-primary px-6 py-3 font-medium text-white transition hover:opacity-90 active:scale-[0.98]"
+              >
+                Send Message
               </button>
             </form>
           </div>

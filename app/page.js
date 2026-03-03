@@ -1,4 +1,3 @@
-import Cta from "@layouts/components/Cta";
 import GSAPWrapper from "@layouts/components/GSAPWrapper";
 import ServicePanel from "@layouts/components/ServicePanel";
 import Expertise from "@layouts/partials/Expertise";
@@ -12,8 +11,7 @@ import { getListPage } from "@lib/contentParser";
 const Home = async () => {
   const homepage = await getListPage("content/_index.md");
   const { frontmatter } = homepage;
-  const { banner, services, features, process, expertise, faq } =
-    frontmatter;
+  const { banner, services, features, process, expertise, faq } = frontmatter;
 
   return (
     <GSAPWrapper>

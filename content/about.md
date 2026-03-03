@@ -1,94 +1,70 @@
 ---
-title: "About"
+title: About Western Australia Software Development Company
 layout: about
-draft: false
+seo_title: About Western Australia Software Development Company | Perth IT Experts
+description: Learn more about Western Australia Software Development Company, a trusted Perth-based IT and software development provider offering web development, mobile apps, automation and digital solutions across Western Australia.
 
-## about us
-about_us:
+banner:
+  title: "About Western Australia"
+  image: /images/service/hero/aboutbg.png
+  content: Western Australia Software Development Company offers professional digital and IT services that help businesses improve online visibility, automate manual tasks and implement effective technology solutions. We collaborate with companies across Perth and Western Australia, delivering practical and flexible digital solutions.
+  link:
+    label: Contact Us
+    href: "/contact"
+  
+
+#about
+about:
   subtitle: WHO WE ARE
-  title: Hello, We’re Andromeda Here For Your Help
-  content: Your online Health & Fitness companion that offers free assistance on its Facebook Group and provides quality paid guided personal training packages by and through website. We are the first ever, online manifesto in Bangladesh to make place you will select when you think of getting fit
-  image: /images/about/01.jpg
+  title: Professional IT Solutions in Western Australia
+  description: Western Australia Software Development Company is led by Kiran Kumar Patel, delivering professional IT solutions including web application development, mobile application development, business automation and digital marketing services.
+  content: With more than eight years of industry experience, we support small and large businesses seeking reliable, secure and scalable IT solutions tailored to their operational requirements.
 
-## our works
-works:
-  subtitle: OUR WORKS
-  title: What We Do
+#services
+services:
+  subtitle: WHAT WE DO
+  title: Our Digital & IT Services
   list:
-    - title: Building A New Class
-      content: Decade of engineering under his belt, Jeremie is responsible for technical infrastructure and feature development. In Flow, wherever things just work is understanding developing complex systems
-    - title: Design For Anyone
-      content: Decade of engineering under his belt, Jeremie is responsible for technical infrastructure and feature development. In Flow, wherever things just work is understanding developing complex systems
-    - title: Creative Flair Design
-      content: Decade of engineering under his belt, Jeremie is responsible for technical infrastructure and feature development. In Flow, wherever things just work is understanding developing complex systems
-    - title: Building Products
-      content: Decade of engineering under his belt, Jeremie is responsible for technical infrastructure and feature development. In Flow, wherever things just work is understanding developing complex systems
+    - title: Software & Web Development
+      content: We help businesses build and strengthen their online presence through custom websites and web-based applications designed to meet clear business objectives and long-term growth plans.
+      url: /images/service/choose/why1.jpg
 
-## our mission
-mission:
-  subtitle: OUR MISSION
-  title: Main Vision And Mission Of Our Company
-  content: We were freelance designers and developers, constantly finding ourselve deep vague feedback. leaving a notes from the sticky note piece .
-  image: /images/about/02.jpg
+    - title: Mobile Application Development
+      content: We develop mobile applications that improve efficiency, support automation and encourage business growth, with a strong focus on usability and real-world performance.
+      url: /images/service/choose/why2.jpg
 
-## short video
-video:
-  subtitle: A SHORT VIDEO
-  title: You Take Care Of The Payments, We Take Care Of The Rest.
-  description: Protect your design vision and leave nothing up to interpretation with interaction recipes. Quickly share and access all your team members interactions by using libraries, ensuring consistcy throughout the.
-  video_id: dyZcRRWiuuw
-  thumbnail: /images/about/video-popup-2.jpg
+    - title: Business Automation
+      content: We assist businesses that rely on manual processes by delivering customised software and automation solutions that improve productivity and operational efficiency.
+      url: /images/service/choose/why3.jpg
 
-## clients
+    - title: Digital Marketing Services
+      content: Our digital marketing services help businesses increase visibility, improve online reach and connect with target customers across Perth and Western Australia.
+      url: /images/service/choose/why4.jpg
+
+#process
+process:
+  subtitle: OUR WORKING APPROACH
+  title: How We Deliver Reliable Solutions
+  steps:
+    - title: Meet and Plan
+      content: We begin by understanding your business goals, objectives and operational challenges to design the most effective digital strategy.
+
+    - title: Design and Refine
+      content: We create user-friendly interfaces focused on strong user experience and functionality, ensuring visitors can easily engage and convert.
+
+    - title: Build and Test
+      content: During development, solutions are tested within secure environments to identify and resolve issues before deployment.
+
+    - title: Launch and Track
+      content: Once testing is complete, the solution goes live and becomes accessible to users, while we monitor performance and ensure smooth operation.
+
+#clients
 clients:
-  subtitle: OUR CLIENTS
-  title: Trusted By Thousands Companies
-  brands:
-    - /images/brands/01-colored.png
-    - /images/brands/02-colored.png
-    - /images/brands/03-colored.png
-    - /images/brands/04-colored.png
-    - /images/brands/05-colored.png
-    - /images/brands/06-colored.png
-    - /images/brands/04-colored.png
-    - /images/brands/05-colored.png
-    - /images/brands/06-colored.png
-
-
-## members
-our_member:
-  subtitle: OUR MEMBERS
-  title: The People Behind
-  content: We were freelance designers and developers, constantly finding </br> ourselves deep in vague feedback. This made every client and team
+  subtitle: WHO WE WORK WITH
+  title: Supporting Businesses Across Western Australia
   list:
-    - name: Valentin Staykov
-      field: Operations
-      image: /images/about/team/01.jpg
-    - name: Bukiakta Bansalo
-      field: Product
-      image: /images/about/team/02.jpg
-    - name: Ortrin Okaster
-      field: Engineering
-      image: /images/about/team/03.jpg
-
-## office
-our_office:
-  subtitle: OUR OFFICES
-  title: Made With Love Of Around The </br> World With Many Offices
-  content: We were freelance designers and developers, constantly finding </br> ourselves deep in vague feedback. This made every client and team
-  countries:
-    - flag: /images/about/flags/us.png
-      name: NewYork, USA
-      location: 219 Bald Hill Drive Oakland Gardens, NY 11364
-    - flag: /images/about/flags/au.png
-      name: Australia, Perth
-      location: Flat 23 80 Anthony Circlet Port Guiseppe, TAS 2691
-    - flag:  /images/about/flags/germany.png
-      name: Berlin, Germany
-      location: Jl Raya Dewi Sartika Ged Harapan Masa, Br Germeny
-    - flag:  /images/about/flags/china.png
-      name: China, Wohan
-      location: 1hao Wen Ti Huo Dong Zhong Xin 1ceng Jian Xing
-
+    - Small businesses looking to build a strong online presence
+    - Businesses seeking custom software and automation solutions
+    - Companies requiring reliable and scalable IT support
+    - Organisations across Perth and Western Australia
 ---
-
