@@ -37,7 +37,7 @@ const ServicePanel = ({ services }) => {
           {markdownify(
             services.title,
             "h2",
-            "mt-2 text-2xl sm:text-3xl md:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent leading-relaxed",
+            "mt-2 text-2xl sm:text-3xl md:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent leading-relaxed pb-1 section-title",
           )}
           {markdownify(
             services.description,
@@ -46,7 +46,6 @@ const ServicePanel = ({ services }) => {
           )}
         </div>
 
-        {/* -------- MOBILE VERSION -------- */}
         <div className="lg:hidden space-y-8">
           {services.list.map((service, index) => (
             <div key={index} className="rounded-xl border border-gray-200 p-6">
@@ -71,7 +70,6 @@ const ServicePanel = ({ services }) => {
           ))}
         </div>
 
-        {/* -------- DESKTOP VERSION -------- */}
         <div className="hidden lg:flex h-[400px] gap-4">
           {services.list.map((service, index) => {
             const isActive = active === index;

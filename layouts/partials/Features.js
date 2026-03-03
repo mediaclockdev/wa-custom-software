@@ -69,7 +69,7 @@ const Features = ({ features }) => {
                   rotate: rotations[index],
                   boxShadow: "0px 35px 80px rgba(0,0,0,0.18)",
                 }}
-                transition={{ type: "spring", stiffness: 180, damping: 20 }}
+                transition={{ type: "spring", stiffness: 120, damping: 20 }}
                 className="w-[260px] sm:w-[320px] h-[450px] rounded-2xl p-8 shadow-xl cursor-pointer relative"
                 style={{
                   background: color.bg,
