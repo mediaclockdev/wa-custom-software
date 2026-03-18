@@ -22,7 +22,7 @@ function highlightFounder(text) {
 
 export default function AboutSection({ about }) {
   return (
-    <section className="section min-h-dvh flex items-center">
+    <section className="section min-h-[50dvh] flex items-center">
       <div className="container text-center relative">
         {/* Soft Background Accent */}
         <div className="absolute -top-32 -right-32 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[120px]" />
@@ -39,21 +39,17 @@ export default function AboutSection({ about }) {
               )}
             </div>
 
-            <div className="animate w-20 h-1 bg-secondary mt-6 rounded-full" />
-
-            <p className="animate mt-6 text-gray-600 leading-relaxed text-base">
+            <p className="animate mt-4 text-xl">
               {highlightFounder(about.description)}
             </p>
 
-            <p className="animate mt-4 text-gray-500 leading-relaxed text-base">
               {markdownify(
                 about.content,
                 "p",
-                "text-gray-500 leading-relaxed text-base",
+                "animate mt-4 text-lg",
               )}
-            </p>
 
-            <div className="animate my-4">
+            <div className="animate mt-6">
               <ButtonLink href="/about" title="Learn More" />
             </div>
           </div>

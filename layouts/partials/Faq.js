@@ -10,14 +10,14 @@ const Faq = ({ faq }) => {
   if (!faq) return null;
 
   return (
-    <section className="section min-h-dvh flex items-center bg-gradient-to-b from-theme-light/80 via-white to-theme-light/40">
+    <section className="section min-h-[50dvh] flex items-center bg-gradient-to-b from-theme-light/80 via-white to-theme-light/40">
       <div className="container w-[80%]">
         {/* Title */}
         <div className="animate text-center">
           {markdownify(
             faq.title,
             "h2",
-            "mt-2 text-2xl sm:text-3xl md:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent leading-relaxed section-title",
+            "mt-2 text-2xl sm:text-3xl md:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent leading-relaxed pb-1 section-title",
           )}
         </div>
 

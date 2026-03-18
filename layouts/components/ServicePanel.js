@@ -30,7 +30,7 @@ const ServicePanel = ({ services }) => {
   };
 
   return (
-    <section className="section min-h-dvh flex items-center">
+    <section className="section min-h-[50dvh] flex items-center">
       <div className="container text-center">
         <div className="animate mb-10">
           <p className="uppercase">{services.subtitle}</p>

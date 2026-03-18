@@ -71,7 +71,8 @@ const Header = () => {
     <>
       <header
         ref={headerRef}
-        className={`my-2 mb-auto container sticky top-2 z-50 transition-all duration-300 ${direction === 1 ? "-translate-y-full" : "translate-y-0"}`}
+        // className={`my-2 mb-auto container sticky top-2 z-50 transition-all duration-300 ${direction === 1 ? "-translate-y-full" : "translate-y-0"}`}
+        className={`my-2 mb-auto container sticky top-2 z-50 transition-all duration-300`}
       >
         <nav className="navbar w-full bg-white py-2 px-4 rounded-full border border-slate-300  relative">
           <div className="order-0">
@@ -90,7 +91,7 @@ const Header = () => {
                   {!item.children && (
                     <Link
                       href={item.url}
-                      className={`relative text-base p-2 rounded-full px-4 border border-transparent transition-all duration-300 hover:bg-[#FAF5F3] hover:shadow-sm ${
+                      className={`relative text-lg p-2 rounded-full px-4 border border-transparent transition-all duration-300 hover:bg-[#FAF5F3] hover:shadow-sm font-medium text-slate-800 ${
                         isActive
                           ? "text-primary font-medium bg-[#FAF5F3] border-slate-300"
                           : ""
@@ -103,7 +104,7 @@ const Header = () => {
                   {item.children && (
                     <>
                       <span
-                        className={`flex items-center gap-1 text-base cursor-pointer ${isParentActive ? "text-primary bg-[#FAF5F3] font-medium rounded-full px-4 py-2 border border-slate-300" : "text-gray-700 hover:bg-gray-50 rounded-full px-4 py-2 transition-all duration-300"}`}
+                        className={`flex items-center gap-1 text-lg cursor-pointer ${isParentActive ? "text-primary bg-[#FAF5F3] font-medium rounded-full px-4 py-2 border border-slate-300" : "text-gray-800 hover:bg-gray-50 rounded-full px-4 py-2 transition-all duration-300 text-lg font-medium"}`}
                       >
                         {item.name}
                         <FaAngleDown
@@ -117,10 +118,10 @@ const Header = () => {
                           <li key={j}>
                             <Link
                               href={child.url}
-                              className={`block px-4 py-3 text-sm rounded-lg hover:bg-gray-50 transition ${
+                              className={`block px-4 py-3 text-lg rounded-lg hover:bg-gray-50 transition font-medium ${
                                 asPath === child.url
                                   ? "text-secondary font-medium"
-                                  : "text-gray-700"
+                                  : "text-gray-900"
                               }`}
                             >
                               {child.name}

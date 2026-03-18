@@ -26,10 +26,10 @@ const Cards = ({ item, index, range, targetScale, progress }) => {
         style={{ scale }}
       >
         <div className="flex-1 text-start">
-          <h3 className="text-4xl tracking-wide mb-5 mt-6 text-start">
+          <h3 className="text-4xl mb-5 mt-6 text-start">
             {item.title}
           </h3>
-          <p className="text-lg tracking-wide line-clamp-6 text-start">
+          <p className="text-lg line-clamp-6 text-start">
             {item.content}
           </p>
         </div>
@@ -68,7 +68,7 @@ const ServiceFeatures = ({ services }) => {
           {markdownify(
             services.description,
             "p",
-            "mt-4 text-base section-title",
+            "mt-4 animate text-lg section-title",
           )}
         </div>
         <div className="w-full min-h-screen flex flex-col items-center">

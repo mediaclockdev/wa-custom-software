@@ -9,10 +9,10 @@ const Contact = ({ data }) => {
   const { title } = frontmatter;
 
   return (
-    <section className="py-20">
+    <section className="section">
       <Banner title={title} />
 
-      <div className="container mt-16">
+      <div className="container ">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           {/* Left Image */}
           <div className="flex justify-center">

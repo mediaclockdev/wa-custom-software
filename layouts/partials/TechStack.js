@@ -42,20 +42,20 @@ const TechStack = ({ technologies }) => {
   if (!technologies) return null;
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-white via-slate-50 to-white min-h-dvh flex items-center my-10">
+    <section className="relative overflow-hidden bg-gradient-to-b from-white via-slate-50 to-white min-h-[50dvh] flex items-center my-10">
       <div className="hidden md:block absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl opacity-30" />
       <div className="hidden md:block absolute bottom-10 right-10 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl opacity-30" />
 
       <div className="container relative z-10">
         <div className="text-center max-w-3xl mx-auto">
-          <p className="text-md sm:text-base uppercase tracking-wider font-medium">
+          <p className="uppercase">
             {technologies.subtitle}
           </p>
 
           {markdownify(
             technologies.title,
             "h2",
-            "mt-2 text-2xl sm:text-3xl md:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent leading-relaxed section-title",
+            "mt-2 text-2xl sm:text-3xl md:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent leading-relaxed pb-1 section-title",
           )}
         </div>
 

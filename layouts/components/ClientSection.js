@@ -29,7 +29,7 @@ export default function ClientsSection({ clients }) {
   };
 
   return (
-    <section className="section min-h-dvh flex items-center">
+    <section className="section min-h-[50dvh] flex items-center">
       <div className="container text-center">
         <div className="relative py-24 bg-gray-50 overflow-hidden">
           {/* Soft Orange Glow */}
@@ -70,7 +70,7 @@ export default function ClientsSection({ clients }) {
                 >
                   <div className="flex items-start gap-4">
                     <div className="w-3 h-3 mt-2 bg-secondary rounded-full shrink-0" />
-                    <p className="text-gray-700">{item}</p>
+                    <p className="text-gray-700 text-lg">{item}</p>
                   </div>
                 </motion.div>
               ))}

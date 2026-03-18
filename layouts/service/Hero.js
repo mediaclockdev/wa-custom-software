@@ -37,16 +37,16 @@ export default function Hero({ banner, isParticle = false }) {
   const parts = banner?.title?.split(/<\/?br\s*\/?>/i);
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-bg-light to-white py-10 lg:py-18 min-h-[calc(100dvh-50px)] flex items-center">
+    <section className="relative overflow-hidden bg-gradient-to-br from-bg-light to-white py-10 lg:py-18 min-h-[calc(100dvh-50px)] 2xl:min-h-[50vh] flex items-center">
       {isParticle ? <ParticlesComponent /> : null}
-      <div className="container mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-5 items-center">
         {/* LEFT SIDE */}
         <div className="z-10 flex flex-col items-start gap-5">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="text-4xl lg:text-6xl font-bold leading-tight text-gray-900"
+            className="text-4xl lg:text-6xl font-bold leading-relaxed text-gray-900"
           >
             {parts?.map((part, i) => {
               if (i === parts.length - 1) {
@@ -74,8 +74,8 @@ export default function Hero({ banner, isParticle = false }) {
             transition={{ delay: 0.2, duration: 0.7 }}
             className="animate mt-3 text-lg text-text max-w-xl"
           >
-            {banner?.content
-              ? banner.content
+            {banner?.description
+              ? banner.description
               : "High-performance web development, scalable solutions, and stunning UI/UX to help your brand stand out in the digital world."}
           </motion.p>
 

@@ -9,16 +9,14 @@ const ServiceValue = ({ value }) => {
   if (!value) return null;
 
   return (
-    <section className="section min-h-dvh flex items-center bg-gradient-to-b from-theme-light/80 via-white to-theme-light/40">
+    <section className="section min-h-[50dvh] flex items-center bg-gradient-to-b from-theme-light/80 via-white to-theme-light/40">
       <div className="container">
         <div className="animate text-center max-w-3xl mx-auto">
-          <p className="uppercase tracking-wider text-sm font-medium">
-            {value.subtitle}
-          </p>
+          <p className="uppercase">{value.subtitle}</p>
           {markdownify(
             value.title,
             "h2",
-            "mt-2 section-title text-2xl sm:text-3xl md:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent leading-relaxed",
+            "mt-2 text-2xl sm:text-3xl md:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent leading-relaxed pb-1 section-title",
           )}
         </div>
 
@@ -38,17 +36,13 @@ const ServiceValue = ({ value }) => {
                 </span>
 
                 <div className="flex items-center justify-center gap-10 flex-col sm:flex-row">
-                  <div className="relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-secondary/10 text-secondary text-2xl transition-all duration-300 group-hover:bg-primary group-hover:text-white">
-                    <Icon size={26} />
+                  <div className="relative z-10 flex h-20 w-20 shrink-0 items-center justify-center rounded-xl bg-secondary/10 text-secondary text-2xl transition-all duration-300 group-hover:bg-primary group-hover:text-white">
+                    <Icon size={36} />
                   </div>
 
                   <div className="relative z-10">
-                    <h3 className="mb-1 text-2xl font-semibold text-dark">
-                      {item.title}
-                    </h3>
-                    <p className="text-text leading-relaxed text-base">
-                      {item.content}
-                    </p>
+                    <h3 className="mb-2 text-3xl  text-dark">{item.title}</h3>
+                    <p className="text-text  text-lg">{item.content}</p>
                   </div>
                 </div>
               </div>

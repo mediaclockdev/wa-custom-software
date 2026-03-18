@@ -17,21 +17,22 @@
 }
 
 @layer swiper {
-  @import '../node_modules/swiper/swiper.scss';
-  @import 'swiper/scss/pagination';
-  @import './swiper.scss';
+  @import "../node_modules/swiper/swiper.scss";
+  @import "swiper/scss/pagination";
+  @import "./swiper.scss";
 }
 
 .perspective {
   perspective: 1000px;
 }
 
-button, a, li {
+button,
+a,
+li {
   cursor: pointer;
 }
 
 #tsparticles {
-  
   width: 100%;
   height: 100%;
   // z-index: -10;

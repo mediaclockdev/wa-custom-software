@@ -10,6 +10,8 @@ banner:
   link:
     label: Talk to Our Experts
     href: /contact
+  description: Reliable web development services in Perth for businesses seeking scalable digital platforms.
+  
 
 brands:
   - /images/brands/01-colored.png

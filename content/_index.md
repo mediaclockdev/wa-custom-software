@@ -74,13 +74,20 @@ expertise:
   subtitle: AREAS OF EXPERTISE
   title: Our Development Expertise in Perth
   list:
-    - Mobile Application Development
-    - Android App Developers in Perth
-    - iOS App Developers in Perth
-    - Custom Software Development in Perth
-    - Web Development Agency
-    - Web Design Services
-    - Digital Marketing Support
+    - title: Mobile Application Development
+      link: /mobile-app-development
+    - title: Android App Developers in Perth
+      link: /android-app-development
+    - title: iOS App Developers in Perth
+      link: /ios-app-development
+    - title: Custom Software Development in Perth
+      link: /custom-software-development
+    - title: Web Development Agency
+      link: /web-development
+    - title: Web Design Services
+      link: /web-design
+    - title: Digital Marketing Support
+      link: /digital-marketing
 
 #faq
 faq:

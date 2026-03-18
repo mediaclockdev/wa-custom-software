@@ -1,7 +1,8 @@
 "use client";
 
 import { markdownify } from "@lib/utils/textConverter";
-import { motion, stagger } from "framer-motion";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Expertise = ({ expertise }) => {
   const containerVariants = {
@@ -28,7 +29,7 @@ const Expertise = ({ expertise }) => {
   };
 
   return (
-    <section className="section min-h-dvh flex items-center">
+    <section className="section min-h-[50dvh] flex items-center">
       <div className="container text-center">
         {/* Title */}
         <div className="animate mb-10">
@@ -66,11 +67,15 @@ const Expertise = ({ expertise }) => {
                 stiffness: 250,
                 damping: 18,
               }}
-              className="px-6 py-3 rounded-full text-sm md:text-base font-medium 
-              bg-white text-primary border border-gray-200 shadow-sm
-              hover:shadow-lg hover:border-secondary/50 transition-colors duration-300 cursor-pointer"
             >
-              {item}
+              <Link
+                href={item.link}
+                className="px-6 py-3 rounded-full text-sm md:text-base font-medium 
+              bg-white text-primary border border-gray-200 shadow-sm
+                hover:shadow-lg hover:border-secondary/50 transition-colors duration-300 cursor-pointer inline-block"
+              >
+                {item.title}
+              </Link>
             </motion.div>
           ))}
         </motion.div>

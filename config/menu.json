@@ -25,7 +25,7 @@
         },
         {
           "name": "Digital Marketing",
-          "url": "/digital-marketing-perth"
+          "url": "/digital-marketing"
         }
       ]
     },
@@ -38,26 +38,19 @@
       "url": "/contact"
     }
   ],
-  "footer": [
-    {
-      "name": "Mobile App Development",
-      "url": "/mobile-app-development"
-    },
-    {
-      "name": "Android App Development",
-      "url": "/android-app-development"
-    },
-    {
-      "name": "iOS App Development",
-      "url": "/ios-app-development"
-    },
-    {
-      "name": "Web Design Perth",
-      "url": "/web-design-perth"
-    },
-    {
-      "name": "Digital Marketing",
-      "url": "/digital-marketing-perth"
-    }
-  ]
+  "footer": {
+    "quick_links": [
+      { "name": "Home", "url": "/" },
+      { "name": "About Us", "url": "/about" },
+      { "name": "Blog", "url": "/blog" },
+      { "name": "Contact Us", "url": "/contact" }
+    ],
+    "services": [
+      { "name": "Mobile App Development", "url": "/mobile-app-development" },
+      { "name": "Android App Development", "url": "/android-app-development" },
+      { "name": "iOS App Development", "url": "/ios-app-development" },
+      { "name": "Web Design Perth", "url": "/web-design-perth" },
+      { "name": "Digital Marketing", "url": "/digital-marketing" }
+    ]
+  }
 }
