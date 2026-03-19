@@ -25,7 +25,22 @@ const fadeUp = {
 const Footer = () => {
   const { copyright, footer_content } = config.params;
   const { email, phone, location } = config.contact_info;
-  const { quick_links, services } = menu.footer;
+  const { quick_links } = menu.footer;
+
+  const servicesData = menu.main.find((item) => item.name === "Services");
+
+  const featuredServices = [
+    "/mobile-app-development",
+    "/web-development",
+    "/web-design",
+    "/digital-marketing",
+    "/custom-software-development",
+  ];
+
+  const services =
+    servicesData?.groups
+      ?.flatMap((group) => group.items)
+      .filter((item) => featuredServices.includes(item.url)) || [];
 
   return (
     <footer className="relative bg-gradient-to-b bg-white text-gray-700">
@@ -33,7 +48,7 @@ const Footer = () => {
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
 
       <div className="container relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 py-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-10">
           {/* About + Social */}
           <motion.div
             variants={fadeUp}
@@ -41,13 +56,11 @@ const Footer = () => {
             whileInView="show"
             viewport={{ once: true }}
             custom={0}
-            className="text-center"
+            className=""
           >
-        
+            <Logo />
 
-            <Logo className={"mx-auto"} />
-
-            <div className="mt-5 text-sm leading-relaxed text-gray-600 max-w-[90%]">
+            <div className="mt-5 text-sm leading-relaxed text-gray-600 max-w-[80%]">
               {markdownify(footer_content)}
             </div>
 
@@ -67,7 +80,7 @@ const Footer = () => {
             whileInView="show"
             viewport={{ once: true }}
             custom={1}
-            className="text-center"
+            className=""
           >
             <h3 className="text-lg font-semibold text-gray-900 mb-6">
               Connect
@@ -85,7 +98,7 @@ const Footer = () => {
             <div className="mt-6">
               <Social
                 source={social}
-                className="flex items-center justify-center gap-4 text-2xl text-gray-500 hover:[&>*]:text-primary transition-all"
+                className="flex items-center justify-start gap-4 text-2xl text-gray-500 hover:[&>*]:text-primary transition-all"
               />
             </div>
           </motion.div>
@@ -97,7 +110,7 @@ const Footer = () => {
             whileInView="show"
             viewport={{ once: true }}
             custom={2}
-            className="text-center"
+            className=""
           >
             <h3 className="text-lg font-semibold text-gray-900 mb-6">
               Quick Links
@@ -119,14 +132,7 @@ const Footer = () => {
           </motion.div>
 
           {/* Services */}
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            custom={3}
-            className="text-center"
-          >
+          <div>
             <h3 className="text-lg font-semibold text-gray-900 mb-6">
               Services
             </h3>
@@ -139,12 +145,12 @@ const Footer = () => {
                     className="group relative inline-block text-sm text-gray-600 hover:text-primary transition duration-300"
                   >
                     {item.name}
-                    <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full" />
+                    <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-primary transition-all duration-400 group-hover:w-full" />
                   </Link>
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
           {/* Contact Details */}
           <motion.div
@@ -153,7 +159,7 @@ const Footer = () => {
             whileInView="show"
             viewport={{ once: true }}
             custom={4}
-            className="text-center"
+            className=""
           >
             <h3 className="text-lg font-semibold text-gray-900 mb-6">
               Contact
@@ -177,7 +183,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-gray-200 py-4 text-center text-sm text-gray-500">
+        <div className="border-t border-gray-200 py-4  text-sm text-gray-500">
           {markdownify(copyright)}
         </div>
       </div>

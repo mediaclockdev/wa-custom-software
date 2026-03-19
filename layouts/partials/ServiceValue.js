@@ -1,6 +1,6 @@
 "use client";
 
-import { markdownify } from "@lib/utils/textConverter";
+import SectionHeader from "@layouts/components/SectionHeader";
 import { FaCogs, FaChartLine, FaExpandArrowsAlt } from "react-icons/fa";
 
 const icons = [FaCogs, FaChartLine, FaExpandArrowsAlt];
@@ -11,14 +11,11 @@ const ServiceValue = ({ value }) => {
   return (
     <section className="section min-h-[50dvh] flex items-center bg-gradient-to-b from-theme-light/80 via-white to-theme-light/40">
       <div className="container">
-        <div className="animate text-center max-w-3xl mx-auto">
-          <p className="uppercase">{value.subtitle}</p>
-          {markdownify(
-            value.title,
-            "h2",
-            "mt-2 text-2xl sm:text-3xl md:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent leading-relaxed pb-1 section-title",
-          )}
-        </div>
+        <SectionHeader
+          subtitle={value.subtitle}
+          title={value.title}
+          description={value.description}
+        />
 
         <div className="animate mt-16 max-w-4xl mx-auto space-y-8">
           {value.list.map((item, i) => {
@@ -41,8 +38,12 @@ const ServiceValue = ({ value }) => {
                   </div>
 
                   <div className="relative z-10">
-                    <h3 className="mb-2 text-3xl  text-dark">{item.title}</h3>
-                    <p className="text-text  text-lg">{item.content}</p>
+                    <h3 className="mb-2 text-2xl lg:text-3xl  text-dark">
+                      {item.title}
+                    </h3>
+                    <p className="text-text text-base lg:text-lg">
+                      {item.content}
+                    </p>
                   </div>
                 </div>
               </div>

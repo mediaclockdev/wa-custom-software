@@ -63,6 +63,7 @@ services:
 why:
   subtitle: WHY CHOOSE US
   title: Why Choose Our Mobile App Development Services?
+  description: If you're a start-up building your first app, or an established company looking to improve its digital platform, we can provide customized solutions that will ensure longevity and success.
   list:
     - title: End-to-End Development
       content: We provide complete mobile app development services from initial concept and strategy to design, development, deployment, and ongoing support.
@@ -85,6 +86,7 @@ why:
 process:
   subtitle: OUR APPROACH
   title: Our Mobile App Development Approach
+  description: Our mobile strategy for app development is built around innovation, flexibility and a thorough knowledge of the Western Australian business environment.
   steps:
     - title: Requirement Analysis
       content: We examine your business goals, target users, and functional requirements to define a clear project direction.
@@ -107,25 +109,40 @@ process:
 technologies:
   subtitle: TECHNOLOGY STACK
   title: Mobile Technologies We Use
-  list:
-    - Swift
-    - Kotlin
-    - Java
-    - C#
-    - TypeScript
-    - Flutter
-    - Angular
-    - Cordova
-    - ASP.Net
-    - Node.js
-    - Figma
-    - Sketch
-    - HTML
-    - CSS
-    - Firebase
-    - AWS
-    - Google Cloud
-    - Third-party integrations
+  description: Our team works with a modern and scalable technology stack to build high-performance mobile applications.
+
+  groups:
+    - title: Languages
+      items:
+        - Swift
+        - Kotlin
+        - Java
+        - C#
+        - TypeScript
+
+    - title: Frameworks & Backend
+      items:
+        - Angular
+        - AngularJS
+        - Cordova
+        - ASP.Net
+        - Node.js
+
+    - title: Cloud & Services
+      items:
+        - Firebase
+        - AWS
+        - Google Cloud
+
+    - title: Frontend Technologies
+      items:
+        - HTML
+        - CSS
+
+    - title: Design Tools
+      items:
+        - Figma
+        - Sketch
 
 faq:
   title: Mobile App Development FAQs

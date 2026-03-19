@@ -1,8 +1,10 @@
 "use client";
-const {motion} = require("framer-motion");
+const { motion } = require("framer-motion");
 
 export const AnimatedText = ({ text }) => {
   const letters = text.trim().split("");
+
+  const words = text.trim().split(" ");
 
   const container = {
     hidden: {},
@@ -25,14 +27,14 @@ export const AnimatedText = ({ text }) => {
       animate="visible"
       className="inline-block"
     >
-      {letters.map((letter, index) => (
-        <motion.span
-          key={index}
-          variants={child}
-          className="inline-block"
-        >
-          {letter === " " ? "\u00A0" : letter}
-        </motion.span>
+      {words.map((word, wordIndex) => (
+        <span key={wordIndex} className="inline-block whitespace-nowrap mr-2">
+          {word.split("").map((letter, index) => (
+            <motion.span key={index} variants={child} className="inline-block">
+              {letter}
+            </motion.span>
+          ))}
+        </span>
       ))}
     </motion.span>
   );

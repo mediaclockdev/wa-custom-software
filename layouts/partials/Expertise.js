@@ -1,5 +1,6 @@
 "use client";
 
+import SectionHeader from "@layouts/components/SectionHeader";
 import { markdownify } from "@lib/utils/textConverter";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -29,22 +30,13 @@ const Expertise = ({ expertise }) => {
   };
 
   return (
-    <section className="section min-h-[50dvh] flex items-center">
+    <section className="section min-h-[30dvh] flex items-center">
       <div className="container text-center">
-        {/* Title */}
-        <div className="animate mb-10">
-          <p className="uppercase">{expertise.subtitle}</p>
-          {markdownify(
-            expertise.title,
-            "h2",
-            "mt-2 text-2xl sm:text-3xl md:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent leading-relaxed",
-          )}
-          {markdownify(
-            expertise.description,
-            "p",
-            "mt-4 text-base section-title",
-          )}
-        </div>
+        <SectionHeader
+          subtitle={expertise.subtitle}
+          title={expertise.title}
+          description={expertise.description}
+        />
 
         {/* Expertise Tags */}
         <motion.div

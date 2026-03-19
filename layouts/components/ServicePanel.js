@@ -1,8 +1,8 @@
 "use client";
 
-import { markdownify } from "@lib/utils/textConverter";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import SectionHeader from "./SectionHeader";
 
 const ServicePanel = ({ services }) => {
   const [active, setActive] = useState(0);
@@ -32,19 +32,11 @@ const ServicePanel = ({ services }) => {
   return (
     <section className="section min-h-[50dvh] flex items-center">
       <div className="container text-center">
-        <div className="animate mb-10">
-          <p className="uppercase">{services.subtitle}</p>
-          {markdownify(
-            services.title,
-            "h2",
-            "mt-2 text-2xl sm:text-3xl md:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent leading-relaxed pb-1 section-title",
-          )}
-          {markdownify(
-            services.description,
-            "p",
-            "mt-4 text-base section-title",
-          )}
-        </div>
+        <SectionHeader
+          subtitle={services.subtitle}
+          title={services.title}
+          description={services.description}
+        />
 
         <div className="lg:hidden space-y-8">
           {services.list.map((service, index) => (
@@ -70,7 +62,7 @@ const ServicePanel = ({ services }) => {
           ))}
         </div>
 
-        <div className="hidden lg:flex h-[400px] gap-4">
+        <div className="hidden lg:flex md:h-[550px] gap-4">
           {services.list.map((service, index) => {
             const isActive = active === index;
 
@@ -81,7 +73,7 @@ const ServicePanel = ({ services }) => {
                 onMouseEnter={() => setActive(index)}
                 className="relative overflow-hidden rounded-2xl cursor-pointer"
                 animate={{
-                  flex: isActive ? 3 : 1,
+                  flex: isActive ? 2 : 1,
                 }}
                 transition={{
                   duration: 0.5,
@@ -100,7 +92,7 @@ const ServicePanel = ({ services }) => {
                 {/* Content */}
                 <div className="relative p-10 h-full flex flex-col justify-between">
                   <h3
-                    className={`text-2xl font-semibold transition ${
+                    className={`text-3xl font-semibold transition ${
                       isActive ? "text-white" : "text-[#24326A]"
                     }`}
                   >
@@ -115,7 +107,7 @@ const ServicePanel = ({ services }) => {
                   >
                     <motion.p
                       variants={item}
-                      className={`mb-6 text-base ${
+                      className={`mb-6 text-lg ${
                         isActive ? "text-white/90" : "text-gray-600"
                       }`}
                     >
@@ -127,7 +119,7 @@ const ServicePanel = ({ services }) => {
                         <motion.li
                           key={i}
                           variants={item}
-                          className={`flex items-center gap-2 text-base ${
+                          className={`flex items-center gap-2 text-lg ${
                             isActive ? "text-white" : "text-gray-700"
                           }`}
                         >

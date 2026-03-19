@@ -33,6 +33,8 @@ const Features = ({ features }) => {
     settings: FiSettings,
   };
 
+  if(!features) return null;
+
   return (
     <section className="section min-h-[50dvh] flex items-center">
       <div className="container text-center">
@@ -42,7 +44,7 @@ const Features = ({ features }) => {
           {markdownify(
             features.title,
             "h2",
-            "mt-2 text-2xl sm:text-3xl md:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent leading-relaxed",
+            "mt-2 text-3xl lg:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent",
           )}
           {markdownify(
             features.description,
@@ -70,7 +72,7 @@ const Features = ({ features }) => {
                   boxShadow: "0px 35px 80px rgba(0,0,0,0.18)",
                 }}
                 transition={{ type: "spring", stiffness: 120, damping: 20 }}
-                className="w-[260px] sm:w-[320px] h-[450px] rounded-2xl p-8 shadow-xl cursor-pointer relative"
+                className="w-[260px] sm:w-[380px] min-h-[450px] rounded-2xl p-8 shadow-xl cursor-pointer relative"
                 style={{
                   background: color.bg,
                   color: color.text,
@@ -89,7 +91,22 @@ const Features = ({ features }) => {
                     {item.title}
                   </h3>
 
-                  <p className="text-base opacity-80 mt-6">{item.content}</p>
+                  <p className="text-lg opacity-80 mt-4">{item.content}</p>
+
+                  {/* Bullet points */}
+                  <ul className="mt-4 space-y-2">
+                    {item.points?.map((point, i) => (
+                      <li key={i} className="text-base flex items-start gap-2">
+                        <span
+                          className="mt-[2px]"
+                          style={{ color: color.bullet }}
+                        >
+                          •
+                        </span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
                 {/* glow */}

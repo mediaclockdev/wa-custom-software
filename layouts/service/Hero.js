@@ -37,7 +37,7 @@ export default function Hero({ banner, isParticle = false }) {
   const parts = banner?.title?.split(/<\/?br\s*\/?>/i);
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-bg-light to-white py-10 lg:py-18 min-h-[calc(100dvh-50px)] 2xl:min-h-[50vh] flex items-center">
+    <section className="relative overflow-hidden bg-gradient-to-br from-bg-light to-white py-10 lg:py-18 min-h-[calc(50dvh-50px)] lg:min-h-[50vh] flex items-center">
       {isParticle ? <ParticlesComponent /> : null}
       <div className="container mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-5 items-center">
         {/* LEFT SIDE */}
@@ -46,14 +46,14 @@ export default function Hero({ banner, isParticle = false }) {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="text-4xl lg:text-6xl font-bold leading-relaxed text-gray-900"
+            className="text-5xl lg:text-6xl font-bold  text-gray-900 "
           >
             {parts?.map((part, i) => {
               if (i === parts.length - 1) {
                 return (
                   <span
                     key={i}
-                    className="block bg-gradient-to-r from-primary via-blue-400 to-primary bg-[length:200%_100%] bg-clip-text text-transparent"
+                    className="block bg-gradient-to-r from-primary via-blue-400 to-primary bg-[length:200%_100%] bg-clip-text text-transparent pb-2"
                   >
                     <AnimatedText text={part} />
                   </span>
@@ -87,7 +87,7 @@ export default function Hero({ banner, isParticle = false }) {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="relative flex justify-center items-center perspective">
+        <div className="relative hidden lg:flex justify-center items-center perspective">
           <motion.div
             animate={{
               y: [0, -15, 0, 15, 0],

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { markdownify } from "@lib/utils/textConverter";
 import { FaChevronDown } from "react-icons/fa";
+import SectionHeader from "@layouts/components/SectionHeader";
 
 const Faq = ({ faq }) => {
   const [active, setActive] = useState(null);
@@ -11,13 +12,13 @@ const Faq = ({ faq }) => {
 
   return (
     <section className="section min-h-[50dvh] flex items-center bg-gradient-to-b from-theme-light/80 via-white to-theme-light/40">
-      <div className="container w-[80%]">
+      <div className="container lg:w-[80%]">
         {/* Title */}
         <div className="animate text-center">
           {markdownify(
             faq.title,
             "h2",
-            "mt-2 text-2xl sm:text-3xl md:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent leading-relaxed pb-1 section-title",
+            "mt-2 text-3xl lg:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent lg:leading-relaxed pb-1 section-title",
           )}
         </div>
 
@@ -59,7 +60,7 @@ const Faq = ({ faq }) => {
                       transition={{ duration: 0.25 }}
                     >
                       <FaChevronDown
-                        className={`transition-colors duration-300 ${
+                        className={`transition-colors duration-300 ml-1 ${
                           isActive ? "text-primary" : "text-slate-400"
                         }`}
                       />

@@ -21,7 +21,7 @@ brands:
 
 intro:
   subtitle: IOS DEVELOPMENT SPECIALISTS
-  title: Build Premium iOS Applications for the Apple Ecosystem
+  title: iOS App Developers in Perth, Australia
   description: |
     At Western Australia Development Company, we specialise in building premium iOS applications that empower Perth-based businesses to reach the high-value Apple ecosystem. While global Android holds the largest market share, iOS remains the second most widely used mobile platform and continues to provide strong monetisation and user-loyalty opportunities.<br> </br>Our Perth-based team is experienced in the unique requirements of the Apple ecosystem native iOS development, App Store deployment, Swift/Objective-C architecture, and ongoing support. Whether you’re launching a new app or migrating an existing Android project into iOS, we provide a full suite of services tailored to the Western Australian market and beyond.
 
@@ -41,22 +41,22 @@ services:
       url: /images/service/choose/why2.jpg
 
     - icon: refresh-cw
-      title: App Modernisation and Migration
+      title: App Modernisation & Migration
       content: If you have an older iOS app or an Android version that needs porting, we can modernise the codebase, update UI/UX, refactor architecture, and migrate to Swift/SwiftUI for longer-term maintainability.
       url: /images/service/choose/why3.jpg
 
     - icon: link
-      title: API Integration and Backend Support
+      title: API Integration & Backend Support
       content: Your iOS app can sync seamlessly with third-party APIs, enterprise systems, cloud platforms (e.g., Apple iCloud, Firebase), and payment gateways. We build robust backend architecture to support real-time updates, data security and scalability.
       url: /images/service/choose/why4.jpg
 
     - icon: settings
-      title: App Maintenance and Version Upgrades
+      title: App Maintenance & Version Upgrades
       content: Post-launch, we offer full maintenance for iOS apps—ensuring compatibility with new iOS releases, performing security updates, fixing bugs, and optimizing performance so your app remains ahead of the curve.
       url: /images/service/choose/why5.jpg
 
     - icon: briefcase
-      title: Enterprise and Consumer iOS Solutions
+      title: Enterprise & Consumer iOS Solutions
       content: We deliver iOS apps for both consumer-facing and enterprise applications—whether you need a retail app for iOS users or an internal business tool for iPads across your workforce in Perth and WA.
       url: /images/service/choose/why6.jpg
 
@@ -94,52 +94,58 @@ process:
     - title: Post-Launch Evolution
       content: Once live, we monitor performance, gather analytics, respond to user feedback, push updates for new iOS versions and add features as your business grows.
 
-# value:
-#   subtitle: BUSINESS VALUE
-#   title: What Your Business Gains
-#   list:
-#     - title: Premium User Experience
-#       content: Deliver a polished Apple-native experience that improves trust, engagement, and retention.
-#     - title: Reliable Product Performance
-#       content: Use robust iOS engineering to reduce production risk and support long-term app stability.
-#     - title: Growth-Ready Architecture
-#       content: Scale your app with maintainable code and structured release processes for future expansion.
-
 industries:
   subtitle: INDUSTRIES
   title: Industries We Serve
   description: We’ve delivered iOS applications across a wide variety of sectors in Perth and WA
   list:
-    - Healthcare and Wellness
-    - Retail & E-Commerce
-    - Property & Real Estate
-    - Education & Training
-    - Finance & Insurance
-    - Tourism & Hospitality
-    - Transport & Logistics
-    - Startup & Innovation Sectors
+    - title: Healthcare and Wellness
+    - title: Retail & E-Commerce
+    - title: Property & Real Estate
+    - title: Education & Training
+    - title: Finance & Insurance
+    - title: Tourism & Hospitality
+    - title: Transport & Logistics
+    - title: Startup & Innovation Sectors
 
 technologies:
   subtitle: TECHNOLOGY STACK
   title: iOS Technologies We Use
-  list:
-    - Swift
-    - Objective-C
-    - SwiftUI
-    - UIKit
-    - Combine
-    - Apple CloudKit
-    - Firebase
-    - AWS
-    - Node.js
-    - Core Data
-    - Realm
-    - SQLite
-    - Figma
-    - Sketch
-    - Jira
-    - Trello
-    - Slack
+  groups:
+    - title: Languages
+      items:
+        - Swift
+        - Objective-C
+
+    - title: UI Frameworks
+      items:
+        - SwiftUI
+        - UIKit
+        - Combine
+
+    - title: Backend & Cloud
+      items:
+        - Apple CloudKit
+        - Firebase
+        - AWS
+        - Node.js
+
+    - title: Data & Storage
+      items:
+        - Core Data
+        - Realm
+        - SQLite
+
+    - title: Design Tools
+      items:
+        - Figma
+        - Sketch
+
+    - title: Collaboration Tools
+      items:
+        - Jira
+        - Trello
+        - Slack
 
 faq:
   title: iOS App Development FAQs

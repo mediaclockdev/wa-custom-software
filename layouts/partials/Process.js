@@ -1,6 +1,6 @@
 "use client";
 
-import { markdownify } from "@lib/utils/textConverter";
+import SectionHeader from "@layouts/components/SectionHeader";
 import { FaSearch, FaDraftingCompass, FaCode, FaRocket } from "react-icons/fa";
 
 const icons = [FaSearch, FaDraftingCompass, FaCode, FaRocket];
@@ -11,27 +11,16 @@ const Process = ({ process }) => {
   return (
     <section className="section min-h-dvh flex items-center">
       <div className="container">
-        <div className="animate text-center max-w-3xl mx-auto">
-          <p className="uppercase">{process.subtitle}</p>
-
-          {process.title &&
-            markdownify(
-              process.title,
-              "h2",
-              `mt-2 text-2xl sm:text-3xl md:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent leading-relaxed pb-1 ${process.description ? "" : "section-title"}`,
-            )}
-          {process.description &&
-            markdownify(
-              process.description,
-              "p",
-              "animate mt-2 text-xl section-title",
-            )}
-        </div>
+        <SectionHeader
+          subtitle={process.subtitle}
+          title={process.title}
+          description={process.description}
+        />
 
         <div className="relative mt-20">
           <div className="absolute left-1/2 top-0 hidden h-full w-[2px] -translate-x-1/2 bg-primary/20 md:block" />
 
-          <div className="space-y-16">
+          <div className="space-y-8 lg:space-y-16">
             {process.steps.map((step, i) => {
               const Icon = icons[i] || FaSearch;
               const isLeft = i % 2 === 0;
@@ -56,7 +45,7 @@ const Process = ({ process }) => {
                         {`0${i + 1}`}
                       </span>
 
-                      <h4 className="mb-4 text-3xl font-semibold relative z-10">
+                      <h4 className="mb-4 text-2xl lg:text-3xl font-semibold relative z-10">
                         {step.title}
                       </h4>
 

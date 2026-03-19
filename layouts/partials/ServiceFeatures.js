@@ -3,6 +3,7 @@ import { markdownify } from "@lib/utils/textConverter";
 import React, { useRef } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import Image from "next/image";
+import SectionHeader from "@layouts/components/SectionHeader";
 
 const Cards = ({ item, index, range, targetScale, progress }) => {
   const container = useRef(null);
@@ -26,10 +27,10 @@ const Cards = ({ item, index, range, targetScale, progress }) => {
         style={{ scale }}
       >
         <div className="flex-1 text-start">
-          <h3 className="text-4xl mb-5 mt-6 text-start">
+          <h3 className="text-2xl lg:text-4xl mb-5 mt-6 text-start">
             {item.title}
           </h3>
-          <p className="text-lg line-clamp-6 text-start">
+          <p className="text-base lg:text-lg line-clamp-6 text-start">
             {item.content}
           </p>
         </div>
@@ -58,19 +59,11 @@ const ServiceFeatures = ({ services }) => {
   return (
     <section className="section relative z-10 ">
       <div className="container text-center">
-        <div className="animate mb-10">
-          <p className="uppercase">{services.subtitle}</p>
-          {markdownify(
-            services.title,
-            "h2",
-            "mt-2 text-2xl sm:text-3xl md:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent leading-relaxed pb-1",
-          )}
-          {markdownify(
-            services.description,
-            "p",
-            "mt-4 animate text-lg section-title",
-          )}
-        </div>
+        <SectionHeader
+          subtitle={services.subtitle}
+          title={services.title}
+          description={services.description}
+        />
         <div className="w-full min-h-screen flex flex-col items-center">
           <div ref={container} className="flex flex-col items-center w-[95%]">
             {services.list.map((item, index) => {

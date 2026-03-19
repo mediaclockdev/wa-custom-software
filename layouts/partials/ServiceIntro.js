@@ -7,9 +7,9 @@ const ServiceIntro = ({ intro }) => (
       {markdownify(
         intro.title,
         "h2",
-        "mt-2 text-2xl sm:text-3xl md:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent leading-relaxed pb-1 section-title",
+        "mt-2 text-3xl lg:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent pb-1 section-title",
       )}
-      {markdownify(intro.description, "p", "animate mt-8 text-xl")}
+      {markdownify(intro.description, "p", "animate mt-8 text-lg lg:text-xl")}
     </div>
   </section>
 );

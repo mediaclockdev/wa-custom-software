@@ -20,60 +20,100 @@ brands:
 
 intro:
   subtitle: PERTH DIGITAL GROWTH PARTNER
-  title: Performance-Driven Digital Marketing for WA Businesses
+  title: Perth’s Growth-Focused Digital Marketing Experts
   description: |
-    Western Australia Development Company helps Perth businesses grow with tailored digital marketing strategies built around measurable outcomes. We combine local WA market knowledge with execution across SEO, paid advertising, content, social media, and conversion-focused web improvements.
-
-    We do not run generic campaigns. Every strategy is customised to your goals, industry, and audience to improve visibility, leads, and ROI.
+    If your company is ready for growth, Western Australia is here to help you make it happen. As Perth's digital marketing growth experts, we blend the deep WA market knowledge with the most effective digital strategies that yield concrete outcomes. Our team isn't a believer in general marketing. Each campaign is customized to your objectives, audience and industry to ensure maximum impact.<br> </br>We've helped start-ups expand faster, increased the flow of leads for businesses that provide services and generated higher ROI for eCommerce companies. Through close collaboration with Perth businesses, Western Australia ensures every campaign is a success in delivering visibility, engagement and a real increase in revenue.
 
 services:
   subtitle: OUR SERVICES
   title: Digital Marketing Services in Perth
   description: Full-funnel marketing services delivered by one in-house team for consistent strategy and execution.
+
   list:
     - icon: map-pin
       title: Local SEO Optimisation
-      content: Improve visibility in Perth local search through Google Business Profile optimisation, suburb pages, and review strategy.
+      content: Reach customers in your area who are actively searching for your products and services. We optimise your Google Business Profile, create suburb-specific landing pages, and improve your visibility across Perth.
+      points:
+        - Google Business Profile optimisation
+        - Local keyword targeting
+        - Suburb-focused landing pages
+        - Review generation and reputation management
       url: /images/service/choose/why1.jpg
 
     - icon: tool
       title: Technical SEO Audits
-      content: Identify and resolve crawl, speed, mobile usability, and indexation issues that hold back rankings.
+      content: We identify and fix technical issues that impact your website performance, search rankings, and user experience.
+      points:
+        - Website speed optimisation
+        - Mobile usability improvements
+        - Core Web Vitals enhancements
+        - Crawl and indexation fixes
       url: /images/service/choose/why2.jpg
 
     - icon: file-text
       title: On-Page SEO Enhancements
-      content: Optimise meta data, internal linking, content structure, and schema for stronger search relevance.
+      content: Every page is optimised to improve relevance, engagement, and search engine visibility.
+      points:
+        - Meta title and description optimisation
+        - Content structure and heading improvements
+        - Internal linking optimisation
+        - Schema implementation for rich results
       url: /images/service/choose/why3.jpg
 
     - icon: search
       title: Keyword Research and SEO Strategy
-      content: Build high-intent keyword strategies using competitor analysis and search demand insights.
+      content: We identify high-value keywords your audience is searching for and build a strategy to capture that demand.
+      points:
+        - Competitor keyword analysis
+        - High-intent keyword targeting
+        - Keyword-focused content planning
       url: /images/service/choose/why4.jpg
 
     - icon: edit-3
       title: Content Marketing and Blogging
-      content: Publish SEO-focused, conversion-ready blog and landing content that builds authority and qualified traffic.
+      content: We create SEO-friendly, conversion-focused content that builds authority and attracts qualified traffic.
+      points:
+        - Blog content creation
+        - Service and landing page content
+        - Clear and compelling calls-to-action
       url: /images/service/choose/why5.jpg
 
     - icon: link
       title: Ethical Link Building
-      content: Strengthen domain authority with white-hat backlink acquisition and spam link cleanup.
+      content: Strengthen your domain authority with high-quality, white-hat backlinks from trusted and relevant sources.
+      points:
+        - High-quality link acquisition
+        - Spammy backlink cleanup
+        - Local and industry-relevant links
       url: /images/service/choose/why6.jpg
 
     - icon: bar-chart-2
-      title: PPC Management
-      content: Manage Google Ads and Meta campaigns with conversion tracking, retargeting, and ROAS optimisation.
+      title: PPC Management (Google & Meta Ads)
+      content: Generate leads and maximise ROI with well-structured, Perth-targeted paid advertising campaigns.
+      points:
+        - Google Ads campaign management
+        - Meta (Facebook & Instagram) advertising
+        - Retargeting strategies
+        - Conversion tracking and ROAS optimisation
       url: /images/service/choose/why1.jpg
 
     - icon: users
       title: Social Media Marketing
-      content: Grow awareness and engagement with creative social content, paid social campaigns, and local audience targeting.
+      content: Build brand awareness and engagement where your audience spends their time.
+      points:
+        - Creative content production
+        - Paid social media campaigns
+        - Local audience targeting and community building
       url: /images/service/choose/why2.jpg
 
     - icon: monitor
       title: Web Development for Marketing
-      content: Build fast, mobile-first websites with SEO architecture, lead forms, and tracking integration.
+      content: We build fast, mobile-first websites designed to support your marketing and lead generation goals.
+      points:
+        - WordPress and Shopify development
+        - Mobile-first responsive design
+        - Lead form and tracking integration
+        - SEO-friendly architecture
       url: /images/service/choose/why3.jpg
 
 why:
@@ -102,65 +142,34 @@ process:
     - title: Reporting and Growth Reviews
       content: You receive transparent dashboards, regular reporting, and strategy reviews focused on ROI.
 
-value:
-  subtitle: BUSINESS VALUE
-  title: Growth Outcomes We Focus On
-  list:
-    - title: More Qualified Leads
-      content: Capture high-intent traffic and convert more users through channel alignment and funnel optimisation.
-    - title: Better Marketing ROI
-      content: Improve budget efficiency through data-led bidding, targeting, and campaign refinement.
-    - title: Sustainable Brand Visibility
-      content: Build durable search and social presence that keeps generating demand over time.
-
 industries:
-  subtitle: INDUSTRIES
+  subtitle: Industries
   title: Industries We Help Grow
   list:
-    - Small and Medium Businesses
-    - E-commerce Stores
-    - Medical and Allied Health Clinics
-    - Education and Coaching Providers
-    - Real Estate and Local Services
-    - Manufacturers and Exporters
-    - Professional Services
-    - Startup and Growth-Stage Businesses
-
-technologies:
-  subtitle: CHANNELS AND PLATFORMS
-  title: Platforms We Use for Delivery and Reporting
-  list:
-    - SEO
-    - Google Search
-    - Google Business Profile
-    - Structured Data Optimisation
-    - Paid Media
-    - Google Ads
-    - Meta Ads
-    - Retargeting Workflows
-    - Content
-    - Service Pages
-    - Landing Pages
-    - Blog Strategy
-    - Social
-    - Paid Social Campaign Execution
-    - Organic Social Campaign Execution
-    - Analytics
-    - Conversion Tracking
-    - Performance Dashboards
-    - Periodic Strategy Reviews
+    - title: Small & Medium Businesses
+      content: Improve local visibility, generate more leads, and stay competitive in your market.
+    - title: E-commerce Stores
+      content: Scale profitably with campaigns focused on increasing conversions, sales, and return on ad spend.
+    - title: Medical & Allied Health Clinics
+      content: Increase patient bookings, build trust, and improve visibility across local search results.
+    - title: Education & Coaching Providers
+      content: Attract targeted inquiries and drive consistent enrollments through focused digital strategies.
+    - title: Real Estate & Local Services
+      content: Rank higher in local search results and generate direct inquiries from nearby customers.
+    - title: Manufacturers & Exporters
+      content: Strengthen your digital presence and attract high-value B2B opportunities.
 
 faq:
   title: Digital Marketing FAQs
   list:
-    - q: What makes your agency different from other Perth digital marketing providers?
-      a: We run tailored, data-led campaigns built around your exact business goals instead of one-size-fits-all packages.
-    - q: How long does it take to see results?
-      a: SEO usually takes a few months for meaningful compounding gains, while paid campaigns can generate leads sooner depending on budget and market conditions.
-    - q: Can you manage both SEO and paid advertising?
-      a: Yes. We manage SEO, PPC, content, social media, and web support so all channels work toward the same growth goals.
-    - q: Will I receive transparent reporting?
-      a: Yes. You receive detailed reports, dashboard visibility, and scheduled strategy reviews.
-    - q: Do you work with specific industries only?
-      a: We work across healthcare, e-commerce, education, real estate, local services, and other WA business sectors.
+    - q: What makes Western Australia different from other Perth digital marketing agencies?
+      a: We are focused on customized methods that are based on data rather than universally designed campaigns. Each plan is custom-made to your specific goals as well as your industry and target audience with ROI and performance at the centre.
+    - q: How long does it take to see results from digital marketing?
+      a: SEO typically takes a few months before showing significant organic growth, while PPC or paid social media campaigns will begin generating leads earlier, based on your budget and the market.
+    - q: Can Western Australia manage both SEO and paid advertising?
+      a: Yes. We offer complete-stack digital advertising which includes SEO PPC, content social media, web development. This ensures that every channel works towards the same growth objectives.
+    - q: Will I get transparent reporting on performance?
+      a: Absolutely. You'll receive detailed reports as well as analytics dashboards and periodic strategy reviews to ensure you're always aware of the performance of your campaigns and the budget you're spending.
+    - q: Do you work with specific industries or any business type?
+      a: We have worked with a wide spectrum of industries, such as healthcare, eCommerce education, real estate local services and many more. We adapt our approach to meet each sector's particular requirements.
 ---

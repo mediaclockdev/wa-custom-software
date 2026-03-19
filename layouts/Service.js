@@ -37,9 +37,6 @@ const Service = ({ data }) => {
       {/* TECH STACK */}
       <TechStack technologies={frontmatter.technologies} />
 
-      {/* TESTIMONIAL */}
-      {/* <Testimonial testimonial={frontmatter.testimonial} /> */}
-
       {/* FAQ */}
       <Faq faq={frontmatter.faq} />
     </>

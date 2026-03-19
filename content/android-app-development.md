@@ -21,7 +21,7 @@ brands:
 
 intro:
   subtitle: ANDROID DEVELOPMENT SPECIALISTS
-  title: Build Modern Android Applications with a Perth-Based Team
+  title: Expert Android App Developers in Perth, Australia
   description: |
     In Western Australia Development Company, we are experts in developing quality, user-focused Android applications that aid businesses to expand, innovate, and remain relevant in a constantly changing digital world. With Android running the majority of smartphones around the world, Perth businesses are increasingly using customized Android applications to broaden their reach, improve customer engagement, and improve processes.<br> </br>Our team of Perth based Android developers bring an extensive technical background, the latest Android development techniques and a dedication to quality to each project. If you're a start-up developing your first app or an established company looking for an scalable Android options, we create solutions that match your goals and make a an impact on your business.
 
@@ -46,17 +46,17 @@ services:
       url: /images/service/choose/why3.jpg
 
     - icon: link
-      title: API Integration and Connectivity
+      title: API Integration & Connectivity
       content: We connect our Android application with key business tools like ERPs, CRMs Cloud platforms, payment gateways and third-party APIs to ensure data flows seamlessly and safely across your platforms.
       url: /images/service/choose/why4.jpg
 
     - icon: settings
-      title: Maintenance and Ongoing Support
+      title: Maintenance & Ongoing Support
       content: Android apps require continual enhancements and updates. We offer long-term maintenance for apps which includes security patches as well as improvements to features, bug fixes and optimization for the most current Android operating systems and versions.
       url: /images/service/choose/why5.jpg
 
     - icon: shopping-cart
-      title: E-commerce and Business App Development
+      title: E-commerce & Business App Development
       content: If you're developing an app for retail or a mobile ordering application or an internal tool for business our team can create Android apps that help with operations, sales, automatization as well as improved customer experiences.
       url: /images/service/choose/why6.jpg
 
@@ -79,6 +79,7 @@ why:
 process:
   subtitle: DEVELOPMENT ROADMAP
   title: Our Android App Development Roadmap
+  description: Our structured roadmap ensures that your app is developed systematically, efficiently, and with complete clarity at every stage.
   steps:
     - title: Discovery & Blueprint Phase
       content: We begin with a detailed consultation—either in-person or virtually—to understand your app concept, business needs, user goals, and technical requirements.
@@ -93,49 +94,52 @@ process:
     - title: Post-Launch Updates & Enhancements
       content: After launch, we provide continuous updates, new features, design improvements, and technical support to keep your app competitive.
 
-# value:
-#   subtitle: BUSINESS VALUE
-#   title: What You Gain from Our Android Delivery Model
-#   list:
-#     - title: Faster Time to Market
-#       content: Structured delivery and agile execution reduce delays and improve release predictability.
-#     - title: Better Product Reliability
-#       content: Quality architecture and testing frameworks improve performance and reduce production risk.
-#     - title: Sustainable App Growth
-#       content: Ongoing support ensures your Android app evolves with platform changes and business priorities.
-
 industries:
   subtitle: INDUSTRIES
   title: Industries We Serve
   list:
-    - Healthcare and Wellness
-    - Retail & E-Commerce
-    - Property & Real Estate
-    - Education & Training
-    - Finance & Insurance
-    - Tourism & Hospitality
-    - Transport & Logistics
-    - Startup & Innovation Sectors
+    - title: Healthcare and Wellness
+    - title: Retail & E-Commerce
+    - title: Property & Real Estate
+    - title: Education & Training
+    - title: Finance & Insurance
+    - title: Tourism & Hospitality
+    - title: Transport & Logistics
+    - title: Startup & Innovation Sectors
 
 technologies:
   subtitle: TECHNOLOGY STACK
   title: Android Technologies We Use
-  list:
-    - Android Studio
-    - Jetpack
-    - Flutter
-    - Firebase
-    - Google Cloud
-    - AWS
-    - Node.js
-    - Kotlin
-    - Java
-    - TypeScript
-    - SQLite
-    - Room DB
-    - Firestore
-    - Figma
-    - Sketch
+  groups:
+    - title: Platforms & Frameworks
+      items:
+        - Android Studio
+        - Jetpack
+        - Flutter
+
+    - title: Backend & Cloud
+      items:
+        - Firebase
+        - Google Cloud
+        - AWS
+        - Node.js
+
+    - title: Languages
+      items:
+        - Kotlin
+        - Java
+        - TypeScript
+
+    - title: Databases
+      items:
+        - SQLite
+        - Room Database
+        - Firestore
+
+    - title: Design Tools
+      items:
+        - Figma
+        - Sketch
 
 faq:
   title: Android App Development FAQs

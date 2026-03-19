@@ -21,7 +21,7 @@ brands:
 intro:
   subtitle: PERTH SOFTWARE SPECIALISTS
   title: We Build High-Performance Custom Software
-  description: We are Western Australia Development company, we are a specialist in the delivery of customized software that is high-performance and meets the ever-changing demands of Perth companies. No matter if you're a new business looking to bring your idea to life, a well-established company that is looking to improve internal processes or a business that is modernising an outdated system, our team develops reliable, secure, reliable, and effective software solutions that are designed to facilitate the long-term growth of your business.</br> </br> With a local team that is dedicated and a dedication to quality, we will work together with clients from conception to finalization, making sure that your customized software will yield measurable results and a high Return on Investment. Our method combines technical knowledge as well as collaborative processes. An in-depth knowledge of Western Australia's business environment.
+  description: We are Western Australia Development Company, we are a specialist in the delivery of customized software that is high-performance and meets the ever-changing demands of Perth companies. No matter if you're a new business looking to bring your idea to life, a well-established company that is looking to improve internal processes or a business that is modernising an outdated system, our team develops reliable, secure, reliable, and effective software solutions that are designed to facilitate the long-term growth of your business.</br> </br> With a local team that is dedicated and a dedication to quality, we will work together with clients from conception to finalization, making sure that your customized software will yield measurable results and a high Return on Investment. Our method combines technical knowledge as well as collaborative processes. An in-depth knowledge of Western Australia's business environment.
 
 services:
   subtitle: OUR SERVICES
@@ -96,6 +96,7 @@ why:
 process:
   subtitle: OUR PROCESS
   title: Our Approach to Custom Software Development
+  description: At Western Australia Development Company, we prioritise strong client relationships and a smooth project experience from start to finish
   steps:
     - title: Discovery Phase
       content: We engage in detailed consultations to understand your objectives, pain points, and project expectations. Yourinsights guide our strategy and ensure the solution we build aligns perfectly with your business.
@@ -120,39 +121,56 @@ value:
 industries:
   subtitle: INDUSTRIES
   title: Industries We Serve
+  description: We deliver custom software for a wide range of Perth industries
   list:
-    - Mining & Resources
-    - Logistics & Supply Chain
-    - Healthcare & Medical Technology
-    - Finance & Professional services
-    - Construction & Engineering
-    - E-commerce & Retail
-    - Education & Training
-    - Startups & Innovation-focused businesses
+    - title: Mining & Resources
+    - title: Logistics & Supply Chain
+    - title: Healthcare & Medical Technology
+    - title: Finance & Professional services
+    - title: Construction & Engineering
+    - title: E-commerce & Retail
+    - title: Education & Training
+    - title: Startups & Innovation-focused businesses
 
 technologies:
   subtitle: TECHNOLOGY STACK
   title: Technologies We Use
-  list:
-    - JavaScript
-    - Python
-    - C#
-    - PHP
-    - React
-    - Angular
-    - .NET
-    - Laravel
-    - Django
-    - Swift
-    - Kotlin
-    - Flutter
-    - MySQL
-    - PostgreSQL
-    - MongoDB
-    - SQL Server
-    - AWS
-    - Azure
-    - Google Cloud
+  description: We utilise industry-standard, widely adopted technologies 
+
+  groups:
+    - title: Languages
+      items:
+        - JavaScript
+        - Python
+        - C#
+        - PHP
+
+    - title: Frameworks
+      items:
+        - React
+        - Angular
+        - .NET
+        - Laravel
+        - Django
+
+    - title: Mobile Technologies
+      items:
+        - Swift
+        - Kotlin
+        - Flutter
+
+    - title: Databases
+      items:
+        - MySQL
+        - PostgreSQL
+        - MongoDB
+        - SQL Server
+
+    - title: Cloud Platforms
+      items:
+        - AWS
+        - Azure
+        - Google Cloud
 
 testimonial:
   subtitle: CLIENT FEEDBACK
