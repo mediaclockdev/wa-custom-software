@@ -1,9 +1,9 @@
 html {
-  @apply text-base;
+  font-size: 18px;
 }
 
 body {
-  @apply text-[15px] bg-body font-primary font-normal leading-relaxed text-text;
+  @apply bg-body font-primary font-normal leading-relaxed text-text;
 }
 
 h1,

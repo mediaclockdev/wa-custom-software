@@ -10,6 +10,7 @@ banner:
   link:
     label: Talk to Our Experts
     href: /contact
+  description: Reliable web development services in Perth for businesses seeking scalable digital platforms.
 
 brands:
   - /images/brands/01-colored.png
@@ -19,13 +20,8 @@ brands:
 
 intro:
   subtitle: PERTH WEB SPECIALISTS
-  title: We Build High-Performance Web Application
-  description:
-    At Western Australia Development Company, we’re more than a web development agency — we are designers, engineers, and digital problem-solvers dedicated to building powerful web experiences for businesses across Perth and Western Australia.
-
-    Our approach is built on collaboration, innovation, and technical excellence. We design and develop modern, flexible, and scalable websites and web-based applications tailored to your business needs and built to grow alongside your organisation.
-
-    From custom-designed websites to large-scale web platforms, our focus is on delivering digital solutions that perform flawlessly today and continue to add value well into the future. When you partner with us, you work with a Perth-based team committed to your long-term success.
+  title: Perth’s Trusted Web Development Agency
+  description: The team at Western Australia Development Company, we're not just an agency for web development we are designers, engineers and digital problem solvers dedicated to creating powerful web-based experiences for businesses in Perth as well as Western Australia. Our strategy is built on collaboration, innovation and technological excellence. We design and build contemporary, flexible, and scalable websites and web-based applications that are tailored to your individual needs and built to expand with your company's growth.<br> </br>In everything from custom-designed web design to large scale platforms we are focused on providing digital solutions that are flawless now and will continue to add value for years to come. When you partner with us, you'll be working with a Perth-based team dedicated to your success over the long term.
 
 subIntro:
   subtitle: WEB DEVELOPMENT
@@ -33,8 +29,9 @@ subIntro:
   description: Our team creates applications and websites that blend aesthetics, performance and user experience, developing digital foundations that can help organizations stand out in the highly competitive markets.
 
 services:
+  subtitle: OUR SERVICES
   title: Our Web Development Services
-  description: We offer a variety of web development services designed to </br> tackle real business problems and increase the efficiency of operations.
+  description: Our team creates applications and websites that blend aesthetics, performance and user experience, developing digital foundations that can help organizations stand out in the highly competitive markets.
   list:
     - icon: tool
       title: Custom Web Development
@@ -43,7 +40,7 @@ services:
 
     - icon: smartphone
       title: WordPress Web Development
-      content: We are Perth WordPress specialists, we create and build unique WordPress websites that blend flexibility with security. Our designers create customized themes with powerful plugins, SEO friendly designs, and user-friendly backend systems that ensure your team is able to manage your content. We also optimize for performance security, speed, and speed.
+      content: We are Perth WordPress specialists, we create and build unique WordPress websites that blend flexibility with security. Our designers create customized themes with powerful plugins, SEO-friendly designs, and user-friendly backend systems that ensure your team can manage your content. We also optimize for performance security, speed, and speed.
       url: /images/service/choose/why2.jpg
 
     - icon: cpu
@@ -63,16 +60,8 @@ services:
 
     - icon: database
       title: Responsive Web Design
-      content: Each website we design is responsive, ensuring constant performance across all devices, including tablets, desktops as well as smartphones. With a focus on visual appeal and mobile first designs our clients can expand their reach and offer seamless user experience.
+      content: Each website we design is responsive, ensuring constant performance across all devices, including tablets, desktops as well as smartphones. With a focus on visual appeal and mobile-first designs our clients can expand their reach and offer seamless user experience.
       url: /images/service/choose/why6.jpg
-
-    - icon: pen-tool
-      title: UI/UX Design
-      content:
-        Great software begins with great design. We create clean, intuitive, and
-        user-friendly interfaces that improve accessibility, usability, and
-        overall user satisfaction.
-      url: /images/service/choose/why1.jpg
 
 why:
   subtitle: WHY CHOOSE US
@@ -104,7 +93,7 @@ process:
       content: After rigorous testing and final approval, your website is launched with minimal downtime. We provide full post-launch support, monitoring, updates, and performance optimisation.
 
 value:
-  # subtitle: BUSINESS VALUE
+  subtitle: BUSINESS VALUE
   title: What Sets Our Services Apart
   list:
     - title: User-Focused Development
@@ -114,42 +103,41 @@ value:
     - title: Above-and-Beyond Support
       content: We offer reliable, ongoing support and maintenance so your business always has expert help just a call away.
 
-# industries:
-#   subtitle: INDUSTRIES
-#   title: Industries We Serve
-#   list:
-#     - Mining & Resources
-#     - Logistics & Supply Chain
-#     - Healthcare & Medical Technology
-#     - Finance & Professional services
-#     - Construction & Engineering
-#     - E-commerce & Retail
-#     - Education & Training
-#     - Startups & Innovation-focused businesses
-
 technologies:
   subtitle: TECHNOLOGY STACK
   title: Technologies We Use
-  list:
-    - JavaScript
-    - Python
-    - C#
-    - PHP
-    - React
-    - Angular
-    - .NET
-    - Laravel
-    - Django
-    - Swift
-    - Kotlin
-    - Flutter
-    - MySQL
-    - PostgreSQL
-    - MongoDB
-    - SQL Server
-    - AWS
-    - Azure
-    - Google Cloud
+  groups:
+    - title: Frontend Technologies
+      items:
+        - React
+        - Vue
+        - Angular
+        - HTML5
+        - CSS3
+
+    - title: Backend Technologies
+      items:
+        - Node.js
+        - Laravel
+        - Django
+        - .NET
+
+    - title: CMS Platforms
+      items:
+        - WordPress
+        - WooCommerce
+
+    - title: Databases
+      items:
+        - MySQL
+        - PostgreSQL
+        - MongoDB
+
+    - title: Cloud & DevOps
+      items:
+        - AWS
+        - Azure
+        - Google Cloud
 
 testimonial:
   subtitle: CLIENT FEEDBACK

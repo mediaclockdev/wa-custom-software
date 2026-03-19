@@ -13,8 +13,8 @@ const About = ({ data }) => {
   return (
     <section>
       <Hero banner={banner} isParticle={false} />
-      <ServiceFeatures services={services} />
       <AboutSection about={about} />
+      <ServiceFeatures services={services} />
       <Process process={process} />
       <ClientsSection clients={clients} />
     </section>

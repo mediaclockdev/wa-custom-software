@@ -1,6 +1,6 @@
 "use client";
 
-import { markdownify } from "@lib/utils/textConverter";
+import SectionHeader from "@layouts/components/SectionHeader";
 import { FaSearch, FaDraftingCompass, FaCode, FaRocket } from "react-icons/fa";
 
 const icons = [FaSearch, FaDraftingCompass, FaCode, FaRocket];
@@ -11,31 +11,22 @@ const Process = ({ process }) => {
   return (
     <section className="section min-h-dvh flex items-center">
       <div className="container">
-        <div className="animate text-center max-w-3xl mx-auto">
-          <p className="text-md sm:text-base uppercase tracking-wider font-medium">
-            {process.subtitle}
-          </p>
+        <SectionHeader
+          subtitle={process.subtitle}
+          title={process.title}
+          description={process.description}
+        />
 
-          {markdownify(
-            process.title,
-            "h2",
-            "mt-2 section-title text-2xl sm:text-3xl md:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent leading-relaxed",
-          )}
-        </div>
-
-        {/* Timeline */}
         <div className="relative mt-20">
-          {/* Center vertical line */}
           <div className="absolute left-1/2 top-0 hidden h-full w-[2px] -translate-x-1/2 bg-primary/20 md:block" />
 
-          <div className="space-y-16">
+          <div className="space-y-8 lg:space-y-16">
             {process.steps.map((step, i) => {
               const Icon = icons[i] || FaSearch;
               const isLeft = i % 2 === 0;
 
               return (
                 <div key={i} className="animate relative grid md:grid-cols-2">
-                  {/* LEFT COLUMN */}
                   <div
                     className={`${
                       isLeft ? "md:pr-16" : "md:col-start-2 md:pl-16"
@@ -46,7 +37,7 @@ const Process = ({ process }) => {
 
                       <div className="flex items-center justify-center md:hidden mb-6 relative z-10">
                         <div className="h-14 w-14 bg-gradient-to-br from-secondary to-primary text-white rounded-xl shadow-lg flex items-center justify-center">
-                          <Icon size={22} />
+                          <Icon size={24} />
                         </div>
                       </div>
 
@@ -54,13 +45,13 @@ const Process = ({ process }) => {
                         {`0${i + 1}`}
                       </span>
 
-                      <h4 className="mb-4 text-3xl font-semibold relative z-10">
+                      <h4 className="mb-4 text-2xl lg:text-3xl font-semibold relative z-10">
                         {step.title}
                       </h4>
 
                       <div className="w-12 h-[2px] bg-primary/70 mb-6 transition-all duration-300 group-hover:w-full" />
 
-                      <p className="text-text leading-relaxed text-base relative z-10">
+                      <p className="text-text text-lg relative z-10">
                         {step.content}
                       </p>
                     </div>

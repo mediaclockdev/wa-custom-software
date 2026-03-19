@@ -1,12 +1,9 @@
-import HomeBanner from "@layouts/partials/HomeBanner";
 import ServiceIntro from "@layouts/partials/ServiceIntro";
-import ServiceList from "@layouts/partials/ServiceList";
 import WhyChooseUs from "@layouts/partials/WhyChooseUs";
 import Process from "@layouts/partials/Process";
 import ServiceValue from "@layouts/partials/ServiceValue";
 import Industries from "@layouts/partials/Industries";
 import TechStack from "@layouts/partials/TechStack";
-import Testimonial from "@layouts/partials/Testimonial";
 import Faq from "@layouts/partials/Faq";
 import ServiceFeatures from "@layouts/partials/ServiceFeatures";
 import Hero from "./service/Hero";
@@ -20,7 +17,7 @@ const Service = ({ data }) => {
       <Hero banner={frontmatter.banner} />
 
       {/* INTRO */}
-      {/* <ServiceIntro intro={frontmatter.intro} /> */}
+      <ServiceIntro intro={frontmatter.intro} />
 
       {/* SERVICES */}
       <ServiceFeatures services={frontmatter.services} />
@@ -39,9 +36,6 @@ const Service = ({ data }) => {
 
       {/* TECH STACK */}
       <TechStack technologies={frontmatter.technologies} />
-
-      {/* TESTIMONIAL */}
-      {/* <Testimonial testimonial={frontmatter.testimonial} /> */}
 
       {/* FAQ */}
       <Faq faq={frontmatter.faq} />

@@ -42,7 +42,7 @@ module.exports = {
         "theme-dark": theme.colors.default.theme_color.theme_dark,
       },
       fontSize: {
-        base: font_base + "px",
+        // base: font_base + "px",
         h1: h1 + "rem",
         "h1-sm": h1 * 0.8 + "rem",
         h2: h2 + "rem",

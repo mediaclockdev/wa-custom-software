@@ -1,7 +1,9 @@
 "use client";
 
+import SectionHeader from "@layouts/components/SectionHeader";
 import { markdownify } from "@lib/utils/textConverter";
-import { motion, stagger } from "framer-motion";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Expertise = ({ expertise }) => {
   const containerVariants = {
@@ -28,22 +30,13 @@ const Expertise = ({ expertise }) => {
   };
 
   return (
-    <section className="section min-h-dvh flex items-center">
+    <section className="section min-h-[30dvh] flex items-center">
       <div className="container text-center">
-        {/* Title */}
-        <div className="animate mb-10">
-          <p className="uppercase">{expertise.subtitle}</p>
-          {markdownify(
-            expertise.title,
-            "h2",
-            "mt-2 text-2xl sm:text-3xl md:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent leading-relaxed",
-          )}
-          {markdownify(
-            expertise.description,
-            "p",
-            "mt-4 text-base section-title",
-          )}
-        </div>
+        <SectionHeader
+          subtitle={expertise.subtitle}
+          title={expertise.title}
+          description={expertise.description}
+        />
 
         {/* Expertise Tags */}
         <motion.div
@@ -66,11 +59,15 @@ const Expertise = ({ expertise }) => {
                 stiffness: 250,
                 damping: 18,
               }}
-              className="px-6 py-3 rounded-full text-sm md:text-base font-medium 
-              bg-white text-primary border border-gray-200 shadow-sm
-              hover:shadow-lg hover:border-secondary/50 transition-colors duration-300 cursor-pointer"
             >
-              {item}
+              <Link
+                href={item.link}
+                className="px-6 py-3 rounded-full text-sm md:text-base font-medium 
+              bg-white text-primary border border-gray-200 shadow-sm
+                hover:shadow-lg hover:border-secondary/50 transition-colors duration-300 cursor-pointer inline-block"
+              >
+                {item.title}
+              </Link>
             </motion.div>
           ))}
         </motion.div>

@@ -22,11 +22,8 @@ function highlightFounder(text) {
 
 export default function AboutSection({ about }) {
   return (
-    <section className="section min-h-dvh flex items-center">
+    <section className="section min-h-[50dvh] flex items-center">
       <div className="container text-center relative">
-        {/* Soft Background Accent */}
-        <div className="absolute -top-32 -right-32 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[120px]" />
-
         <div className="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10">
           {/* LEFT SIDE */}
           <div>
@@ -35,25 +32,17 @@ export default function AboutSection({ about }) {
               {markdownify(
                 about.title,
                 "h2",
-                "mt-2 text-2xl sm:text-3xl md:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent leading-relaxed pb-1 section-title",
+                "mt-2 text-4xl lg:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent",
               )}
             </div>
 
-            <div className="animate w-20 h-1 bg-secondary mt-6 rounded-full" />
-
-            <p className="animate mt-6 text-gray-600 leading-relaxed text-base">
+            <p className="animate mt-4 text-xl">
               {highlightFounder(about.description)}
             </p>
 
-            <p className="animate mt-4 text-gray-500 leading-relaxed text-base">
-              {markdownify(
-                about.content,
-                "p",
-                "text-gray-500 leading-relaxed text-base",
-              )}
-            </p>
+            {markdownify(about.content, "p", "animate mt-4 text-lg")}
 
-            <div className="animate my-4">
+            <div className="animate mt-6">
               <ButtonLink href="/about" title="Learn More" />
             </div>
           </div>

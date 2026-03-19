@@ -7,11 +7,17 @@ description: Learn more about Western Australia Software Development Company, a 
 banner:
   title: "About Western Australia"
   image: /images/service/hero/aboutbg.png
-  content: Western Australia Software Development Company offers professional digital and IT services that help businesses improve online visibility, automate manual tasks and implement effective technology solutions. We collaborate with companies across Perth and Western Australia, delivering practical and flexible digital solutions.
+  content: Western Australia Software Development Company offers professional digital and IT services that help businesses
   link:
     label: Contact Us
     href: "/contact"
-  
+  description: Western Australia Software Development Company offers digital and IT services that help businesses increase the online visibility of their business, automate manual tasks and use effective technology solutions. We collaborate with companies across Perth as well as Western Australia, delivering practical and flexible digital solutions
+
+intro:
+  subtitle: IOS DEVELOPMENT SPECIALISTS
+  title: iOS App Developers in Perth, Australia
+  description: |
+    At Western Australia Development Company, we specialise in building premium iOS applications that empower Perth-based businesses to reach the high-value Apple ecosystem. While global Android holds the largest market share, iOS remains the second most widely used mobile platform and continues to provide strong monetisation and user-loyalty opportunities.<br> </br>Our Perth-based team is experienced in the unique requirements of the Apple ecosystem native iOS development, App Store deployment, Swift/Objective-C architecture, and ongoing support. Whether you’re launching a new app or migrating an existing Android project into iOS, we provide a full suite of services tailored to the Western Australian market and beyond.
 
 #about
 about:
@@ -26,19 +32,19 @@ services:
   title: Our Digital & IT Services
   list:
     - title: Software & Web Development
-      content: We help businesses build and strengthen their online presence through custom websites and web-based applications designed to meet clear business objectives and long-term growth plans.
+      content: We help businesses build and expand their online presence by developing custom websites and web-based apps that are designed to meet business objectives.
       url: /images/service/choose/why1.jpg
 
     - title: Mobile Application Development
-      content: We develop mobile applications that improve efficiency, support automation and encourage business growth, with a strong focus on usability and real-world performance.
+      content: We create mobile apps which support efficiency, automation and growth of businesses. We focus on usability in real-world situations.
       url: /images/service/choose/why2.jpg
 
     - title: Business Automation
-      content: We assist businesses that rely on manual processes by delivering customised software and automation solutions that improve productivity and operational efficiency.
+      content: We support companies that depend on manual processes through the provision of customized software and automation solutions that help increase efficiency and productivity.
       url: /images/service/choose/why3.jpg
 
     - title: Digital Marketing Services
-      content: Our digital marketing services help businesses increase visibility, improve online reach and connect with target customers across Perth and Western Australia.
+      content: Our digital marketing services can help companies increase their exposure and connect with their desired customers all across Western Australia.
       url: /images/service/choose/why4.jpg
 
 #process
@@ -47,24 +53,24 @@ process:
   title: How We Deliver Reliable Solutions
   steps:
     - title: Meet and Plan
-      content: We begin by understanding your business goals, objectives and operational challenges to design the most effective digital strategy.
+      content: We start by understanding your company's goals, objectives and operational challenges in order to develop the best digital solution.
 
     - title: Design and Refine
-      content: We create user-friendly interfaces focused on strong user experience and functionality, ensuring visitors can easily engage and convert.
+      content: We create user-friendly interfaces focusing on user experience and functionality to help turn visitors into customers.
 
     - title: Build and Test
-      content: During development, solutions are tested within secure environments to identify and resolve issues before deployment.
+      content: While developing testing, solutions are put through a secure environment to discover problems and rectify them prior to launch.
 
     - title: Launch and Track
-      content: Once testing is complete, the solution goes live and becomes accessible to users, while we monitor performance and ensure smooth operation.
+      content: Once testing is complete, the solution goes live and becomes accessible to users.
 
 #clients
 clients:
   subtitle: WHO WE WORK WITH
   title: Supporting Businesses Across Western Australia
   list:
-    - Small businesses looking to build a strong online presence
-    - Businesses seeking custom software and automation solutions
-    - Companies requiring reliable and scalable IT support
+    - Small businesses looking to build an online presence
+    - Businesses seeking custom software and automation
+    - Companies requiring reliable IT solutions
     - Organisations across Perth and Western Australia
 ---

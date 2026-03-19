@@ -71,7 +71,8 @@ const Header = () => {
     <>
       <header
         ref={headerRef}
-        className={`my-2 mb-auto container sticky top-2 z-50 transition-all duration-300 ${direction === 1 ? "-translate-y-full" : "translate-y-0"}`}
+        // className={`my-2 mb-auto container sticky top-2 z-50 transition-all duration-300 ${direction === 1 ? "-translate-y-full" : "translate-y-0"}`}
+        className={`my-2 mb-auto container sticky top-2 z-50 transition-all duration-300`}
       >
         <nav className="navbar w-full bg-white py-2 px-4 rounded-full border border-slate-300  relative">
           <div className="order-0">
@@ -81,16 +82,16 @@ const Header = () => {
           <ul className="hidden lg:flex items-center gap-6 order-1 text-black ">
             {main.map((item, i) => {
               const isActive = asPath === item.url;
-              const isParentActive = item.children?.some(
-                (child) => child.url === asPath,
+              const isParentActive = item.groups?.some((group) =>
+                group.items.some((child) => child.url === asPath),
               );
 
               return (
                 <li key={i} className="relative group">
-                  {!item.children && (
+                  {!item.groups && (
                     <Link
                       href={item.url}
-                      className={`relative text-base p-2 rounded-full px-4 border border-transparent transition-all duration-300 hover:bg-[#FAF5F3] hover:shadow-sm ${
+                      className={`relative text-lg p-2 rounded-full px-4 border border-transparent transition-all duration-300 hover:bg-[#FAF5F3] hover:shadow-sm font-medium text-slate-800 ${
                         isActive
                           ? "text-primary font-medium bg-[#FAF5F3] border-slate-300"
                           : ""
@@ -100,10 +101,10 @@ const Header = () => {
                     </Link>
                   )}
 
-                  {item.children && (
+                  {item.groups && (
                     <>
                       <span
-                        className={`flex items-center gap-1 text-base cursor-pointer ${isParentActive ? "text-primary bg-[#FAF5F3] font-medium rounded-full px-4 py-2 border border-slate-300" : "text-gray-700 hover:bg-gray-50 rounded-full px-4 py-2 transition-all duration-300"}`}
+                        className={`flex items-center gap-1 text-lg cursor-pointer ${isParentActive ? "text-primary bg-[#FAF5F3] font-medium rounded-full px-4 py-2 border border-slate-300" : "text-gray-800 hover:bg-gray-50 rounded-full px-4 py-2 transition-all duration-300 text-lg font-medium"}`}
                       >
                         {item.name}
                         <FaAngleDown
@@ -112,21 +113,36 @@ const Header = () => {
                         />
                       </span>
 
-                      <ul className="absolute left-0 top-full mt-4 min-w-[320px] p-3 rounded-xl border border-gray-100 bg-white shadow-xl opacity-0 invisible translate-y-2 transition-all duration-200 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 z-20">
-                        {item.children.map((child, j) => (
-                          <li key={j}>
-                            <Link
-                              href={child.url}
-                              className={`block px-4 py-3 text-sm rounded-lg hover:bg-gray-50 transition ${
-                                asPath === child.url
-                                  ? "text-secondary font-medium"
-                                  : "text-gray-700"
-                              }`}
+                      <ul className="absolute left-0 top-full mt-4 min-w-[650px] p-5 rounded-xl border border-gray-100 bg-white shadow-xl opacity-0 invisible translate-y-2 transition-all duration-200 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 z-20">
+                        <div className="grid grid-cols-2 gap-6">
+                          {item.groups.map((group, gi) => (
+                            <div
+                              key={gi}
+                              className={gi === 2 ? "col-span-2" : ""}
                             >
-                              {child.name}
-                            </Link>
-                          </li>
-                        ))}
+                              <p className="text-xl font-semibold text-gray-600 mb-2">
+                                {group.title}
+                              </p>
+
+                              <ul className="space-y-2">
+                                {group.items.map((child, j) => (
+                                  <li key={j}>
+                                    <Link
+                                      href={child.url}
+                                      className={`block px-3 py-2 text-lg font-medium rounded-md hover:bg-gray-50 transition ${
+                                        asPath === child.url
+                                          ? "text-secondary font-medium"
+                                          : "text-gray-800"
+                                      }`}
+                                    >
+                                      {child.name}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
                       </ul>
                     </>
                   )}
@@ -178,7 +194,7 @@ const Header = () => {
               <ul className="flex flex-col gap-5">
                 {main.map((item, i) => (
                   <li key={i}>
-                    {!item.children && (
+                    {!item.groups && (
                       <Link
                         href={item.url}
                         onClick={() => setShowMenu(false)}
@@ -192,29 +208,33 @@ const Header = () => {
                       </Link>
                     )}
 
-                    {item.children && (
+                    {item.groups && (
                       <div>
-                        <p className="text-base font-semibold mb-2">
-                          {item.name}
-                        </p>
+                        {item.groups.map((group, gi) => (
+                          <div key={gi} className="mb-4">
+                            <p className="text-base font-semibold mb-2">
+                              {group.title}
+                            </p>
 
-                        <ul className="pl-4 flex flex-col gap-3 border-l border-gray-200">
-                          {item.children.map((child, j) => (
-                            <li key={j}>
-                              <Link
-                                href={child.url}
-                                onClick={() => setShowMenu(false)}
-                                className={`block text-sm ${
-                                  asPath === child.url
-                                    ? "text-secondary font-medium"
-                                    : "text-gray-600"
-                                }`}
-                              >
-                                {child.name}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
+                            <ul className="pl-4 flex flex-col gap-2 border-l border-gray-200">
+                              {group.items.map((child, j) => (
+                                <li key={j}>
+                                  <Link
+                                    href={child.url}
+                                    onClick={() => setShowMenu(false)}
+                                    className={`block text-sm ${
+                                      asPath === child.url
+                                        ? "text-secondary font-medium"
+                                        : "text-gray-600"
+                                    }`}
+                                  >
+                                    {child.name}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
                       </div>
                     )}
                   </li>

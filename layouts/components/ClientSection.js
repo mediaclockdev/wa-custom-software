@@ -3,6 +3,7 @@
 import { markdownify } from "@lib/utils/textConverter";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import SectionHeader from "./SectionHeader";
 
 export default function ClientsSection({ clients }) {
   const { ref, inView } = useInView({
@@ -29,7 +30,7 @@ export default function ClientsSection({ clients }) {
   };
 
   return (
-    <section className="section min-h-dvh flex items-center">
+    <section className="section min-h-[30dvh] flex items-center pb-0">
       <div className="container text-center">
         <div className="relative py-24 bg-gray-50 overflow-hidden">
           {/* Soft Orange Glow */}
@@ -40,19 +41,12 @@ export default function ClientsSection({ clients }) {
             className="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-start relative z-10"
           >
             {/* LEFT SIDE */}
-            <div className="animate mb-10">
-              <p className="uppercase">{clients.subtitle}</p>
-              {markdownify(
-                clients.title,
-                "h2",
-                "mt-2 text-2xl sm:text-3xl md:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent leading-relaxed pb-1 section-title",
-              )}
-              {markdownify(
-                clients.description,
-                "p",
-                "mt-4 text-base section-title",
-              )}
-            </div>
+
+            <SectionHeader
+              subtitle={clients.subtitle}
+              title={clients.title}
+              description={clients.description}
+            />
 
             {/* RIGHT SIDE - Animated Cards */}
             <motion.div
@@ -70,7 +64,7 @@ export default function ClientsSection({ clients }) {
                 >
                   <div className="flex items-start gap-4">
                     <div className="w-3 h-3 mt-2 bg-secondary rounded-full shrink-0" />
-                    <p className="text-gray-700">{item}</p>
+                    <p className="text-gray-700 text-lg">{item}</p>
                   </div>
                 </motion.div>
               ))}

@@ -10,6 +10,7 @@ banner:
   link:
     label: Talk to Our Experts
     href: /contact
+  description: We craft high-performance custom software solutions tailored to the unique needs of Perth businesses, helping them stay competitive and drive growth in a rapidly evolving market.
 
 brands:
   - /images/brands/01-colored.png
@@ -20,14 +21,7 @@ brands:
 intro:
   subtitle: PERTH SOFTWARE SPECIALISTS
   title: We Build High-Performance Custom Software
-  description:
-    We are a Western Australia–based development company specialising in the
-    delivery of high-performance, custom software solutions that meet the
-    ever-changing demands of Perth businesses.Whether you are a new business bringing an idea to life, an established organisation looking to improve internal processes, or a company modernising an outdated system, our team develops secure, reliable, and effective software designed to support long-term business growth.</br> </br> With a dedicated local team and a strong commitment to quality, we work
-    closely with our clients from concept through to final delivery. Our
-    collaborative approach combines deep technical expertise with a strong
-    understanding of Western Australia’s business environment, ensuring every
-    solution delivers measurable results and a high return on investment.
+  description: We are Western Australia Development Company, we are a specialist in the delivery of customized software that is high-performance and meets the ever-changing demands of Perth companies. No matter if you're a new business looking to bring your idea to life, a well-established company that is looking to improve internal processes or a business that is modernising an outdated system, our team develops reliable, secure, reliable, and effective software solutions that are designed to facilitate the long-term growth of your business.</br> </br> With a local team that is dedicated and a dedication to quality, we will work together with clients from conception to finalization, making sure that your customized software will yield measurable results and a high Return on Investment. Our method combines technical knowledge as well as collaborative processes. An in-depth knowledge of Western Australia's business environment.
 
 services:
   subtitle: OUR SERVICES
@@ -36,91 +30,62 @@ services:
   list:
     - icon: tool
       title: Custom Software Development
-      content:
-        We design and develop fully customised software solutions built around
-        your business needs. From workflow automation to enterprise systems, we
-        create reliable applications that scale as your organisation grows.
+      content: We design and develop fully customised software solutions built around your business needs. From workflow automation to enterprise systems, we create reliable applications that scale as you grow.
       url: /images/service/choose/why1.jpg
 
     - icon: smartphone
       title: Web & Mobile App Development
-      content: Our team develops highly responsive and efficient mobile and web
-        applications tailored to the needs of your users. Whether you’re using
-        iOS, Android, or cross-platform technologies, we deliver seamless
-        functionality with a user-friendly design.
+      content: Our team develops highly responsive, efficient mobile and web applications that are tailored to the needs of your users. It doesn't matter if you're using iOS, Android, or cross-platform platforms, we provide seamless functionality and a user-friendly design.
       url: /images/service/choose/why2.jpg
 
     - icon: cpu
       title: AI & Intelligent Automation
-      content:
-        By integrating AI-driven features and intelligent automation, we help
-        reduce manual workloads, streamline business processes, and unlock
-        smarter operational capabilities for Perth businesses.
+      content: By integrating AI-driven features and automation, we help reduce manual workloads, streamline processes, and unlock smarter operational capabilities for Perth businesses.
       url: /images/service/choose/why3.jpg
 
     - icon: layers
-      title: Custom ERP & CRM Development
-      content:
-        We build powerful ERP and CRM systems that centralise your data, improve
-        internal coordination, and support data-driven decision-making across
-        your entire organisation.
+      title: Custom ERP/CRM Development
+      content: We build powerful ERP and CRM systems that centralise your data, improve internal coordination, and support data-driven decision-making across your organisation.
       url: /images/service/choose/why4.jpg
 
     - icon: cloud
       title: SaaS Application Development
-      content:
-        For businesses launching cloud-based platforms, we develop scalable SaaS
-        applications with security, multi-tenancy, and long-term adaptability
-        built into the core architecture.
+      content: For businesses launching cloud-based platforms, we develop scalable SaaS applications built with security, multi-tenancy, and long-term adaptability in mind.
       url: /images/service/choose/why5.jpg
 
     - icon: database
       title: Database & Backend Development
-      content:
-        Our experts build robust databases and backend systems that ensure high
-        performance, stability, and data integrity — essential foundations for
-        modern custom software environments.
+      content: Our experts build robust databases and backend structures that ensure speed, stability, and data integrity — essential for custom software environments.
       url: /images/service/choose/why6.jpg
 
     - icon: pen-tool
       title: UI/UX Design
-      content:
-        Great software begins with great design. We create clean, intuitive, and
-        user-friendly interfaces that improve accessibility, usability, and
-        overall user satisfaction.
+      content: Great software begins with great design. We develop clean, user-friendly interfaces that improve accessibility, ease of use, and user satisfaction.
       url: /images/service/choose/why1.jpg
 
     - icon: layers
       title: Solution Architecture & Prototyping
-      content: Before writing a single line of code, we create prototypes,
-        architectural models, and functional plans to ensure the solution aligns
-        perfectly with your business goals and technical requirements.
+      content: Before writing even a one line of code we create prototypes, architectural models and functional plans to ensure that the project is in line with your desired outcomes.
       url: /images/service/choose/why2.jpg
 
     - icon: refresh-cw
       title: Software Migration & Modernisation
-      content:
-        If you’re upgrading legacy systems, we modernise architecture, UI/UX,
-        security layers, and infrastructure to ensure long-term stability,
-        improved performance, and future scalability.
+      content: If you’re upgrading legacy systems, we modernise the architecture, UI/UX, security layers, and infrastructure, ensuring long-term stability and performance.
       url: /images/service/choose/why3.jpg
 
     - icon: users
       title: Consulting & CTO Services
-      content:
-        We provide strategic guidance, technical leadership, and full project
-        management support, helping you plan, manage, and execute software
-        projects with confidence.
+      content: We provide strategic guidance, technical leadership, and full project management support, helping you plan and execute software projects with confidence.
       url: /images/service/choose/why4.jpg
 
 why:
   subtitle: WHY CHOOSE US
-  title: Why Choose Western Australia Development Company for Custom Software Development
+  title: Why Choose Us for Custom Software Development Services
   list:
     - title: Local Expertise You Can Trust
-      content: With a Perth-based team, we offer accessible communication,collaborative planning, and an understanding of Western Australia’s unique business ecosystem.
+      content: With a Perth-based team, we offer accessible communication, collaborative planning, and an understanding of Western  Australia’s unique business ecosystem.
     - title: Tailored, Effective Software Solutions
-      content: We don’t believe in one-size-fits-all. Each solution is built from the ground up to match your workflows, goals, and longterm business strategy.
+      content: We don’t believe in one-size-fits-all. Each solution is built from the ground up to match your workflows, goals, and long-term business strategy.
     - title: Agile, Transparent Process
       content: Our agile development methodology ensures flexibility, clear communication, and continuous improvement throughout the project.
     - title: Cost-Effective and High-Quality
@@ -131,6 +96,7 @@ why:
 process:
   subtitle: OUR PROCESS
   title: Our Approach to Custom Software Development
+  description: At Western Australia Development Company, we prioritise strong client relationships and a smooth project experience from start to finish
   steps:
     - title: Discovery Phase
       content: We engage in detailed consultations to understand your objectives, pain points, and project expectations. Yourinsights guide our strategy and ensure the solution we build aligns perfectly with your business.
@@ -155,39 +121,56 @@ value:
 industries:
   subtitle: INDUSTRIES
   title: Industries We Serve
+  description: We deliver custom software for a wide range of Perth industries
   list:
-    - Mining & Resources
-    - Logistics & Supply Chain
-    - Healthcare & Medical Technology
-    - Finance & Professional services
-    - Construction & Engineering
-    - E-commerce & Retail
-    - Education & Training
-    - Startups & Innovation-focused businesses
+    - title: Mining & Resources
+    - title: Logistics & Supply Chain
+    - title: Healthcare & Medical Technology
+    - title: Finance & Professional services
+    - title: Construction & Engineering
+    - title: E-commerce & Retail
+    - title: Education & Training
+    - title: Startups & Innovation-focused businesses
 
 technologies:
   subtitle: TECHNOLOGY STACK
   title: Technologies We Use
-  list:
-    - JavaScript
-    - Python
-    - C#
-    - PHP
-    - React
-    - Angular
-    - .NET
-    - Laravel
-    - Django
-    - Swift
-    - Kotlin
-    - Flutter
-    - MySQL
-    - PostgreSQL
-    - MongoDB
-    - SQL Server
-    - AWS
-    - Azure
-    - Google Cloud
+  description: We utilise industry-standard, widely adopted technologies 
+
+  groups:
+    - title: Languages
+      items:
+        - JavaScript
+        - Python
+        - C#
+        - PHP
+
+    - title: Frameworks
+      items:
+        - React
+        - Angular
+        - .NET
+        - Laravel
+        - Django
+
+    - title: Mobile Technologies
+      items:
+        - Swift
+        - Kotlin
+        - Flutter
+
+    - title: Databases
+      items:
+        - MySQL
+        - PostgreSQL
+        - MongoDB
+        - SQL Server
+
+    - title: Cloud Platforms
+      items:
+        - AWS
+        - Azure
+        - Google Cloud
 
 testimonial:
   subtitle: CLIENT FEEDBACK

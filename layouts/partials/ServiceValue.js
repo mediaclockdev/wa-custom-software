@@ -1,6 +1,6 @@
 "use client";
 
-import { markdownify } from "@lib/utils/textConverter";
+import SectionHeader from "@layouts/components/SectionHeader";
 import { FaCogs, FaChartLine, FaExpandArrowsAlt } from "react-icons/fa";
 
 const icons = [FaCogs, FaChartLine, FaExpandArrowsAlt];
@@ -9,18 +9,13 @@ const ServiceValue = ({ value }) => {
   if (!value) return null;
 
   return (
-    <section className="section min-h-dvh flex items-center bg-gradient-to-b from-theme-light/80 via-white to-theme-light/40">
+    <section className="section min-h-[50dvh] flex items-center bg-gradient-to-b from-theme-light/80 via-white to-theme-light/40">
       <div className="container">
-        <div className="animate text-center max-w-3xl mx-auto">
-          <p className="uppercase tracking-wider text-sm font-medium">
-            {value.subtitle}
-          </p>
-          {markdownify(
-            value.title,
-            "h2",
-            "mt-2 section-title text-2xl sm:text-3xl md:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent leading-relaxed",
-          )}
-        </div>
+        <SectionHeader
+          subtitle={value.subtitle}
+          title={value.title}
+          description={value.description}
+        />
 
         <div className="animate mt-16 max-w-4xl mx-auto space-y-8">
           {value.list.map((item, i) => {
@@ -38,15 +33,15 @@ const ServiceValue = ({ value }) => {
                 </span>
 
                 <div className="flex items-center justify-center gap-10 flex-col sm:flex-row">
-                  <div className="relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-secondary/10 text-secondary text-2xl transition-all duration-300 group-hover:bg-primary group-hover:text-white">
-                    <Icon size={26} />
+                  <div className="relative z-10 flex h-20 w-20 shrink-0 items-center justify-center rounded-xl bg-secondary/10 text-secondary text-2xl transition-all duration-300 group-hover:bg-primary group-hover:text-white">
+                    <Icon size={36} />
                   </div>
 
                   <div className="relative z-10">
-                    <h3 className="mb-1 text-2xl font-semibold text-dark">
+                    <h3 className="mb-2 text-2xl lg:text-3xl  text-dark">
                       {item.title}
                     </h3>
-                    <p className="text-text leading-relaxed text-base">
+                    <p className="text-text text-base lg:text-lg">
                       {item.content}
                     </p>
                   </div>
