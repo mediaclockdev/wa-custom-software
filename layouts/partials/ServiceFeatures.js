@@ -1,5 +1,5 @@
 "use client";
-import { markdownify } from "@lib/utils/textConverter";
+
 import React, { useRef } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import Image from "next/image";
@@ -7,7 +7,6 @@ import SectionHeader from "@layouts/components/SectionHeader";
 
 const Cards = ({ item, index, range, targetScale, progress }) => {
   const container = useRef(null);
-  // const scale = useTransform(progress, range, [1, targetScale]);
   const rawScale = useTransform(progress, range, [1, targetScale]);
   const scale = useSpring(rawScale, {
     stiffness: 120,
@@ -20,7 +19,7 @@ const Cards = ({ item, index, range, targetScale, progress }) => {
       key={index}
       ref={container}
       className={`card w-full h-dvh sticky`}
-      style={{ top: `calc(5vh + ${index * 25}px)` }}
+      style={{ top: `calc(8vh + ${index * 25}px)` }}
     >
       <motion.div
         className="bg-white rounded-lg px-7 py-16 shadow-sm border border-slate-300 h-[500px] w-full flex items-center justify-between gap-10"

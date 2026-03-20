@@ -18,8 +18,6 @@ const HomeBanner = ({
 }) => {
   const bannerRef = useRef(null);
 
-  console.log("Banner ", bannerData);
-
   useLayoutEffect(() => {
     if (!bannerRef.current) return;
 

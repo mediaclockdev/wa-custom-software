@@ -21,7 +21,7 @@ const PostSingle = ({ frontmatter, content, recentPosts }) => {
       <section className="section pt-0">
         <div className="container">
           <article>
-            <div className="row justify-center">
+            <div className="row justify-center mt-3">
               <div className="lg:col-10">
                 {image && (
                   <Image
@@ -52,21 +52,21 @@ const PostSingle = ({ frontmatter, content, recentPosts }) => {
                     </p>
                   </div>
                 </div>
-                <div className="content mb-16 mt-16 text-left">
+                <div className="content mb-4 mt-16 text-left">
                   <MDXContent content={content} />
                 </div>
               </div>
-              {disqus.enable && (
+              {/* {disqus.enable && (
                 <div className="fade row justify-center ">
                   <div className="lg:col-8">
                     <DisqussEmbed />
                   </div>
                 </div>
-              )}
+              )} */}
             </div>
           </article>
 
-          <div className="section mt-16">
+          <div className="section mt-4">
             <h2 className="section-title text-center">Recent Articles</h2>
             <div className="row justify-center">
               {recentPosts.slice(0, 2).map((post, index) => (
@@ -78,8 +78,6 @@ const PostSingle = ({ frontmatter, content, recentPosts }) => {
           </div>
         </div>
       </section>
-
-      <Cta />
     </>
   );
 };

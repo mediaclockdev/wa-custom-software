@@ -123,7 +123,7 @@ Mobile App Development Tools & Technology Stack
 ● Our team is equipped with a complete range of the latest tools and technology that
 include:
 ● Languages: Swift, Kotlin, Java, C#, TypeScript
-● Frameworks: Angular, AngularJS, Cordova, ASP.Net, Node.js
+● Frameworks: Angular, AngularJS, Cordova, ASP.NET, Node.js
 ● Design Tools: Figma, Sketch
 ● Front-End Technologies: HTML, CSS
 

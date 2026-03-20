@@ -132,7 +132,14 @@ const Footer = () => {
           </motion.div>
 
           {/* Services */}
-          <div>
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            custom={2}
+            className=""
+          >
             <h3 className="text-lg font-semibold text-gray-900 mb-6">
               Services
             </h3>
@@ -150,7 +157,7 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
           {/* Contact Details */}
           <motion.div

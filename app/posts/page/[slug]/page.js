@@ -43,8 +43,6 @@ const BlogPagination = async ({ params }) => {
           />
         </div>
       </section>
-      {/* CTA */}
-      <Cta />
     </GSAPWrapper>
   );
 };

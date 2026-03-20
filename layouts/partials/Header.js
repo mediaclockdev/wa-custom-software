@@ -71,7 +71,6 @@ const Header = () => {
     <>
       <header
         ref={headerRef}
-        // className={`my-2 mb-auto container sticky top-2 z-50 transition-all duration-300 ${direction === 1 ? "-translate-y-full" : "translate-y-0"}`}
         className={`my-2 mb-auto container sticky top-2 z-50 transition-all duration-300`}
       >
         <nav className="navbar w-full bg-white py-2 px-4 rounded-full border border-slate-300  relative">
@@ -91,10 +90,10 @@ const Header = () => {
                   {!item.groups && (
                     <Link
                       href={item.url}
-                      className={`relative text-lg p-2 rounded-full px-4 border border-transparent transition-all duration-300 hover:bg-[#FAF5F3] hover:shadow-sm font-medium text-slate-800 ${
+                      className={`relative text-lg p-2 rounded-full px-4 border transition-all duration-300 hover:bg-[#FAF5F3] hover:shadow-sm font-medium text-slate-800 ${
                         isActive
-                          ? "text-primary font-medium bg-[#FAF5F3] border-slate-300"
-                          : ""
+                          ? "border-slate-300 bg-[#FAF5F3] text-primary"
+                          : "border-transparent"
                       }`}
                     >
                       {item.name}
@@ -120,7 +119,7 @@ const Header = () => {
                               key={gi}
                               className={gi === 2 ? "col-span-2" : ""}
                             >
-                              <p className="text-xl font-semibold text-gray-600 mb-2">
+                              <p className="text-xl font-semibold text-gray-600 mb-3">
                                 {group.title}
                               </p>
 
@@ -129,7 +128,7 @@ const Header = () => {
                                   <li key={j}>
                                     <Link
                                       href={child.url}
-                                      className={`block px-3 py-2 text-lg font-medium rounded-md hover:bg-gray-50 transition ${
+                                      className={`block px-2 py-1 text-base font-medium rounded-md hover:bg-gray-50 transition ${
                                         asPath === child.url
                                           ? "text-secondary font-medium"
                                           : "text-gray-800"

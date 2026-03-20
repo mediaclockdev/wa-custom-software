@@ -20,7 +20,7 @@ const Process = ({ process }) => {
         <div className="relative mt-20">
           <div className="absolute left-1/2 top-0 hidden h-full w-[2px] -translate-x-1/2 bg-primary/20 md:block" />
 
-          <div className="space-y-8 lg:space-y-16">
+          <div className="space-y-8 lg:space-y-8">
             {process.steps.map((step, i) => {
               const Icon = icons[i] || FaSearch;
               const isLeft = i % 2 === 0;

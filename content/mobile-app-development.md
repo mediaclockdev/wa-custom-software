@@ -6,7 +6,7 @@ description: High-performance mobile app development for Perth and Western Austr
 
 banner:
   title: "Mobile App </br> Development in Perth"
-  image: /images/service/hero/mobdevbg.png
+  image: /images/service/mobile-app-development/hero.png
   link:
     label: Talk to Our Experts
     href: /contact
@@ -33,27 +33,27 @@ services:
     - icon: smartphone
       title: Android App Development
       content: We create high-performance Android apps that meet your company's needs, using modern languages like Kotlin along with Java. The Perth office of our Android development team ensures that each application is safe as well as scalable and designed to work seamlessly across the entire Android operating system.
-      url: /images/service/choose/why1.jpg
+      url: /images/service/mobile-app-development/android-development.jpg
 
     - icon: tablet
       title: iPhone App Development
       content: We have iOS app developers specialize with Swift and Objective-C and create custom iPhone as well as iPad applications that are engineered to provide superior performance, speed as well as user-experience. If you're aiming at consumer markets or internal business processes our iOS solutions provide extraordinary performance.
-      url: /images/service/choose/why2.jpg
+      url: /images/service/mobile-app-development/iphone-development.png
 
     - icon: layers
       title: Flutter App Development
       content: As experts for Flutter development, our team create and develop cross-platform applications that work flawlessly on iOS or Android. Flutter lets us reduce the time to develop, speed up deployment and maintain the same design across all devices. This is ideal for businesses and startups looking for an efficient and cost-effective solution.
-      url: /images/service/choose/why3.jpg
+      url: /images/service/mobile-app-development/flutter-development.jpg
 
     - icon: code
       title: Kotlin App Development
       content: Our Kotlin developers design modern and secure Android applications that have improved efficiency and simpler code structures. Kotlin's sophisticated features enable us to build feature-rich, mobile applications that are flexible and designed to meet your needs for operation.
-      url: /images/service/choose/why4.jpg
+      url: /images/service/mobile-app-development/kotlin-development.png
 
     - icon: cpu
       title: Swift App Development
       content: If you are a client who is looking to provide top-quality native iOS experience Our Swift developers help you bring your ideas to life by using modern frameworks and Apple's top practices. We design and build elegant, fast and flexible iOS applications that can be used by consumers and enterprises.
-      url: /images/service/choose/why2.jpg
+      url: /images/service/mobile-app-development/swift-development.png
 
     - icon: pen-tool
       title: Mobile App Design
@@ -125,7 +125,7 @@ technologies:
         - Angular
         - AngularJS
         - Cordova
-        - ASP.Net
+        - ASP.NET
         - Node.js
 
     - title: Cloud & Services

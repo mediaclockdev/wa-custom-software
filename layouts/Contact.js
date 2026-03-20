@@ -11,7 +11,6 @@ const fadeUp = {
 };
 
 const Contact = ({ data }) => {
-  console.log("Data ", data);
   const { frontmatter } = data;
   const { title, banner } = frontmatter;
 

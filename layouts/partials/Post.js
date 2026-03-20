@@ -20,7 +20,7 @@ const Post = ({ post, i }) => {
         </Link>
       )}
       <div className="p-8">
-        <h2 className="h4">
+        <h2 className="h4 line-clamp-2">
           <Link
             href={`/${blog_folder}/${post.slug}`}
             className="block hover:text-primary hover:underline"
@@ -28,8 +28,8 @@ const Post = ({ post, i }) => {
             {post.frontmatter.title}
           </Link>
         </h2>
-        <p className="mt-4">
-          {post.content.slice(0, Number(summary_length))}...
+        <p className="mt-4 line-clamp-6">
+          {post.content}
         </p>
         <div className="mt-6 flex items-center">
           <div className="overflow-hidden rounded-full border-2 border-white shadow-[0_0_0_2px] shadow-primary">

@@ -37,7 +37,7 @@ export default function Hero({ banner, isParticle = false }) {
   const parts = banner?.title?.split(/<\/?br\s*\/?>/i);
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-bg-light to-white py-10 lg:py-18 min-h-[calc(50dvh-50px)] lg:min-h-[50vh] flex items-center">
+    <section className="relative bg-transparent py-16 lg:py-20 lg:pb-12">
       {isParticle ? <ParticlesComponent /> : null}
       <div className="container mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-5 items-center">
         {/* LEFT SIDE */}
