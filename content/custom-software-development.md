@@ -99,11 +99,11 @@ process:
   description: At Western Australia Development Company, we prioritise strong client relationships and a smooth project experience from start to finish
   steps:
     - title: Discovery Phase
-      content: We engage in detailed consultations to understand your objectives, pain points, and project expectations. Yourinsights guide our strategy and ensure the solution we build aligns perfectly with your business.
+      content: We engage in detailed consultations to understand your objectives, pain points, and project expectations. Your insights guide our strategy and ensure the solution we build aligns perfectly with your business.
     - title: Design & Planning Phase
-      content: We design interfaces and user flows with usability at the forefront. Our planning ensures that any technical decision supports scalability, security, and long-term software Health.
+      content: We design interfaces and user flows with usability at the forefront. Our planning ensures that any technical decision supports scalability, security, and long-term software health.
     - title: Development & Testing
-      content: Using modern technology stacks and best coding practices,our developers bring your software vision to life. We conduct rigorous testing to ensure quality, performance, and security.
+      content: Using modern technology stacks and best coding practices, our developers bring your software vision to life. We conduct rigorous testing to ensure quality, performance, and security.
     - title: Launch & Ongoing Maintenance
       content: We manage deployment, onboarding, and full post-launch support. This includes updates, security patches, and system enhancements to keep your software running smoothly.
 
