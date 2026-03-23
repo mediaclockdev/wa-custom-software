@@ -19,7 +19,7 @@ const Post = ({ post, i }) => {
           />
         </Link>
       )}
-      <div className="p-8">
+      <div className="p-2 lg:p-8">
         <h2 className="h4 line-clamp-2">
           <Link
             href={`/${blog_folder}/${post.slug}`}
@@ -28,9 +28,7 @@ const Post = ({ post, i }) => {
             {post.frontmatter.title}
           </Link>
         </h2>
-        <p className="mt-4 line-clamp-6">
-          {post.content}
-        </p>
+        <p className="mt-4 line-clamp-6">{post.content}</p>
         <div className="mt-6 flex items-center">
           <div className="overflow-hidden rounded-full border-2 border-white shadow-[0_0_0_2px] shadow-primary">
             <ImageFallback

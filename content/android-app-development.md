@@ -8,7 +8,7 @@ banner:
   title: "Android App Development </br> in Perth"
   image: /images/service/custom-software-hero-removebg-preview2.png
   link:
-    label: Start Your Android Project
+    label: Start Your Project
     href: /contact
   description: We offer a range of Android app development services tailored to Perth businesses. Our approach combines user experience, innovation, and technology to produce visually striking and technically robust applications.
 

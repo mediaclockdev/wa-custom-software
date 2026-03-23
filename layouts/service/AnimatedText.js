@@ -4,13 +4,11 @@ const { motion } = require("framer-motion");
 export const AnimatedText = ({ text }) => {
   const letters = text.trim().split("");
 
-  const words = text.trim().split(" ");
-
   const container = {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.07,
+        staggerChildren: 0.04,
       },
     },
   };
@@ -25,16 +23,16 @@ export const AnimatedText = ({ text }) => {
       variants={container}
       initial="hidden"
       animate="visible"
-      className="inline-block"
+      className="inline"
     >
-      {words.map((word, wordIndex) => (
-        <span key={wordIndex} className="inline-block whitespace-nowrap mr-2">
-          {word.split("").map((letter, index) => (
-            <motion.span key={index} variants={child} className="inline-block">
-              {letter}
-            </motion.span>
-          ))}
-        </span>
+      {letters.map((letter, index) => (
+        <motion.span
+          key={index}
+          variants={child}
+          className="inline-block whitespace-pre"
+        >
+          {letter}
+        </motion.span>
       ))}
     </motion.span>
   );

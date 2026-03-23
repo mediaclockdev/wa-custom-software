@@ -5,7 +5,7 @@ seo_title: About Western Australia Software Development Company | Perth IT Exper
 description: Learn more about Western Australia Software Development Company, a trusted Perth-based IT and software development provider offering web development, mobile apps, automation and digital solutions across Western Australia.
 
 banner:
-  title: "About Western Australia"
+  title: "About </br> Western Australia"
   image: /images/service/hero/aboutbg.png
   content: Western Australia Software Development Company offers professional digital and IT services that help businesses
   link:

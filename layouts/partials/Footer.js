@@ -152,7 +152,7 @@ const Footer = () => {
                     className="group relative inline-block text-sm text-gray-600 hover:text-primary transition duration-300"
                   >
                     {item.name}
-                    <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-primary transition-all duration-400 group-hover:w-full" />
+                    <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-primary transition-all duration-500 group-hover:w-full" />
                   </Link>
                 </li>
               ))}

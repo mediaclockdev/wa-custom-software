@@ -38,7 +38,7 @@ services:
         - Local keyword targeting
         - Suburb-focused landing pages
         - Review generation and reputation management
-      url: /images/service/choose/why1.jpg
+      url: /images/service/digital-marketing/local-seo.png
 
     - icon: tool
       title: Technical SEO Audits
@@ -48,7 +48,7 @@ services:
         - Mobile usability improvements
         - Core Web Vitals enhancements
         - Crawl and indexation fixes
-      url: /images/service/choose/why2.jpg
+      url: /images/service/digital-marketing/tech-seo.jpg
 
     - icon: file-text
       title: On-Page SEO Enhancements
@@ -58,7 +58,7 @@ services:
         - Content structure and heading improvements
         - Internal linking optimisation
         - Schema implementation for rich results
-      url: /images/service/choose/why3.jpg
+      url: /images/service/digital-marketing/onpage-seo.png
 
     - icon: search
       title: Keyword Research and SEO Strategy
@@ -67,7 +67,8 @@ services:
         - Competitor keyword analysis
         - High-intent keyword targeting
         - Keyword-focused content planning
-      url: /images/service/choose/why4.jpg
+      url: /images/service/digital-marketing/keyword-research.png
+
 
     - icon: edit-3
       title: Content Marketing and Blogging
@@ -76,7 +77,8 @@ services:
         - Blog content creation
         - Service and landing page content
         - Clear and compelling calls-to-action
-      url: /images/service/choose/why5.jpg
+      url: /images/service/digital-marketing/content-marketing.png
+
 
     - icon: link
       title: Ethical Link Building
@@ -85,7 +87,8 @@ services:
         - High-quality link acquisition
         - Spammy backlink cleanup
         - Local and industry-relevant links
-      url: /images/service/choose/why6.jpg
+      url: /images/service/digital-marketing/ethical-link.jpg
+
 
     - icon: bar-chart-2
       title: PPC Management (Google & Meta Ads)
@@ -95,7 +98,8 @@ services:
         - Meta (Facebook & Instagram) advertising
         - Retargeting strategies
         - Conversion tracking and ROAS optimisation
-      url: /images/service/choose/why1.jpg
+      url: /images/service/digital-marketing/ppc-managment.jpg
+
 
     - icon: users
       title: Social Media Marketing
@@ -104,7 +108,8 @@ services:
         - Creative content production
         - Paid social media campaigns
         - Local audience targeting and community building
-      url: /images/service/choose/why2.jpg
+      url: /images/service/digital-marketing/social-media.png
+
 
     - icon: monitor
       title: Web Development for Marketing
@@ -114,7 +119,7 @@ services:
         - Mobile-first responsive design
         - Lead form and tracking integration
         - SEO-friendly architecture
-      url: /images/service/choose/why3.jpg
+      url: /images/service/digital-marketing/web-dev.jpg
 
 why:
   subtitle: WHY CHOOSE US

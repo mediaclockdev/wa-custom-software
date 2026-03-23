@@ -9,6 +9,7 @@ import { usePathname } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
 import { CgClose } from "react-icons/cg";
 import { FaAngleDown } from "react-icons/fa6";
+import { IoIosCall } from "react-icons/io";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 const Header = () => {
@@ -78,7 +79,7 @@ const Header = () => {
             <Logo src={logo} />
           </div>
 
-          <ul className="hidden lg:flex items-center gap-6 order-1 text-black ">
+          <ul className="hidden lg:flex items-center gap-4 order-1 text-black ">
             {main.map((item, i) => {
               const isActive = asPath === item.url;
               const isParentActive = item.groups?.some((group) =>
@@ -151,7 +152,7 @@ const Header = () => {
           </ul>
 
           <div className="hidden lg:flex items-center gap-3 order-2 ml-6">
-            <ButtonLink href="/contact" title="Let's Talk" animate={animate} />
+            <ButtonLink href="/contact" title="Let's Talk" animate={animate} icon={IoIosCall} />
           </div>
 
           <div className="lg:hidden ml-auto">
@@ -180,6 +181,7 @@ const Header = () => {
                   onClick={() => setShowMenu(false)}
                   href="/contact"
                   title="Let's Talk"
+                  icon={IoIosCall}
                 />
 
                 <button

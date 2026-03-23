@@ -31,52 +31,52 @@ services:
     - icon: tool
       title: Custom Software Development
       content: We design and develop fully customised software solutions built around your business needs. From workflow automation to enterprise systems, we create reliable applications that scale as you grow.
-      url: /images/service/choose/why1.jpg
+      url: /images/service/custom-development/custom-software.jpg
 
     - icon: smartphone
       title: Web & Mobile App Development
       content: Our team develops highly responsive, efficient mobile and web applications that are tailored to the needs of your users. It doesn't matter if you're using iOS, Android, or cross-platform platforms, we provide seamless functionality and a user-friendly design.
-      url: /images/service/choose/why2.jpg
+      url: /images/service/custom-development/web-mobile.jpg
 
     - icon: cpu
       title: AI & Intelligent Automation
       content: By integrating AI-driven features and automation, we help reduce manual workloads, streamline processes, and unlock smarter operational capabilities for Perth businesses.
-      url: /images/service/choose/why3.jpg
+      url: /images/service/custom-development/ai.jpg
 
     - icon: layers
       title: Custom ERP/CRM Development
       content: We build powerful ERP and CRM systems that centralise your data, improve internal coordination, and support data-driven decision-making across your organisation.
-      url: /images/service/choose/why4.jpg
+      url: /images/service/custom-development/erp-crm.jpg
 
     - icon: cloud
       title: SaaS Application Development
       content: For businesses launching cloud-based platforms, we develop scalable SaaS applications built with security, multi-tenancy, and long-term adaptability in mind.
-      url: /images/service/choose/why5.jpg
+      url: /images/service/custom-development/saas.jpg
 
     - icon: database
       title: Database & Backend Development
       content: Our experts build robust databases and backend structures that ensure speed, stability, and data integrity — essential for custom software environments.
-      url: /images/service/choose/why6.jpg
+      url: /images/service/custom-development/db-backend.jpg
 
     - icon: pen-tool
       title: UI/UX Design
       content: Great software begins with great design. We develop clean, user-friendly interfaces that improve accessibility, ease of use, and user satisfaction.
-      url: /images/service/choose/why1.jpg
+      url: /images/service/custom-development/uiux.jpg
 
     - icon: layers
       title: Solution Architecture & Prototyping
       content: Before writing even a one line of code we create prototypes, architectural models and functional plans to ensure that the project is in line with your desired outcomes.
-      url: /images/service/choose/why2.jpg
+      url: /images/service/custom-development/solution.jpg
 
     - icon: refresh-cw
       title: Software Migration & Modernisation
       content: If you’re upgrading legacy systems, we modernise the architecture, UI/UX, security layers, and infrastructure, ensuring long-term stability and performance.
-      url: /images/service/choose/why3.jpg
+      url: /images/service/custom-development/migration.png
 
     - icon: users
       title: Consulting & CTO Services
       content: We provide strategic guidance, technical leadership, and full project management support, helping you plan and execute software projects with confidence.
-      url: /images/service/choose/why4.jpg
+      url: /images/service/custom-development/consult.png
 
 why:
   subtitle: WHY CHOOSE US

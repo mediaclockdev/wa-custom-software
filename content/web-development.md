@@ -36,32 +36,37 @@ services:
     - icon: tool
       title: Custom Web Development
       content: We specialize in the creation of custom web applications and websites that go well beyond templates and one-size-fits-all solutions. Our designers create robust, secure and user-friendly systems designed specifically to meet the needs of your business. No matter if your task is straightforward or complex, we can provide solutions that improve efficiency and help sustain the long-term growth.
-      url: /images/service/choose/why1.jpg
+      url: /images/service/web-development/custom.png
 
     - icon: smartphone
       title: WordPress Web Development
       content: We are Perth WordPress specialists, we create and build unique WordPress websites that blend flexibility with security. Our designers create customized themes with powerful plugins, SEO-friendly designs, and user-friendly backend systems that ensure your team can manage your content. We also optimize for performance security, speed, and speed.
-      url: /images/service/choose/why2.jpg
+      url: /images/service/web-development/wordpress.png
+
 
     - icon: cpu
       title: SaaS Platform Development
       content: We develop and design flexible SaaS applications that support businesses that depend heavily on multi-user platforms and subscription systems and cloud-based user interfaces. We offer SaaS solutions are built to handle massive amounts of traffic, provide complicated features, and ensure the stability of your users as their base expands.
-      url: /images/service/choose/why3.jpg
+      url: /images/service/web-development/saas.png
+
 
     - icon: layers
       title: Web & Mobile App Development
       content: From enterprise-level apps to integrated systems tools we develop functional apps that feature smooth UX/UI designs, a robust backend architecture and seamless performance. We are focused on creating custom applications that aid organizations simplify tasks, enhance workflows and increase user engagement.
-      url: /images/service/choose/why4.jpg
+      url: /images/service/web-development/mobile.jpg
+
 
     - icon: cloud
       title: E-Commerce Website Development
       content: We design fully customized eCommerce websites that are designed to increase sales and give customers a seamless shopping experience. Our eCommerce builds feature safe checkouts, speedy loading cart integrations, product pages and real-time inventory features and easy-to-use interfaces. We optimize the customer experience to maximize conversions.
-      url: /images/service/choose/why5.jpg
+      url: /images/service/web-development/ecom.jpg
+
 
     - icon: database
       title: Responsive Web Design
       content: Each website we design is responsive, ensuring constant performance across all devices, including tablets, desktops as well as smartphones. With a focus on visual appeal and mobile-first designs our clients can expand their reach and offer seamless user experience.
-      url: /images/service/choose/why6.jpg
+      url: /images/service/web-development/responsive.png
+
 
 why:
   subtitle: WHY CHOOSE US

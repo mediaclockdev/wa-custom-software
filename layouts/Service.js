@@ -7,6 +7,7 @@ import TechStack from "@layouts/partials/TechStack";
 import Faq from "@layouts/partials/Faq";
 import ServiceFeatures from "@layouts/partials/ServiceFeatures";
 import Hero from "./service/Hero";
+import HeroService from "./service/HeroService";
 
 const Service = ({ data }) => {
   const { frontmatter } = data;
@@ -14,7 +15,8 @@ const Service = ({ data }) => {
   return (
     <>
       {/* HERO (same quality as homepage) */}
-      <Hero banner={frontmatter.banner} />
+      {/* <Hero banner={frontmatter.banner} /> */}
+      <HeroService banner={frontmatter.banner} />
 
       {/* INTRO */}
       <ServiceIntro intro={frontmatter.intro} />

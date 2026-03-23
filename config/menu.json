@@ -40,6 +40,7 @@
     },
 
     { "name": "About", "url": "/about" },
+    { "name": "Blog", "url": "/posts" },
     { "name": "Contact", "url": "/contact" }
   ],
   "footer": {
