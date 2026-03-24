@@ -33,19 +33,19 @@ services:
   list:
     - title: Software & Web Development
       content: We help businesses build and expand their online presence by developing custom websites and web-based apps that are designed to meet business objectives.
-      url: /images/service/choose/why1.jpg
+      url: /images/about/software.jpg
 
     - title: Mobile Application Development
       content: We create mobile apps which support efficiency, automation and growth of businesses. We focus on usability in real-world situations.
-      url: /images/service/choose/why2.jpg
+      url: /images/about/mobile.jpg
 
     - title: Business Automation
       content: We support companies that depend on manual processes through the provision of customized software and automation solutions that help increase efficiency and productivity.
-      url: /images/service/choose/why3.jpg
+      url: /images/about/business.png
 
     - title: Digital Marketing Services
       content: Our digital marketing services can help companies increase their exposure and connect with their desired customers all across Western Australia.
-      url: /images/service/choose/why4.jpg
+      url: /images/about/digital.jpg
 
 #process
 process:

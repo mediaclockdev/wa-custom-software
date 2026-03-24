@@ -48,7 +48,7 @@ const Footer = () => {
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
 
       <div className="container relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-10 py-4 lg:py-10">
           {/* About + Social */}
           <motion.div
             variants={fadeUp}
@@ -82,7 +82,7 @@ const Footer = () => {
             custom={1}
             className=""
           >
-            <h3 className="text-lg font-semibold text-gray-900 mb-6">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3 lg:mb-6">
               Connect
             </h3>
 
@@ -112,11 +112,11 @@ const Footer = () => {
             custom={2}
             className=""
           >
-            <h3 className="text-lg font-semibold text-gray-900 mb-6">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3 lg:mb-6">
               Quick Links
             </h3>
 
-            <ul className="space-y-3">
+            <ul className="space-y-1 lg:space-y-3">
               {quick_links.map((item) => (
                 <li key={item.name}>
                   <Link
@@ -140,11 +140,11 @@ const Footer = () => {
             custom={2}
             className=""
           >
-            <h3 className="text-lg font-semibold text-gray-900 mb-6">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3 lg:mb-6">
               Services
             </h3>
 
-            <ul className="space-y-3">
+            <ul className="space-y-1 lg:space-y-3">
               {services.map((item) => (
                 <li key={item.name}>
                   <Link
@@ -168,11 +168,11 @@ const Footer = () => {
             custom={4}
             className=""
           >
-            <h3 className="text-lg font-semibold text-gray-900 mb-6">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3 lg:mb-6">
               Contact
             </h3>
 
-            <ul className="space-y-3 text-sm text-gray-600">
+            <ul className="space-y-1 lg:space-y-3 text-sm text-gray-600">
               <li>{markdownify(location)}</li>
 
               {phone && (

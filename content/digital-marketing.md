@@ -6,7 +6,7 @@ description: Data-driven digital marketing services in Perth across SEO, PPC, co
 
 banner:
   title: "Digital Marketing </br> Agency in Perth"
-  image: /images/service/hero/digimarkbg.png
+  image: /images/service/digital-marketing/hero.jpg
   link:
     label: Grow Your Business
     href: /contact

@@ -6,7 +6,7 @@ description: Custom Android app development services in Perth for secure, scalab
 
 banner:
   title: "Android App Development </br> in Perth"
-  image: /images/service/custom-software-hero-removebg-preview2.png
+  image: /images/service/android-development/hero.jpg
   link:
     label: Start Your Project
     href: /contact
@@ -33,32 +33,32 @@ services:
     - icon: smartphone
       title: Custom Android App Development
       content: We create fully customized Android applications from scratch, ensuring that each component from functionalities to features--is tailored to meet your company's needs. Our developers make use of modern frameworks and languages to build rapid reliable, secure and future-proof applications.
-      url: /images/service/choose/why1.jpg
+      url: /images/service/android-development/custom-app.jpg
 
     - icon: pen-tool
       title: UI and UX Design for Android
       content: Design that is user-friendly is at the foundation of any successful application. We design sleek interfaces, easy flow of navigation, as well as visually seamless designs that are inspired by the Google's Material Design principles. The result is an application that people love using.
-      url: /images/service/choose/why2.jpg
+      url: /images/service/android-development/uiux.jpg
 
     - icon: refresh-cw
       title: App Modernisation Services
       content: If your current Android application is slow, old-fashioned or visually unbalanced We modernize it to keep up with the latest standards. From redesigns to optimization of performance and code refactoring to create your app to look and perform as it should to the digital age.
-      url: /images/service/choose/why3.jpg
+      url: /images/service/android-development/app-modern.jpg
 
     - icon: link
       title: API Integration & Connectivity
       content: We connect our Android application with key business tools like ERPs, CRMs Cloud platforms, payment gateways and third-party APIs to ensure data flows seamlessly and safely across your platforms.
-      url: /images/service/choose/why4.jpg
+      url: /images/service/android-development/api-connect.jpg
 
     - icon: settings
       title: Maintenance & Ongoing Support
       content: Android apps require continual enhancements and updates. We offer long-term maintenance for apps which includes security patches as well as improvements to features, bug fixes and optimization for the most current Android operating systems and versions.
-      url: /images/service/choose/why5.jpg
+      url: /images/service/android-development/maintain.jpg
 
     - icon: shopping-cart
       title: E-commerce & Business App Development
       content: If you're developing an app for retail or a mobile ordering application or an internal tool for business our team can create Android apps that help with operations, sales, automatization as well as improved customer experiences.
-      url: /images/service/choose/why6.jpg
+      url: /images/service/android-development/ecomm.jpg
 
 why:
   subtitle: WHY CHOOSE US

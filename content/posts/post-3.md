@@ -1,6 +1,6 @@
 ---
 title: Top Web Development Trends Businesses Should Follow in 2026
-image: /images/blog/03.jpg
+image: /images/blog/top.png
 author:
   name: Abdullah Al Shifat
   avatar: /images/author/abdullah.jpg

@@ -6,7 +6,7 @@ description: Conversion-focused web design services in Perth built for performan
 
 banner:
   title: "Web Design </br> in Perth"
-  image: /images/service/custom-software-hero-removebg-preview2.png
+  image: /images/service/web-design/hero.png
   link:
     label: Start Your Project
     href: /contact

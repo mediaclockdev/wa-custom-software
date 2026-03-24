@@ -6,7 +6,7 @@ description: Premium iOS app development services in Perth for secure, scalable,
 
 banner:
   title: "iOS App Development </br> in Perth"
-  image: /images/service/custom-software-hero-removebg-preview2.png
+  image: /images/service/ios-development/hero.jpg
   link:
     label: Build Your iOS App
     href: /contact
@@ -33,32 +33,32 @@ services:
     - icon: smartphone
       title: Custom iOS App Development
       content: We build native iOS applications from the ground up using Swift (Apple’s modern language), enabling high performance, reliability, and full access to Apple’s ecosystem features. Your solution will be aligned with iPhone, iPad, and Apple Watch if required.
-      url: /images/service/choose/why1.jpg
+      url: /images/service/ios-development/custom.jpg
 
     - icon: pen-tool
       title: UI and UX Design for iOS
       content: We design apps with Apple’s Human Interface Guidelines in mind—clean, intuitive, and user-friendly. Our design process emphasises accessibility, gesture-based navigation, and a polished look suitable for the premium iOS audience.
-      url: /images/service/choose/why2.jpg
+      url: /images/service/ios-development/uiux.jpg
 
     - icon: refresh-cw
       title: App Modernisation & Migration
       content: If you have an older iOS app or an Android version that needs porting, we can modernise the codebase, update UI/UX, refactor architecture, and migrate to Swift/SwiftUI for longer-term maintainability.
-      url: /images/service/choose/why3.jpg
+      url: /images/service/ios-development/modern.jpg
 
     - icon: link
       title: API Integration & Backend Support
       content: Your iOS app can sync seamlessly with third-party APIs, enterprise systems, cloud platforms (e.g., Apple iCloud, Firebase), and payment gateways. We build robust backend architecture to support real-time updates, data security and scalability.
-      url: /images/service/choose/why4.jpg
+      url: /images/service/ios-development/api.jpg
 
     - icon: settings
       title: App Maintenance & Version Upgrades
       content: Post-launch, we offer full maintenance for iOS apps—ensuring compatibility with new iOS releases, performing security updates, fixing bugs, and optimizing performance so your app remains ahead of the curve.
-      url: /images/service/choose/why5.jpg
+      url: /images/service/ios-development/maintain.png
 
     - icon: briefcase
       title: Enterprise & Consumer iOS Solutions
       content: We deliver iOS apps for both consumer-facing and enterprise applications—whether you need a retail app for iOS users or an internal business tool for iPads across your workforce in Perth and WA.
-      url: /images/service/choose/why6.jpg
+      url: /images/service/ios-development/enterprise.jpg
 
 why:
   subtitle: WHY CHOOSE US

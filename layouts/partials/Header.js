@@ -72,7 +72,7 @@ const Header = () => {
     <>
       <header
         ref={headerRef}
-        className={`my-2 mb-auto container sticky top-2 z-50 transition-all duration-300`}
+        className={`my-1 mb-auto container sticky top-1 z-50 transition-all duration-300`}
       >
         <nav className="navbar w-full bg-white py-2 px-4 rounded-full border border-slate-300  relative">
           <div className="order-0">
@@ -192,7 +192,7 @@ const Header = () => {
                 </button>
               </div>
 
-              <ul className="flex flex-col gap-5">
+              <ul className="flex flex-col gap-3">
                 {main.map((item, i) => (
                   <li key={i}>
                     {!item.groups && (

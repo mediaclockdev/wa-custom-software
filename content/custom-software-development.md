@@ -6,7 +6,7 @@ description: High-performance custom software development for Perth businesses.
 
 banner:
   title: "Custom Software </br> Development in Perth"
-  image: /images/service/hero/custdevbg.png
+  image: /images/service/custom-development/hero.jpg
   link:
     label: Talk to Our Experts
     href: /contact

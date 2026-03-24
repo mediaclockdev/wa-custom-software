@@ -6,7 +6,7 @@ description: High-performance custom web development for Perth businesses.
 
 banner:
   title: "Website Design and </br> Development in Perth"
-  image: /images/service/hero/webdev.jpg
+  image: /images/service/web-development/hero.jpg
   link:
     label: Talk to Our Experts
     href: /contact

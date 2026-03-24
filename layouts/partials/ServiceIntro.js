@@ -20,9 +20,8 @@ const ServiceIntro = ({ intro }) => {
   };
 
   return (
-    <section className="relative py-4 lg:py-8 bg-white border-b border-gray-100">
+    <section className="relative section bg-white border-b border-gray-100">
 
-      {/* Background Soft Glow Wrapper (Isolates overflow-hidden so Position:Sticky works below) */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[130px] -z-10 mix-blend-multiply"></div>
       </div>
@@ -33,12 +32,12 @@ const ServiceIntro = ({ intro }) => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start relative"
+          className="grid lg:grid-cols-12 gap-4 lg:gap-20 items-start relative"
         >
           {/* LEFT: Structural Title & Subtitle (Now Sticky!) */}
           <div className="lg:col-span-5 flex flex-col items-start lg:sticky lg:top-32 lg:h-max z-20 transition-all duration-300">
             {intro.subtitle && (
-              <motion.div variants={itemVariants} className="inline-flex items-center gap-4 mb-6 sm:mb-8">
+              <motion.div variants={itemVariants} className="inline-flex items-center lg:gap-4 mb-6 sm:mb-8">
                 <div className="h-[2px] w-10 bg-primary rounded-full"></div>
                 <p className="text-xs sm:text-sm font-extrabold tracking-[0.2em] uppercase text-primary">
                   {intro.subtitle}

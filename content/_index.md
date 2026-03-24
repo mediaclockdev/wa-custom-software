@@ -1,7 +1,6 @@
 ---
 banner:
   title: "Western Software </br> Development in Perth"
-  image: /images/western-hero.jpg
   description: We provide web, mobile app and IT services in Perth. With 10+ years of experience, we build secure, scalable and high-performing digital solutions for long-term business growth.
   link:
     label: Get in Touch

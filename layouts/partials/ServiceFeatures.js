@@ -69,7 +69,7 @@ const ServiceFeatures = ({ services }) => {
   });
 
   return (
-    <section className="section relative z-10 ">
+    <section className="section relative z-10">
       <div className="container text-center">
         <SectionHeader
           subtitle={services.subtitle}
