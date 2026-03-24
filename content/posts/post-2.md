@@ -1,6 +1,6 @@
 ---
 title: Next.js vs React Which One Should You Choose for Your Business
-image: /images/blog/02.jpg
+image: /images/blog/next.png
 author:
   name: Derick Barker
   avatar: /images/author/derick.jpg

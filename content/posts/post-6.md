@@ -1,6 +1,6 @@
 ---
 title: How Digital Marketing Helps Businesses Grow Online
-image: /images/blog/06.jpg
+image: /images/blog/digital.png
 author:
   name: Abdullah Al Shifat
   avatar: /images/author/abdullah.jpg

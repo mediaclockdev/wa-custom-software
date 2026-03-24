@@ -1,6 +1,6 @@
 ---
 title: Why Your Business Needs a Strong Digital Presence in 2026
-image: /images/blog/01.jpg
+image: /images/blog/why.jpg
 author:
   name: Western Australia
   avatar: /images/author/abdullah.jpg

@@ -1,6 +1,6 @@
 ---
 title: Common Web Development Mistakes Businesses Should Avoid
-image: /images/blog/07.jpg
+image: /images/blog/common-web.png
 author:
   name: Abdullah Al Shifat
   avatar: /images/author/abdullah.jpg

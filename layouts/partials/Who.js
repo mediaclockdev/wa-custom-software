@@ -4,6 +4,7 @@ import ButtonLink from "@layouts/components/ui/ButtonLink";
 import { markdownify } from "@lib/utils/textConverter";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
+import { FaAngleRight } from "react-icons/fa6";
 
 function highlightFounder(text) {
   const founderName = "Kiran Kumar Patel";
@@ -43,7 +44,12 @@ export default function AboutSection({ about }) {
             {markdownify(about.content, "p", "animate mt-4 text-lg")}
 
             <div className="animate mt-6">
-              <ButtonLink href="/about" title="Learn More" />
+              <ButtonLink
+                href="/about"
+                title="Learn More"
+                icon={FaAngleRight}
+                size={20}
+              />
             </div>
           </div>
 

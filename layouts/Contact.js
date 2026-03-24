@@ -33,7 +33,7 @@ const Contact = ({ data }) => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="text-4xl lg:text-6xl font-bold leading-relaxed text-gray-900 "
+            className="text-4xl lg:text-6xl font-bold leading-tight text-gray-900 "
           >
             {parts?.map((part, i) => {
               if (i === parts.length - 1) {
@@ -101,7 +101,7 @@ const Contact = ({ data }) => {
               whileInView="show"
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="p-6 rounded-2xl bg-white/70 backdrop-blur border border-gray-100 shadow-sm hover:shadow-md transition"
+              className="p-6 rounded-2xl bg-white/70 backdrop-blur border border-gray-100 shadow-sm hover:shadow-md transition cursor-pointer"
             >
               <h3 className="font-semibold text-2xl mb-3 leading-relaxed">
                 {item.title}
