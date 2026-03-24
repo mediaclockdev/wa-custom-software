@@ -29,14 +29,14 @@ export default function HeroService({ banner, title: propTitle, description: pro
 
 
       <div className="container relative z-10 mx-auto px-6 lg:px-12">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-6 items-center">
 
           {/* LEFT: Text (Half width) */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="flex flex-col items-start text-left lg:pr-8"
+            className="flex flex-col items-start text-left lg:pr-2"
           >
             {/* Minimalist Pill Badge */}
             <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-200 shadow-[0_2px_10px_rgba(0,0,0,0.02)] mb-8">

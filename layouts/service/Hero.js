@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import ButtonLink from "@layouts/components/ui/ButtonLink";
 import { AnimatedText } from "./AnimatedText";
 import { IoIosCall } from "react-icons/io";
@@ -10,36 +10,6 @@ export default function Hero({ banner }) {
     "High-Performance",
     "Web Development",
   ];
-
-  // 3D Perspective Mouse Tracking
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-
-  // Springs for buttery smooth interpolation
-  const smoothX = useSpring(mouseX, { stiffness: 60, damping: 15 });
-  const smoothY = useSpring(mouseY, { stiffness: 60, damping: 15 });
-
-  // Map mouse movement to rotation degrees
-  const rotateX = useTransform(smoothY, [-1, 1], [15, -15]);
-  const rotateY = useTransform(smoothX, [-1, 1], [-15, 15]);
-
-  // Map mouse movement to 2D parallax (pixels) for About page
-  const parallaxX = useTransform(smoothX, [-1, 1], [-20, 20]);
-  const parallaxY = useTransform(smoothY, [-1, 1], [-20, 20]);
-
-  const handleMouseMove = (e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5; // normalized -0.5 to 0.5
-    const y = (e.clientY - rect.top) / rect.height - 0.5; // normalized -0.5 to 0.5
-    mouseX.set(x * 2);
-    mouseY.set(y * 2);
-  };
-
-  const handleMouseLeave = () => {
-    // Snap back to zero on leave
-    mouseX.set(0);
-    mouseY.set(0);
-  };
 
   // Stagger Text Reveal Variants
   const containerVariants = {
@@ -82,15 +52,17 @@ export default function Hero({ banner }) {
           initial="hidden"
           animate="visible"
         >
-          <motion.div
-            variants={itemVariants}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-200 shadow-sm"
-          >
-            <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-[pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite]"></span>
-            <span className="text-sm font-semibold tracking-wide text-gray-700">
-              Next-Gen Software Agency
-            </span>
-          </motion.div>
+          {!banner?.image && (
+            <motion.div
+              variants={itemVariants}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-200 shadow-sm"
+            >
+              <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-[pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite]"></span>
+              <span className="text-sm font-semibold tracking-wide text-gray-700">
+                Next-Gen Software Agency
+              </span>
+            </motion.div>
+          )}
 
           <motion.h1 className="text-5xl sm:text-6xl lg:text-[4.25rem] font-extrabold text-gray-900 leading-[1.1] tracking-tight max-w-3xl">
             {parts.map((part, i) => {
@@ -134,16 +106,20 @@ export default function Hero({ banner }) {
         {/* RIGHT SIDE - Interactive 3D Faux UI or Banner Image */}
         <div
           className="relative w-full h-[500px] lg:h-[600px] flex justify-center items-center perspective-[1200px]"
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
         >
-          {/* Framer motion wrapper combining mouse rotation mapped to 3D CSS rotation */}
+          {/* Framer motion wrapper with gentle continuous rotation for Faux UI */}
           <motion.div
-            style={
+            animate={
               banner?.image
-                ? { x: parallaxX, y: parallaxY }
-                : { rotateX, rotateY, transformStyle: "preserve-3d" }
+                ? {}
+                : { rotateX: [3, -3, 3], rotateY: [-3, 3, -3] }
             }
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            style={{ transformStyle: "preserve-3d" }}
             className="relative w-full max-w-md h-full flex justify-center items-center"
           >
             {banner?.image ? (
