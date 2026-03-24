@@ -23,14 +23,17 @@ const Cards = ({ item, index, range, targetScale, progress }) => {
     >
       <motion.div
         className="bg-white rounded-[2rem] p-10 lg:p-14 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] border border-slate-100 h-[500px] w-full max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 relative overflow-hidden"
-        style={{ scale }}
+        style={{
+          scale,
+          willChange: "transform",
+        }}
       >
         <div className="absolute -top-1/4 -right-1/4 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[80px] pointer-events-none"></div>
 
         <div className="flex-1 text-start relative z-10 flex flex-col justify-center h-full mt-0">
-          <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-slate-50 border border-gray-100 shadow-sm mb-6 flex-shrink-0">
+          {/* <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-slate-50 border border-gray-100 shadow-sm mb-6 flex-shrink-0">
             <span className="text-lg font-bold text-gray-800">0{index + 1}</span>
-          </div>
+          </div> */}
           <h3 className="text-3xl lg:text-[2.5rem] font-bold tracking-tight text-gray-900 mb-4 leading-[1.15]">
             {item.title}
           </h3>
@@ -80,6 +83,7 @@ const ServiceFeatures = ({ services }) => {
           <div ref={container} className="flex flex-col items-center w-[95%]">
             {services.list.map((item, index) => {
               const targetScale = 1 - (services.list.length - index) * 0.05;
+              const step = 1 / services.list.length;
               return (
                 <Cards
                   item={item}
