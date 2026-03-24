@@ -30,15 +30,15 @@ export default function ClientsSection({ clients }) {
   };
 
   return (
-    <section className="section min-h-[30dvh] flex items-center pb-0">
+    <section className="section flex items-center pb-0">
       <div className="container text-center">
-        <div className="relative py-24 bg-gray-50 overflow-hidden">
+        <div className="relative py-4 lg:py-6 bg-gray-50 overflow-hidden">
           {/* Soft Orange Glow */}
           <div className="absolute -bottom-32 -left-32 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[120px]" />
 
           <div
             ref={ref}
-            className="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-start relative z-10"
+            className="container mx-auto px-6 grid md:grid-cols-2 gap-2 lg:gap-16 items-start relative z-10"
           >
             {/* LEFT SIDE */}
 

@@ -8,6 +8,7 @@ const SectionHeader = ({
   description,
   align = "center", // center | left
   className = "",
+  titleClass = "",
 }) => {
   const alignment = align === "left" ? "text-left" : "text-center mx-auto";
 
@@ -25,7 +26,7 @@ const SectionHeader = ({
         markdownify(
           title,
           "h2",
-          `mt-2 text-3xl lg:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent pb-2 ${!description && "section-title"}`,
+          `${titleClass} mt-2 text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.1] tracking-tight bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent pb-2 ${!description && "section-title"}`,
         )}
 
       {/* DESCRIPTION */}
@@ -33,7 +34,7 @@ const SectionHeader = ({
         markdownify(
           description,
           "p",
-          "mt-4 text-base lg:text-lg text-gray-600 section-title",
+          "mt-1 text-base lg:text-lg text-gray-600 section-title",
         )}
     </div>
   );

@@ -11,18 +11,17 @@ const Faq = ({ faq }) => {
   if (!faq) return null;
 
   return (
-    <section className="section min-h-[50dvh] flex items-center bg-gradient-to-b from-theme-light/80 via-white to-theme-light/40">
-      <div className="container lg:w-[80%]">
+    <section className="section flex items-center bg-gradient-to-b from-theme-light/80 via-white to-theme-light/40">
+      <div className="container lg:w-[85%]">
         {/* Title */}
-        <div className="animate text-center">
-          {markdownify(
-            faq.title,
-            "h2",
-            "mt-2 text-3xl lg:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent lg:leading-relaxed pb-1 section-title",
-          )}
-        </div>
 
-        <div className="mt-16 space-y-6">
+        <SectionHeader
+          title={faq.title}
+          description={faq.description}
+          titleClass="!mt-0"
+        />
+
+        <div className="mt-5 lg:mt-10 space-y-4">
           {faq.list.map((item, i) => {
             const isActive = active === i;
 
@@ -31,11 +30,10 @@ const Faq = ({ faq }) => {
                 key={i}
                 onClick={() => setActive(isActive ? null : i)}
                 className={`relative rounded-2xl border overflow-hidden cursor-pointer transition-all duration-300 bg-white
-                ${
-                  isActive
+                ${isActive
                     ? "bg-white shadow-none border-primary/40"
                     : "bg-white hover:shadow-sm border-slate-200"
-                }`}
+                  }`}
               >
                 <motion.div
                   initial={false}
@@ -48,9 +46,8 @@ const Faq = ({ faq }) => {
                   {/* Question */}
                   <div className="flex items-center justify-between">
                     <h5
-                      className={`text-xl font-semibold transition-colors duration-300 ${
-                        isActive ? "text-primary" : "text-slate-800"
-                      }`}
+                      className={`text-xl font-semibold transition-colors duration-300 ${isActive ? "text-primary" : "text-slate-800"
+                        }`}
                     >
                       {item.q}
                     </h5>
@@ -60,9 +57,8 @@ const Faq = ({ faq }) => {
                       transition={{ duration: 0.25 }}
                     >
                       <FaChevronDown
-                        className={`transition-colors duration-300 ml-1 ${
-                          isActive ? "text-primary" : "text-slate-400"
-                        }`}
+                        className={`transition-colors duration-300 ml-1 ${isActive ? "text-primary" : "text-slate-400"
+                          }`}
                       />
                     </motion.div>
                   </div>

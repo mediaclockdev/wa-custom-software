@@ -9,7 +9,7 @@ const ServiceValue = ({ value }) => {
   if (!value) return null;
 
   return (
-    <section className="section min-h-[50dvh] flex items-center bg-gradient-to-b from-theme-light/80 via-white to-theme-light/40">
+    <section className="section bg-gradient-to-b from-theme-light/80 via-white to-theme-light/40">
       <div className="container">
         <SectionHeader
           subtitle={value.subtitle}
@@ -17,34 +17,31 @@ const ServiceValue = ({ value }) => {
           description={value.description}
         />
 
-        <div className="animate mt-16 max-w-4xl mx-auto space-y-8">
+        <div className="animate mt-10 md:mt-12 grid gap-6 md:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {value.list.map((item, i) => {
             const Icon = icons[i] || FaCogs;
 
             return (
               <div
                 key={i}
-                className="group cursor-pointer relative flex flex-col md:flex-row items-start gap-6 rounded-2xl bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-lg overflow-hidden ring-1 ring-slate-200 hover:ring-0"
+                className="group relative rounded-2xl border border-primary/10 bg-white p-6 lg:p-8 shadow-sm transition-all duration-500 hover:-translate-y-1 lg:hover:-translate-y-1.5 hover:shadow-[0_15px_35px_-10px_rgba(0,0,0,0.1)] hover:border-primary/20 overflow-hidden flex flex-col h-full"
               >
-                <span className="pointer-events-none absolute inset-0 rounded-2xl">
-                  <span className="absolute inset-0 rounded-2xl border border-primary opacity-0 transition-opacity duration-200 group-hover:opacity-100"></span>
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 pointer-events-none" />
 
-                  <span className="absolute inset-0 rounded-2xl border border-secondary [clip-path:inset(0_100%_100%_0)] transition-all duration-700 ease-out group-hover:[clip-path:inset(0_0_0_0)]"></span>
-                </span>
+                <div className="relative z-10 flex h-14 w-14 lg:h-16 lg:w-16 mb-5 lg:mb-6 items-center justify-center rounded-2xl bg-gradient-to-br from-secondary/10 to-primary/10 text-primary transition-all duration-500 group-hover:scale-110 group-hover:shadow-md group-hover:from-secondary group-hover:to-primary group-hover:text-white">
+                  <Icon size={24} className="lg:w-7 lg:h-7" />
+                </div>
 
-                <div className="flex items-center justify-center gap-10 flex-col sm:flex-row">
-                  <div className="relative z-10 flex h-20 w-20 shrink-0 items-center justify-center rounded-xl bg-secondary/10 text-secondary text-2xl transition-all duration-300 group-hover:bg-primary group-hover:text-white">
-                    <Icon size={36} />
-                  </div>
+                <div className="relative z-10 flex-grow flex flex-col">
+                  <h3 className="mb-3 text-2xl lg:text-3xl font-semibold text-gray-900 tracking-tight">
+                    {item.title}
+                  </h3>
 
-                  <div className="relative z-10">
-                    <h3 className="mb-2 text-2xl lg:text-3xl  text-dark">
-                      {item.title}
-                    </h3>
-                    <p className="text-text text-base lg:text-lg">
-                      {item.content}
-                    </p>
-                  </div>
+                  <div className="w-8 group-hover:w-16 h-1 bg-gradient-to-r from-primary/60 to-secondary/60 rounded-full mb-4 lg:mb-5 transition-all duration-500" />
+
+                  <p className="text-text text-lg">
+                    {item.content}
+                  </p>
                 </div>
               </div>
             );

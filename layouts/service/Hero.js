@@ -30,7 +30,7 @@ export default function Hero({ banner }) {
   };
 
   return (
-    <section className="relative flex items-center min-h-[60dvh] bg-slate-50 overflow-hidden py-4 xl:py-6">
+    <section className="relative flex items-center min-h-[60dvh] bg-slate-50 overflow-hidden py-6 xl:py-8">
       {/* Decorative Grid & Glow Background */}
       <div
         className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none"
@@ -41,8 +41,8 @@ export default function Hero({ banner }) {
         }}
       />
       <div className="absolute inset-0 bg-gradient-to-tr from-slate-50 via-transparent to-slate-100 z-0 pointer-events-none" />
-      <div className="absolute top-1/4 -left-20 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[100px] -z-10 mix-blend-multiply pointer-events-none" />
-      <div className="absolute bottom-10 right-10 lg:right-1/4 w-[500px] h-[500px] bg-blue-300/20 rounded-full blur-[120px] -z-10 mix-blend-multiply pointer-events-none" />
+      <div className="absolute top-1/4 -left-20 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[120px] -z-10 mix-blend-multiply pointer-events-none" />
+      <div className="absolute bottom-10 right-10 lg:right-1/4 w-[500px] h-[500px] bg-blue-300/20 rounded-full blur-[140px] -z-10 mix-blend-multiply pointer-events-none" />
 
       <div className="container relative z-10 mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
         {/* LEFT SIDE - Staggered Text Reveal */}
@@ -92,7 +92,6 @@ export default function Hero({ banner }) {
 
           <motion.div
             variants={itemVariants}
-            className="pt-4 flex flex-col sm:flex-row gap-4 w-full sm:w-auto z-20 relative"
           >
             <ButtonLink
               animate={true}
@@ -105,7 +104,7 @@ export default function Hero({ banner }) {
 
         {/* RIGHT SIDE - Interactive 3D Faux UI or Banner Image */}
         <div
-          className="relative w-full h-[500px] lg:h-[600px] flex justify-center items-center perspective-[1200px]"
+          className="hidden lg:flex relative w-full h-[500px] lg:h-[600px] justify-center items-center perspective-[1200px]"
         >
           {/* Framer motion wrapper with gentle continuous rotation for Faux UI */}
           <motion.div
@@ -396,6 +395,6 @@ export default function Hero({ banner }) {
           </motion.div>
         </div>
       </div>
-    </section>
+    </section >
   );
 }

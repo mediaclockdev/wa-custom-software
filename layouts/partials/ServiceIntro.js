@@ -50,7 +50,7 @@ const ServiceIntro = ({ intro }) => {
                 {markdownify(
                   intro.title,
                   "h2",
-                  "text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold text-gray-900 leading-[1.1] tracking-tight bg-gradient-to-br from-gray-900 via-gray-800 to-gray-500 bg-clip-text text-transparent pb-2"
+                  "text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold text-gray-900 leading-[1.1] tracking-tight bg-gradient-to-br from-gray-900 via-gray-800 to-gray-500 bg-clip-text text-transparent pb-2"
                 )}
               </motion.div>
             )}
@@ -63,7 +63,7 @@ const ServiceIntro = ({ intro }) => {
                 {markdownify(
                   intro.description,
                   "div",
-                  "text-xl text-gray-700 leading-relaxed [&>p]:mb-5 last:[&>p]:mb-0"
+                  "text-lg lg:text-xl text-gray-700 leading-relaxed lg:[&>p]:mb-5 last:[&>p]:mb-0"
                 )}
               </motion.div>
             )}
