@@ -17,6 +17,7 @@ From websites to mobile apps and digital marketing, every touchpoint matters.
 Your website is often the first interaction a customer has with your business. A poorly designed or outdated website can instantly reduce trust.
 
 A modern website should:
+
 - Be fast and responsive
 - Work seamlessly across all devices
 - Clearly communicate your services
@@ -29,6 +30,7 @@ Technologies like **Next.js** allow businesses to build high-performance, SEO-fr
 With the majority of users accessing services via smartphones, mobile applications are a powerful way to engage your audience.
 
 A well-built mobile app can:
+
 - Improve customer retention
 - Provide personalized experiences
 - Increase brand loyalty
@@ -41,6 +43,7 @@ Businesses that invest in mobile-first solutions often gain a competitive edge.
 Design is more than just aesthetics — it's about communication and usability.
 
 Good design:
+
 - Enhances user experience (UX)
 - Builds brand credibility
 - Guides users toward action
@@ -48,15 +51,12 @@ Good design:
 
 From UI/UX design to branding, a thoughtful design strategy can significantly impact business growth.
 
-<Blockquote name="Design Insight">
-  Good design is not just what it looks like and feels like — design is how it works.
-</Blockquote>
-
 ## 📈 Digital Marketing: Driving Growth
 
 Even the best product or service needs visibility. Digital marketing helps you reach the right audience at the right time.
 
 Key strategies include:
+
 - Search Engine Optimization (SEO)
 - Social Media Marketing
 - Paid Advertising (Google Ads, Meta Ads)
@@ -67,6 +67,7 @@ A data-driven marketing approach ensures consistent growth and measurable result
 ## 🔗 Bringing It All Together
 
 The real power lies in integrating all these services:
+
 - A fast website
 - A user-friendly mobile app
 - Engaging design
@@ -84,4 +85,3 @@ Whether you're looking to build a new website, launch a mobile app, or grow thro
 
 Need help building your digital presence?  
 Let’s create something impactful together.
-

@@ -58,7 +58,7 @@ services:
     - icon: pen-tool
       title: Mobile App Design
       content: Our UX/UI designers design elegant, user-friendly, and visually appealing interfaces. Utilizing tools for designing, like Figma as well as Sketch, we will ensure that your app has outstanding user experience, a high level of engagement with customers and a seamless user experience that matches the brand's identity.
-      url: /images/service/choose/why5.jpg
+      url: /images/service/mobile-app-development/mobiledesign.png
 
 why:
   subtitle: WHY CHOOSE US
