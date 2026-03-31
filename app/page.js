@@ -3,7 +3,7 @@ import ServicePanel from "@layouts/components/ServicePanel";
 import Expertise from "@layouts/partials/Expertise";
 import Faq from "@layouts/partials/Faq";
 import Features from "@layouts/partials/Features";
-import Process from "@layouts/partials/Process";
+import PageProcess from "@layouts/partials/PageProcess";
 import SeoMeta from "@layouts/partials/SeoMeta";
 import Hero from "@layouts/service/Hero";
 import { getListPage } from "@lib/contentParser";
@@ -19,7 +19,7 @@ const Home = async () => {
       <Hero banner={banner} isParticle={true} />
       <Features features={features} />
       <ServicePanel services={services} />
-      <Process process={process} />
+      <PageProcess process={process} />
       <Expertise expertise={expertise} />
       <Faq faq={faq} />
     </GSAPWrapper>

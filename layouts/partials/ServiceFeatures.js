@@ -1,102 +1,153 @@
 "use client";
 
 import React, { useRef } from "react";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import SectionHeader from "@layouts/components/SectionHeader";
-
-const Cards = ({ item, index, range, targetScale, progress }) => {
-  const container = useRef(null);
-  const rawScale = useTransform(progress, range, [1, targetScale]);
-  const scale = useSpring(rawScale, {
-    stiffness: 120,
-    damping: 25,
-    mass: 0.6,
-  });
-
-  return (
-    <div
-      key={index}
-      ref={container}
-      className={`card w-full h-dvh sticky`}
-      style={{ top: `calc(8vh + ${index * 25}px)` }}
-    >
-      <motion.div
-        className="bg-white rounded-[2rem] p-10 lg:p-14 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] border border-slate-100 h-[500px] w-full max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 relative overflow-hidden"
-        style={{
-          scale,
-          willChange: "transform",
-        }}
-      >
-        <div className="absolute -top-1/4 -right-1/4 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[80px] pointer-events-none"></div>
-
-        <div className="flex-1 text-start relative z-10 flex flex-col justify-center h-full mt-0">
-          {/* <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-slate-50 border border-gray-100 shadow-sm mb-6 flex-shrink-0">
-            <span className="text-lg font-bold text-gray-800">0{index + 1}</span>
-          </div> */}
-          <h3 className="text-3xl lg:text-[2.5rem] font-bold tracking-tight text-gray-900 mb-4 leading-[1.15]">
-            {item.title}
-          </h3>
-          <p className="text-lg lg:text-xl text-gray-500 font-medium leading-relaxed line-clamp-5">
-            {item.content}
-          </p>
-        </div>
-
-        <div className="flex-1 hidden lg:flex items-center justify-end h-full relative z-10">
-          <div className="relative w-full max-w-[450px] aspect-[4/3] rounded-[1.5rem] overflow-hidden shadow-2xl border border-white flex-shrink-0">
-            {item.url ? (
-              <Image
-                src={item.url}
-                alt={item.title}
-                fill
-                className="object-cover transition-transform duration-700 hover:scale-105"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            ) : (
-              <div className="w-full h-full bg-slate-100 flex items-center justify-center text-gray-400 font-medium">No Image</div>
-            )}
-            <div className="absolute inset-0 border border-black/5 rounded-[1.5rem] pointer-events-none"></div>
-            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/20 to-transparent pointer-events-none mix-blend-multiply"></div>
-          </div>
-        </div>
-      </motion.div>
-    </div>
-  );
-};
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
 
 const ServiceFeatures = ({ services }) => {
-  const container = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ["start start", "end end"],
-  });
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 20,
+      },
+    },
+  };
 
   return (
-    <section className="section relative z-10">
-      <div className="container text-center">
-        <SectionHeader
-          subtitle={services.subtitle}
-          title={services.title}
-          description={services.description}
-        />
-        <div className="w-full min-h-screen flex flex-col items-center">
-          <div ref={container} className="flex flex-col items-center w-[95%]">
-            {services.list.map((item, index) => {
-              const targetScale = 1 - (services.list.length - index) * 0.05;
-              const step = 1 / services.list.length;
-              return (
-                <Cards
-                  item={item}
-                  index={index}
-                  // range={[0.14 * index, 1]}
-                  range={[index / services.list.length, 1]}
-                  targetScale={targetScale}
-                  progress={scrollYProgress}
-                />
-              );
-            })}
-          </div>
+    <section className="section relative z-10 overflow-hidden">
+      <div className="container">
+        <div className="text-center mb-8 lg:mb-12">
+          <SectionHeader
+            subtitle={services.subtitle}
+            title={services.title}
+            description={services.description}
+          />
         </div>
+
+        {/* Mobile Slider (hidden on md and up) */}
+        <div className="block md:hidden pb-12">
+          <Swiper
+            modules={[Pagination]}
+            spaceBetween={20}
+            pagination={{ clickable: true }}
+            grabCursor={true}
+            slidesPerView={1}
+            className="pb-12"
+          >
+            {services.list.map((item, index) => (
+              <SwiperSlide key={index} className="!h-auto">
+                <div
+                  className="group bg-white rounded-[2rem] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-slate-100 transition-all duration-500 flex flex-col h-full w-full relative"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0"></div>
+
+                  <div className="relative w-full aspect-[4/3] overflow-hidden bg-slate-50 z-10">
+                    {item.url ? (
+                      <Image
+                        src={item.url}
+                        alt={item.title || "Feature Image"}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                        sizes="(max-width: 768px) 100vw"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center text-gray-400 font-medium">
+                        <svg className="w-12 h-12 mb-2 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                      </div>
+                    )}
+
+                    <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/40 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  </div>
+
+                  <div className="p-4 flex flex-col flex-grow relative z-10 bg-white">
+                    <div className="mb-4">
+                      <h3 className="text-2xl font-bold text-gray-900 group-hover:text-primary transition-colors duration-300">
+                        {item.title}
+                      </h3>
+                    </div>
+                    <p className="text-lg text-gray-600 leading-normal max-w-none transition-all duration-300">
+                      {item.content}
+                    </p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+        {/* Desktop Grid (hidden below md) */}
+        <motion.div
+          className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 xl:gap-6"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-20px" }}
+        >
+          {services.list.map((item, index) => (
+            <motion.div
+              key={index}
+              variants={cardVariants}
+              className="group bg-white rounded-[2rem] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_50px_rgb(0,0,0,0.12)] border border-slate-100 transition-all duration-500 hover:-translate-y-2 flex flex-col h-full relative"
+            >
+              {/* Optional background glow on hover */}
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0"></div>
+
+              <div className="relative w-full aspect-[4/3] overflow-hidden bg-slate-50 z-10">
+                {item.url ? (
+                  <Image
+                    src={item.url}
+                    alt={item.title || "Feature Image"}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    sizes="(max-width: 1200px) 50vw, 33vw"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center text-gray-400 font-medium">
+                    <svg className="w-12 h-12 mb-2 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                  </div>
+                )}
+
+                <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/40 to-transparent pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+
+              <div className="p-4 lg:p-6 flex flex-col flex-grow relative z-10 bg-white">
+                <div className="mb-4">
+                  <h3 className="text-2xl font-bold text-gray-900 group-hover:text-primary transition-colors duration-300">
+                    {item.title}
+                  </h3>
+                </div>
+                <p className="text-lg text-gray-600 leading-normal max-w-none transition-all duration-300">
+                  {item.content}
+                </p>
+
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

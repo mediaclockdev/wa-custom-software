@@ -6,7 +6,6 @@ import Industries from "@layouts/partials/Industries";
 import TechStack from "@layouts/partials/TechStack";
 import Faq from "@layouts/partials/Faq";
 import ServiceFeatures from "@layouts/partials/ServiceFeatures";
-import Hero from "./service/Hero";
 import HeroService from "./service/HeroService";
 
 const Service = ({ data }) => {
@@ -16,6 +15,9 @@ const Service = ({ data }) => {
     <>
       {/* HERO (same quality as homepage) */}
       <HeroService banner={frontmatter.banner} />
+
+      {/* TECH STACK */}
+      <TechStack technologies={frontmatter.technologies} />
 
       {/* INTRO */}
       <ServiceIntro intro={frontmatter.intro} />
@@ -34,9 +36,6 @@ const Service = ({ data }) => {
 
       {/* INDUSTRIES */}
       <Industries industries={frontmatter.industries} />
-
-      {/* TECH STACK */}
-      <TechStack technologies={frontmatter.technologies} />
 
       {/* FAQ */}
       <Faq faq={frontmatter.faq} />

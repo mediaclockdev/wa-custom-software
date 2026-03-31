@@ -91,11 +91,10 @@ const Header = () => {
                   {!item.groups && (
                     <Link
                       href={item.url}
-                      className={`relative text-lg p-2 rounded-full px-4 border transition-all duration-300 hover:bg-[#FAF5F3] hover:shadow-sm font-medium text-slate-800 ${
-                        isActive
-                          ? "border-slate-300 bg-[#FAF5F3] text-primary"
-                          : "border-transparent"
-                      }`}
+                      className={`relative text-lg p-2 rounded-full px-4 border transition-all duration-300 hover:bg-[#FAF5F3] hover:shadow-sm font-medium text-slate-800 ${isActive
+                        ? "border-slate-300 bg-[#FAF5F3] text-primary"
+                        : "border-transparent"
+                        }`}
                     >
                       {item.name}
                     </Link>
@@ -104,7 +103,7 @@ const Header = () => {
                   {item.groups && (
                     <>
                       <span
-                        className={`flex items-center gap-1 text-lg cursor-pointer ${isParentActive ? "text-primary bg-[#FAF5F3] font-medium rounded-full px-4 py-2 border border-slate-300" : "text-gray-800 hover:bg-gray-50 rounded-full px-4 py-2 transition-all duration-300 text-lg font-medium"}`}
+                        className={`flex items-center gap-1 text-lg cursor-default ${isParentActive ? "text-primary bg-[#FAF5F3] font-medium rounded-full px-4 py-2 border border-slate-300" : "text-gray-800 hover:bg-gray-50 rounded-full px-4 py-2 transition-all duration-300 text-lg font-medium"}`}
                       >
                         {item.name}
                         <FaAngleDown
@@ -113,14 +112,14 @@ const Header = () => {
                         />
                       </span>
 
-                      <ul className="absolute left-0 top-full mt-4 min-w-[650px] p-5 rounded-xl border border-gray-100 bg-white shadow-xl opacity-0 invisible translate-y-2 transition-all duration-200 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 z-20">
+                      <ul className="absolute left-0 top-full mt-4 min-w-[650px] p-5 rounded-xl border border-gray-100 bg-white shadow-xl opacity-0 invisible translate-y-2 transition-all duration-200 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 z-20 cursor-default">
                         <div className="grid grid-cols-2 gap-6">
                           {item.groups.map((group, gi) => (
                             <div
                               key={gi}
                               className={gi === 2 ? "col-span-2" : ""}
                             >
-                              <p className="text-xl font-semibold text-gray-600 mb-3">
+                              <p className="text-xl font-semibold text-gray-600 mb-3 cursor-default">
                                 {group.title}
                               </p>
 
@@ -129,11 +128,10 @@ const Header = () => {
                                   <li key={j}>
                                     <Link
                                       href={child.url}
-                                      className={`block px-2 py-1 text-base font-medium rounded-md hover:bg-gray-50 transition ${
-                                        asPath === child.url
-                                          ? "text-secondary font-medium"
-                                          : "text-gray-800"
-                                      }`}
+                                      className={`block px-2 py-1 text-base font-medium rounded-md hover:bg-gray-50 transition ${asPath === child.url
+                                        ? "text-secondary font-medium"
+                                        : "text-gray-800"
+                                        }`}
                                     >
                                       {child.name}
                                     </Link>
@@ -152,7 +150,7 @@ const Header = () => {
           </ul>
 
           <div className="hidden lg:flex items-center gap-3 order-2 ml-6">
-            <ButtonLink href="/contact" title="Let's Talk" animate={animate} icon={IoIosCall} />
+            <ButtonLink href={`tel:${config.contact_info.phone.replace(/\\s+/g, "")}`} title="Let's Talk" animate={animate} icon={IoIosCall} />
           </div>
 
           <div className="lg:hidden ml-auto">
@@ -179,7 +177,7 @@ const Header = () => {
                 <ButtonLink
                   animate={false}
                   onClick={() => setShowMenu(false)}
-                  href="/contact"
+                  href={`tel:${config.contact_info.phone.replace(/\\s+/g, "")}`}
                   title="Let's Talk"
                   icon={IoIosCall}
                 />
@@ -199,11 +197,10 @@ const Header = () => {
                       <Link
                         href={item.url}
                         onClick={() => setShowMenu(false)}
-                        className={`block text-base ${
-                          asPath === item.url
-                            ? "text-secondary font-semibold"
-                            : "text-gray-800"
-                        }`}
+                        className={`block text-base ${asPath === item.url
+                          ? "text-secondary font-semibold"
+                          : "text-gray-800"
+                          }`}
                       >
                         {item.name}
                       </Link>
@@ -223,11 +220,10 @@ const Header = () => {
                                   <Link
                                     href={child.url}
                                     onClick={() => setShowMenu(false)}
-                                    className={`block text-sm ${
-                                      asPath === child.url
-                                        ? "text-secondary font-medium"
-                                        : "text-gray-600"
-                                    }`}
+                                    className={`block text-sm ${asPath === child.url
+                                      ? "text-secondary font-medium"
+                                      : "text-gray-600"
+                                      }`}
                                   >
                                     {child.name}
                                   </Link>

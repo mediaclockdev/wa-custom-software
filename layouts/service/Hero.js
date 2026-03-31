@@ -149,7 +149,7 @@ export default function Hero({ banner }) {
                         ? banner.title.replace(/<[^>]*>?/gm, "")
                         : "Hero Illustration"
                     }
-                    className="w-full max-w-[90%] sm:max-w-md h-auto max-h-[450px] object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.15)]"
+                    className="w-full max-w-[90%] sm:max-w-md h-auto max-h-[450px] object-contain rounded-[2rem] drop-shadow-[0_20px_50px_rgba(0,0,0,0.15)]"
                   />
                 </motion.div>
 

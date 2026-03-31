@@ -10,7 +10,7 @@ banner:
   content: Western Australia Software Development Company offers professional digital and IT services that help businesses
   link:
     label: Contact Us
-    href: "/contact"
+    href: "tel:+61410445566"
   description: Western Australia Software Development Company offers digital and IT services that help businesses increase the online visibility of their business, automate manual tasks and use effective technology solutions. We collaborate with companies across Perth as well as Western Australia, delivering practical and flexible digital solutions
 
 intro:

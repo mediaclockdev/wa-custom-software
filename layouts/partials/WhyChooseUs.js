@@ -29,15 +29,29 @@ const WhyChooseUs = ({ why }) => {
   return (
     <section className="section bg-gradient-to-b from-theme-light/80 via-white to-theme-light/40">
       <div className="container">
-        <SectionHeader
-          subtitle={safeWhy.subtitle}
-          title={safeWhy.title}
-          description={safeWhy.description}
-        />
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <SectionHeader
+            subtitle={safeWhy.subtitle}
+            title={safeWhy.title}
+            description={safeWhy.description}
+          />
+        </motion.div>
 
         {Array.isArray(safeWhy.list) && safeWhy.list.length > 0 && (
-          <div className="mt-16">
+          <motion.div
+            className="mt-16"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             <Swiper
+              className="!p-4 -m-4 !pb-8"
               modules={[Pagination]}
               spaceBetween={20}
               pagination={{ clickable: true }}
@@ -53,8 +67,15 @@ const WhyChooseUs = ({ why }) => {
 
                 return (
                   <SwiperSlide key={i} className="flex !h-auto mb-10">
-                    <div className="w-full h-full flex">
-                      <div className="group relative rounded-3xl p-[2px] w-full h-full flex overflow-hidden">
+                    <motion.div
+                      className="w-full h-full flex transform-gpu"
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-50px" }}
+                      transition={{ duration: 0.2 }}
+                      whileHover={{ scale: 1.02 }}
+                    >
+                      <div className="group relative rounded-3xl p-[2px] w-full h-full flex overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300">
                         <motion.div
                           className="absolute -inset-[150%] rounded-full"
                           animate={{ rotate: 360 }}
@@ -70,9 +91,13 @@ const WhyChooseUs = ({ why }) => {
                         />
 
                         <div className="relative rounded-3xl bg-white p-6 flex flex-col w-full h-full">
-                          <div className="mb-4 text-primary">
+                          <motion.div
+                            className="mb-4 text-primary origin-left w-fit"
+                            whileHover={{ scale: 1.1, rotate: 5 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                          >
                             <Icon size={40} />
-                          </div>
+                          </motion.div>
 
                           <h3 className="text-xl lg:text-3xl font-semibold mb-2 line-clamp-3">
                             {item.title}
@@ -83,12 +108,12 @@ const WhyChooseUs = ({ why }) => {
                           </p>
                         </div>
                       </div>
-                    </div>
+                    </motion.div>
                   </SwiperSlide>
                 );
               })}
             </Swiper>
-          </div>
+          </motion.div>
         )}
       </div>
     </section>

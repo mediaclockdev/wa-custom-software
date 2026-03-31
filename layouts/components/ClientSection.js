@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import SectionHeader from "./SectionHeader";
+import ButtonLink from "@layouts/components/ui/ButtonLink";
 
 export default function ClientsSection({ clients }) {
   const { ref, inView } = useInView({
@@ -39,12 +40,16 @@ export default function ClientsSection({ clients }) {
             className="container mx-auto px-6 grid md:grid-cols-2 gap-2 lg:gap-16 items-start relative z-10"
           >
             {/* LEFT SIDE */}
-
-            <SectionHeader
-              subtitle={clients.subtitle}
-              title={clients.title}
-              description={clients.description}
-            />
+            <div className="flex flex-col items-center gap-5 md:items-start text-center md:text-left justify-center pb-10 md:pb-0">
+              <SectionHeader
+                subtitle={clients.subtitle}
+                title={clients.title}
+                description={clients.description}
+              />
+              <div className="w-full text-center">
+                <ButtonLink href="/contact" title="Contact Us" />
+              </div>
+            </div>
 
             {/* RIGHT SIDE - Animated Cards */}
             <motion.div

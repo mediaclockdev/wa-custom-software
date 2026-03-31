@@ -25,7 +25,7 @@ export default function HeroService({ banner, title: propTitle, description: pro
   };
 
   return (
-    <section className="relative py-6 lg:pb-12 overflow-hidden bg-white">
+    <section className="relative py-6 lg:pb-12 overflow-hidden bg-gradient-to-b from-slate-50 to-white border-b border-gray-100">
 
 
       <div className="container relative z-10 mx-auto px-6 lg:px-12">

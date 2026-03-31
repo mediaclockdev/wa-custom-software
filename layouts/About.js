@@ -1,7 +1,7 @@
 "use client";
 
 import ClientsSection from "./components/ClientSection";
-import Process from "./partials/Process";
+import PageProcess from "./partials/PageProcess";
 import ServiceFeatures from "./partials/ServiceFeatures";
 import AboutSection from "./partials/Who";
 import Hero from "./service/Hero";
@@ -15,7 +15,7 @@ const About = ({ data }) => {
       <Hero banner={banner} isParticle={false} />
       <AboutSection about={about} />
       <ServiceFeatures services={services} />
-      <Process process={process} />
+      <PageProcess process={process} />
       <ClientsSection clients={clients} />
     </section>
   );

@@ -5,6 +5,7 @@ import Banner from "./components/Banner";
 import { motion } from "framer-motion";
 import { AnimatedText } from "./service/AnimatedText";
 import { MdLocationOn, MdAccessTime, MdPhone, MdCheckCircle, MdPhoneIphone, MdMail } from "react-icons/md";
+import Link from "next/link";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -13,7 +14,7 @@ const fadeUp = {
 
 const Contact = ({ data }) => {
   const { frontmatter } = data;
-  const { title, banner } = frontmatter;
+  const { title, banner, services } = frontmatter;
 
   const containerVariants = {
     hidden: {},
@@ -90,10 +91,10 @@ const Contact = ({ data }) => {
         </motion.div>
 
         {/* Info Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-24 cursor-default">
+        <div className="grid md:grid-cols-3 gap-8 mb-16 cursor-default">
           {[
             {
-              icon: <MdLocationOn size={32} className="text-primary" />,
+              Icon: MdLocationOn,
               title: "Office Address",
               content: (
                 <>
@@ -103,7 +104,7 @@ const Contact = ({ data }) => {
               ),
             },
             {
-              icon: <MdAccessTime size={32} className="text-primary" />,
+              Icon: MdAccessTime,
               title: "Business Hours",
               content: (
                 <>
@@ -113,7 +114,7 @@ const Contact = ({ data }) => {
               ),
             },
             {
-              icon: <MdPhone size={32} className="text-primary" />,
+              Icon: MdPhone,
               title: "Contact",
               content: (
                 <div className="flex flex-col gap-2 mt-2">
@@ -133,8 +134,8 @@ const Contact = ({ data }) => {
               transition={{ delay: i * 0.1 }}
               className="group flex flex-col items-center text-center p-8 rounded-3xl bg-white/60 backdrop-blur-md border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-                {item.icon}
+              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-5 transition-all duration-500  group-hover:scale-110 group-hover:-rotate-3 group-hover:shadow-md bg-gradient-to-br group-hover:from-secondary group-hover:to-primary">
+                <item.Icon size={32} className="text-primary group-hover:text-white transition-colors duration-500" />
               </div>
               <h3 className="font-semibold text-2xl mb-3 text-gray-900">
                 {item.title}
@@ -148,7 +149,7 @@ const Contact = ({ data }) => {
 
         {/* Main Section - Stacked and Centered */}
         <div className="max-w-4xl mx-auto flex flex-col gap-16 items-center">
-          
+
           {/* Top - Services (Centered & Horizontal Flow) */}
           <motion.div
             variants={containerVariants}
@@ -162,13 +163,7 @@ const Contact = ({ data }) => {
             </h3>
 
             <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
-              {[
-                "Website development services",
-                "Mobile application development",
-                "Business automation solutions",
-                "Digital marketing services",
-                "Custom IT solutions in Western Australia",
-              ].map((item, i) => (
+              {(services || []).map((item, i) => (
                 <motion.div
                   key={i}
                   variants={itemVariants}
@@ -182,9 +177,9 @@ const Contact = ({ data }) => {
                     damping: 18,
                   }}
                 >
-                  <div className="px-6 py-3 rounded-full text-sm md:text-base font-medium bg-white text-primary border border-gray-200 shadow-sm hover:shadow-lg hover:border-secondary/50 transition-colors duration-300 cursor-default inline-block">
-                    {item}
-                  </div>
+                  <Link href={item.link || "/"} className="px-6 py-3 rounded-full text-sm md:text-base font-medium bg-white text-primary border border-gray-200 shadow-sm hover:shadow-lg hover:border-secondary/50 transition-colors duration-300 cursor-pointer inline-block">
+                    {item.title || item}
+                  </Link>
                 </motion.div>
               ))}
             </div>
@@ -202,7 +197,7 @@ const Contact = ({ data }) => {
             {/* Background Blob for aesthetic */}
             <div className="absolute -inset-10 bg-gradient-to-r from-primary/10 to-blue-400/10 rounded-[4rem] blur-2xl opacity-60 -z-10"></div>
 
-            <div className="rounded-[2.5rem] bg-white p-10 md:p-14 shadow-[0_20px_60px_rgb(0,0,0,0.06)] border border-gray-100 relative z-10 w-full animate-fade-in-up text-center">
+            <div className="rounded-[2.5rem] bg-white p-4 md:p-14 shadow-[0_20px_60px_rgb(0,0,0,0.06)] border border-gray-100 relative z-10 w-full animate-fade-in-up text-center">
               <h3 className="text-3xl font-bold mb-2">Drop Your Message</h3>
               <p className="text-gray-500 mb-10">We usually respond within 24 hours.</p>
 

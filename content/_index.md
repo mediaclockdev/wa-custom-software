@@ -79,7 +79,6 @@ faq:
 
     - q: What type of mobile apps do you develop?
       a: We create Android, iOS, and custom mobile apps that are customized to the specific requirements of your business.
-
     - q: Can you redesign an existing website?
       a: Yes. We redesign websites to improve performance, usability, and alignment with business objectives.
 

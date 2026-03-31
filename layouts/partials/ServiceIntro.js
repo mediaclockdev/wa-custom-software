@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { markdownify } from "@lib/utils/textConverter";
+import SectionHeader from "@layouts/components/SectionHeader";
 
 const ServiceIntro = ({ intro }) => {
   if (!intro) return null;
@@ -45,7 +46,7 @@ const ServiceIntro = ({ intro }) => {
               </motion.div>
             )}
 
-            {intro.title && (
+            {/* {intro.title && (
               <motion.div variants={itemVariants}>
                 {markdownify(
                   intro.title,
@@ -53,7 +54,12 @@ const ServiceIntro = ({ intro }) => {
                   "text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold text-gray-900 leading-[1.1] tracking-tight bg-gradient-to-br from-gray-900 via-gray-800 to-gray-500 bg-clip-text text-transparent pb-2"
                 )}
               </motion.div>
-            )}
+            )} */}
+
+            <SectionHeader
+              title={intro.title}
+              className="text-start"
+            />
           </div>
 
           {/* RIGHT: High-End Editorial Description */}
