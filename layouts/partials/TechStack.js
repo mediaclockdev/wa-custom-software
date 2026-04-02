@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { markdownify } from "@lib/utils/textConverter";
 import { IconMap } from "@lib/service/IconMap";
 import SectionHeader from "@layouts/components/SectionHeader";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -50,7 +49,7 @@ const TechStack = ({ technologies }) => {
             modules={[Autoplay]}
             spaceBetween={24}
             loop={true}
-            speed={6000} // increase for smoother flow
+            speed={4000} // increase for smoother flow
             freeMode={true} // IMPORTANT
             autoplay={{
               delay: 0,
@@ -60,7 +59,6 @@ const TechStack = ({ technologies }) => {
             allowTouchMove={false}
             slidesPerView="auto" // IMPORTANT
           >
-            {/* Inject linear transition for continuous scroll */}
             <style>{`
               .tech-marquee-slider .swiper-wrapper {
                   transition-timing-function: linear !important;
@@ -78,15 +76,15 @@ const TechStack = ({ technologies }) => {
                     hidden: { opacity: 0, y: 15 },
                     show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
                   }}
-                  className="group relative h-full overflow-hidden bg-white/70 backdrop-blur-md p-8 rounded-[2rem] border border-white/60 hover:border-primary/20 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all duration-500 hover:-translate-y-1"
+                  className="group relative h-full overflow-hidden bg-white/70 backdrop-blur-md p-8 rounded-[2rem] border border-white/60 hover:border-primary/20 shadow-md transition-all duration-500 hover:-translate-y-1"
                 >
-                  {/* Subtle hover gradient wash */}
+
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                   <div className="relative z-10">
                     <div className="flex items-center gap-3 mb-6">
                       <div className="w-1.5 h-6 bg-gradient-to-b from-primary to-blue-400 rounded-full" />
-                      <h3 className="text-xl font-bold tracking-tight text-gray-900 drop-shadow-sm">
+                      <h3 className="text-2xl font-bold tracking-normal text-gray-900 drop-shadow-sm">
                         {group.title}
                       </h3>
                     </div>

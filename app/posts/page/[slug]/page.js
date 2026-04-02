@@ -29,7 +29,7 @@ const BlogPagination = async ({ params }) => {
       <section className="section pt-0">
         <Banner title={title} />
         <div className="container">
-          <div className="row justify-center pb-16 pt-20 ">
+          <div className="row justify-center pb-6 pt-6 ">
             {currentPosts.map((post, i) => (
               <div key={`key-${i}`} className="mb-8 lg:col-5">
                 <Post post={post} />

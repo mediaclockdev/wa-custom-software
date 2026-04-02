@@ -57,7 +57,7 @@ const ServiceFeatures = ({ services }) => {
             {services.list.map((item, index) => (
               <SwiperSlide key={index} className="!h-auto">
                 <div
-                  className="group bg-white rounded-[2rem] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-slate-100 transition-all duration-500 flex flex-col h-full w-full relative"
+                  className="group bg-white rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-slate-100 transition-all duration-500 flex flex-col h-full w-full relative mb-5"
                 >
                   <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0"></div>
 
@@ -109,7 +109,7 @@ const ServiceFeatures = ({ services }) => {
             <motion.div
               key={index}
               variants={cardVariants}
-              className="group bg-white rounded-[2rem] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_50px_rgb(0,0,0,0.12)] border border-slate-100 transition-all duration-500 hover:-translate-y-2 flex flex-col h-full relative"
+              className="group bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md border border-slate-100 transition-all duration-500 hover:-translate-y-2 flex flex-col h-full relative"
             >
               {/* Optional background glow on hover */}
               <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0"></div>
