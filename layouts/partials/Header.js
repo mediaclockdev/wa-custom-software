@@ -81,9 +81,10 @@ const Header = () => {
 
           <ul className="hidden lg:flex items-center gap-4 order-1 text-black ">
             {main.map((item, i) => {
-              const isActive = asPath === item.url;
+              // Updated logic in Header.js
+              const isActive = asPath === item.url || (item.url !== "/" && asPath?.startsWith(`${item.url}/`));
               const isParentActive = item.groups?.some((group) =>
-                group.items.some((child) => child.url === asPath),
+                group.items.some((child) => child.url === asPath || (child.url !== "/" && asPath?.startsWith(`${child.url}/`))),
               );
 
               return (
@@ -128,7 +129,7 @@ const Header = () => {
                                   <li key={j}>
                                     <Link
                                       href={child.url}
-                                      className={`block px-2 py-1 text-base font-medium rounded-md hover:bg-gray-50 transition ${asPath === child.url
+                                      className={`block px-2 py-1 text-base font-medium rounded-md hover:bg-gray-50 transition ${asPath === child.url || (child.url !== "/" && asPath?.startsWith(`${child.url}/`))
                                         ? "text-secondary font-medium"
                                         : "text-gray-800"
                                         }`}
@@ -197,7 +198,7 @@ const Header = () => {
                       <Link
                         href={item.url}
                         onClick={() => setShowMenu(false)}
-                        className={`block text-base ${asPath === item.url
+                        className={`block text-base ${asPath === item.url || (item.url !== "/" && asPath?.startsWith(`${item.url}/`))
                           ? "text-secondary font-semibold"
                           : "text-gray-800"
                           }`}
@@ -220,7 +221,7 @@ const Header = () => {
                                   <Link
                                     href={child.url}
                                     onClick={() => setShowMenu(false)}
-                                    className={`block text-sm ${asPath === child.url
+                                    className={`block text-sm ${asPath === child.url || (child.url !== "/" && asPath?.startsWith(`${child.url}/`))
                                       ? "text-secondary font-medium"
                                       : "text-gray-600"
                                       }`}

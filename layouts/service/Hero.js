@@ -30,7 +30,7 @@ export default function Hero({ banner }) {
   };
 
   return (
-    <section className="relative flex items-center min-h-[60dvh] bg-slate-50 overflow-hidden py-6 xl:py-8">
+    <section className="relative flex items-center min-h-[60dvh] bg-slate-50 overflow-hidden py-6 !pt-0">
       {/* Decorative Grid & Glow Background */}
       <div
         className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none"
@@ -44,7 +44,7 @@ export default function Hero({ banner }) {
       <div className="absolute top-1/4 -left-20 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[120px] -z-10 mix-blend-multiply pointer-events-none" />
       <div className="absolute bottom-10 right-10 lg:right-1/4 w-[500px] h-[500px] bg-blue-300/20 rounded-full blur-[140px] -z-10 mix-blend-multiply pointer-events-none" />
 
-      <div className="container relative z-10 mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+      <div className="container relative z-10 mx-autopx-4 grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
         {/* LEFT SIDE - Staggered Text Reveal */}
         <motion.div
           className="flex flex-col items-start gap-6 lg:pr-0"
@@ -84,7 +84,7 @@ export default function Hero({ banner }) {
 
           <motion.p
             variants={itemVariants}
-            className="text-lg sm:text-xl text-gray-600 font-medium max-w-lg leading-relaxed mt-2"
+            className="text-lg md:text-xl text-muted max-w-lg lg:leading-relaxed"
           >
             {banner?.description ||
               "High-performance web development, scalable solutions, and stunning UI/UX to help your brand stand out in the digital world."}

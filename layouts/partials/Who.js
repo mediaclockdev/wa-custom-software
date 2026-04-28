@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { FaAngleRight } from "react-icons/fa6";
 import { usePathname } from "next/navigation";
+import SectionHeader from "@layouts/components/SectionHeader";
 
 function highlightFounder(text) {
   const founderName = "Kiran Kumar Patel";
@@ -28,23 +29,28 @@ export default function AboutSection({ about }) {
   return (
     <section className="section min-h-[50dvh] flex items-center">
       <div className="container text-center relative">
-        <div className="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10">
+        <div className="grid md:grid-cols-2 gap-4 lg:gap-16 items-center relative z-10">
           {/* LEFT SIDE */}
           <div>
-            <div className="animate mb-10">
+            {/* <div className="animate mb-10">
               <p className="uppercase">{about.subtitle}</p>
               {markdownify(
                 about.title,
                 "h2",
                 "mt-2 text-4xl lg:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent",
               )}
-            </div>
+            </div> */}
 
-            <p className="animate mt-4 text-xl">
+            <SectionHeader
+              subtitle={about.subtitle}
+              title={about.title}
+            />
+
+            <p className="animate lg:mt-4 text-xl">
               {highlightFounder(about.description)}
             </p>
 
-            {markdownify(about.content, "p", "animate mt-4 text-lg")}
+            {markdownify(about.content, "p", "animate mt-2 lg:mt-4 text-lg")}
 
             {pathname !== "/about" && (
               <div className="animate mt-6">
@@ -60,7 +66,7 @@ export default function AboutSection({ about }) {
 
           {/* RIGHT SIDE - Floating Card */}
           <div className="relative">
-            <div className="animate bg-white border border-gray-100 p-10 rounded-3xl shadow-md">
+            <div className="animate bg-white border border-gray-100 p-6 px-3 lg:p-10 rounded-3xl shadow-md">
               <div className="grid grid-cols-2 gap-10">
                 <Stat number="8+" label="Years Experience" />
                 <Stat number="100+" label="Projects Delivered" />
@@ -114,9 +120,8 @@ function Stat({ number, label }) {
   return (
     <div
       ref={ref}
-      className={`transition-all duration-1000 ${
-        inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-      }`}
+      className={`transition-all duration-1000 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+        }`}
     >
       <h3 className="text-4xl font-bold text-primary">
         {isCountable ? `${count}${suffix}` : number}

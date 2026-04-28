@@ -33,10 +33,10 @@ const Features = ({ features }) => {
     settings: FiSettings,
   };
 
-  if(!features) return null;
+  if (!features) return null;
 
   return (
-    <section className="section min-h-[50dvh] flex items-center">
+    <section className="section flex items-center">
       <div className="container text-center">
         {/* Header */}
         <div className="animate mb-10">

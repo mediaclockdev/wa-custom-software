@@ -12,7 +12,7 @@ const Faq = ({ faq }) => {
 
   return (
     <section className="section flex items-center bg-gradient-to-b from-theme-light/80 via-white to-theme-light/40">
-      <div className="container lg:w-[85%]">
+      <div className="container">
         {/* Title */}
 
         <SectionHeader
@@ -42,7 +42,7 @@ const Faq = ({ faq }) => {
                   className="h-1 w-full origin-left bg-gradient-to-r from-primary to-purple-500"
                 />
 
-                <div className="p-6 py-5">
+                <div className="p-3 px-4lg:p-6 lg:py-5">
                   {/* Question */}
                   <div className="flex items-center justify-between">
                     <h5
@@ -72,7 +72,7 @@ const Faq = ({ faq }) => {
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
-                    <p className="pt-4 text-slate-600 text-base leading-relaxed">
+                    <p className="pt-4 text-slate-600 text-lg lg:leading-relaxed">
                       {item.a}
                     </p>
                   </motion.div>

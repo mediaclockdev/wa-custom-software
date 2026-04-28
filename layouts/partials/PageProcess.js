@@ -140,7 +140,7 @@ const PageProcess = ({ process }) => {
                     />
 
                     {/* Description */}
-                    <p className="flex-1 text-base leading-relaxed text-text lg:text-lg">
+                    <p className="flex-1 text-lg lg:leading-relaxed text-text">
                       {step.content}
                     </p>
                   </div>
@@ -152,7 +152,7 @@ const PageProcess = ({ process }) => {
 
         {/* ── Bottom connecting decoration ── */}
         <motion.div
-          className="mx-auto mt-10 flex items-center justify-center gap-2 lg:mt-14"
+          className="mx-auto flex items-center justify-center gap-2 mt-5"
           initial={{ opacity: 0, scaleX: 0 }}
           whileInView={{ opacity: 1, scaleX: 1 }}
           viewport={{ once: true }}

@@ -20,7 +20,7 @@ const TechStack = ({ technologies }) => {
   if (!technologies || !technologies.groups) return null;
 
   return (
-    <section className="relative overflow-hidden py-10 border-y border-border/50">
+    <section className="relative overflow-hidden py-6 border-y border-border/50">
       <div className="container">
 
         <motion.div

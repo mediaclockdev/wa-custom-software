@@ -26,16 +26,16 @@ const PostSingle = ({ frontmatter, content, recentPosts }) => {
                 {image && (
                   <Image
                     src={image}
-                    height="700"
-                    width="1120"
+                    height="600"
+                    width="1020"
                     alt={title}
                     priority={true}
                     className="fade w-full rounded-lg "
                   />
                 )}
               </div>
-              <div className="lg:col-8">
-                {markdownify(title, "h1", "h2 mt-6")}
+              <div className="lg:col-10">
+                {markdownify(title, "h1", "h2 mt-4 lg:mt-6")}
                 <div className="mt-6 flex items-center">
                   <div className="overflow-hidden rounded-full border-2 border-white shadow-[0_0_0_2px] shadow-primary">
                     <ImageFallback
@@ -53,7 +53,7 @@ const PostSingle = ({ frontmatter, content, recentPosts }) => {
                   </div>
                 </div>
                 <div
-                  className="content mb-4 mt-5 text-left prose-h2:mb-3 prose-p:text-lg prose-p:my-1 prose-ul:mt-2 prose-li:cursor-default"
+                  className="content mb-4 mt-5 text-left prose-h2:mb-2 prose-h2:mt-3 lg:prose-h2:mt-6 prose-h2:text-2xl lg:prose-h2:text-3xl  prose-p:text-lg prose-p:my-1 prose-ul:mt-2 prose-li:cursor-default prose-li:text-gray-600 prose-li:marker:text-gray-600"
                 >
                   <MDXContent content={content} />
                 </div>
@@ -70,9 +70,9 @@ const PostSingle = ({ frontmatter, content, recentPosts }) => {
 
           <div className="section mt-4">
             <h2 className="section-title text-center">Recent Articles</h2>
-            <div className="row justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 justify-center mt-8">
               {recentPosts.slice(0, 2).map((post, index) => (
-                <div key={"post-" + index} className="animate mt-16 lg:col-5">
+                <div key={"post-" + index} className="animate">
                   <Post post={post} />
                 </div>
               ))}

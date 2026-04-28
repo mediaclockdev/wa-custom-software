@@ -37,21 +37,21 @@ const Industries = ({ industries }) => {
           description={industries.description}
         />
 
-        <div className="mt-6 lg:mt-12">
+        <div className="mt-6">
           <Swiper
             className="industries-marquee-slider !py-4"
             modules={[Autoplay]}
             spaceBetween={24}
             loop={true}
-            speed={6000}
-            freeMode={true}
+            speed={4000} // increase for smoother flow
+            freeMode={true} // IMPORTANT
             autoplay={{
               delay: 0,
               disableOnInteraction: false,
               pauseOnMouseEnter: false,
             }}
             allowTouchMove={false}
-            slidesPerView="auto"
+            slidesPerView="auto" // IMPORTANT
           >
             <style>{`
               .industries-marquee-slider .swiper-wrapper {
@@ -74,7 +74,7 @@ const Industries = ({ industries }) => {
                       <Icon size={24} />
                     </div>
 
-                    <h3 className="font-semibold text-gray-800 text-base lg:text-xl leading-snug group-hover:text-primary transition-colors">
+                    <h3 className="font-semibold text-gray-800 text-xl leading-snug group-hover:text-primary transition-colors">
                       {item.title}
                     </h3>
                   </div>

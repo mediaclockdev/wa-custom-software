@@ -62,7 +62,7 @@ const Expertise = ({ expertise }) => {
             >
               <Link
                 href={item.link}
-                className="px-6 py-3 rounded-full text-sm md:text-base font-medium 
+                className="px-6 py-3 rounded-full text-md md:text-xl font-medium 
               bg-white text-primary border border-gray-200 shadow-sm
                 hover:shadow-lg hover:border-secondary/50 transition-colors duration-300 cursor-pointer inline-block"
               >

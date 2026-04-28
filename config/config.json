@@ -4,8 +4,8 @@
     "base_url": "/",
     "favicon": "/images/favicon.ico",
     "logo": "/images/logo.png",
-    "logo_width": "130",
-    "logo_height": "65",
+    "logo_width": "150",
+    "logo_height": "75",
     "logo_text": "Andromeda"
   },
 
@@ -18,7 +18,7 @@
   "params": {
     "tag_manager_id": "",
     "contact_form_action": "#",
-    "footer_content": "We are Western Australia Development Company, we are a specialist in the delivery of customized software that is high performance and meets the ever-changing demands of Perth companies.",
+    "footer_content": "We are a Western Australia development company specializing in high-performance, custom software for Perth businesses.",
     "copyright": "Designed & Developed By [WA Software](https://wa-custom-software.vercel.app/)"
   },
 

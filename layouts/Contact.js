@@ -45,7 +45,7 @@ const Contact = ({ data }) => {
     <section className="section">
       <Banner title={title} />
 
-      <div className="container max-w-6xl">
+      <div className="container">
         <motion.div
           variants={fadeUp}
           initial="hidden"

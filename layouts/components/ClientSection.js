@@ -37,7 +37,7 @@ export default function ClientsSection({ clients }) {
 
           <div
             ref={ref}
-            className="container mx-auto px-6 grid md:grid-cols-2 gap-2 lg:gap-16 items-start relative z-10"
+            className="container grid md:grid-cols-2 gap-2 lg:gap-12 items-start relative z-10"
           >
             {/* LEFT SIDE */}
             <div className="flex flex-col items-center gap-5 md:items-start text-center md:text-left justify-center pb-10 md:pb-0">
@@ -56,14 +56,14 @@ export default function ClientsSection({ clients }) {
               variants={container}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
-              className="grid gap-6"
+              className="grid gap-4"
             >
               {clients.list.map((item, index) => (
                 <motion.div
                   key={index}
                   variants={card}
                   whileHover={{ y: -6 }}
-                  className="bg-white border border-gray-100 p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300"
+                  className="bg-white border border-gray-100 p-2 px-3 lg:p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300"
                 >
                   <div className="flex items-start gap-4">
                     <div className="w-3 h-3 mt-2 bg-secondary rounded-full shrink-0" />

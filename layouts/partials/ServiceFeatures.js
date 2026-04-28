@@ -45,7 +45,7 @@ const ServiceFeatures = ({ services }) => {
         </div>
 
         {/* Mobile Slider (hidden on md and up) */}
-        <div className="block md:hidden pb-12">
+        <div className="block md:hidden pb-4">
           <Swiper
             modules={[Pagination]}
             spaceBetween={20}

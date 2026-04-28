@@ -1,6 +1,6 @@
 // section style
 .section {
-  @apply py-4 lg:py-10;
+  @apply py-2 lg:py-6;
 }
 
 // container
@@ -364,21 +364,9 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(
-      at 30% 30%,
-      rgba(255, 122, 0, 0.18),
-      transparent 45%
-    ),
-    radial-gradient(
-      at 70% 20%,
-      rgba(59, 130, 246, 0.18),
-      transparent 45%
-    ),
-    radial-gradient(
-      at 50% 80%,
-      rgba(255, 200, 120, 0.12),
-      transparent 45%
-    );
+    radial-gradient(at 30% 30%, rgba(255, 122, 0, 0.18), transparent 45%),
+    radial-gradient(at 70% 20%, rgba(59, 130, 246, 0.18), transparent 45%),
+    radial-gradient(at 50% 80%, rgba(255, 200, 120, 0.12), transparent 45%);
   background-size: 200% 200%;
   z-index: 0;
 }
@@ -486,21 +474,9 @@
 
 .dark .service-gradient-mesh {
   background:
-    radial-gradient(
-      at 30% 30%,
-      rgba(56, 189, 248, 0.18),
-      transparent 45%
-    ),
-    radial-gradient(
-      at 70% 20%,
-      rgba(99, 102, 241, 0.18),
-      transparent 45%
-    ),
-    radial-gradient(
-      at 50% 80%,
-      rgba(236, 72, 153, 0.12),
-      transparent 45%
-    );
+    radial-gradient(at 30% 30%, rgba(56, 189, 248, 0.18), transparent 45%),
+    radial-gradient(at 70% 20%, rgba(99, 102, 241, 0.18), transparent 45%),
+    radial-gradient(at 50% 80%, rgba(236, 72, 153, 0.12), transparent 45%);
 }
 
 .dark .code-stream {
@@ -519,13 +495,6 @@
     transform: none;
   }
 }
-
-
-
-
-
-
-
 
 //fade
 // .fade-up, .fade-left {

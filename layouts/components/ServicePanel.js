@@ -30,7 +30,7 @@ const ServicePanel = ({ services }) => {
   };
 
   return (
-    <section className="section min-h-[50dvh] flex items-center">
+    <section className="section flex items-center">
       <div className="container text-center">
         <SectionHeader
           subtitle={services.subtitle}
@@ -41,17 +41,17 @@ const ServicePanel = ({ services }) => {
         <div className="lg:hidden space-y-8">
           {services.list.map((service, index) => (
             <div key={index} className="rounded-xl border border-gray-200 p-6">
-              <h3 className="text-xl font-semibold text-[#24326A] mb-3">
+              <h3 className="text-2xl font-semibold text-[#24326A] mb-3">
                 {service.title}
               </h3>
 
-              <p className="text-gray-600 mb-4">{service.description}</p>
+              <p className="text-gray-600 mb-4 text-lg">{service.description}</p>
 
               <ul className="space-y-2">
                 {service.items.map((item, i) => (
                   <li
                     key={i}
-                    className="flex items-start gap-2 text-sm text-gray-700"
+                    className="flex items-start gap-2 text-md text-gray-700"
                   >
                     <span className="w-2 h-2 mt-2 rounded-full bg-[#fe6019]" />
                     {item}
@@ -82,19 +82,17 @@ const ServicePanel = ({ services }) => {
               >
                 {/* Background */}
                 <div
-                  className={`absolute inset-0 transition-all duration-500 ${
-                    isActive
-                      ? "bg-gradient-to-br from-[#24326A] to-[#fe6019]"
-                      : "bg-gray-100"
-                  }`}
+                  className={`absolute inset-0 transition-all duration-500 ${isActive
+                    ? "bg-gradient-to-br from-[#24326A] to-[#fe6019]"
+                    : "bg-gray-100"
+                    }`}
                 />
 
                 {/* Content */}
                 <div className="relative p-10 h-full flex flex-col justify-between">
                   <h3
-                    className={`text-3xl font-semibold transition ${
-                      isActive ? "text-white" : "text-[#24326A]"
-                    }`}
+                    className={`text-3xl font-semibold transition ${isActive ? "text-white" : "text-[#24326A]"
+                      }`}
                   >
                     {service.title}
                   </h3>
@@ -107,9 +105,8 @@ const ServicePanel = ({ services }) => {
                   >
                     <motion.p
                       variants={item}
-                      className={`mb-6 text-lg ${
-                        isActive ? "text-white/90" : "text-gray-600"
-                      }`}
+                      className={`mb-6 text-lg ${isActive ? "text-white/90" : "text-gray-600"
+                        }`}
                     >
                       {service.description}
                     </motion.p>
@@ -119,9 +116,8 @@ const ServicePanel = ({ services }) => {
                         <motion.li
                           key={i}
                           variants={item}
-                          className={`flex items-center gap-2 text-lg ${
-                            isActive ? "text-white" : "text-gray-700"
-                          }`}
+                          className={`flex items-center gap-2 text-lg ${isActive ? "text-white" : "text-gray-700"
+                            }`}
                         >
                           <span className="w-2 h-2 rounded-full bg-current"></span>
                           {itemText}

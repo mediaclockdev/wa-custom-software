@@ -29,9 +29,9 @@ const BlogPagination = async ({ params }) => {
       <section className="section pt-0">
         <Banner title={title} />
         <div className="container">
-          <div className="row justify-center pb-6 pt-6 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-4 justify-center pb-6 pt-6">
             {currentPosts.map((post, i) => (
-              <div key={`key-${i}`} className="mb-8 lg:col-5">
+              <div key={`key-${i}`}>
                 <Post post={post} />
               </div>
             ))}

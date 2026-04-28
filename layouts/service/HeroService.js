@@ -25,10 +25,10 @@ export default function HeroService({ banner, title: propTitle, description: pro
   };
 
   return (
-    <section className="relative py-6 lg:pb-12 overflow-hidden bg-gradient-to-b from-slate-50 to-white border-b border-gray-100">
+    <section className="relative py-6 lg:pb-8 overflow-hidden bg-gradient-to-b from-slate-50 to-white border-b border-gray-100">
 
 
-      <div className="container relative z-10 mx-auto px-6 lg:px-12">
+      <div className="container relative z-10 mx-auto">
         <div className="grid lg:grid-cols-2 gap-6 items-center">
 
           {/* LEFT: Text (Half width) */}
