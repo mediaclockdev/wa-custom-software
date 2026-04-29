@@ -58,7 +58,7 @@ const PageProcess = ({ process }) => {
   if (!process) return null;
 
   return (
-    <section className="section relative overflow-hidden">
+    <section className="section relative overflow-hidden lg:pb-0">
       {/* ── Background Decor ── */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -left-32 top-20 h-72 w-72 rounded-full bg-primary/[0.04] blur-[100px]" />

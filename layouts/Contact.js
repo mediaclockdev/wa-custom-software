@@ -52,7 +52,7 @@ const Contact = ({ data }) => {
           whileInView="show"
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-center max-w-3xl mx-auto mb-6"
         >
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
@@ -91,7 +91,7 @@ const Contact = ({ data }) => {
         </motion.div>
 
         {/* Info Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16 cursor-default">
+        <div className="grid md:grid-cols-3 gap-8 mb-6 cursor-default">
           {[
             {
               Icon: MdLocationOn,
@@ -148,7 +148,7 @@ const Contact = ({ data }) => {
         </div>
 
         {/* Main Section - Stacked and Centered */}
-        <div className="max-w-4xl mx-auto flex flex-col gap-16 items-center">
+        <div className="max-w-4xl mx-auto flex flex-col gap-8 items-center">
 
           {/* Top - Services (Centered & Horizontal Flow) */}
           <motion.div
@@ -158,7 +158,7 @@ const Contact = ({ data }) => {
             viewport={{ once: true }}
             className="w-full text-center"
           >
-            <h3 className="text-3xl font-bold mb-8">
+            <h3 className="text-3xl font-bold mb-6">
               How Can We Help You?
             </h3>
 
@@ -195,7 +195,7 @@ const Contact = ({ data }) => {
             className="w-full relative"
           >
             {/* Background Blob for aesthetic */}
-            <div className="absolute -inset-10 bg-gradient-to-r from-primary/10 to-blue-400/10 rounded-[4rem] blur-2xl opacity-60 -z-10"></div>
+            <div className="lg:absolute -inset-10 bg-gradient-to-r from-primary/10 to-blue-400/10 rounded-[4rem] blur-2xl opacity-60 -z-10"></div>
 
             <div className="rounded-[2.5rem] bg-white p-4 md:p-14 shadow-[0_20px_60px_rgb(0,0,0,0.06)] border border-gray-100 relative z-10 w-full animate-fade-in-up text-center">
               <h3 className="text-3xl font-bold mb-2">Drop Your Message</h3>

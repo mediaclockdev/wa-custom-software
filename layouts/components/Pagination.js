@@ -16,7 +16,7 @@ const Pagination = ({ section, currentPage, totalPages }) => {
     <>
       {totalPages > 1 && (
         <nav
-          className="mb-4 flex justify-center space-x-1"
+          className="flex justify-center space-x-1"
           aria-label="Pagination"
         >
           {/* previous */}
@@ -33,9 +33,8 @@ const Pagination = ({ section, currentPage, totalPages }) => {
             </Link>
           ) : (
             <span
-              className={`${
-                !hasPrevPage && "opacity-0"
-              } inline-flex h-11 w-11 items-center justify-center rounded px-2 py-2 text-primary hover:bg-primary hover:text-body`}
+              className={`${!hasPrevPage && "opacity-0"
+                } inline-flex h-11 w-11 items-center justify-center rounded px-2 py-2 text-primary hover:bg-primary hover:text-body`}
             >
               <TfiAngleLeft />
             </span>
@@ -78,9 +77,8 @@ const Pagination = ({ section, currentPage, totalPages }) => {
             </Link>
           ) : (
             <span
-              className={`${
-                !hasNextPage && "opacity-0"
-              } inline-flex h-11 w-11 items-center justify-center rounded px-2 py-2 text-primary hover:bg-primary hover:text-body`}
+              className={`${!hasNextPage && "opacity-0"
+                } inline-flex h-11 w-11 items-center justify-center rounded px-2 py-2 text-primary hover:bg-primary hover:text-body`}
             >
               <TfiAngleRight />
             </span>
