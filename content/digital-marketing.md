@@ -38,7 +38,7 @@ services:
         - Local keyword targeting
         - Suburb-focused landing pages
         - Review generation and reputation management
-      url: /images/service/digital-marketing/local-seo.png
+      url: /images/service/digital-marketing/local-seo.jpg
 
     - icon: tool
       title: Technical SEO Audits
@@ -48,7 +48,7 @@ services:
         - Mobile usability improvements
         - Core Web Vitals enhancements
         - Crawl and indexation fixes
-      url: /images/service/digital-marketing/tech-seo.jpg
+      url: /images/service/digital-marketing/tech-seo.webp
 
     - icon: file-text
       title: On-Page SEO Enhancements
@@ -58,7 +58,7 @@ services:
         - Content structure and heading improvements
         - Internal linking optimisation
         - Schema implementation for rich results
-      url: /images/service/digital-marketing/onpage-seo.png
+      url: /images/service/digital-marketing/onpage-seo.webp
 
     - icon: search
       title: Keyword Research and SEO Strategy
@@ -69,7 +69,6 @@ services:
         - Keyword-focused content planning
       url: /images/service/digital-marketing/keyword-research.png
 
-
     - icon: edit-3
       title: Content Marketing and Blogging
       content: We create SEO-friendly, conversion-focused content that builds authority and attracts qualified traffic.
@@ -79,7 +78,6 @@ services:
         - Clear and compelling calls-to-action
       url: /images/service/digital-marketing/content-marketing.png
 
-
     - icon: link
       title: Ethical Link Building
       content: Strengthen your domain authority with high-quality, white-hat backlinks from trusted and relevant sources.
@@ -88,7 +86,6 @@ services:
         - Spammy backlink cleanup
         - Local and industry-relevant links
       url: /images/service/digital-marketing/ethical-link.jpg
-
 
     - icon: bar-chart-2
       title: PPC Management (Google & Meta Ads)
@@ -100,7 +97,6 @@ services:
         - Conversion tracking and ROAS optimisation
       url: /images/service/digital-marketing/ppc-managment.jpg
 
-
     - icon: users
       title: Social Media Marketing
       content: Build brand awareness and engagement where your audience spends their time.
@@ -108,8 +104,7 @@ services:
         - Creative content production
         - Paid social media campaigns
         - Local audience targeting and community building
-      url: /images/service/digital-marketing/social-media.png
-
+      url: /images/service/digital-marketing/social-media.jpg
 
     - icon: monitor
       title: Web Development for Marketing
@@ -119,7 +114,7 @@ services:
         - Mobile-first responsive design
         - Lead form and tracking integration
         - SEO-friendly architecture
-      url: /images/service/digital-marketing/web-dev.jpg
+      url: /images/service/digital-marketing/web-dev.webp
 
 why:
   subtitle: WHY CHOOSE US

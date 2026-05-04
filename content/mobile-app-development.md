@@ -48,7 +48,7 @@ services:
     - icon: code
       title: Kotlin App Development
       content: Our Kotlin developers design modern and secure Android applications that have improved efficiency and simpler code structures. Kotlin's sophisticated features enable us to build feature-rich, mobile applications that are flexible and designed to meet your needs for operation.
-      url: /images/service/mobile-app-development/kotlin-development.png
+      url: /images/service/mobile-app-development/kotlin-development.jpg
 
     - icon: cpu
       title: Swift App Development

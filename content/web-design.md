@@ -34,27 +34,20 @@ services:
       content: Western Australian designs fully customized websites that are built around your brand's identity, goals and customer journey. Each website is unique and designed by a talented team of experts with a wide range of experience across different sectors.
       url: /images/service/web-design/custom.jpg
 
-
     - icon: smartphone
       title: Responsive & Mobile-First Builds
       content: Today’s users surf across a variety of devices, meaning that your site should be able to adapt quickly. Mobile-first design ensures an easy structure and modern design, as well as interactive elements and seamless user experience on any size screen.
       url: /images/service/web-design/responsive.jpg
-
-
 
     - icon: shopping-cart
       title: E-commerce & CMS Development
       content: If you are launching a brand web-based store for the first time, or enhancing an existing site, Western Australian builds an scalable eCommerce as well as CMS solutions. Perth agencies usually offer custom-built solutions within 8 to 16 weeks, based on the size and complexity, and we use the same tested method.
       url: /images/service/web-design/cms.jpg
 
-
-
     - icon: zap
       title: SEO-Ready & Performance Optimised
       content: The speed of your website can greatly influence conversion rates. As the source document outlines, slow websites can lose clients instantly. We ensure fast loading times, mobile optimization and SEO-ready design to help sustain organic growth over the long term.
       url: /images/service/web-design/seo.jpg
-
-
 
 why:
   subtitle: WHY CHOOSE US
