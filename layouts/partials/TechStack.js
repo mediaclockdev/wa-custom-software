@@ -76,7 +76,7 @@ const TechStack = ({ technologies }) => {
                     hidden: { opacity: 0, y: 15 },
                     show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
                   }}
-                  className="group relative h-full overflow-hidden bg-white/70 backdrop-blur-md p-8 rounded-[2rem] border border-gray-100 hover:border-primary/20 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.03)] transition-all duration-500 hover:-translate-y-1"
+                  className="group relative h-full overflow-hidden bg-white/70 backdrop-blur-md p-8 rounded-2xl border border-gray-100 hover:border-gray-200 shadow-sm transition-all duration-500 hover:-translate-y-1"
                 >
 
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

@@ -4,8 +4,11 @@ import { motion } from "framer-motion";
 import ButtonLink from "@layouts/components/ui/ButtonLink";
 import { AnimatedText } from "./AnimatedText";
 import { IoIosCall } from "react-icons/io";
+import { usePathname } from "next/navigation";
 
 export default function Hero({ banner }) {
+  const currentPage = usePathname();
+  console.log("currentPage", currentPage);
   const parts = banner?.title?.split(/<\/?br\s*\/?>/i) || [
     "High-Performance",
     "Web Development",
@@ -29,6 +32,8 @@ export default function Hero({ banner }) {
     },
   };
 
+  const isAboutPage = currentPage === "/about";
+
   return (
     <section className="relative flex items-center min-h-[60dvh] bg-slate-50 overflow-hidden py-6 !pt-0">
       {/* Decorative Grid & Glow Background */}
@@ -47,7 +52,7 @@ export default function Hero({ banner }) {
       <div className="container relative z-10 mx-autopx-4 grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
         {/* LEFT SIDE - Staggered Text Reveal */}
         <motion.div
-          className="flex flex-col items-start gap-6 lg:pr-0"
+          className="flex flex-col items-start gap-6 lg:pr-0 mt-4 lg:mt-0"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -89,17 +94,19 @@ export default function Hero({ banner }) {
             {banner?.description ||
               "High-performance web development, scalable solutions, and stunning UI/UX to help your brand stand out in the digital world."}
           </motion.p>
+          {!isAboutPage &&
+            <motion.div
+              variants={itemVariants}
+            >
+              <ButtonLink
+                animate={true}
+                href={banner?.link?.href || "/contact"}
+                title={banner?.link?.label || "Start a Project"}
+                icon={IoIosCall}
+              />
+            </motion.div>
+          }
 
-          <motion.div
-            variants={itemVariants}
-          >
-            <ButtonLink
-              animate={true}
-              href={banner?.link?.href || "/contact"}
-              title={banner?.link?.label || "Start a Project"}
-              icon={IoIosCall}
-            />
-          </motion.div>
         </motion.div>
 
         {/* RIGHT SIDE - Interactive 3D Faux UI or Banner Image */}

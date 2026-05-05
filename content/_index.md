@@ -4,7 +4,7 @@ banner:
   description: We provide web, mobile app and IT services in Perth. With 10+ years of experience, we build secure, scalable and high-performing digital solutions for long-term business growth.
   link:
     label: Get in Touch
-    href: "/contact"
+    href: "tel:+1234567890"
 
 #services
 services:

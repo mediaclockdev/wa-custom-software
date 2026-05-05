@@ -61,7 +61,7 @@ services:
       url: /images/service/ios-development/enterprise.jpg
 
 why:
-  subtitle: WHY CHOOSE US
+  subtitle: OUR COMPETITIVE EDGE
   title: Why Choose Us for iOS Development
   description: Selecting the right iOS development partner matters. We combine local industry knowledge with premium technical capabilities
   list:

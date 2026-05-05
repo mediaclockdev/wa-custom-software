@@ -113,7 +113,7 @@ const Header = () => {
                         />
                       </span>
 
-                      <ul className="absolute left-0 top-full mt-4 min-w-[650px] p-5 rounded-xl border border-gray-100 bg-white shadow-xl opacity-0 invisible translate-y-2 transition-all duration-200 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 z-20 cursor-default">
+                      <ul className="absolute left-1/2 -translate-x-1/2 top-full mt-4 min-w-[650px] p-5 rounded-xl border border-gray-100 bg-white shadow-xl opacity-0 invisible translate-y-2 transition-all duration-200 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 z-20 cursor-default">
                         <div className="grid grid-cols-2 gap-6">
                           {item.groups.map((group, gi) => (
                             <div
@@ -154,12 +154,19 @@ const Header = () => {
             <ButtonLink href={`tel:${config.contact_info.phone.replace(/\\s+/g, "")}`} title="Let's Talk" animate={animate} icon={IoIosCall} />
           </div>
 
-          <div className="lg:hidden ml-auto">
+          <div className="lg:hidden ml-auto flex items-center gap-4">
+            <a
+              href={`tel:${config.contact_info.phone.replace(/\s+/g, "")}`}
+              className="text-2xl text-primary"
+              aria-label="Call Us"
+            >
+              <IoIosCall />
+            </a>
             <button
-              className="h-6 w-6 text-xl"
+              className="h-6 w-6 text-xl flex items-center justify-center"
               onClick={() => setShowMenu(!showMenu)}
             >
-              {showMenu ? <CgClose /> : <RxHamburgerMenu />}
+              {showMenu ? <CgClose className="text-2xl text-primary" /> : <RxHamburgerMenu className="text-2xl text-primary" />}
             </button>
           </div>
         </nav>
@@ -174,20 +181,12 @@ const Header = () => {
 
           <div className="absolute top-0 right-0 h-full w-[85%] max-w-md bg-white shadow-xl p-6 overflow-y-auto  overflow-x-hidden">
             <div className="w-full min-w-0">
-              <div className="flex items-center justify-between mb-6 w-full min-w-0">
-                <ButtonLink
-                  animate={false}
-                  onClick={() => setShowMenu(false)}
-                  href={`tel:${config.contact_info.phone.replace(/\\s+/g, "")}`}
-                  title="Let's Talk"
-                  icon={IoIosCall}
-                />
-
+              <div className="flex items-center justify-end mb-6 w-full min-w-0">
                 <button
-                  className="text-2xl text-primary shrink-0"
+                  className="shrink-0"
                   onClick={() => setShowMenu(false)}
                 >
-                  <CgClose />
+                  <CgClose className="text-3xl text-primary" />
                 </button>
               </div>
 
@@ -198,20 +197,21 @@ const Header = () => {
                       <Link
                         href={item.url}
                         onClick={() => setShowMenu(false)}
-                        className={`block text-base ${asPath === item.url || (item.url !== "/" && asPath?.startsWith(`${item.url}/`))
-                          ? "text-secondary font-semibold"
-                          : "text-gray-800"
+                        className={`group relative inline-block text-lg font-medium transition duration-300 ${asPath === item.url || (item.url !== "/" && asPath?.startsWith(`${item.url}/`))
+                          ? "text-primary"
+                          : "text-gray-800 hover:text-primary"
                           }`}
                       >
                         {item.name}
+                        <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full" />
                       </Link>
                     )}
 
                     {item.groups && (
                       <div>
                         {item.groups.map((group, gi) => (
-                          <div key={gi} className="mb-4">
-                            <p className="text-base font-semibold mb-2">
+                          <div key={gi} className="mb-4 last:mb-1">
+                            <p className="text-lg font-semibold mb-2 text-gray-900">
                               {group.title}
                             </p>
 
@@ -221,12 +221,13 @@ const Header = () => {
                                   <Link
                                     href={child.url}
                                     onClick={() => setShowMenu(false)}
-                                    className={`block text-sm ${asPath === child.url || (child.url !== "/" && asPath?.startsWith(`${child.url}/`))
-                                      ? "text-secondary font-medium"
-                                      : "text-gray-600"
+                                    className={`group relative inline-block font-medium text-lg transition duration-300 ${asPath === child.url || (child.url !== "/" && asPath?.startsWith(`${child.url}/`))
+                                      ? "text-primary"
+                                      : "text-gray-800 hover:text-primary"
                                       }`}
                                   >
                                     {child.name}
+                                    <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full" />
                                   </Link>
                                 </li>
                               ))}

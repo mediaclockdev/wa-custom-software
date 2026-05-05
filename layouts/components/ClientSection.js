@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import SectionHeader from "./SectionHeader";
 import ButtonLink from "@layouts/components/ui/ButtonLink";
+import { IoIosCall } from "react-icons/io";
 
 export default function ClientsSection({ clients }) {
   const { ref, inView } = useInView({
@@ -40,14 +41,14 @@ export default function ClientsSection({ clients }) {
             className="container grid md:grid-cols-2 gap-2 lg:gap-12 items-start relative z-10"
           >
             {/* LEFT SIDE */}
-            <div className="flex flex-col items-center gap-5 md:items-start text-center md:text-left justify-center pb-10 md:pb-0">
+            <div className="flex flex-col items-center md:items-start text-center md:text-left justify-center pb-3 md:pb-0">
               <SectionHeader
                 subtitle={clients.subtitle}
                 title={clients.title}
                 description={clients.description}
               />
               <div className="w-full text-center">
-                <ButtonLink href="/contact" title="Contact Us" />
+                <ButtonLink href={clients.href} title="Contact Us" icon={IoIosCall} />
               </div>
             </div>
 
@@ -65,9 +66,10 @@ export default function ClientsSection({ clients }) {
                   whileHover={{ y: -6 }}
                   className="bg-white border border-gray-100 p-2 px-3 lg:p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300"
                 >
-                  <div className="flex items-start gap-4">
-                    <div className="w-3 h-3 mt-2 bg-secondary rounded-full shrink-0" />
-                    <p className="text-gray-700 text-lg">{item}</p>
+                  <div className="text-left">
+                    <p className="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-[0.55em] before:w-2.5 before:h-2.5 before:bg-secondary before:rounded-full text-gray-700 text-lg">
+                      {item}
+                    </p>
                   </div>
                 </motion.div>
               ))}

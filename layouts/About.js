@@ -3,7 +3,7 @@
 import ClientsSection from "./components/ClientSection";
 import PageProcess from "./partials/PageProcess";
 import ServiceFeatures from "./partials/ServiceFeatures";
-import AboutSection from "./partials/Who";
+import AboutSection from "./partials/AboutSection";
 import Hero from "./service/Hero";
 
 const About = ({ data }) => {

@@ -46,7 +46,7 @@ const Footer = () => {
       .filter((item) => featuredServices.includes(item.url)) || [];
 
   return (
-    <footer className="relative bg-gradient-to-b bg-white ">
+    <footer className="container relative bg-gradient-to-b bg-white">
       {/* top divider */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
 
@@ -190,8 +190,9 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-gray-200 py-4 text-base text-gray-800">
-          {markdownify(copyright)}
+        <div className="border-t border-gray-200 py-4 text-base text-gray-800 text-center flex items-center justify-center flex-wrap gap-1">
+          <span>&copy; {new Date().getFullYear()}</span>
+          {markdownify(copyright, "span")}
         </div>
       </div>
     </footer>

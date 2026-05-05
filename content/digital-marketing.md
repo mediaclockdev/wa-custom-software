@@ -117,7 +117,7 @@ services:
       url: /images/service/digital-marketing/web-dev.webp
 
 why:
-  subtitle: WHY CHOOSE US
+  subtitle: OUR COMPETITIVE EDGE
   title: Why Perth Brands Partner With Western Australia Development Company
   list:
     - title: Local WA Insight

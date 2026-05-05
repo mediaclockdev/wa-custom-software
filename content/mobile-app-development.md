@@ -61,7 +61,7 @@ services:
       url: /images/service/mobile-app-development/mobiledesign.png
 
 why:
-  subtitle: WHY CHOOSE US
+  subtitle: OUR COMPETITIVE EDGE
   title: Why Choose Our Mobile App Development Services?
   description: If you're a start-up building your first app, or an established company looking to improve its digital platform, we can provide customized solutions that will ensure longevity and success.
   list:
@@ -84,7 +84,7 @@ why:
       content: We follow disciplined processes and timelines to ensure projects are delivered on schedule without compromising quality, meeting client expectations.
 
 process:
-  subtitle: OUR APPROACH
+  subtitle: HOW WE WORK
   title: Our Mobile App Development Approach
   description: Our mobile strategy for app development is built around innovation, flexibility and a thorough knowledge of the Western Australian business environment.
   steps:

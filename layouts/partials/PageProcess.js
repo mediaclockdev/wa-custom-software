@@ -103,7 +103,7 @@ const PageProcess = ({ process }) => {
 
                   {/* Watermark step number */}
                   <span
-                    className={`pointer-events-none absolute -right-3 -top-2 select-none text-[9rem] font-black leading-none ${accent.number} transition-all duration-700 group-hover:scale-110 group-hover:opacity-[0.12]`}
+                    className={`pointer-events-none absolute right-0 -top-2 select-none text-[9rem] font-black leading-none ${accent.number} transition-all duration-700 group-hover:scale-110 group-hover:opacity-[0.12]`}
                   >
                     {`0${i + 1}`}
                   </span>
@@ -123,7 +123,7 @@ const PageProcess = ({ process }) => {
                         <Icon size={24} />
                       </div>
                       <span
-                        className={`text-xs font-bold uppercase tracking-[0.2em] text-primary/40`}
+                        className={`text-sm font-bold uppercase tracking-wider text-primary/80`}
                       >
                         Step {i + 1}
                       </span>
@@ -156,7 +156,7 @@ const PageProcess = ({ process }) => {
           initial={{ opacity: 0, scaleX: 0 }}
           whileInView={{ opacity: 1, scaleX: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          transition={{ duration: 0.3, delay: 0.3 }}
         >
           <div className="h-[2px] w-8 rounded-full bg-primary/20" />
           <div className="h-[2px] w-16 rounded-full bg-gradient-to-r from-primary to-secondary" />

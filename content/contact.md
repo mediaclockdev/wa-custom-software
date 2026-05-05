@@ -24,4 +24,11 @@ services:
     link: /digital-marketing
   - title: Custom IT solutions in Western Australia
     link: /custom-software-development
+
+contact_info:
+  phone: "123 456 7890"
+  mobile: "123 456 7890"
+  email: "info@wasoftware.com.au"
+  address: "41 Clearview Avenue <br /> Yokine, Western Australia 6060"
+  business_hours: "Monday to Friday <br /> 9:00 AM – 6:00 PM AST"
 ---

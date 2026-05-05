@@ -3,7 +3,7 @@
 import SectionHeader from "@layouts/components/SectionHeader";
 import { FaSearch, FaDraftingCompass, FaCode, FaRocket } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
+import { Autoplay, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -13,7 +13,7 @@ const Process = ({ process }) => {
   if (!process) return null;
 
   return (
-    <section className="section min-h-dvh flex items-center">
+    <section className="section min-h-dvh flex items-center overflow-hidden">
       <div className="container">
         <SectionHeader
           subtitle={process.subtitle}
@@ -25,7 +25,8 @@ const Process = ({ process }) => {
           {/* Mobile/Tablet Slider (hidden on lg and up) */}
           <div className="block lg:hidden">
             <Swiper
-              modules={[Pagination]}
+              modules={[Pagination, Autoplay]}
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
               spaceBetween={20}
               pagination={{ clickable: true }}
               grabCursor={true}
@@ -33,15 +34,15 @@ const Process = ({ process }) => {
                 320: { slidesPerView: 1 },
                 768: { slidesPerView: 2 },
               }}
-              className="pb-12 pt-4"
+              className=""
             >
               {process.steps.map((step, i) => {
                 const Icon = icons[i] || FaSearch;
 
                 return (
-                  <SwiperSlide key={i} className="flex h-auto">
-                    <div className="w-full h-full mb-10">
-                      <div className="group relative min-h-[220px] h-full rounded-2xl border border-primary/10 bg-white p-8 shadow-sm transition-all duration-500 lg:hover:-translate-y-2 hover:shadow-sm cursor-pointer overflow-hidden flex flex-col">
+                  <SwiperSlide key={i} className="flex !h-auto">
+                    <div className="w-full h-full">
+                      <div className="group relative min-h-[220px] h-full rounded-2xl border border-primary/10 bg-white p-6 lg:p-8 shadow-sm transition-all duration-500 lg:hover:-translate-y-2 hover:shadow-sm cursor-pointer overflow-hidden flex flex-col">
                         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-primary/5 via-transparent to-secondary/10" />
 
                         <div className="flex items-center mb-6 relative z-10">
@@ -60,7 +61,7 @@ const Process = ({ process }) => {
 
                         <div className="w-12 h-[2px] bg-primary/70 mb-6 transition-all duration-300 group-hover:w-full" />
 
-                        <p className="text-text text-lg relative z-10 flex-grow">
+                        <p className="text-slate-800 text-lg relative z-10 flex-grow">
                           {step.content}
                         </p>
                       </div>
@@ -99,7 +100,7 @@ const Process = ({ process }) => {
 
                         <div className="w-12 h-[2px] bg-primary/70 mb-2 transition-all duration-300 group-hover:w-full" />
 
-                        <p className="text-text text-lg relative z-10">
+                        <p className="text-slate-800 text-lg relative z-10">
                           {step.content}
                         </p>
                       </div>

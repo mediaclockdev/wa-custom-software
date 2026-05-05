@@ -64,7 +64,7 @@ services:
       url: /images/service/web-development/responsive.png
 
 why:
-  subtitle: WHY CHOOSE US
+  subtitle: OUR COMPETITIVE EDGE
   title: Why Choose Western Australia Development Company
   list:
     - title: Perth-Based Expertise
@@ -79,7 +79,7 @@ why:
       content: From the initial concept to deployment and for a long time after launchwe offer maintenance monitoring, as well as ongoing support to ensure your site is always performing at its best.
 
 process:
-  subtitle: OUR APPROACH
+  subtitle: HOW WE WORK
   title: Our Approach to Web Development
   description: We believe in a collaborative development process that involves you at every step. Our goal is to deliver not only exceptional websites but also a clear and enjoyable experience while working with us.
   steps:

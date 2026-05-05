@@ -1,3 +1,10 @@
+/* Automatically add padding to Swiper containers that have pagination dots */
+.swiper:has(.swiper-pagination-bullets) {
+  padding-bottom: 2.5rem !important; /* Equivalent to pb-16 */
+}
+
+/* Ensure the dots stay neatly at the very bottom */
 .swiper-pagination {
-    margin-top: 100px;
+  bottom: 0 !important;
+  margin-top: 0 !important;
 }

@@ -1,11 +1,10 @@
 "use client";
 
-import { markdownify } from "@lib/utils/textConverter";
 import { FaMapMarkerAlt, FaCogs, FaBolt, FaHandsHelping } from "react-icons/fa";
 import { FaUsers, FaClock } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { motion } from "framer-motion";
-import { Pagination } from "swiper";
+import { Autoplay, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import SectionHeader from "@layouts/components/SectionHeader";
@@ -27,7 +26,7 @@ const WhyChooseUs = ({ why }) => {
   };
 
   return (
-    <section className="section bg-gradient-to-b from-theme-light/80 via-white to-theme-light/40">
+    <section className="section bg-gradient-to-b from-theme-light/80 via-white to-theme-light/40 overflow-hidden">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -44,68 +43,59 @@ const WhyChooseUs = ({ why }) => {
 
         {Array.isArray(safeWhy.list) && safeWhy.list.length > 0 && (
           <motion.div
-            className="mt-16"
+            className="mt-8 lg:mt-12"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <Swiper
-              className="!p-4 -m-4 !pb-8"
-              modules={[Pagination]}
-              spaceBetween={20}
+              className="lg:!pt-4 !px-1 lg:!px-4 lg:-mx-4"
+              modules={[Pagination, Autoplay]}
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
+              spaceBetween={24}
               pagination={{ clickable: true }}
               grabCursor={true}
               breakpoints={{
                 320: { slidesPerView: 1 },
-                640: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 }
               }}
             >
               {safeWhy.list.map((item, i) => {
                 const Icon = icons[i] || FaCogs;
 
                 return (
-                  <SwiperSlide key={i} className="flex !h-auto mb-10">
+                  <SwiperSlide key={i} className="flex !h-auto">
                     <motion.div
-                      className="w-full h-full flex transform-gpu"
+                      className="w-full h-full flex"
                       initial={{ opacity: 0, y: 30 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, margin: "-50px" }}
-                      transition={{ duration: 0.2 }}
-                      whileHover={{ scale: 1.02 }}
+                      transition={{ duration: 0.4, delay: i * 0.1 }}
                     >
-                      <div className="group relative rounded-3xl p-[2px] w-full h-full flex overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300">
-                        <motion.div
-                          className="absolute -inset-[150%] rounded-full"
-                          animate={{ rotate: 360 }}
-                          transition={{
-                            duration: 4,
-                            ease: "linear",
-                            repeat: Infinity,
-                          }}
-                          style={{
-                            background:
-                              "conic-gradient(#24326A 0deg 300deg, #fe6019 300deg 330deg, #24326A 330deg 360deg)",
-                          }}
-                        />
 
-                        <div className="relative rounded-3xl bg-white p-6 flex flex-col w-full h-full">
-                          <motion.div
-                            className="mb-4 text-primary origin-left w-fit"
-                            whileHover={{ scale: 1.1, rotate: 5 }}
-                            transition={{ type: "spring", stiffness: 300 }}
-                          >
-                            <Icon size={40} />
-                          </motion.div>
+                      <div className="group relative rounded-[2rem] p-[2px] w-full h-full flex overflow-hidden shadow-sm lg:hover:shadow-md transition-all duration-500 lg:hover:-translate-y-2 border border-primary ">
 
-                          <h3 className="text-xl lg:text-3xl font-semibold mb-2 line-clamp-3">
-                            {item.title}
-                          </h3>
+                        {/* Card Content Layer */}
+                        <div className="relative bg-white border border-slate-50/50 rounded-[calc(2rem-2px)] p-6 w-full h-full flex flex-col z-10 overflow-hidden">
 
-                          <p className="text-lg text-text flex-grow">
-                            {item.content}
-                          </p>
+                          {/* Subtle background glow on hover */}
+                          <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] to-transparent opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500" />
+
+                          <div className="relative z-10 flex flex-col h-full">
+                            <div className="mb-6 lg:mb-8 text-primary/90 lg:group-hover:text-primary transition-colors duration-300 origin-left inline-flex">
+                              <Icon size={44} className="transform transition-transform duration-500 lg:group-hover:scale-110 lg:group-hover:rotate-3" />
+                            </div>
+
+                            <h3 className="text-xl lg:text-2xl font-bold mb-4 text-gray-900 lg:group-hover:text-primary transition-colors duration-300">
+                              {item.title}
+                            </h3>
+
+                            <p className="text-lg text-gray-600 flex-grow leading-relaxed">
+                              {item.content}
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </motion.div>
@@ -116,7 +106,7 @@ const WhyChooseUs = ({ why }) => {
           </motion.div>
         )}
       </div>
-    </section>
+    </section >
   );
 };
 

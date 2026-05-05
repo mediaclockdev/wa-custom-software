@@ -50,7 +50,7 @@ services:
       url: /images/service/web-design/seo.jpg
 
 why:
-  subtitle: WHY CHOOSE US
+  subtitle: OUR COMPETITIVE EDGE
   title: Why Perth Businesses Choose Our Web Design Team
   list:
     - title: Local Expertise & Market Knowledge

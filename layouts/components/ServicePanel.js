@@ -51,10 +51,10 @@ const ServicePanel = ({ services }) => {
                 {service.items.map((item, i) => (
                   <li
                     key={i}
-                    className="flex items-start gap-2 text-md text-gray-700"
+                    className="flex items-start gap-2 text-md text-gray-700 text-left"
                   >
-                    <span className="w-2 h-2 mt-2 rounded-full bg-[#fe6019]" />
-                    {item}
+                    <span className="w-2 h-2 mt-2 shrink-0 rounded-full bg-[#fe6019]" />
+                    <span>{item}</span>
                   </li>
                 ))}
               </ul>
@@ -116,11 +116,11 @@ const ServicePanel = ({ services }) => {
                         <motion.li
                           key={i}
                           variants={item}
-                          className={`flex items-center gap-2 text-lg ${isActive ? "text-white" : "text-gray-700"
+                          className={`flex items-start gap-2 text-lg text-left ${isActive ? "text-white" : "text-gray-700"
                             }`}
                         >
-                          <span className="w-2 h-2 rounded-full bg-current"></span>
-                          {itemText}
+                          <span className="w-2 h-2 mt-2.5 shrink-0 rounded-full bg-current"></span>
+                          <span>{itemText}</span>
                         </motion.li>
                       ))}
                     </motion.ul>

@@ -1,11 +1,10 @@
 "use client";
 
-import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import SectionHeader from "@layouts/components/SectionHeader";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
+import { Pagination, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -47,17 +46,21 @@ const ServiceFeatures = ({ services }) => {
         {/* Mobile Slider (hidden on md and up) */}
         <div className="block md:hidden pb-4">
           <Swiper
-            modules={[Pagination]}
+            modules={[Pagination, Autoplay]}
             spaceBetween={20}
             pagination={{ clickable: true }}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
             grabCursor={true}
             slidesPerView={1}
-            className="pb-12"
+            breakpoints={{
+              320: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+            }}
           >
             {services.list.map((item, index) => (
               <SwiperSlide key={index} className="!h-auto">
                 <div
-                  className="group bg-white rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-slate-100 transition-all duration-500 flex flex-col h-full w-full relative mb-5"
+                  className="group bg-white border border-gray-200 transition-all duration-500 flex flex-col h-full w-full relative mb-5 rounded-3xl overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0"></div>
 
@@ -82,12 +85,12 @@ const ServiceFeatures = ({ services }) => {
                   </div>
 
                   <div className="p-4 flex flex-col flex-grow relative z-10 bg-white">
-                    <div className="mb-4">
+                    <div className="mb-2">
                       <h3 className="text-2xl font-bold text-gray-900 group-hover:text-primary transition-colors duration-300">
                         {item.title}
                       </h3>
                     </div>
-                    <p className="text-lg text-gray-600 leading-normal max-w-none transition-all duration-300">
+                    <p className="text-slate-800 text-lg max-w-none transition-all duration-300">
                       {item.content}
                     </p>
                   </div>
@@ -99,7 +102,7 @@ const ServiceFeatures = ({ services }) => {
 
         {/* Desktop Grid (hidden below md) */}
         <motion.div
-          className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 xl:gap-6"
+          className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

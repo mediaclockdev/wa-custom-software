@@ -61,7 +61,7 @@ services:
       url: /images/service/android-development/ecomm.jpg
 
 why:
-  subtitle: WHY CHOOSE US
+  subtitle: OUR COMPETITIVE EDGE
   title: Why We Stand Out as a Leading Android App Development Partner
   description: Our company is committed to providing high-quality Android app solutions backed by industry best practices and local expertise
   list:

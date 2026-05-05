@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { AnimatedText } from "./service/AnimatedText";
 import { MdLocationOn, MdAccessTime, MdPhone, MdCheckCircle, MdPhoneIphone, MdMail } from "react-icons/md";
 import Link from "next/link";
+import { markdownify } from "@lib/utils/textConverter";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -14,7 +15,7 @@ const fadeUp = {
 
 const Contact = ({ data }) => {
   const { frontmatter } = data;
-  const { title, banner, services } = frontmatter;
+  const { title, banner, services, contact_info } = frontmatter;
 
   const containerVariants = {
     hidden: {},
@@ -96,7 +97,7 @@ const Contact = ({ data }) => {
             {
               Icon: MdLocationOn,
               title: "Office Address",
-              content: (
+              content: contact_info?.address ? markdownify(contact_info.address, "span") : (
                 <>
                   41 Clearview Avenue <br />
                   Yokine, Western Australia 6060
@@ -106,7 +107,7 @@ const Contact = ({ data }) => {
             {
               Icon: MdAccessTime,
               title: "Business Hours",
-              content: (
+              content: contact_info?.business_hours ? markdownify(contact_info.business_hours, "span") : (
                 <>
                   Monday to Friday <br />
                   9:00 AM – 6:00 PM AST
@@ -118,9 +119,27 @@ const Contact = ({ data }) => {
               title: "Contact",
               content: (
                 <div className="flex flex-col gap-2 mt-2">
-                  <div className="flex items-center justify-center gap-2"><MdPhone className="text-primary" /> <span className="text-gray-700">Phone: TBC</span></div>
-                  <div className="flex items-center justify-center gap-2"><MdPhoneIphone className="text-primary" /> <span className="text-gray-700">Mobile: TBC</span></div>
-                  <div className="flex items-center justify-center gap-2"><MdMail className="text-primary" /> <span className="text-gray-700">Email: TBC</span></div>
+                  <div className="flex items-center justify-center gap-2 whitespace-nowrap">
+                    <MdPhone className="text-primary text-xl shrink-0" />
+                    <span className="text-gray-700">
+                      <span className="hidden lg:inline">Phone: </span>
+                      {contact_info?.phone || "TBC"}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-center gap-2 whitespace-nowrap">
+                    <MdPhoneIphone className="text-primary text-xl shrink-0" />
+                    <span className="text-gray-700">
+                      <span className="hidden lg:inline">Mobile: </span>
+                      {contact_info?.mobile || "TBC"}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-center gap-2 whitespace-nowrap">
+                    <MdMail className="text-primary text-xl shrink-0" />
+                    <span className="text-gray-700">
+                      <span className="hidden lg:inline">Email: </span>
+                      {contact_info?.email || config.contact_info.email}
+                    </span>
+                  </div>
                 </div>
               ),
             },

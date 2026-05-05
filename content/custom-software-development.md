@@ -79,7 +79,7 @@ services:
       url: /images/service/custom-development/consult.png
 
 why:
-  subtitle: WHY CHOOSE US
+  subtitle: OUR COMPETITIVE EDGE
   title: Why Choose Us for Custom Software Development Services
   list:
     - title: Local Expertise You Can Trust

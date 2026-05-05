@@ -13,10 +13,10 @@ function highlightFounder(text) {
 
   return text.split(founderName).map((part, index, array) =>
     index < array.length - 1 ? (
-      <>
+      <span key={index}>
         {part}
         <span className="text-primary font-semibold">{founderName}</span>
-      </>
+      </span>
     ) : (
       part
     ),

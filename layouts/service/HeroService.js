@@ -51,7 +51,7 @@ export default function HeroService({ banner, title: propTitle, description: pro
               {parts?.map((part, i) => {
                 if (i === parts.length - 1) {
                   return (
-                    <motion.span key={i} variants={itemVariants} className="block mt-2">
+                    <motion.span key={i} variants={itemVariants} className="block mt-1">
                       <span className="bg-gradient-to-r from-primary via-blue-500 to-indigo-500 bg-clip-text text-transparent pb-3">
                         <AnimatedText text={part} />
                       </span>
