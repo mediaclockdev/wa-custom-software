@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { markdownify } from "@lib/utils/textConverter";
 import { FaChevronDown } from "react-icons/fa";
 import SectionHeader from "@layouts/components/SectionHeader";
 

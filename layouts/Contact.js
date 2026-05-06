@@ -4,7 +4,7 @@ import config from "@config/config.json";
 import Banner from "./components/Banner";
 import { motion } from "framer-motion";
 import { AnimatedText } from "./service/AnimatedText";
-import { MdLocationOn, MdAccessTime, MdPhone, MdCheckCircle, MdPhoneIphone, MdMail } from "react-icons/md";
+import { MdLocationOn, MdAccessTime, MdPhone, MdPhoneIphone, MdMail } from "react-icons/md";
 import Link from "next/link";
 import { markdownify } from "@lib/utils/textConverter";
 
@@ -182,9 +182,9 @@ const Contact = ({ data }) => {
             </h3>
 
             <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
-              {(services || []).map((item, i) => (
+              {(services || []).map((item, index) => (
                 <motion.div
-                  key={i}
+                  key={index}
                   variants={itemVariants}
                   whileHover={{
                     y: -6,
@@ -196,8 +196,13 @@ const Contact = ({ data }) => {
                     damping: 18,
                   }}
                 >
-                  <Link href={item.link || "/"} className="px-6 py-3 rounded-full text-sm md:text-base font-medium bg-white text-primary border border-gray-200 shadow-sm hover:shadow-lg hover:border-secondary/50 transition-colors duration-300 cursor-pointer inline-block">
-                    {item.title || item}
+                  <Link
+                    href={item.link}
+                    className="px-6 py-3 rounded-full text-md md:text-lg font-medium 
+              bg-white text-primary border border-gray-200 shadow-sm
+                hover:shadow-lg hover:border-secondary/50 transition-colors duration-300 cursor-pointer inline-block"
+                  >
+                    {item.title}
                   </Link>
                 </motion.div>
               ))}

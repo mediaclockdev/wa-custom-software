@@ -203,7 +203,7 @@ const Header = () => {
                           }`}
                       >
                         {item.name}
-                        <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full" />
+                        <span className={`absolute left-0 -bottom-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full ${asPath === item.url || (item.url !== "/" && asPath?.startsWith(`${item.url}/`)) ? "w-full" : "w-0"}`} />
                       </Link>
                     )}
 
@@ -227,7 +227,7 @@ const Header = () => {
                                       }`}
                                   >
                                     {child.name}
-                                    <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full" />
+                                    <span className={`absolute left-0 -bottom-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full ${asPath === child.url || (child.url !== "/" && asPath?.startsWith(`${child.url}/`)) ? "w-full" : "w-0"}`} />
                                   </Link>
                                 </li>
                               ))}

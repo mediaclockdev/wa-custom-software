@@ -1,19 +1,15 @@
-import config from "@config/config.json";
 import dateFormat from "@lib/utils/dateFormat";
 import readingTime from "@lib/utils/readingTime";
 import { markdownify } from "@lib/utils/textConverter";
 import MDXContent from "app/helper/MDXContent";
 import Image from "next/image";
-import Cta from "./components/Cta";
 import ImageFallback from "./components/ImageFallback";
-import DisqussEmbed from "./partials/DisqussEmbed";
 import Post from "./partials/Post";
 import SeoMeta from "./partials/SeoMeta";
 
 const PostSingle = ({ frontmatter, content, recentPosts }) => {
   let { description, title, date, image, author } = frontmatter;
   description = description ? description : content.slice(0, 120);
-  const { disqus } = config;
 
   return (
     <>

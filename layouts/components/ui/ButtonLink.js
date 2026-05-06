@@ -1,6 +1,6 @@
 "use client";
-import Link from "next/link";
 
+import Link from "next/link";
 
 const ButtonLink = ({ href = "/", onClick, title = "", animate, icon: Icon, size = 25, frontIcon = false }) => {
   return (

@@ -14,16 +14,20 @@ banner:
     or digital marketing requirements. We work with businesses across Perth and Western Australia.
 
 services:
-  - title: Website development services
-    link: /web-development
-  - title: Mobile application development
+  - title: Mobile Application Development
     link: /mobile-app-development
-  - title: Business automation solutions
+  - title: Android App Developers in Perth
+    link: /android-app-development
+  - title: iOS App Developers in Perth
     link: /ios-app-development
-  - title: Digital marketing services
-    link: /digital-marketing
-  - title: Custom IT solutions in Western Australia
+  - title: Custom Software Development in Perth
     link: /custom-software-development
+  - title: Web Development Agency
+    link: /web-development
+  - title: Web Design Services
+    link: /web-design
+  - title: Digital Marketing Support
+    link: /digital-marketing
 
 contact_info:
   phone: "123 456 7890"

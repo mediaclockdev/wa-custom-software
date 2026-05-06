@@ -8,7 +8,6 @@ import { usePathname } from "next/navigation";
 
 export default function Hero({ banner }) {
   const currentPage = usePathname();
-  console.log("currentPage", currentPage);
   const parts = banner?.title?.split(/<\/?br\s*\/?>/i) || [
     "High-Performance",
     "Web Development",

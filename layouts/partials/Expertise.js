@@ -1,7 +1,6 @@
 "use client";
 
 import SectionHeader from "@layouts/components/SectionHeader";
-import { markdownify } from "@lib/utils/textConverter";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -62,7 +61,7 @@ const Expertise = ({ expertise }) => {
             >
               <Link
                 href={item.link}
-                className="px-6 py-3 rounded-full text-md md:text-xl font-medium 
+                className="px-6 py-3 rounded-full text-md md:text-lg font-medium 
               bg-white text-primary border border-gray-200 shadow-sm
                 hover:shadow-lg hover:border-secondary/50 transition-colors duration-300 cursor-pointer inline-block"
               >

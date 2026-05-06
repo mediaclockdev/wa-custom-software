@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { markdownify } from "@lib/utils/textConverter";
+import Link from "next/link";
 
 const NotFound = ({ data }) => {
   const { frontmatter, content } = data;
