@@ -81,7 +81,7 @@ const PageProcess = ({ process }) => {
 
         {/* ── Cards grid : 2×2 on desktop, stack on mobile ── */}
         <motion.div
-          className="mt-10 grid gap-6 sm:grid-cols-2 lg:mt-14 lg:gap-8"
+          className="mt-10 grid gap-4 sm:grid-cols-2 lg:mt-12"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
