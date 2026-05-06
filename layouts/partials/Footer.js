@@ -190,10 +190,17 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-gray-200 py-4 text-base text-gray-800 text-center flex items-center justify-center flex-wrap gap-1">
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          custom={3}
+          className="border-t border-gray-200 py-2 text-base text-gray-800 text-center flex items-center justify-center flex-wrap gap-1"
+        >
           <span>&copy; {new Date().getFullYear()}</span>
           {markdownify(copyright, "span")}
-        </div>
+        </motion.div>
       </div>
     </footer>
   );
