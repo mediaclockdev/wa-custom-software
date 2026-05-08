@@ -48,10 +48,10 @@ export default function Hero({ banner }) {
       <div className="absolute top-1/4 -left-20 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[120px] -z-10 mix-blend-multiply pointer-events-none" />
       <div className="absolute bottom-10 right-10 lg:right-1/4 w-[500px] h-[500px] bg-blue-300/20 rounded-full blur-[140px] -z-10 mix-blend-multiply pointer-events-none" />
 
-      <div className="container relative z-10 mx-autopx-4 grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+      <div className="container relative z-10 mx-auto px-4 grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
         {/* LEFT SIDE - Staggered Text Reveal */}
         <motion.div
-          className="flex flex-col items-start gap-6 lg:pr-0 mt-4 lg:mt-0"
+          className="flex flex-col items-center text-center lg:items-start lg:text-left gap-6 lg:pr-0 mt-4 lg:mt-0"
           variants={containerVariants}
           initial="hidden"
           animate="visible"

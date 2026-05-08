@@ -13,7 +13,7 @@ const Process = ({ process }) => {
   if (!process) return null;
 
   return (
-    <section className="section min-h-dvh flex items-center overflow-hidden">
+    <section className="section flex items-center overflow-hidden">
       <div className="container">
         <SectionHeader
           subtitle={process.subtitle}

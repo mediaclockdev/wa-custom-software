@@ -36,7 +36,7 @@ export default function HeroService({ banner, title: propTitle, description: pro
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="flex flex-col items-start text-left lg:pr-2"
+            className="flex flex-col items-center text-center lg:items-start lg:text-left lg:pr-2"
           >
             {/* Minimalist Pill Badge */}
             <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-200 shadow-[0_2px_10px_rgba(0,0,0,0.02)] mb-8">
@@ -69,7 +69,7 @@ export default function HeroService({ banner, title: propTitle, description: pro
             {/* Description */}
             <motion.p
               variants={itemVariants}
-              className="text-lg md:text-xl text-muted max-w-xl leading-relaxed"
+              className="text-lg md:text-xl text-muted max-w-xl lg:mx-0 mx-auto leading-relaxed"
             >
               {description || "We architect and build robust, scalable, and high-performance digital solutions custom-tailored to accelerate your business growth."}
             </motion.p>

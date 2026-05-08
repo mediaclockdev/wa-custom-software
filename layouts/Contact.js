@@ -119,23 +119,23 @@ const Contact = ({ data }) => {
               title: "Contact",
               content: (
                 <div className="flex flex-col gap-2 mt-2">
-                  <div className="flex items-center justify-center gap-2 whitespace-nowrap">
-                    <MdPhone className="text-primary text-xl shrink-0" />
-                    <span className="text-gray-700">
+                  <div className="flex items-start justify-center gap-2">
+                    <MdPhone className="text-primary text-xl shrink-0 mt-1" />
+                    <span className="text-gray-700 break-all">
                       <span className="hidden lg:inline">Phone: </span>
                       {contact_info?.phone || "TBC"}
                     </span>
                   </div>
-                  <div className="flex items-center justify-center gap-2 whitespace-nowrap">
-                    <MdPhoneIphone className="text-primary text-xl shrink-0" />
-                    <span className="text-gray-700">
+                  <div className="flex items-start justify-center gap-2">
+                    <MdPhoneIphone className="text-primary text-xl shrink-0 mt-1" />
+                    <span className="text-gray-700 break-all">
                       <span className="hidden lg:inline">Mobile: </span>
                       {contact_info?.mobile || "TBC"}
                     </span>
                   </div>
-                  <div className="flex items-center justify-center gap-2 whitespace-nowrap">
-                    <MdMail className="text-primary text-xl shrink-0" />
-                    <span className="text-gray-700">
+                  <div className="flex items-start justify-center gap-2">
+                    <MdMail className="text-primary text-xl shrink-0 mt-1" />
+                    <span className="text-gray-700 break-all">
                       <span className="hidden lg:inline">Email: </span>
                       {contact_info?.email || config.contact_info.email}
                     </span>

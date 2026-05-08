@@ -35,9 +35,9 @@ const ServiceIntro = ({ intro }) => {
           viewport={{ once: true, margin: "-100px" }}
           className="grid lg:grid-cols-12 lg:gap-20 items-start relative"
         >
-          <div className="lg:col-span-5 flex flex-col items-start lg:sticky lg:top-32 lg:h-max z-20 transition-all duration-300">
+          <div className="lg:col-span-5 flex flex-col items-center text-center lg:items-start lg:text-left lg:sticky lg:top-32 lg:h-max z-20 transition-all duration-300">
             {intro.subtitle && (
-              <motion.div variants={itemVariants} className="inline-flex items-center lg:gap-4 mb-6 sm:mb-8">
+              <motion.div variants={itemVariants} className="inline-flex items-center lg:gap-4 mb-2 lg:mb-6 ">
                 <div className="h-[2px] w-10 bg-primary rounded-full"></div>
                 <p className="text-xs sm:text-sm font-extrabold tracking-[0.2em] uppercase text-primary">
                   {intro.subtitle}
@@ -48,7 +48,7 @@ const ServiceIntro = ({ intro }) => {
 
             <SectionHeader
               title={intro.title}
-              className="text-start"
+              className="text-center lg:text-start"
             />
           </div>
           <div className="lg:col-span-7 flex flex-col lg:pl-12 lg:border-l border-gray-200">
@@ -57,7 +57,7 @@ const ServiceIntro = ({ intro }) => {
                 {markdownify(
                   intro.description.replace(/(<\/?br\s*\/?>\s*)+/gi, '\n\n'),
                   "div",
-                  "text-lg lg:text-xl text-gray-700 leading-relaxed [&>p]:mb-2 lg:[&>p]:mb-6 last:[&>p]:mb-0"
+                  "text-lg text-center lg:text-left lg:text-xl text-gray-700 leading-relaxed [&>p]:mb-2 lg:[&>p]:mb-6 last:[&>p]:mb-0"
                 )}
               </motion.div>
             )}

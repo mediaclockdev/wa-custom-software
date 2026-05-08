@@ -80,7 +80,7 @@ const Header = () => {
             <Logo src={logo} />
           </div>
 
-          <ul className="hidden lg:flex items-center gap-4 order-1 text-black">
+          <ul className="hidden xl:flex items-center gap-4 order-1 text-black">
             {main.map((item, i) => {
               // Updated logic in Header.js
               const isActive = asPath === item.url || (item.url !== "/" && asPath?.startsWith(`${item.url}/`));
@@ -151,11 +151,11 @@ const Header = () => {
             })}
           </ul>
 
-          <div className="hidden lg:flex items-center gap-3 order-2 ml-6">
+          <div className="hidden xl:flex items-center gap-3 order-2 ml-6">
             <ButtonLink href={`tel:${config.contact_info.phone.replace(/\\s+/g, "")}`} title="Let's Talk" animate={animate} icon={IoIosCall} />
           </div>
 
-          <div className="lg:hidden ml-auto flex items-center gap-3">
+          <div className="xl:hidden ml-auto flex items-center gap-3">
             <a
               href={`tel:${config.contact_info.phone.replace(/\s+/g, "")}`}
               className="flex items-center justify-center h-11 w-11 bg-secondary text-white rounded-xl shadow-sm transition-transform active:scale-95"
@@ -175,7 +175,7 @@ const Header = () => {
       </header>
 
       <div
-        className={`fixed inset-0 z-[100] lg:hidden bg-primary transition-all duration-500 ease-in-out ${showMenu ? "opacity-100 visible" : "opacity-0 invisible"
+        className={`fixed inset-0 z-[100] xl:hidden bg-primary transition-all duration-500 ease-in-out ${showMenu ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
       >
         <div className="absolute top-6 right-4 z-[110]">
