@@ -51,7 +51,7 @@ export default function Hero({ banner }) {
       <div className="container relative z-10 mx-auto px-4 grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
         {/* LEFT SIDE - Staggered Text Reveal */}
         <motion.div
-          className="flex flex-col items-center text-center lg:items-start lg:text-left gap-6 lg:pr-0 mt-4 lg:mt-0"
+          className="flex flex-col items-center text-center lg:items-start lg:text-left gap-6 lg:pr-0 mt-2"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
