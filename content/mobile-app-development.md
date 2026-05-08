@@ -6,7 +6,7 @@ description: High-performance mobile app development for Perth and Western Austr
 
 banner:
   title: "Mobile App </br> Development in Perth"
-  image: /images/service/mobile-app-development/hero.png
+  image: /images/service/mobile-app-development/hero.jpg
   link:
     label: Talk to Our Experts
     href: /contact

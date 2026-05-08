@@ -18,6 +18,7 @@ const Header = () => {
   const [direction, setDirection] = useState(null);
   const headerRef = useRef(null);
   const [animate, setAnimate] = useState(false);
+  const [openGroup, setOpenGroup] = useState(null);
 
   const pathname = usePathname();
   const asPath = pathname;
@@ -74,12 +75,12 @@ const Header = () => {
         ref={headerRef}
         className={`my-1 mb-auto container sticky top-1 z-50 transition-all duration-300`}
       >
-        <nav className="navbar w-full bg-white py-2 px-4 rounded-full border border-slate-300  relative">
+        <nav className="navbar w-full bg-white py-2 px-4 rounded-full border border-slate-300 relative">
           <div className="order-0">
             <Logo src={logo} />
           </div>
 
-          <ul className="hidden lg:flex items-center gap-4 order-1 text-black ">
+          <ul className="hidden lg:flex items-center gap-4 order-1 text-black">
             {main.map((item, i) => {
               // Updated logic in Header.js
               const isActive = asPath === item.url || (item.url !== "/" && asPath?.startsWith(`${item.url}/`));
@@ -154,95 +155,112 @@ const Header = () => {
             <ButtonLink href={`tel:${config.contact_info.phone.replace(/\\s+/g, "")}`} title="Let's Talk" animate={animate} icon={IoIosCall} />
           </div>
 
-          <div className="lg:hidden ml-auto flex items-center gap-4">
+          <div className="lg:hidden ml-auto flex items-center gap-3">
             <a
               href={`tel:${config.contact_info.phone.replace(/\s+/g, "")}`}
-              className="text-2xl text-primary"
+              className="flex items-center justify-center h-11 w-11 bg-secondary text-white rounded-xl shadow-sm transition-transform active:scale-95"
               aria-label="Call Us"
             >
-              <IoIosCall />
+              <IoIosCall className="text-2xl" />
             </a>
             <button
-              className="h-6 w-6 text-xl flex items-center justify-center"
+              className="flex items-center justify-center h-11 w-11 bg-primary text-white rounded-xl shadow-sm transition-transform active:scale-95"
               onClick={() => setShowMenu(!showMenu)}
+              aria-label="Toggle Menu"
             >
-              {showMenu ? <CgClose className="text-2xl text-primary" /> : <RxHamburgerMenu className="text-2xl text-primary" />}
+              {showMenu ? <CgClose className="text-2xl" /> : <RxHamburgerMenu className="text-2xl" />}
             </button>
           </div>
         </nav>
       </header>
 
-      {showMenu && (
-        <div className="fixed inset-0 z-50 lg:hidden">
-          <div
-            className="absolute inset-0 bg-black/30 backdrop-blur-sm"
+      <div
+        className={`fixed inset-0 z-[100] lg:hidden bg-primary transition-all duration-500 ease-in-out ${showMenu ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
+      >
+        <div className="absolute top-6 right-4 z-[110]">
+          <button
+            className="flex items-center justify-center h-11 w-11 bg-white text-primary rounded-xl shadow-lg transition-transform active:scale-95"
             onClick={() => setShowMenu(false)}
-          />
+            aria-label="Close Menu"
+          >
+            <CgClose className="text-2xl" />
+          </button>
+        </div>
 
-          <div className="absolute top-0 right-0 h-full w-[85%] max-w-md bg-white shadow-xl p-6 overflow-y-auto  overflow-x-hidden">
-            <div className="w-full min-w-0">
-              <div className="flex items-center justify-end mb-6 w-full min-w-0">
-                <button
-                  className="shrink-0"
-                  onClick={() => setShowMenu(false)}
-                >
-                  <CgClose className="text-3xl text-primary" />
-                </button>
-              </div>
+        <Link
+          href="/contact"
+          onClick={() => setShowMenu(false)}
+          className="fixed right-0 top-1/2 -translate-y-1/2 bg-secondary text-white font-bold py-6 px-2 rounded-tr-2xl rounded-br-2xl hover:bg-opacity-90 transition-all text-sm tracking-widest z-[110]"
+          style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}
+        >
+          GET A QUOTE
+        </Link>
 
-              <ul className="flex flex-col gap-3">
-                {main.map((item, i) => (
-                  <li key={i}>
-                    {!item.groups && (
-                      <Link
-                        href={item.url}
-                        onClick={() => setShowMenu(false)}
-                        className={`group relative inline-block text-lg font-medium transition duration-300 ${asPath === item.url || (item.url !== "/" && asPath?.startsWith(`${item.url}/`))
-                          ? "text-primary"
-                          : "text-gray-800 hover:text-primary"
-                          }`}
-                      >
-                        {item.name}
-                        <span className={`absolute left-0 -bottom-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full ${asPath === item.url || (item.url !== "/" && asPath?.startsWith(`${item.url}/`)) ? "w-full" : "w-0"}`} />
-                      </Link>
-                    )}
+        <div className={`h-full w-full overflow-y-auto px-6 py-16 flex flex-col items-center transition-all duration-500 ease-out ${showMenu ? "scale-100 opacity-100" : "scale-95 opacity-0"}`}>
+          <ul className="flex flex-col gap-6 text-center w-full max-w-sm mt-4">
+            {main.map((item, i) => (
+              <li key={i} className="w-full">
+                {!item.groups && (
+                  <Link
+                    href={item.url}
+                    onClick={() => setShowMenu(false)}
+                    className={`block w-full text-xl font-medium transition duration-300 ${asPath === item.url || (item.url !== "/" && asPath?.startsWith(`${item.url}/`))
+                      ? "text-white underline decoration-white underline-offset-8 decoration-2"
+                      : "text-white/80"
+                      }`}
+                  >
+                    {item.name}
+                  </Link>
+                )}
 
-                    {item.groups && (
-                      <div>
-                        {item.groups.map((group, gi) => (
-                          <div key={gi} className="mb-4 last:mb-1">
-                            <p className="text-lg font-semibold mb-2 text-gray-900">
-                              {group.title}
-                            </p>
+                {item.groups && (
+                  <div className="w-full">
+                    <div className="text-xl font-bold text-white mb-4">{item.name}</div>
+                    <div className="flex flex-col gap-4">
+                      {item.groups.map((group, gi) => (
+                        <div key={gi} className="w-full flex flex-col items-center">
+                          <button
+                            onClick={() => setOpenGroup(openGroup === `${i}-${gi}` ? null : `${i}-${gi}`)}
+                            className="flex items-center justify-center gap-2 text-xl font-medium text-white py-1  transition-colors"
+                          >
+                            {group.title}
+                            <FaAngleDown
+                              className={`transition-transform duration-300 text-md ${openGroup === `${i}-${gi}` ? 'rotate-180 text-white' : ''}`}
+                            />
+                          </button>
 
-                            <ul className="pl-4 flex flex-col gap-2 border-l border-gray-200">
+                          <div
+                            className={`overflow-hidden transition-all duration-300 ease-in-out w-full ${openGroup === `${i}-${gi}` ? "max-h-[500px] opacity-100 mt-1" : "max-h-0 opacity-0"
+                              }`}
+                          >
+                            <ul className="flex flex-col gap-3 py-2 items-center">
                               {group.items.map((child, j) => (
                                 <li key={j}>
                                   <Link
                                     href={child.url}
                                     onClick={() => setShowMenu(false)}
-                                    className={`group relative inline-block font-medium text-lg transition duration-300 ${asPath === child.url || (child.url !== "/" && asPath?.startsWith(`${child.url}/`))
-                                      ? "text-primary"
-                                      : "text-gray-800 hover:text-primary"
+                                    className={`block text-lg transition duration-300 font-medium ${asPath === child.url || (child.url !== "/" && asPath?.startsWith(`${child.url}/`))
+                                      ? "text-white underline decoration-white underline-offset-8 decoration-2"
+                                      : "text-gray-200"
                                       }`}
                                   >
                                     {child.name}
-                                    <span className={`absolute left-0 -bottom-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full ${asPath === child.url || (child.url !== "/" && asPath?.startsWith(`${child.url}/`)) ? "w-full" : "w-0"}`} />
                                   </Link>
                                 </li>
                               ))}
                             </ul>
                           </div>
-                        ))}
-                      </div>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
         </div>
-      )}
+      </div>
     </>
   );
 };

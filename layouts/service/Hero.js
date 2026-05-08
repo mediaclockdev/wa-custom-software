@@ -125,7 +125,8 @@ export default function Hero({ banner }) {
               ease: "easeInOut",
             }}
             style={{ transformStyle: "preserve-3d" }}
-            className="relative w-full max-w-md h-full flex justify-center items-center"
+            className={`relative w-full h-full flex justify-center items-center ${isAboutPage ? "max-w-[600px]" : "max-w-md"
+              }`}
           >
             {banner?.image ? (
               <motion.div
@@ -155,7 +156,10 @@ export default function Hero({ banner }) {
                         ? banner.title.replace(/<[^>]*>?/gm, "")
                         : "Hero Illustration"
                     }
-                    className="w-full max-w-[90%] sm:max-w-md h-auto max-h-[450px] object-contain rounded-[2rem] drop-shadow-[0_20px_50px_rgba(0,0,0,0.15)]"
+                    className={`w-full h-auto object-contain rounded-[2rem] drop-shadow-[0_20px_50px_rgba(0,0,0,0.15)] ${isAboutPage
+                      ? "max-w-full sm:max-w-[600px] max-h-[550px]"
+                      : "max-w-[90%] sm:max-w-md max-h-[500px]"
+                      }`}
                   />
                 </motion.div>
 
