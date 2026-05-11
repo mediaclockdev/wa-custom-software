@@ -27,7 +27,9 @@ const Process = ({ process }) => {
             <Swiper
               modules={[Pagination, Autoplay]}
               autoplay={{ delay: 3000, disableOnInteraction: false }}
-              spaceBetween={20}
+              speed={800}
+              loop={true}
+              spaceBetween={24}
               pagination={{ clickable: true }}
               grabCursor={true}
               breakpoints={{
@@ -90,7 +92,7 @@ const Process = ({ process }) => {
                       <div className="group relative min-h-[220px] rounded-2xl border border-primary/10 bg-white p-6 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-sm cursor-pointer overflow-hidden">
                         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-primary/5 via-transparent to-secondary/10" />
 
-                        <span className="absolute top-6 right-6 text-sm font-semibold text-primary/40">
+                        <span className="absolute top-2 right-3 text-sm font-semibold text-primary/40">
                           {`0${i + 1}`}
                         </span>
 

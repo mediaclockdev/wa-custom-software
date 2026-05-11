@@ -50,9 +50,11 @@ const WhyChooseUs = ({ why }) => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <Swiper
-              className="lg:!pt-4 !px-1 lg:!px-4 lg:-mx-4"
+              className="!px-1 lg:!px-4 lg:-mx-4"
               modules={[Pagination, Autoplay]}
               autoplay={{ delay: 3000, disableOnInteraction: false }}
+              speed={800}
+              loop={true}
               spaceBetween={24}
               pagination={{ clickable: true }}
               grabCursor={true}
@@ -66,39 +68,26 @@ const WhyChooseUs = ({ why }) => {
                 const Icon = icons[i] || FaCogs;
 
                 return (
-                  <SwiperSlide key={i} className="flex !h-auto">
-                    <motion.div
-                      className="w-full h-full flex"
-                      initial={{ opacity: 0, y: 30 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true, margin: "-50px" }}
-                      transition={{ duration: 0.4, delay: i * 0.1 }}
+                  <SwiperSlide key={i} className="!h-auto">
+                    <div
+                      className="group bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-md border border-primary/10 transition-all duration-500 flex flex-col h-full relative"
                     >
+                      <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0"></div>
 
-                      <div className="group relative rounded-[2rem] p-[2px] w-full h-full flex overflow-hidden shadow-sm lg:hover:shadow-md transition-all duration-500 lg:hover:-translate-y-2 border border-primary ">
-
-                        {/* Card Content Layer */}
-                        <div className="relative bg-white border border-slate-50/50 rounded-[calc(2rem-2px)] p-6 w-full h-full flex flex-col z-10 overflow-hidden">
-
-                          {/* Subtle background glow on hover */}
-                          <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] to-transparent opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500" />
-
-                          <div className="relative z-10 flex flex-col h-full">
-                            <div className="mb-6 lg:mb-8 text-primary/90 lg:group-hover:text-primary transition-colors duration-300 origin-left inline-flex">
-                              <Icon size={44} className="transform transition-transform duration-500 lg:group-hover:scale-110 lg:group-hover:rotate-3" />
-                            </div>
-
-                            <h3 className="text-xl lg:text-2xl font-bold mb-4 text-gray-900 lg:group-hover:text-primary transition-colors duration-300">
-                              {item.title}
-                            </h3>
-
-                            <p className="text-lg text-gray-600 flex-grow leading-relaxed">
-                              {item.content}
-                            </p>
-                          </div>
+                      <div className="p-6 lg:p-8 flex flex-col flex-grow relative z-10 bg-white">
+                        <div className="mb-6 lg:mb-8 text-primary/90 group-hover:text-primary transition-colors duration-300 origin-left inline-flex">
+                          <Icon size={44} className="transform transition-transform duration-500 group-hover:scale-110" />
                         </div>
+
+                        <h3 className="text-xl lg:text-2xl font-bold mb-4 text-gray-900 group-hover:text-primary transition-colors duration-300">
+                          {item.title}
+                        </h3>
+
+                        <p className="text-lg text-gray-600 flex-grow leading-relaxed">
+                          {item.content}
+                        </p>
                       </div>
-                    </motion.div>
+                    </div>
                   </SwiperSlide>
                 );
               })}

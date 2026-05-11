@@ -1,4 +1,6 @@
 "use client";
+
+import { motion } from "framer-motion";
 import SectionHeader from "@layouts/components/SectionHeader";
 import {
   FaIndustry,
@@ -25,11 +27,20 @@ const icons = [
   FaRocket,
 ];
 
+const containerVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.08,
+    },
+  },
+};
+
 const Industries = ({ industries }) => {
   if (!industries) return null;
 
   return (
-    <section className="section bg-slate-50 ">
+    <section className="relative overflow-hidden section border-y border-border/50">
       <div className="container">
         <SectionHeader
           subtitle={industries.subtitle}
@@ -37,9 +48,15 @@ const Industries = ({ industries }) => {
           description={industries.description}
         />
 
-        <div className="mt-6">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="w-full"
+        >
           <Swiper
-            className="industries-marquee-slider !py-4"
+            className="industries-marquee-slider py-4!"
             modules={[Autoplay]}
             spaceBetween={24}
             loop={true}
@@ -68,13 +85,15 @@ const Industries = ({ industries }) => {
               return (
                 <SwiperSlide key={i} className="!w-[280px] md:!w-[330px]">
                   <div
-                    className="group flex flex-col h-full items-center gap-4 p-5 lg:p-6 rounded-2xl bg-white border border-gray-100 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.03)] hover:border-primary/20 transition-all duration-300 hover:-translate-y-1"
+                    className="group relative flex flex-col h-full items-center gap-4 p-5 lg:p-6 rounded-2xl overflow-hidden bg-white/70 backdrop-blur-md border border-gray-100 hover:border-gray-200 shadow-sm transition-all duration-500"
                   >
-                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary/5 to-secondary/5 text-primary transition-all duration-500 group-hover:text-white group-hover:scale-110 group-hover:-rotate-3 group-hover:shadow-md group-hover:from-secondary group-hover:to-primary">
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0" />
+
+                    <div className="relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary/5 to-secondary/5 text-primary transition-all duration-500 group-hover:text-white group-hover:scale-110 group-hover:-rotate-3 group-hover:shadow-md group-hover:from-secondary group-hover:to-primary">
                       <Icon size={24} />
                     </div>
 
-                    <h3 className="font-semibold text-gray-800 text-xl leading-snug group-hover:text-primary transition-colors">
+                    <h3 className="relative z-10 font-semibold text-gray-800 text-xl leading-snug group-hover:text-primary transition-colors">
                       {item.title}
                     </h3>
                   </div>
@@ -82,7 +101,7 @@ const Industries = ({ industries }) => {
               );
             })}
           </Swiper>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

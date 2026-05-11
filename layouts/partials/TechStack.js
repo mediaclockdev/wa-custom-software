@@ -20,7 +20,7 @@ const TechStack = ({ technologies }) => {
   if (!technologies || !technologies.groups) return null;
 
   return (
-    <section className="relative overflow-hidden py-6 border-y border-border/50">
+    <section className="relative overflow-hidden section border-y border-border/50">
       <div className="container">
 
         <motion.div
@@ -45,7 +45,7 @@ const TechStack = ({ technologies }) => {
         >
 
           <Swiper
-            className="tech-marquee-slider !py-4"
+            className="tech-marquee-slider py-2!"
             modules={[Autoplay]}
             spaceBetween={24}
             loop={true}
