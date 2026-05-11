@@ -37,9 +37,9 @@ const ServiceIntro = ({ intro }) => {
         >
           <div className="lg:col-span-5 flex flex-col items-center text-center lg:items-start lg:text-left lg:sticky lg:top-32 lg:h-max z-20 transition-all duration-300">
             {intro.subtitle && (
-              <motion.div variants={itemVariants} className="inline-flex items-center lg:gap-4 mb-2 lg:mb-6 ">
-                <div className="h-[2px] w-10 bg-primary rounded-full"></div>
-                <p className="text-xs sm:text-sm font-extrabold tracking-[0.2em] uppercase text-primary">
+              <motion.div variants={itemVariants} className="inline-flex items-center gap-3 lg:gap-4 mb-2 lg:mb-6">
+                <div className="h-[2px] w-10 bg-primary rounded-full hidden lg:block"></div>
+                <p className="text-sm font-extrabold tracking-[0.2em] uppercase text-primary">
                   {intro.subtitle}
                 </p>
               </motion.div>
@@ -48,16 +48,16 @@ const ServiceIntro = ({ intro }) => {
 
             <SectionHeader
               title={intro.title}
-              className="text-center lg:text-start"
+              className="text-center lg:text-start !mb-6 lg:!mb-10"
             />
           </div>
-          <div className="lg:col-span-7 flex flex-col lg:pl-12 lg:border-l border-gray-200">
+          <div className="lg:col-span-7 flex flex-col lg:pl-12 lg:border-l border-gray-200 mt-4 lg:mt-0">
             {intro.description && (
               <motion.div variants={itemVariants}>
                 {markdownify(
-                  intro.description.replace(/(<\/?br\s*\/?>\s*)+/gi, '\n\n'),
+                  intro.description.replace(/(<\/?br\s*\/?>[\s]*)+/gi, '\n\n'),
                   "div",
-                  "text-lg text-center lg:text-left lg:text-xl text-gray-700 leading-relaxed [&>p]:mb-2 lg:[&>p]:mb-6 last:[&>p]:mb-0"
+                  "text-base sm:text-lg text-center lg:text-left lg:text-xl text-gray-700 leading-relaxed [&>p]:mb-4 lg:[&>p]:mb-6 last:[&>p]:mb-0"
                 )}
               </motion.div>
             )}
