@@ -20,7 +20,7 @@ const PostSingle = ({ frontmatter, content, recentPosts }) => {
         <div className="container">
           <article>
             <div className="row justify-center mt-3">
-              <div className="lg:col-10">
+              <div className="lg:col-12">
                 {image && (
                   <Image
                     src={image}
@@ -28,11 +28,11 @@ const PostSingle = ({ frontmatter, content, recentPosts }) => {
                     width="1020"
                     alt={title}
                     priority={true}
-                    className="fade w-full rounded-lg "
+                    className="fade w-full max-h-[350px] md:max-h-[450px] lg:max-h-[500px] object-cover rounded-lg "
                   />
                 )}
               </div>
-              <div className="lg:col-10">
+              <div className="lg:col-12">
                 {markdownify(title, "h1", "h2 mt-4 lg:mt-6")}
                 <div className="mt-6 flex items-center">
                   <div className="overflow-hidden rounded-full border-2 border-white shadow-[0_0_0_2px] shadow-primary">
@@ -51,7 +51,7 @@ const PostSingle = ({ frontmatter, content, recentPosts }) => {
                   </div>
                 </div>
                 <div
-                  className="content mb-4 mt-5 text-left prose-h2:mb-2 prose-h2:mt-3 lg:prose-h2:mt-6 prose-h2:text-2xl lg:prose-h2:text-3xl  prose-p:text-lg prose-p:my-1 prose-ul:mt-2 prose-li:cursor-default prose-li:text-gray-600 prose-li:marker:text-gray-600"
+                  className="content mb-4 mt-5 text-left prose-h2:mb-2 prose-h2:mt-4 lg:prose-h2:mt-6 prose-h2:text-2xl lg:prose-h2:text-3xl prose-p:text-lg prose-ul:mt-1 prose-li:cursor-default prose-li:text-gray-700 prose-li:marker:text-gray-700 prose-ul:mb-1 prose-h3:mb-0 prose-blockquote:my-2 prose-p:mt-0 prose-p:mb-0 prose-li:my-1 prose-hr:my-5"
                 >
                   <MDXContent content={content} />
                 </div>
@@ -66,7 +66,7 @@ const PostSingle = ({ frontmatter, content, recentPosts }) => {
             </div>
           </article>
 
-          <div className="section mt-4">
+          <div className="section container mx-auto mt-4">
             <h2 className="section-title text-center">Recent Articles</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 justify-center mt-8">
               {recentPosts.slice(0, 2).map((post, index) => (

@@ -188,16 +188,9 @@ const Header = () => {
           </button>
         </div>
 
-        <Link
-          href="/contact"
-          onClick={() => setShowMenu(false)}
-          className="fixed right-0 top-1/2 -translate-y-1/2 bg-secondary text-white font-bold py-6 px-2 rounded-tr-2xl rounded-br-2xl hover:bg-opacity-90 transition-all text-sm tracking-widest z-[110]"
-          style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}
-        >
-          GET A QUOTE
-        </Link>
 
-        <div className={`h-full w-full overflow-y-auto px-6 py-16 flex flex-col items-center transition-all duration-500 ease-out ${showMenu ? "scale-100 opacity-100" : "scale-95 opacity-0"}`}>
+
+        <div className={`h-full w-full overflow-y-auto px-6 pt-14 pb-4 flex flex-col items-center transition-all duration-500 ease-out ${showMenu ? "scale-100 opacity-100" : "scale-95 opacity-0"}`}>
           <ul className="flex flex-col gap-6 text-center w-full max-w-sm mt-4">
             {main.map((item, i) => (
               <li key={i} className="w-full">
@@ -259,6 +252,16 @@ const Header = () => {
               </li>
             ))}
           </ul>
+
+          <div className="w-full max-w-sm mt-4">
+            <Link
+              href="/contact"
+              onClick={() => setShowMenu(false)}
+              className="flex items-center justify-center w-full bg-secondary text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-secondary/20 hover:bg-opacity-90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 text-lg tracking-widest"
+            >
+              GET A QUOTE
+            </Link>
+          </div>
         </div>
       </div>
     </>

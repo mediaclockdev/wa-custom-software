@@ -115,7 +115,7 @@ const Contact = ({ data }) => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="text-4xl lg:text-6xl font-bold leading-tight text-gray-900 "
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.25rem] font-bold leading-[1.1] text-gray-900 "
           >
             {parts?.map((part, i) => {
               if (i === parts.length - 1) {

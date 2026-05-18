@@ -34,7 +34,7 @@ const Post = ({ post, i }) => {
             {post.frontmatter.title}
           </Link>
         </h2>
-        <p className="text-lg text-slate-600 mt-2 lg:mt-2 line-clamp-4 flex-grow">{post.content}</p>
+        <p className="text-lg leading-[1.35] text-slate-600 mt-2 lg:mt-2 line-clamp-4 flex-grow">{post.content}</p>
 
         <div className="mt-6 lg:mt-2 flex items-center pt-4 border-t border-slate-100">
           <div className="overflow-hidden rounded-full border-2 border-white shadow-[0_0_0_2px] shadow-primary shrink-0">

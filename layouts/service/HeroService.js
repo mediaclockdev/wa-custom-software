@@ -27,7 +27,6 @@ export default function HeroService({ banner, title: propTitle, description: pro
   return (
     <section className="relative py-6 lg:pb-8 overflow-hidden bg-gradient-to-b from-slate-50 to-white border-b border-gray-100">
 
-
       <div className="container relative z-10 mx-auto">
         <div className="grid lg:grid-cols-2 gap-6 items-center">
 
@@ -46,7 +45,7 @@ export default function HeroService({ banner, title: propTitle, description: pro
 
             {/* Super Clean Typography Title */}
             <motion.h1
-              className="text-5xl sm:text-6xl lg:text-[4.5rem] font-bold text-gray-900 tracking-tight leading-[1.05] mb-8"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-bold text-gray-900 tracking-tight leading-[1.05] mb-8"
             >
               {parts?.map((part, i) => {
                 if (i === parts.length - 1) {

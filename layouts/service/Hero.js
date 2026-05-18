@@ -68,7 +68,7 @@ export default function Hero({ banner }) {
             </motion.div>
           )}
 
-          <motion.h1 className="text-5xl sm:text-6xl lg:text-[4.25rem] font-extrabold text-gray-900 leading-[1.1] tracking-tight max-w-3xl">
+          <motion.h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.25rem] font-extrabold text-gray-900 leading-[1.1] tracking-tight max-w-3xl break-words ">
             {parts.map((part, i) => {
               const isLast = i === parts.length - 1;
 
