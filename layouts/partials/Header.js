@@ -75,9 +75,9 @@ const Header = () => {
         ref={headerRef}
         className={`my-1 mb-auto container sticky top-1 z-50 transition-all duration-300`}
       >
-        <nav className="navbar w-full bg-white py-2 px-4 rounded-full border border-slate-300 relative">
-          <div className="order-0">
-            <Logo src={logo} />
+        <nav className="navbar w-full bg-white py-2 px-3 md:px-4 rounded-full border border-slate-300 relative flex flex-nowrap items-center justify-between">
+          <div className="order-0 flex-shrink-0">
+            <Logo src={logo} className="max-w-[130px] sm:max-w-none !h-auto object-contain" />
           </div>
 
           <ul className="hidden xl:flex items-center gap-4 order-1 text-black">
@@ -155,20 +155,20 @@ const Header = () => {
             <ButtonLink href={`tel:${config.contact_info.phone.replace(/\\s+/g, "")}`} title="Let's Talk" animate={animate} icon={IoIosCall} />
           </div>
 
-          <div className="xl:hidden ml-auto flex items-center gap-3">
+          <div className="xl:hidden ml-auto flex items-center gap-2 md:gap-3 flex-shrink-0">
             <a
               href={`tel:${config.contact_info.phone.replace(/\s+/g, "")}`}
-              className="flex items-center justify-center h-11 w-11 bg-secondary text-white rounded-xl shadow-sm transition-transform active:scale-95"
+              className="flex items-center justify-center h-10 w-10 md:h-11 md:w-11 bg-secondary text-white rounded-xl shadow-sm transition-transform active:scale-95"
               aria-label="Call Us"
             >
-              <IoIosCall className="text-2xl" />
+              <IoIosCall className="text-xl md:text-2xl" />
             </a>
             <button
-              className="flex items-center justify-center h-11 w-11 bg-primary text-white rounded-xl shadow-sm transition-transform active:scale-95"
+              className="flex items-center justify-center h-10 w-10 md:h-11 md:w-11 bg-primary text-white rounded-xl shadow-sm transition-transform active:scale-95"
               onClick={() => setShowMenu(!showMenu)}
               aria-label="Toggle Menu"
             >
-              {showMenu ? <CgClose className="text-2xl" /> : <RxHamburgerMenu className="text-2xl" />}
+              {showMenu ? <CgClose className="text-xl md:text-2xl" /> : <RxHamburgerMenu className="text-xl md:text-2xl" />}
             </button>
           </div>
         </nav>
