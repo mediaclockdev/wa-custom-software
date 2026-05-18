@@ -6,6 +6,7 @@ import GSAPWrapper from "@layouts/components/GSAPWrapper";
 import SeoMeta from "@layouts/partials/SeoMeta";
 import { getListPage, getSinglePage } from "@lib/contentParser";
 import Post from "@partials/Post";
+import Breadcrumbs from "@layouts/components/Breadcrumbs";
 const { blog_folder } = config.settings;
 
 // blog pagination
@@ -28,8 +29,9 @@ const BlogPagination = async ({ params }) => {
       <SeoMeta title={title} />
       <section className="section pt-0">
         <Banner title={title} />
+        <Breadcrumbs />
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center pb-6 pt-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center pb-6">
             {currentPosts.map((post, i) => (
               <div key={`key-${i}`}>
                 <Post post={post} />

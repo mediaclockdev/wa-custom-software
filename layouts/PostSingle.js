@@ -6,6 +6,7 @@ import Image from "next/image";
 import ImageFallback from "./components/ImageFallback";
 import Post from "./partials/Post";
 import SeoMeta from "./partials/SeoMeta";
+import Breadcrumbs from "./components/Breadcrumbs";
 
 const PostSingle = ({ frontmatter, content, recentPosts }) => {
   let { description, title, date, image, author } = frontmatter;
@@ -14,6 +15,7 @@ const PostSingle = ({ frontmatter, content, recentPosts }) => {
   return (
     <>
       <SeoMeta title={title} description={description} image={image} />
+      <Breadcrumbs customTitle={title} />
       <section className="section pt-0">
         <div className="container">
           <article>

@@ -144,9 +144,14 @@ const Footer = () => {
                 <div className="mt-1 text-primary">
                   <FaMapMarkerAlt size={18} />
                 </div>
-                <div className="leading-relaxed text-gray-800">
+                <a
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location.replace(/<[^>]*>/g, ""))}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="leading-relaxed text-gray-800 hover:text-primary transition-colors duration-300 "
+                >
                   {markdownify(location)}
-                </div>
+                </a>
               </li>
 
               {/* Phone */}

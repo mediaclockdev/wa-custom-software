@@ -45,7 +45,6 @@ const ServiceIntro = ({ intro }) => {
               </motion.div>
             )}
 
-
             <SectionHeader
               title={intro.title}
               className="text-center lg:text-start !mb-6 lg:!mb-10"

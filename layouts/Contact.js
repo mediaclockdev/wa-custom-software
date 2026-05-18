@@ -7,6 +7,25 @@ import { AnimatedText } from "./service/AnimatedText";
 import { MdLocationOn, MdAccessTime, MdPhone, MdPhoneIphone, MdMail } from "react-icons/md";
 import Link from "next/link";
 import { markdownify } from "@lib/utils/textConverter";
+import { useState } from "react";
+import * as yup from "yup";
+
+const contactSchema = yup.object().shape({
+  name: yup
+    .string()
+    .matches(/^[a-zA-Z\s\-']+$/, "Name can only contain letters, spaces, hyphens, and apostrophes")
+    .required("Name is required"),
+  email: yup
+    .string()
+    .required("Email is required")
+    .email("Invalid email address"),
+  subject: yup
+    .string()
+    .required("Subject is required"),
+  message: yup
+    .string()
+    .required("Message is required"),
+});
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -16,6 +35,43 @@ const fadeUp = {
 const Contact = ({ data }) => {
   const { frontmatter } = data;
   const { title, banner, services, contact_info } = frontmatter;
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [errors, setErrors] = useState({});
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+    if (errors[e.target.name]) {
+      setErrors({ ...errors, [e.target.name]: "" });
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setErrors({});
+    setIsSuccess(false);
+
+    try {
+      await contactSchema.validate(formData, { abortEarly: false });
+      setIsSuccess(true);
+    } catch (err) {
+      if (err instanceof yup.ValidationError) {
+        const fieldErrors = {};
+        err.inner.forEach((error) => {
+          if (error.path) {
+            fieldErrors[error.path] = error.message;
+          }
+        });
+        setErrors(fieldErrors);
+      }
+    }
+  };
 
   const containerVariants = {
     hidden: {},
@@ -92,11 +148,12 @@ const Contact = ({ data }) => {
         </motion.div>
 
         {/* Info Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-6 cursor-default">
+        <div className="grid md:grid-cols-3 gap-8 mb-6">
           {[
             {
               Icon: MdLocationOn,
               title: "Office Address",
+              link: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(contact_info?.address ? contact_info.address.replace(/<[^>]*>/g, "") : "41 Clearview Avenue, Yokine, Western Australia 6060")}`,
               content: contact_info?.address ? markdownify(contact_info.address, "span") : (
                 <>
                   41 Clearview Avenue <br />
@@ -118,28 +175,41 @@ const Contact = ({ data }) => {
               Icon: MdPhone,
               title: "Contact",
               content: (
-                <div className="flex flex-col gap-2 mt-2">
-                  <div className="flex items-start justify-center gap-2">
-                    <MdPhone className="text-primary text-xl shrink-0 mt-1" />
-                    <span className="text-gray-700 break-all">
-                      <span className="hidden lg:inline">Phone: </span>
-                      {contact_info?.phone || "TBC"}
-                    </span>
-                  </div>
-                  <div className="flex items-start justify-center gap-2">
-                    <MdPhoneIphone className="text-primary text-xl shrink-0 mt-1" />
-                    <span className="text-gray-700 break-all">
-                      <span className="hidden lg:inline">Mobile: </span>
-                      {contact_info?.mobile || "TBC"}
-                    </span>
-                  </div>
-                  <div className="flex items-start justify-center gap-2">
+                <div className="flex flex-col gap-2 mt-2 relative z-20">
+                  {contact_info?.phone && (
+                    <a
+                      href={`tel:${contact_info.phone}`}
+                      className="flex items-start justify-center gap-2 hover:text-primary transition-colors duration-300"
+                    >
+                      <MdPhone className="text-primary text-xl shrink-0 mt-1" />
+                      <span className="text-gray-700 break-all">
+                        <span className="hidden lg:inline">Phone: </span>
+                        {contact_info.phone}
+                      </span>
+                    </a>
+                  )}
+                  {contact_info?.mobile && (
+                    <a
+                      href={`tel:${contact_info.mobile}`}
+                      className="flex items-start justify-center gap-2 hover:text-primary transition-colors duration-300"
+                    >
+                      <MdPhoneIphone className="text-primary text-xl shrink-0 mt-1" />
+                      <span className="text-gray-700 break-all">
+                        <span className="hidden lg:inline">Mobile: </span>
+                        {contact_info.mobile}
+                      </span>
+                    </a>
+                  )}
+                  <a
+                    href={`mailto:${contact_info?.email || config.contact_info.email}`}
+                    className="flex items-start justify-center gap-2 hover:text-primary transition-colors duration-300"
+                  >
                     <MdMail className="text-primary text-xl shrink-0 mt-1" />
                     <span className="text-gray-700 break-all">
                       <span className="hidden lg:inline">Email: </span>
                       {contact_info?.email || config.contact_info.email}
                     </span>
-                  </div>
+                  </a>
                 </div>
               ),
             },
@@ -151,17 +221,26 @@ const Contact = ({ data }) => {
               whileInView="show"
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="group flex flex-col items-center text-center p-8 rounded-3xl bg-white/60 backdrop-blur-md border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1"
+              className={`group flex flex-col items-center text-center p-8 rounded-3xl bg-white/60 backdrop-blur-md border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1 relative ${item.link ? "cursor-pointer" : "cursor-default"}`}
             >
+              {item.link && (
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute inset-0 z-10 rounded-3xl"
+                  aria-label={item.title}
+                />
+              )}
               <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-5 transition-all duration-500  group-hover:scale-110 group-hover:-rotate-3 group-hover:shadow-md bg-gradient-to-br group-hover:from-secondary group-hover:to-primary">
                 <item.Icon size={32} className="text-primary group-hover:text-white transition-colors duration-500" />
               </div>
               <h3 className="font-semibold text-2xl mb-3 text-gray-900">
                 {item.title}
               </h3>
-              <p className="text-gray-600 text-lg leading-relaxed">
+              <div className="text-gray-600 text-lg leading-relaxed">
                 {item.content}
-              </p>
+              </div>
             </motion.div>
           ))}
         </div>
@@ -225,10 +304,38 @@ const Contact = ({ data }) => {
               <h3 className="text-3xl font-bold mb-2">Drop Your Message</h3>
               <p className="text-gray-500 mb-10">We usually respond within 24 hours.</p>
 
+              {isSuccess && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-white/95 backdrop-blur-sm rounded-[2.5rem]"
+                >
+                  <div className="w-20 h-20 bg-green-100 text-green-500 rounded-full flex items-center justify-center mb-4">
+                    <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <h4 className="text-2xl font-bold text-gray-900 mb-2">Message Sent!</h4>
+                  <p className="text-gray-600 mb-6 text-center max-w-sm">
+                    Thank you for reaching out. We will get back to you shortly.
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setIsSuccess(false);
+                      setFormData({ name: "", email: "", subject: "", message: "" });
+                    }}
+                    className="px-8 py-3 bg-gray-900 text-white rounded-xl font-medium hover:bg-gray-800 transition-colors"
+                  >
+                    Send Another Message
+                  </button>
+                </motion.div>
+              )}
+
               <form
-                method="POST"
-                action={config.params.contact_form_action}
+                onSubmit={handleSubmit}
                 className="space-y-6"
+                noValidate
               >
                 <div className="grid md:grid-cols-2 gap-6 w-full">
                   <div className="space-y-2 text-left w-full">
@@ -239,9 +346,11 @@ const Contact = ({ data }) => {
                       name="name"
                       type="text"
                       placeholder="John Doe"
-                      required
-                      className="w-full px-5 py-4 rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className={`w-full px-5 py-4 rounded-xl border ${errors.name ? 'border-red-500 focus:ring-red-500/20' : 'border-gray-200 focus:border-primary focus:ring-primary/20'} bg-gray-50/50 focus:bg-white focus:ring-2 transition-all outline-none`}
                     />
+                    {errors.name && <span className="text-red-500 text-sm mt-1 ml-1 block">{errors.name}</span>}
                   </div>
                   <div className="space-y-2 text-left w-full">
                     <label className="text-sm font-medium text-gray-700 ml-1">
@@ -251,9 +360,11 @@ const Contact = ({ data }) => {
                       name="email"
                       type="email"
                       placeholder="john@example.com"
-                      required
-                      className="w-full px-5 py-4 rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className={`w-full px-5 py-4 rounded-xl border ${errors.email ? 'border-red-500 focus:ring-red-500/20' : 'border-gray-200 focus:border-primary focus:ring-primary/20'} bg-gray-50/50 focus:bg-white focus:ring-2 transition-all outline-none`}
                     />
+                    {errors.email && <span className="text-red-500 text-sm mt-1 ml-1 block">{errors.email}</span>}
                   </div>
                 </div>
 
@@ -265,9 +376,11 @@ const Contact = ({ data }) => {
                     name="subject"
                     type="text"
                     placeholder="How can we help?"
-                    required
-                    className="w-full px-5 py-4 rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    className={`w-full px-5 py-4 rounded-xl border ${errors.subject ? 'border-red-500 focus:ring-red-500/20' : 'border-gray-200 focus:border-primary focus:ring-primary/20'} bg-gray-50/50 focus:bg-white focus:ring-2 transition-all outline-none`}
                   />
+                  {errors.subject && <span className="text-red-500 text-sm mt-1 ml-1 block">{errors.subject}</span>}
                 </div>
 
                 <div className="space-y-2 text-left w-full">
@@ -278,9 +391,11 @@ const Contact = ({ data }) => {
                     name="message"
                     rows="5"
                     placeholder="Tell us about your project..."
-                    required
-                    className="w-full px-5 py-4 rounded-xl border border-gray-200 bg-gray-50/50 focus:bg-white focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none resize-none"
+                    value={formData.message}
+                    onChange={handleChange}
+                    className={`w-full px-5 py-4 rounded-xl border ${errors.message ? 'border-red-500 focus:ring-red-500/20' : 'border-gray-200 focus:border-primary focus:ring-primary/20'} bg-gray-50/50 focus:bg-white focus:ring-2 transition-all outline-none resize-none`}
                   />
+                  {errors.message && <span className="text-red-500 text-sm mt-1 ml-1 block">{errors.message}</span>}
                 </div>
 
                 <button
