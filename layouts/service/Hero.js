@@ -34,7 +34,7 @@ export default function Hero({ banner }) {
   const isAboutPage = currentPage === "/about";
 
   return (
-    <section className="relative flex items-center min-h-[60dvh] bg-slate-50 overflow-hidden py-6 !pt-0">
+    <section className={`relative flex items-center ${isAboutPage ? "min-h-[40dvh]" : "min-h-[60dvh]" }  bg-slate-50 overflow-hidden py-6 !pt-0`}>
       {/* Decorative Grid & Glow Background */}
       <div
         className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none"
@@ -51,7 +51,7 @@ export default function Hero({ banner }) {
       <div className="container relative z-10 mx-auto px-4 grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
         {/* LEFT SIDE - Staggered Text Reveal */}
         <motion.div
-          className="flex flex-col items-center text-center lg:items-start lg:text-left gap-6 lg:pr-0 mt-2"
+          className="flex flex-col items-center text-center lg:items-start lg:text-left gap-6 lg:pr-0 mt-3"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
