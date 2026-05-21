@@ -68,23 +68,51 @@ export default function Hero({ banner }) {
             </motion.div>
           )}
 
-          <motion.h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.25rem] font-extrabold text-gray-900 leading-[1.1] tracking-tight max-w-3xl break-words ">
-            {parts.map((part, i) => {
-              const isLast = i === parts.length - 1;
-
-              return (
-                <span key={i} className="block">
-                  {isLast ? (
-                    <span className="bg-gradient-to-r from-primary via-blue-500 to-indigo-500 bg-clip-text text-transparent">
-                      <AnimatedText text={part} delay={i * 0.4} />
+          {isAboutPage ? (
+            <motion.h1
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.25rem] font-bold leading-[1.1] text-gray-900 "
+            >
+              {parts?.map((part, i) => {
+                if (i === parts.length - 1) {
+                  return (
+                    <span
+                      key={i}
+                      className="inline bg-gradient-to-r from-primary via-blue-400 to-primary bg-[length:200%_100%] bg-clip-text text-transparent pb-2"
+                    >
+                      <AnimatedText text={part} />
                     </span>
-                  ) : (
-                    <AnimatedText text={part} delay={i * 0.4} />
-                  )}
-                </span>
-              );
-            })}
-          </motion.h1>
+                  );
+                }
+
+                return (
+                  <span key={i} className="inline">
+                    {part}
+                  </span>
+                );
+              })}
+            </motion.h1>
+          ) : (
+            <motion.h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.25rem] font-extrabold text-gray-900 leading-[1.1] tracking-tight max-w-3xl break-words ">
+              {parts.map((part, i) => {
+                const isLast = i === parts.length - 1;
+
+                return (
+                  <span key={i} className="block">
+                    {isLast ? (
+                      <span className="bg-gradient-to-r from-primary via-blue-500 to-indigo-500 bg-clip-text text-transparent">
+                        <AnimatedText text={part} delay={i * 0.4} />
+                      </span>
+                    ) : (
+                      <AnimatedText text={part} delay={i * 0.4} />
+                    )}
+                  </span>
+                );
+              })}
+            </motion.h1>
+          )}
 
           <motion.p
             variants={itemVariants}
@@ -93,10 +121,8 @@ export default function Hero({ banner }) {
             {banner?.description ||
               "High-performance web development, scalable solutions, and stunning UI/UX to help your brand stand out in the digital world."}
           </motion.p>
-          {!isAboutPage &&
-            <motion.div
-              variants={itemVariants}
-            >
+          {!isAboutPage && (
+            <motion.div variants={itemVariants}>
               <ButtonLink
                 animate={true}
                 href={banner?.link?.href || "/contact"}
@@ -104,20 +130,15 @@ export default function Hero({ banner }) {
                 icon={IoIosCall}
               />
             </motion.div>
-          }
-
+          )}
         </motion.div>
 
         {/* RIGHT SIDE - Interactive 3D Faux UI or Banner Image */}
-        <div
-          className="hidden lg:flex relative w-full h-[500px] lg:h-[600px] justify-center items-center perspective-[1200px]"
-        >
+        <div className="hidden lg:flex relative w-full h-[500px] lg:h-[600px] justify-center items-center perspective-[1200px]">
           {/* Framer motion wrapper with gentle continuous rotation for Faux UI */}
           <motion.div
             animate={
-              banner?.image
-                ? {}
-                : { rotateX: [3, -3, 3], rotateY: [-3, 3, -3] }
+              banner?.image ? {} : { rotateX: [3, -3, 3], rotateY: [-3, 3, -3] }
             }
             transition={{
               duration: 8,
@@ -125,8 +146,9 @@ export default function Hero({ banner }) {
               ease: "easeInOut",
             }}
             style={{ transformStyle: "preserve-3d" }}
-            className={`relative w-full h-full flex justify-center items-center ${isAboutPage ? "max-w-[600px]" : "max-w-md"
-              }`}
+            className={`relative w-full h-full flex justify-center items-center ${
+              isAboutPage ? "max-w-[600px]" : "max-w-md"
+            }`}
           >
             {banner?.image ? (
               <motion.div
@@ -156,10 +178,11 @@ export default function Hero({ banner }) {
                         ? banner.title.replace(/<[^>]*>?/gm, "")
                         : "Hero Illustration"
                     }
-                    className={`w-full h-auto object-contain rounded-[2rem] drop-shadow-[0_20px_50px_rgba(0,0,0,0.15)] ${isAboutPage
-                      ? "max-w-full sm:max-w-[600px] max-h-[550px]"
-                      : "max-w-[90%] sm:max-w-md max-h-[500px]"
-                      }`}
+                    className={`w-full h-auto object-contain rounded-[2rem] drop-shadow-[0_20px_50px_rgba(0,0,0,0.15)] ${
+                      isAboutPage
+                        ? "max-w-full sm:max-w-[600px] max-h-[550px]"
+                        : "max-w-[90%] sm:max-w-md max-h-[500px]"
+                    }`}
                   />
                 </motion.div>
 
@@ -405,6 +428,6 @@ export default function Hero({ banner }) {
           </motion.div>
         </div>
       </div>
-    </section >
+    </section>
   );
 }

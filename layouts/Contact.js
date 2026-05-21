@@ -15,18 +15,25 @@ import * as yup from "yup";
 const contactSchema = yup.object().shape({
   name: yup
     .string()
-    .matches(/^[a-zA-Z\s\-']+$/, "Name can only contain letters, spaces, hyphens, and apostrophes")
-    .required("Name is required"),
+    .trim()
+    .required("Name is required")
+    .matches(/[a-zA-Z]/, "Name must contain at least one letter")
+    .matches(/^[a-zA-Z]+([\s\-'][a-zA-Z]+)*$/, "Name can only contain letters, spaces, hyphens, and apostrophes"),
   email: yup
     .string()
+    .trim()
     .required("Email is required")
     .email("Invalid email address"),
   subject: yup
     .string()
-    .required("Subject is required"),
+    .trim()
+    .required("Subject is required")
+    .test("not-only-whitespace", "Subject is required", (val) => val && val.trim().length > 0),
   message: yup
     .string()
-    .required("Message is required"),
+    .trim()
+    .required("Message is required")
+    .test("not-only-whitespace", "Message is required", (val) => val && val.trim().length > 0),
 });
 
 const fadeUp = {
@@ -48,7 +55,22 @@ const Contact = ({ data }) => {
   const [isSuccess, setIsSuccess] = useState(false);
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    let value = e.target.value;
+
+    // Email: strip all whitespace (emails never have spaces)
+    if (e.target.name === "email") {
+      value = value.replace(/\s/g, "");
+    } else {
+      // Prevent leading whitespace on other fields
+      value = value.replace(/^\s+/, "");
+
+      // Collapse multiple consecutive spaces into one (except for message)
+      if (e.target.name !== "message") {
+        value = value.replace(/\s{2,}/g, " ");
+      }
+    }
+
+    setFormData({ ...formData, [e.target.name]: value });
     if (errors[e.target.name]) {
       setErrors({ ...errors, [e.target.name]: "" });
     }
