@@ -4,8 +4,9 @@ import { motion } from "framer-motion";
 import { IconMap } from "@lib/service/IconMap";
 import SectionHeader from "@layouts/components/SectionHeader";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper";
+import { Autoplay, Pagination } from "swiper";
 import "swiper/css";
+import "swiper/css/pagination";
 
 const containerVariants = {
   hidden: {},
@@ -45,30 +46,20 @@ const TechStack = ({ technologies }) => {
         >
 
           <Swiper
-            className="tech-marquee-slider py-2!"
-            modules={[Autoplay]}
+            className="!px-1 pb-12 lg:!px-4 lg:-mx-4"
+            modules={[Pagination, Autoplay]}
             spaceBetween={24}
+            pagination={{ clickable: true }}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            speed={800}
             loop={true}
-            speed={4000} // increase for smoother flow
-            freeMode={true} // IMPORTANT
-            autoplay={{
-              delay: 0,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: false,
+            grabCursor={true}
+            breakpoints={{
+              320: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
             }}
-            allowTouchMove={false}
-            slidesPerView="auto" // IMPORTANT
           >
-            <style>{`
-              .tech-marquee-slider .swiper-wrapper {
-                  transition-timing-function: linear !important;
-              }
-
-              .tech-marquee-slider .swiper-slide {
-                  width: auto !important; /* VERY IMPORTANT */
-              }
-            `}</style>
-
             {technologies.groups.map((group, i) => (
               <SwiperSlide key={i} className="!h-auto">
                 <motion.div

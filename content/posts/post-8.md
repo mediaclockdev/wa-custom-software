@@ -2,9 +2,9 @@
 title: How to Build a Successful Ecommerce Website for Your Business
 image: /images/blog/ecom.png
 author:
-  name: Abdullah Al Shifat
-  avatar: /images/author/abdullah.jpg
-date: 2022-04-04T05:00:00Z
+  name: Jack Thompson
+  avatar: /images/author/jack-thompson.jpg
+date: 2025-09-10T05:00:00Z
 draft: false
 ---
 

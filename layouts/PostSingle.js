@@ -35,12 +35,13 @@ const PostSingle = ({ frontmatter, content, recentPosts }) => {
               <div className="lg:col-12">
                 {markdownify(title, "h1", "h2 mt-4 lg:mt-6")}
                 <div className="mt-6 flex items-center">
-                  <div className="overflow-hidden rounded-full border-2 border-white shadow-[0_0_0_2px] shadow-primary">
+                  <div className="h-[50px] w-[50px] overflow-hidden rounded-full border-2 border-white shadow-[0_0_0_2px] shadow-primary shrink-0">
                     <ImageFallback
                       src={author.avatar}
                       width={50}
                       height={50}
                       alt="author"
+                      className="h-full w-full object-cover object-top"
                     />
                   </div>
                   <div className="pl-5">

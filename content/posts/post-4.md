@@ -2,9 +2,9 @@
 title: Why Your Business Needs a Mobile App in 2026
 image: /images/blog/mobile.png
 author:
-  name: Abdullah Al Shifat
-  avatar: /images/author/abdullah.jpg
-date: 2022-04-04T05:00:00Z
+  name: Jack Thompson
+  avatar: /images/author/jack-thompson.jpg
+date: 2026-02-12T05:00:00Z
 draft: false
 ---
 

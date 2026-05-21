@@ -2,9 +2,9 @@
 title: Common Web Development Mistakes Businesses Should Avoid
 image: /images/blog/common-web.png
 author:
-  name: Abdullah Al Shifat
-  avatar: /images/author/abdullah.jpg
-date: 2022-04-04T05:00:00Z
+  name: Emily Carter
+  avatar: /images/author/emily-carter.jpg
+date: 2025-11-18T05:00:00Z
 draft: false
 ---
 

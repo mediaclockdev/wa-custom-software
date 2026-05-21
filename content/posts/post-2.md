@@ -4,7 +4,7 @@ image: /images/blog/next.png
 author:
   name: Derick Barker
   avatar: /images/author/derick.jpg
-date: 2022-04-04T05:00:00Z
+date: 2025-07-17T05:00:00Z
 draft: false
 ---
 

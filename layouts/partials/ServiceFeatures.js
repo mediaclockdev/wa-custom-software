@@ -48,7 +48,7 @@ const ServiceFeatures = ({ services }) => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-20px" }}
+          viewport={{ once: true, margin: "0px" }}
         >
           <Swiper
             modules={[Pagination, Autoplay]}

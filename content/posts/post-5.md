@@ -2,9 +2,9 @@
 title: How UI UX Design Impacts Your Business Growth
 image: /images/blog/uiux.png
 author:
-  name: Abdullah Al Shifat
-  avatar: /images/author/abdullah.jpg
-date: 2022-04-04T05:00:00Z
+  name: Grace Taylor
+  avatar: /images/author/grace-taylor.jpg
+date: 2025-10-22T05:00:00Z
 draft: false
 ---
 

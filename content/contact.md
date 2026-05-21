@@ -4,7 +4,7 @@ layout: "contact"
 draft: false
 
 banner:
-  title: "Contact Western Australia </br> Software Development Company"
+  title: "Contact <br /> Us"
   image: /images/service/custom-software-hero-removebg-preview2.png
   link:
     label: Build Your iOS App
@@ -30,8 +30,8 @@ services:
     link: /digital-marketing
 
 contact_info:
-  phone: "123 456 7890"
-  mobile: "123 456 7890"
+  phone: "0480 080 232"
+  mobile: "0480 080 232"
   email: "info@wasoftware.com.au"
   address: "41 Clearview Avenue <br /> Yokine, Western Australia 6060"
   business_hours: "Monday to Friday <br /> 9:00 AM – 6:00 PM AST"

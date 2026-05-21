@@ -4,7 +4,9 @@ import config from "@config/config.json";
 import Banner from "./components/Banner";
 import { motion } from "framer-motion";
 import { AnimatedText } from "./service/AnimatedText";
-import { MdLocationOn, MdAccessTime, MdPhone, MdPhoneIphone, MdMail } from "react-icons/md";
+import { MdLocationOn } from "react-icons/md";
+import { FaClock } from "react-icons/fa";
+import { FaEnvelope, FaMobile, FaPhoneAlt } from "react-icons/fa";
 import Link from "next/link";
 import { markdownify } from "@lib/utils/textConverter";
 import { useState } from "react";
@@ -122,7 +124,7 @@ const Contact = ({ data }) => {
                 return (
                   <span
                     key={i}
-                    className="block bg-gradient-to-r from-primary via-blue-400 to-primary bg-[length:200%_100%] bg-clip-text text-transparent pb-2"
+                    className="inline bg-gradient-to-r from-primary via-blue-400 to-primary bg-[length:200%_100%] bg-clip-text text-transparent pb-2"
                   >
                     <AnimatedText text={part} />
                   </span>
@@ -130,7 +132,7 @@ const Contact = ({ data }) => {
               }
 
               return (
-                <span key={i} className="block">
+                <span key={i} className="inline">
                   {part}
                 </span>
               );
@@ -153,6 +155,7 @@ const Contact = ({ data }) => {
             {
               Icon: MdLocationOn,
               title: "Office Address",
+              size: 34,
               link: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(contact_info?.address ? contact_info.address.replace(/<[^>]*>/g, "") : "41 Clearview Avenue, Yokine, Western Australia 6060")}`,
               content: contact_info?.address ? markdownify(contact_info.address, "span") : (
                 <>
@@ -162,8 +165,9 @@ const Contact = ({ data }) => {
               ),
             },
             {
-              Icon: MdAccessTime,
+              Icon: FaClock,
               title: "Business Hours",
+              size: 28,
               content: contact_info?.business_hours ? markdownify(contact_info.business_hours, "span") : (
                 <>
                   Monday to Friday <br />
@@ -172,8 +176,9 @@ const Contact = ({ data }) => {
               ),
             },
             {
-              Icon: MdPhone,
+              Icon: FaPhoneAlt,
               title: "Contact",
+              size: 28,
               content: (
                 <div className="flex flex-col gap-2 mt-2 relative z-20">
                   {contact_info?.phone && (
@@ -181,7 +186,7 @@ const Contact = ({ data }) => {
                       href={`tel:${contact_info.phone}`}
                       className="flex items-start justify-center gap-2 hover:text-primary transition-colors duration-300"
                     >
-                      <MdPhone className="text-primary text-xl shrink-0 mt-1" />
+                      <FaPhoneAlt className="text-primary text-lg shrink-0 mt-1" />
                       <span className="text-gray-700 break-all">
                         <span className="hidden lg:inline">Phone: </span>
                         {contact_info.phone}
@@ -193,7 +198,7 @@ const Contact = ({ data }) => {
                       href={`tel:${contact_info.mobile}`}
                       className="flex items-start justify-center gap-2 hover:text-primary transition-colors duration-300"
                     >
-                      <MdPhoneIphone className="text-primary text-xl shrink-0 mt-1" />
+                      <FaMobile className="text-primary text-lg shrink-0 mt-1" />
                       <span className="text-gray-700 break-all">
                         <span className="hidden lg:inline">Mobile: </span>
                         {contact_info.mobile}
@@ -202,9 +207,9 @@ const Contact = ({ data }) => {
                   )}
                   <a
                     href={`mailto:${contact_info?.email || config.contact_info.email}`}
-                    className="flex items-start justify-center gap-2 hover:text-primary transition-colors duration-300"
+                    className="flex items-start mt-0.5 justify-center gap-2 hover:text-primary transition-colors duration-300"
                   >
-                    <MdMail className="text-primary text-xl shrink-0 mt-1" />
+                    <FaEnvelope className="text-primary text-lg shrink-0 mt-1" />
                     <span className="text-gray-700 break-all">
                       <span className="hidden lg:inline">Email: </span>
                       {contact_info?.email || config.contact_info.email}
@@ -233,7 +238,7 @@ const Contact = ({ data }) => {
                 />
               )}
               <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-5 transition-all duration-500  group-hover:scale-110 group-hover:-rotate-3 group-hover:shadow-md bg-gradient-to-br group-hover:from-secondary group-hover:to-primary">
-                <item.Icon size={32} className="text-primary group-hover:text-white transition-colors duration-500" />
+                <item.Icon size={item.size} className="text-primary group-hover:text-white transition-colors duration-500" />
               </div>
               <h3 className="font-semibold text-2xl mb-3 text-gray-900">
                 {item.title}

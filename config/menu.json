@@ -39,7 +39,7 @@
       ]
     },
     { "name": "Blog", "url": "/posts" },
-    { "name": "Contact", "url": "/contact" }
+    { "name": "Contact Us", "url": "/contact" }
   ],
   "footer": {
     "quick_links": [

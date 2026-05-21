@@ -13,8 +13,9 @@ import {
   FaRocket,
 } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper";
+import { Autoplay, Pagination } from "swiper";
 import "swiper/css";
+import "swiper/css/pagination";
 
 const icons = [
   FaIndustry,
@@ -56,34 +57,28 @@ const Industries = ({ industries }) => {
           className="w-full"
         >
           <Swiper
-            className="industries-marquee-slider py-4!"
-            modules={[Autoplay]}
+            className="!px-1 pb-12 lg:!px-4 lg:-mx-4"
+            modules={[Pagination, Autoplay]}
             spaceBetween={24}
-            loop={true}
-            speed={4000} // increase for smoother flow
-            freeMode={true} // IMPORTANT
+            pagination={{ clickable: true }}
             autoplay={{
-              delay: 0,
+              delay: 3000,
               disableOnInteraction: false,
-              pauseOnMouseEnter: false,
             }}
-            allowTouchMove={false}
-            slidesPerView="auto" // IMPORTANT
+            speed={800}
+            loop={true}
+            grabCursor={true}
+            breakpoints={{
+              320: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
           >
-            <style>{`
-              .industries-marquee-slider .swiper-wrapper {
-                  transition-timing-function: linear !important;
-              }
-              .industries-marquee-slider .swiper-slide {
-                  width: auto !important; 
-              }
-            `}</style>
-
             {industries.list.map((item, i) => {
               const Icon = icons[i] || FaIndustry;
 
               return (
-                <SwiperSlide key={i} className="!w-[280px] md:!w-[330px]">
+                <SwiperSlide key={i} className="!h-auto">
                   <div
                     className="group relative flex flex-col h-full items-center gap-4 p-5 lg:p-6 rounded-2xl overflow-hidden bg-white/70 backdrop-blur-md border border-gray-100 hover:border-gray-200 shadow-sm transition-all duration-500"
                   >

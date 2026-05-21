@@ -2,9 +2,9 @@
 title: Top Web Development Trends Businesses Should Follow in 2026
 image: /images/blog/top.png
 author:
-  name: Abdullah Al Shifat
-  avatar: /images/author/abdullah.jpg
-date: 2022-04-02T06:00:00+00:00
+  name: Emily Carter
+  avatar: /images/author/emily-carter.jpg
+date: 2025-08-05T06:00:00+00:00
 draft: false
 ---
 

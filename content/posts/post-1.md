@@ -2,8 +2,8 @@
 title: Why Your Business Needs a Strong Digital Presence in 2026
 image: /images/blog/why.jpg
 author:
-  name: Western Australia
-  avatar: /images/author/abdullah.jpg
+  name: Grace Taylor
+  avatar: /images/author/grace-taylor.jpg
 date: 2026-03-20T05:00:00Z
 draft: false
 ---
