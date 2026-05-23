@@ -20,12 +20,10 @@ brands:
   - /images/brands/06-colored.png
 
 intro:
-  subtitle: PERTH MOBILE SPECIALISTS
   title: Perth-Based Mobile App Development Experts
   description: With over 12+ of professional experience, Western Australia Development Company has earned a reputable reputation in Perth as a renowned provider of mobile and digital solutions. The region is well-known for its flourishing mining industry and growing tech ecosystem and rapidly growing startup culture. We have assisted numerous companies to transform their digital strategies by using top-quality mobile apps.</br> </br>Our team of developers is specialized in creating apps for businesses across various industries, such as mining logistics, healthcare and retail, real estate along with professional and other services. With a portfolio that includes thousands of mobile applications We're committed to delivering quality, generating value and ensuring long-term customer satisfaction.<br> </br>In East Perth, West Perth, Northbridge, and Leederville the local tech landscape is constantly evolving, home to the most innovative mobile developers as well as innovative digital agencies. In this highly competitive marketplace, Western Australia Development Company is distinguished by our customer-centric approach, our advanced technological capabilities, and dedication to creating world-class mobile apps for companies of all sizes.
 
 services:
-  subtitle: OUR SERVICES
   title: Best Mobile App Development Services
   description: We are Western Australia Development Company, we go beyond building applications. We help businesses speed up in their journey to digital. If you require an original iOS application or an Android solution or a cross-platform application our team of experts blends technological expertise with imaginative conceptual thinking in order to help bring your vision to reality.
 
@@ -61,7 +59,6 @@ services:
       url: /images/service/mobile-app-development/mobiledesign.png
 
 why:
-  subtitle: OUR COMPETITIVE EDGE
   title: Why Choose Our Mobile App Development Services?
   description: If you're a start-up building your first app, or an established company looking to improve its digital platform, we can provide customized solutions that will ensure longevity and success.
   list:
@@ -84,7 +81,6 @@ why:
       content: We follow disciplined processes and timelines to ensure projects are delivered on schedule without compromising quality, meeting client expectations.
 
 process:
-  subtitle: HOW WE WORK
   title: Our Mobile App Development Approach
   description: Our mobile strategy for app development is built around innovation, flexibility and a thorough knowledge of the Western Australian business environment.
   steps:
@@ -107,7 +103,6 @@ process:
       content: We optimise speed, usability, and overall performance to deliver a smooth and efficient user experience.
 
 technologies:
-  subtitle: TECHNOLOGY STACK
   title: Mobile Technologies We Use
   description: Our team works with a modern and scalable technology stack to build high-performance mobile applications.
 

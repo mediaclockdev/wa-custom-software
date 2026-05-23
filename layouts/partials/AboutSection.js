@@ -32,17 +32,8 @@ export default function AboutSection({ about }) {
         <div className="grid md:grid-cols-2 gap-4 lg:gap-16 items-center relative z-10">
           {/* LEFT SIDE */}
           <div>
-            {/* <div className="animate mb-10">
-              <p className="uppercase">{about.subtitle}</p>
-              {markdownify(
-                about.title,
-                "h2",
-                "mt-2 text-4xl lg:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent",
-              )}
-            </div> */}
 
             <SectionHeader
-              subtitle={about.subtitle}
               title={about.title}
             />
 

@@ -1,6 +1,6 @@
 ---
 banner:
-  title: "Western Software </br> Development in Perth"
+  title: "WA Development </br> in Perth"
   description: We provide web, mobile app and IT services in Perth. With 10+ years of experience, we build secure, scalable and high-performing digital solutions for long-term business growth.
   link:
     label: Get in Touch
@@ -8,7 +8,6 @@ banner:
 
 #services
 services:
-  subtitle: WHAT WE OFFER
   title: Our Digital Services in Perth
   list:
     - title: Mobile App Development in Perth
@@ -34,8 +33,7 @@ services:
 
 #process
 process:
-  subtitle: OUR APPROACH
-  title: Why Choose Western Software Development
+  title: Why Choose WA Development
   description: With over 8 years of expertise across web design, mobile app development, and IT services, we follow a structured approach to ensure quality results.
   steps:
     - title: Analyse
@@ -52,7 +50,6 @@ process:
 
 #expertise
 expertise:
-  subtitle: AREAS OF EXPERTISE
   title: Our Development Expertise in Perth
   list:
     - title: Mobile Application Development

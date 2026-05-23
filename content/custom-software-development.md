@@ -19,12 +19,10 @@ brands:
   - /images/brands/05-colored.png
 
 intro:
-  subtitle: PERTH SOFTWARE SPECIALISTS
   title: We Build High-Performance Custom Software
   description: We are Western Australia Development Company, we are a specialist in the delivery of customized software that is high-performance and meets the ever-changing demands of Perth companies. No matter if you're a new business looking to bring your idea to life, a well-established company that is looking to improve internal processes or a business that is modernising an outdated system, our team develops reliable, secure, reliable, and effective software solutions that are designed to facilitate the long-term growth of your business.</br> </br> With a local team that is dedicated and a dedication to quality, we will work together with clients from conception to finalization, making sure that your customized software will yield measurable results and a high Return on Investment. Our method combines technical knowledge as well as collaborative processes. An in-depth knowledge of Western Australia's business environment.
 
 services:
-  subtitle: OUR SERVICES
   title: Our Custom Software Development Services
   description: We offer a variety of software development services designed to </br> tackle real business problems and increase the efficiency of operations.
   list:
@@ -79,7 +77,6 @@ services:
       url: /images/service/custom-development/consult.png
 
 why:
-  subtitle: OUR COMPETITIVE EDGE
   title: Why Choose Us for Custom Software Development Services
   list:
     - title: Local Expertise You Can Trust
@@ -94,7 +91,6 @@ why:
       content: From updates to performance monitoring, we provide ongoing support to keep your software secure, stable, and aligned with your evolving requirements.
 
 process:
-  subtitle: OUR PROCESS
   title: Our Approach to Custom Software Development
   description: At Western Australia Development Company, we prioritise strong client relationships and a smooth project experience from start to finish
   steps:
@@ -108,7 +104,6 @@ process:
       content: We manage deployment, onboarding, and full post-launch support. This includes updates, security patches, and system enhancements to keep your software running smoothly.
 
 value:
-  subtitle: BUSINESS VALUE
   title: Value-Driven Features That Support Your Business
   list:
     - title: Workflow Automation
@@ -119,7 +114,6 @@ value:
       content: Our software solutions adapt as your business expands,supporting larger workloads, new users, and additional features without disruption.
 
 industries:
-  subtitle: INDUSTRIES
   title: Industries We Serve
   description: We deliver custom software for a wide range of Perth industries
   list:
@@ -133,7 +127,6 @@ industries:
     - title: Startups & Innovation-focused businesses
 
 technologies:
-  subtitle: TECHNOLOGY STACK
   title: Technologies We Use
   description: We utilise industry-standard, widely adopted technologies 
 
@@ -173,7 +166,6 @@ technologies:
         - Google Cloud
 
 testimonial:
-  subtitle: CLIENT FEEDBACK
   title: Trusted by Perth Businesses
   list:
     - author: Sarah Thompson

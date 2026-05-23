@@ -13,7 +13,6 @@ const Testimonial = ({ testimonial }) => {
     <section className="section pt-0">
       <div className="container">
         <div className="animate text-center">
-          <p>{testimonial?.subtitle}</p>
           {markdownify(testimonial?.title, "h2", "mt-4 section-title")}
           {markdownify(testimonial?.description, "p", "mt-10")}
         </div>

@@ -7,7 +7,7 @@ const ButtonLink = ({ href = "/", onClick, title = "", animate, icon: Icon, size
     <Link
       href={href}
       onClick={onClick}
-      className={`relative overflow-hidden inline-flex items-center justify-center px-6 py-3 rounded-full bg-secondary text-white text-lg font-medium tracking-wide transition-all duration-300 group ${animate ? "animate-cta-attention" : ""}`}
+      className={`relative overflow-hidden inline-flex items-center justify-center px-6 py-3 rounded-full bg-gradient-to-r from-primary  to-secondary text-white text-lg font-medium tracking-wide transition-all duration-300 group ${animate ? "animate-cta-attention" : ""}`}
     >
       {!frontIcon ? (
         <>

@@ -40,11 +40,11 @@ const Features = ({ features }) => {
       <div className="container text-center">
         {/* Header */}
         <div className="animate mb-10">
-          <p className="uppercase">{features.subtitle}</p>
+
           {markdownify(
             features.title,
             "h2",
-            "mt-2 text-3xl lg:text-5xl tracking-wide bg-gradient-to-r from-primary via-primary to-secondary/80 bg-clip-text text-transparent",
+            "mt-2 text-3xl lg:text-5xl tracking-wide bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent",
           )}
           {markdownify(
             features.description,

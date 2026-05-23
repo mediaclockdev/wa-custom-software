@@ -37,7 +37,6 @@ const ServiceFeatures = ({ services }) => {
       <div className="container">
         <div className="text-center mb-8 lg:mb-12">
           <SectionHeader
-            subtitle={services.subtitle}
             title={services.title}
             description={services.description}
           />

@@ -20,13 +20,11 @@ brands:
   - /images/brands/06-colored.png
 
 intro:
-  subtitle: IOS DEVELOPMENT SPECIALISTS
   title: iOS App Developers in Perth, Australia
   description: |
     At Western Australia Development Company, we specialise in building premium iOS applications that empower Perth-based businesses to reach the high-value Apple ecosystem. While global Android holds the largest market share, iOS remains the second most widely used mobile platform and continues to provide strong monetisation and user-loyalty opportunities.<br> </br>Our Perth-based team is experienced in the unique requirements of the Apple ecosystem native iOS development, App Store deployment, Swift/Objective-C architecture, and ongoing support. Whether you’re launching a new app or migrating an existing Android project into iOS, we provide a full suite of services tailored to the Western Australian market and beyond.
 
 services:
-  subtitle: OUR SERVICES
   title: iOS App Development Services in Perth
   description: We offer end-to-end iOS app development services designed to deliver results for businesses across Perth and Western Australia from start-ups to large enterprises.
   list:
@@ -61,7 +59,6 @@ services:
       url: /images/service/ios-development/enterprise.jpg
 
 why:
-  subtitle: OUR COMPETITIVE EDGE
   title: Why Choose Us for iOS Development
   description: Selecting the right iOS development partner matters. We combine local industry knowledge with premium technical capabilities
   list:
@@ -77,7 +74,6 @@ why:
       content: We don’t just deliver the app and walk away—we support it. With version updates, user-analytics review, and feature enhancements, we help your iOS solution evolve with your business.
 
 process:
-  subtitle: DEVELOPMENT ROADMAP
   title: Our iOS App Development Roadmap
   description: Here’s how we bring your iOS project from concept to live App Store listing and beyond
   steps:
@@ -95,7 +91,6 @@ process:
       content: Once live, we monitor performance, gather analytics, respond to user feedback, push updates for new iOS versions and add features as your business grows.
 
 industries:
-  subtitle: INDUSTRIES
   title: Industries We Serve
   description: We’ve delivered iOS applications across a wide variety of sectors in Perth and WA
   list:
@@ -109,7 +104,6 @@ industries:
     - title: Startup & Innovation Sectors
 
 technologies:
-  subtitle: TECHNOLOGY STACK
   title: iOS Technologies We Use
   groups:
     - title: Languages

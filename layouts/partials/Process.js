@@ -16,7 +16,6 @@ const Process = ({ process }) => {
     <section className="section flex items-center overflow-hidden">
       <div className="container">
         <SectionHeader
-          subtitle={process.subtitle}
           title={process.title}
           description={process.description}
         />

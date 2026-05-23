@@ -43,7 +43,6 @@ export default function ClientsSection({ clients }) {
             {/* LEFT SIDE */}
             <div className="flex flex-col items-center md:items-start text-center md:text-left justify-center pb-3 md:pb-0">
               <SectionHeader
-                subtitle={clients.subtitle}
                 title={clients.title}
                 description={clients.description}
               />

@@ -36,14 +36,7 @@ const ServiceIntro = ({ intro }) => {
           className="grid lg:grid-cols-12 lg:gap-20 items-start relative"
         >
           <div className="lg:col-span-5 flex flex-col items-center text-center lg:items-start lg:text-left lg:sticky lg:top-32 lg:h-max z-20 transition-all duration-300">
-            {intro.subtitle && (
-              <motion.div variants={itemVariants} className="inline-flex items-center gap-3 lg:gap-4 mb-2 lg:mb-6">
-                <div className="h-[2px] w-10 bg-primary rounded-full hidden lg:block"></div>
-                <p className="text-sm font-extrabold tracking-[0.2em] uppercase text-primary">
-                  {intro.subtitle}
-                </p>
-              </motion.div>
-            )}
+
 
             <SectionHeader
               title={intro.title}

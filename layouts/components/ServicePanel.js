@@ -33,7 +33,6 @@ const ServicePanel = ({ services }) => {
     <section className="section flex items-center">
       <div className="container text-center">
         <SectionHeader
-          subtitle={services.subtitle}
           title={services.title}
           description={services.description}
         />
@@ -62,7 +61,7 @@ const ServicePanel = ({ services }) => {
           ))}
         </div>
 
-        <div className="hidden lg:flex md:h-[550px] gap-4">
+        <div className="hidden  lg:flex lg:h-[650px] xl:h-[530px] gap-4">
           {services.list.map((service, index) => {
             const isActive = active === index;
 
@@ -89,10 +88,10 @@ const ServicePanel = ({ services }) => {
                 />
 
                 {/* Content */}
-                <div className="relative p-10 h-full flex flex-col justify-between">
+                <div className="relative p-10 flex flex-col justify-start">
                   <h3
                     className={`text-3xl font-semibold transition ${isActive ? "text-white" : "text-[#24326A]"
-                      }`}
+                      } break-words`}
                   >
                     {service.title}
                   </h3>
@@ -105,7 +104,7 @@ const ServicePanel = ({ services }) => {
                   >
                     <motion.p
                       variants={item}
-                      className={`mb-6 text-lg ${isActive ? "text-white/90" : "text-gray-600"
+                      className={`my-6 text-lg ${isActive ? "text-white/90" : "text-gray-600"
                         }`}
                     >
                       {service.description}

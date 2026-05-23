@@ -20,12 +20,10 @@ brands:
   - /images/brands/06-colored.png
 
 intro:
-  subtitle: PERTH WEB DESIGN SPECIALISTS
   title: Affordable Web Design in Perth
   description: Get more customers to your site, increase conversions, and enhance your brand's image with a high-quality web layout in Perth. Western Australian brings together design strategy, strategy, and performance to build websites to provide real business results. We collaborate with Perth businesses to help them turn their ideas into captivating and user-friendly websites that load quickly and rank well. They also convert.
 
 services:
-  subtitle: OUR SERVICES
   title: Web Design Services in Perth
   description: We design and build websites that balance visual quality with conversion performance.
   list:
@@ -50,7 +48,6 @@ services:
       url: /images/service/web-design/seo.jpg
 
 why:
-  subtitle: OUR COMPETITIVE EDGE
   title: Why Perth Businesses Choose Our Web Design Team
   list:
     - title: Local Expertise & Market Knowledge
@@ -66,7 +63,6 @@ why:
       content: Our websites are built with scalability and performance in mind, allowing your platform to grow alongside your business. Whether you need new features, integrations, or performance upgrades, your website is structured to adapt without requiring a complete rebuild.
 
 process:
-  subtitle: OUR PROCESS
   title: Our Process & Timeline
   description: We follow a clear, strategic workflow typically 8-12 weeks, aligned with Perth industry standards.
   steps:

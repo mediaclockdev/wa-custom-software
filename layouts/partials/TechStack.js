@@ -31,7 +31,6 @@ const TechStack = ({ technologies }) => {
           transition={{ duration: 0.5 }}
         >
           <SectionHeader
-            subtitle={technologies.subtitle}
             title={technologies.title}
             description={technologies.description}
           />
@@ -74,7 +73,7 @@ const TechStack = ({ technologies }) => {
 
                   <div className="relative z-10">
                     <div className="flex items-center gap-3 mb-6">
-                      <div className="w-1.5 h-6 bg-gradient-to-b from-primary to-blue-400 rounded-full" />
+                      <div className="w-1.5 h-6 bg-gradient-to-b from-primary to-secondary rounded-full" />
                       <h3 className="text-2xl font-bold tracking-normal text-gray-900 drop-shadow-sm">
                         {group.title}
                       </h3>

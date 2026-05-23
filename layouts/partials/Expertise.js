@@ -32,7 +32,6 @@ const Expertise = ({ expertise }) => {
     <section className="section min-h-[30dvh] flex items-center">
       <div className="container text-center">
         <SectionHeader
-          subtitle={expertise.subtitle}
           title={expertise.title}
           description={expertise.description}
         />

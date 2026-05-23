@@ -20,7 +20,6 @@ const icons = [
 
 const WhyChooseUs = ({ why }) => {
   const safeWhy = why ?? {
-    subtitle: "",
     title: "",
     list: [],
   };
@@ -35,7 +34,6 @@ const WhyChooseUs = ({ why }) => {
           transition={{ duration: 0.5 }}
         >
           <SectionHeader
-            subtitle={safeWhy.subtitle}
             title={safeWhy.title}
             description={safeWhy.description}
           />

@@ -33,17 +33,19 @@ const Footer = () => {
   const servicesData = menu.main.find((item) => item.name === "Services");
 
   const featuredServices = [
+    "/custom-software-development",
     "/mobile-app-development",
     "/web-development",
     "/web-design",
     "/digital-marketing",
-    "/custom-software-development",
   ];
 
   const services =
     servicesData?.groups
       ?.flatMap((group) => group.items)
       .filter((item) => featuredServices.includes(item.url)) || [];
+
+      console.log("services ",services)
 
   return (
     <footer className="container relative bg-gradient-to-b bg-white">
@@ -148,9 +150,10 @@ const Footer = () => {
                   href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location.replace(/<[^>]*>/g, ""))}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="leading-relaxed text-gray-800 hover:text-primary transition-colors duration-300 "
+                  className="group relative inline-block leading-relaxed text-gray-800 hover:text-primary transition-colors duration-300"
                 >
                   {markdownify(location)}
+                  <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full" />
                 </a>
               </li>
 
@@ -162,9 +165,10 @@ const Footer = () => {
                   </div>
                   <Link
                     href={`tel:${phone.replace(/\\s+/g, "")}`}
-                    className="hover:text-primary text-gray-800 transition duration-300"
+                    className="group relative inline-block hover:text-primary text-gray-800 transition duration-300"
                   >
                     {phone}
+                    <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full" />
                   </Link>
                 </li>
               )}
@@ -177,9 +181,10 @@ const Footer = () => {
                   </div>
                   <Link
                     href={`mailto:${email}`}
-                    className="hover:text-primary text-gray-800 transition duration-300"
+                    className="group relative inline-block hover:text-primary text-gray-800 transition duration-300"
                   >
                     {email}
+                    <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full" />
                   </Link>
                 </li>
               )}
@@ -201,7 +206,7 @@ const Footer = () => {
           whileInView="show"
           viewport={{ once: true }}
           custom={3}
-          className="border-t border-gray-200 py-2 text-base text-gray-800 text-center flex items-center justify-center flex-wrap gap-1"
+          className="border-t border-gray-200 py-2 text-base text-gray-800 text-center flex items-center justify-center flex-wrap gap-1 [&_a]:text-primary [&_a]:font-medium hover:[&_a]:underline [&_a]:decoration-2 [&_a]:underline-offset-4"
         >
           <span>&copy; {new Date().getFullYear()}</span>
           {markdownify(copyright, "span")}

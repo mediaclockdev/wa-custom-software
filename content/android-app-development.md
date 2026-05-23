@@ -20,13 +20,11 @@ brands:
   - /images/brands/06-colored.png
 
 intro:
-  subtitle: ANDROID DEVELOPMENT SPECIALISTS
   title: Expert Android App Developers in Perth, Australia
   description: |
     In Western Australia Development Company, we are experts in developing quality, user-focused Android applications that aid businesses to expand, innovate, and remain relevant in a constantly changing digital world. With Android running the majority of smartphones around the world, Perth businesses are increasingly using customized Android applications to broaden their reach, improve customer engagement, and improve processes.<br> </br>Our team of Perth based Android developers bring an extensive technical background, the latest Android development techniques and a dedication to quality to each project. If you're a start-up developing your first app or an established company looking for an scalable Android options, we create solutions that match your goals and make a an impact on your business.
 
 services:
-  subtitle: OUR SERVICES
   title: Android App Development Services in Perth
   description: We provide a wide selection of Android apps development services, specifically designed to meet the specific demands of business owners throughout Perth as well as Western Australia. Our approach combines the latest in user experience, innovation and technology to produce applications that are visually striking and technically robust.
   list:
@@ -61,7 +59,6 @@ services:
       url: /images/service/android-development/ecomm.jpg
 
 why:
-  subtitle: OUR COMPETITIVE EDGE
   title: Why We Stand Out as a Leading Android App Development Partner
   description: Our company is committed to providing high-quality Android app solutions backed by industry best practices and local expertise
   list:
@@ -77,7 +74,6 @@ why:
       content: We continue to support you after launch with updates, improvements, and troubleshooting to ensure your app remains competitive and user-friendly over time.
 
 process:
-  subtitle: DEVELOPMENT ROADMAP
   title: Our Android App Development Roadmap
   description: Our structured roadmap ensures that your app is developed systematically, efficiently, and with complete clarity at every stage.
   steps:
@@ -95,7 +91,6 @@ process:
       content: After launch, we provide continuous updates, new features, design improvements, and technical support to keep your app competitive.
 
 industries:
-  subtitle: INDUSTRIES
   title: Industries We Serve
   list:
     - title: Healthcare and Wellness
@@ -108,7 +103,6 @@ industries:
     - title: Startup & Innovation Sectors
 
 technologies:
-  subtitle: TECHNOLOGY STACK
   title: Android Technologies We Use
   groups:
     - title: Platforms & Frameworks

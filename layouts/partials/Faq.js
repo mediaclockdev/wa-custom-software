@@ -38,7 +38,7 @@ const Faq = ({ faq }) => {
                   initial={false}
                   animate={{ scaleX: isActive ? 1 : 0 }}
                   transition={{ duration: 0.35, ease: "easeInOut" }}
-                  className="h-1 w-full origin-left bg-gradient-to-r from-primary to-purple-500"
+                  className="h-1 w-full origin-left bg-gradient-to-r from-primary to-secondary"
                 />
 
                 <div className="p-3 px-4lg:p-6 lg:py-5">

@@ -12,7 +12,6 @@ const ServiceValue = ({ value }) => {
     <section className="section bg-gradient-to-b from-theme-light/80 via-white to-theme-light/40">
       <div className="container">
         <SectionHeader
-          subtitle={value.subtitle}
           title={value.title}
           description={value.description}
         />

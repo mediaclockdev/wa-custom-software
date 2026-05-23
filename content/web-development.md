@@ -19,17 +19,14 @@ brands:
   - /images/brands/05-colored.png
 
 intro:
-  subtitle: PERTH WEB SPECIALISTS
   title: Perth’s Trusted Web Development Agency
   description: The team at Western Australia Development Company, we're not just an agency for web development we are designers, engineers and digital problem solvers dedicated to creating powerful web-based experiences for businesses in Perth as well as Western Australia. Our strategy is built on collaboration, innovation and technological excellence. We design and build contemporary, flexible, and scalable websites and web-based applications that are tailored to your individual needs and built to expand with your company's growth.<br> </br>In everything from custom-designed web design to large scale platforms we are focused on providing digital solutions that are flawless now and will continue to add value for years to come. When you partner with us, you'll be working with a Perth-based team dedicated to your success over the long term.
 
 subIntro:
-  subtitle: WEB DEVELOPMENT
   title: Driving Digital Success Through Custom Web Development
   description: Our team creates applications and websites that blend aesthetics, performance and user experience, developing digital foundations that can help organizations stand out in the highly competitive markets.
 
 services:
-  subtitle: OUR SERVICES
   title: Our Web Development Services
   description: Our team creates applications and websites that blend aesthetics, performance and user experience, developing digital foundations that can help organizations stand out in the highly competitive markets.
   list:
@@ -64,7 +61,6 @@ services:
       url: /images/service/web-development/responsive.png
 
 why:
-  subtitle: OUR COMPETITIVE EDGE
   title: Why Choose Western Australia Development Company
   list:
     - title: Perth-Based Expertise
@@ -79,7 +75,6 @@ why:
       content: From the initial concept to deployment and for a long time after launchwe offer maintenance monitoring, as well as ongoing support to ensure your site is always performing at its best.
 
 process:
-  subtitle: HOW WE WORK
   title: Our Approach to Web Development
   description: We believe in a collaborative development process that involves you at every step. Our goal is to deliver not only exceptional websites but also a clear and enjoyable experience while working with us.
   steps:
@@ -93,7 +88,6 @@ process:
       content: After rigorous testing and final approval, your website is launched with minimal downtime. We provide full post-launch support, monitoring, updates, and performance optimisation.
 
 value:
-  subtitle: BUSINESS VALUE
   title: What Sets Our Services Apart
   list:
     - title: User-Focused Development
@@ -104,7 +98,6 @@ value:
       content: We offer reliable, ongoing support and maintenance so your business always has expert help just a call away.
 
 technologies:
-  subtitle: TECHNOLOGY STACK
   title: Technologies We Use
   groups:
     - title: Frontend Technologies
@@ -140,7 +133,6 @@ technologies:
         - Google Cloud
 
 testimonial:
-  subtitle: CLIENT FEEDBACK
   title: Trusted by Perth Businesses
   list:
     - author: Sarah Thompson

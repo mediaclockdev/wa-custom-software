@@ -19,13 +19,11 @@ brands:
   - /images/brands/06-colored.png
 
 intro:
-  subtitle: PERTH DIGITAL GROWTH PARTNER
   title: Perth’s Growth-Focused Digital Marketing Experts
   description: |
     If your company is ready for growth, Western Australia is here to help you make it happen. As Perth's digital marketing growth experts, we blend the deep WA market knowledge with the most effective digital strategies that yield concrete outcomes. Our team isn't a believer in general marketing. Each campaign is customized to your objectives, audience and industry to ensure maximum impact.<br> </br>We've helped start-ups expand faster, increased the flow of leads for businesses that provide services and generated higher ROI for eCommerce companies. Through close collaboration with Perth businesses, Western Australia ensures every campaign is a success in delivering visibility, engagement and a real increase in revenue.
 
 services:
-  subtitle: OUR SERVICES
   title: Digital Marketing Services in Perth
   description: Full-funnel marketing services delivered by one in-house team for consistent strategy and execution.
 
@@ -117,7 +115,6 @@ services:
       url: /images/service/digital-marketing/web-dev.webp
 
 why:
-  subtitle: OUR COMPETITIVE EDGE
   title: Why Perth Brands Partner With Western Australia Development Company
   list:
     - title: Local WA Insight
@@ -130,7 +127,6 @@ why:
       content: Our frameworks are designed to scale with your business from early traction to sustained growth.
 
 process:
-  subtitle: OUR PROCESS
   title: Our Digital Marketing Execution Framework
   steps:
     - title: Strategy and Channel Planning
@@ -143,7 +139,6 @@ process:
       content: You receive transparent dashboards, regular reporting, and strategy reviews focused on ROI.
 
 industries:
-  subtitle: Industries
   title: Industries We Help Grow
   list:
     - title: Small & Medium Businesses

@@ -80,7 +80,7 @@ export default function Hero({ banner }) {
                   return (
                     <span
                       key={i}
-                      className="inline bg-gradient-to-r from-primary via-blue-400 to-primary bg-[length:200%_100%] bg-clip-text text-transparent pb-2"
+                      className="inline bg-gradient-to-r from-primary to-secondary bg-[length:200%_100%] bg-clip-text text-transparent pb-2"
                     >
                       <AnimatedText text={part} />
                     </span>
@@ -102,7 +102,7 @@ export default function Hero({ banner }) {
                 return (
                   <span key={i} className="block">
                     {isLast ? (
-                      <span className="bg-gradient-to-r from-primary via-blue-500 to-indigo-500 bg-clip-text text-transparent">
+                      <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                         <AnimatedText text={part} delay={i * 0.4} />
                       </span>
                     ) : (
@@ -259,7 +259,7 @@ export default function Hero({ banner }) {
                       initial={{ width: 0 }}
                       animate={{ width: "100%" }}
                       transition={{ duration: 1.5, delay: 2, ease: "easeOut" }}
-                      className="h-full bg-gradient-to-r from-primary to-indigo-500"
+                      className="h-full bg-gradient-to-r from-primary to-secondary"
                     />
                   </div>
                 </motion.div>
@@ -413,7 +413,7 @@ export default function Hero({ banner }) {
                       initial={{ width: 0 }}
                       animate={{ width: "100%" }}
                       transition={{ duration: 1, delay: 2.5, ease: "easeOut" }}
-                      className="h-full bg-gradient-to-r from-primary via-blue-500 to-indigo-500"
+                      className="h-full bg-gradient-to-r from-primary to-secondary"
                     />
                   </div>
                 </motion.div>

@@ -9,33 +9,12 @@ const icons = [FaSearch, FaDraftingCompass, FaCode, FaRocket, FaDraftingCompass]
 /* ─── colour palette per card ─── */
 const cardAccents = [
   {
-    gradient: "from-primary to-primary/80",
-    bg: "from-primary/[0.06] to-primary/[0.02]",
-    border: "border-primary/15",
-    number: "text-primary/[0.07]",
-    bar: "from-primary to-primary/60",
-  },
-  {
-    gradient: "from-secondary to-secondary/80",
-    bg: "from-secondary/[0.06] to-secondary/[0.02]",
-    border: "border-secondary/15",
-    number: "text-secondary/[0.07]",
-    bar: "from-secondary to-secondary/60",
-  },
-  {
     gradient: "from-primary to-secondary",
     bg: "from-primary/[0.05] to-secondary/[0.03]",
     border: "border-primary/15",
     number: "text-primary/[0.07]",
     bar: "from-primary to-secondary",
-  },
-  {
-    gradient: "from-secondary to-primary",
-    bg: "from-secondary/[0.05] to-primary/[0.03]",
-    border: "border-secondary/15",
-    number: "text-secondary/[0.07]",
-    bar: "from-secondary to-primary",
-  },
+  }
 ];
 
 const containerVariants = {
@@ -73,7 +52,6 @@ const PageProcess = ({ process }) => {
           transition={{ duration: 0.5 }}
         >
           <SectionHeader
-            subtitle={process.subtitle}
             title={process.title}
             description={process.description}
           />

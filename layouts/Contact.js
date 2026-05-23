@@ -11,29 +11,42 @@ import Link from "next/link";
 import { markdownify } from "@lib/utils/textConverter";
 import { useState } from "react";
 import * as yup from "yup";
+import ButtonLink from "./components/ui/ButtonLink";
+
+const SERVICE_OPTIONS = [
+  "Custom Software Development",
+  "MVP or Prototype",
+  "UI/UX Design",
+  "Website Design",
+  "Help on Existing Product",
+];
 
 const contactSchema = yup.object().shape({
+  selectedServices: yup
+    .array()
+    .min(1, "Please select at least one service"),
   name: yup
     .string()
     .trim()
     .required("Name is required")
     .matches(/[a-zA-Z]/, "Name must contain at least one letter")
     .matches(/^[a-zA-Z]+([\s\-'][a-zA-Z]+)*$/, "Name can only contain letters, spaces, hyphens, and apostrophes"),
+  companyName: yup
+    .string()
+    .trim(),
   email: yup
     .string()
     .trim()
     .required("Email is required")
     .email("Invalid email address"),
-  subject: yup
+  phone: yup
+    .string()
+    .trim(),
+  description: yup
     .string()
     .trim()
-    .required("Subject is required")
-    .test("not-only-whitespace", "Subject is required", (val) => val && val.trim().length > 0),
-  message: yup
-    .string()
-    .trim()
-    .required("Message is required")
-    .test("not-only-whitespace", "Message is required", (val) => val && val.trim().length > 0),
+    .required("Description is required")
+    .test("not-only-whitespace", "Description is required", (val) => val && val.trim().length > 0),
 });
 
 const fadeUp = {
@@ -46,10 +59,12 @@ const Contact = ({ data }) => {
   const { title, banner, services, contact_info } = frontmatter;
 
   const [formData, setFormData] = useState({
+    selectedServices: [],
     name: "",
+    companyName: "",
     email: "",
-    subject: "",
-    message: "",
+    phone: "",
+    description: "",
   });
   const [errors, setErrors] = useState({});
   const [isSuccess, setIsSuccess] = useState(false);
@@ -60,12 +75,15 @@ const Contact = ({ data }) => {
     // Email: strip all whitespace (emails never have spaces)
     if (e.target.name === "email") {
       value = value.replace(/\s/g, "");
+    } else if (e.target.name === "phone") {
+      // Allow only digits, spaces, +, -, and parentheses for phone
+      value = value.replace(/[^\d\s+\-()]/g, "");
     } else {
       // Prevent leading whitespace on other fields
       value = value.replace(/^\s+/, "");
 
-      // Collapse multiple consecutive spaces into one (except for message)
-      if (e.target.name !== "message") {
+      // Collapse multiple consecutive spaces into one (except for description)
+      if (e.target.name !== "description") {
         value = value.replace(/\s{2,}/g, " ");
       }
     }
@@ -73,6 +91,18 @@ const Contact = ({ data }) => {
     setFormData({ ...formData, [e.target.name]: value });
     if (errors[e.target.name]) {
       setErrors({ ...errors, [e.target.name]: "" });
+    }
+  };
+
+  const toggleService = (service) => {
+    setFormData((prev) => {
+      const selected = prev.selectedServices.includes(service)
+        ? prev.selectedServices.filter((s) => s !== service)
+        : [...prev.selectedServices, service];
+      return { ...prev, selectedServices: selected };
+    });
+    if (errors.selectedServices) {
+      setErrors((prev) => ({ ...prev, selectedServices: "" }));
     }
   };
 
@@ -146,7 +176,7 @@ const Contact = ({ data }) => {
                 return (
                   <span
                     key={i}
-                    className="inline bg-gradient-to-r from-primary via-blue-400 to-primary bg-[length:200%_100%] bg-clip-text text-transparent pb-2"
+                    className="inline bg-gradient-to-r from-primary to-secondary bg-[length:200%_100%] bg-clip-text text-transparent pb-2"
                   >
                     <AnimatedText text={part} />
                   </span>
@@ -202,37 +232,24 @@ const Contact = ({ data }) => {
               title: "Contact",
               size: 28,
               content: (
-                <div className="flex flex-col gap-2 mt-2 relative z-20">
+                <div className="flex flex-col gap-0 mt-2 relative z-20">
                   {contact_info?.phone && (
                     <a
                       href={`tel:${contact_info.phone}`}
                       className="flex items-start justify-center gap-2 hover:text-primary transition-colors duration-300"
                     >
-                      <FaPhoneAlt className="text-primary text-lg shrink-0 mt-1" />
-                      <span className="text-gray-700 break-all">
+                      <span className="text-gray-800 break-all">
                         <span className="hidden lg:inline">Phone: </span>
                         {contact_info.phone}
                       </span>
                     </a>
                   )}
-                  {contact_info?.mobile && (
-                    <a
-                      href={`tel:${contact_info.mobile}`}
-                      className="flex items-start justify-center gap-2 hover:text-primary transition-colors duration-300"
-                    >
-                      <FaMobile className="text-primary text-lg shrink-0 mt-1" />
-                      <span className="text-gray-700 break-all">
-                        <span className="hidden lg:inline">Mobile: </span>
-                        {contact_info.mobile}
-                      </span>
-                    </a>
-                  )}
+                  
                   <a
                     href={`mailto:${contact_info?.email || config.contact_info.email}`}
                     className="flex items-start mt-0.5 justify-center gap-2 hover:text-primary transition-colors duration-300"
                   >
-                    <FaEnvelope className="text-primary text-lg shrink-0 mt-1" />
-                    <span className="text-gray-700 break-all">
+                    <span className="text-gray-800 break-all">
                       <span className="hidden lg:inline">Email: </span>
                       {contact_info?.email || config.contact_info.email}
                     </span>
@@ -265,7 +282,7 @@ const Contact = ({ data }) => {
               <h3 className="font-semibold text-2xl mb-3 text-gray-900">
                 {item.title}
               </h3>
-              <div className="text-gray-600 text-lg leading-relaxed">
+              <div className="text-gray-800 text-lg leading-relaxed">
                 {item.content}
               </div>
             </motion.div>
@@ -329,7 +346,7 @@ const Contact = ({ data }) => {
 
             <div className="rounded-[2.5rem] bg-white p-4 md:p-14 shadow-[0_20px_60px_rgb(0,0,0,0.06)] border border-gray-100 relative z-10 w-full animate-fade-in-up text-center">
               <h3 className="text-3xl font-bold mb-2">Drop Your Message</h3>
-              <p className="text-gray-500 mb-10">We usually respond within 24 hours.</p>
+              <p className="text-gray-500 mb-4">We usually respond within 24 hours.</p>
 
               {isSuccess && (
                 <motion.div
@@ -350,7 +367,7 @@ const Contact = ({ data }) => {
                     type="button"
                     onClick={() => {
                       setIsSuccess(false);
-                      setFormData({ name: "", email: "", subject: "", message: "" });
+                      setFormData({ selectedServices: [], name: "", companyName: "", email: "", phone: "", description: "" });
                     }}
                     className="px-8 py-3 bg-gray-900 text-white rounded-xl font-medium hover:bg-gray-800 transition-colors"
                   >
@@ -364,10 +381,39 @@ const Contact = ({ data }) => {
                 className="space-y-6"
                 noValidate
               >
+                {/* Service Selection */}
+                <div className="space-y-3 text-left w-full">
+                  <label className="text-sm font-medium text-gray-700 ml-1">
+                    What services do you need? <span className="text-red-500 font-bold">*</span>
+                  </label>
+                  <div className="flex flex-wrap gap-3">
+                    {SERVICE_OPTIONS.map((service) => {
+                      const isSelected = formData.selectedServices.includes(service);
+                      return (
+                        <button
+                          key={service}
+                          type="button"
+                          onClick={() => toggleService(service)}
+                          className={`px-5 py-2.5 rounded-full text-sm md:text-base font-medium border transition-all duration-300 cursor-pointer
+                            ${isSelected
+                              ? 'bg-gradient-to-r from-primary to-secondary text-white border-transparent shadow-md scale-[1.03]'
+                              : 'bg-white text-gray-700 border-gray-200 hover:border-primary/40 hover:shadow-sm'
+                            }`}
+                        >
+                          {isSelected && <span className="mr-1.5">✓</span>}
+                          {service}
+                        </button>
+                      );
+                    })}
+                  </div>
+                  {errors.selectedServices && <span className="text-red-500 text-sm mt-1 ml-1 block">{errors.selectedServices}</span>}
+                </div>
+
+                {/* Name + Company Name */}
                 <div className="grid md:grid-cols-2 gap-6 w-full">
                   <div className="space-y-2 text-left w-full">
                     <label className="text-sm font-medium text-gray-700 ml-1">
-                      Full Name <span className="text-red-500 font-bold">*</span>
+                      Name <span className="text-red-500 font-bold">*</span>
                     </label>
                     <input
                       name="name"
@@ -381,7 +427,24 @@ const Contact = ({ data }) => {
                   </div>
                   <div className="space-y-2 text-left w-full">
                     <label className="text-sm font-medium text-gray-700 ml-1">
-                      Email Address <span className="text-red-500 font-bold">*</span>
+                      Company Name
+                    </label>
+                    <input
+                      name="companyName"
+                      type="text"
+                      placeholder="Your Company"
+                      value={formData.companyName}
+                      onChange={handleChange}
+                      className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:border-primary focus:ring-primary/20 bg-gray-50/50 focus:bg-white focus:ring-2 transition-all outline-none"
+                    />
+                  </div>
+                </div>
+
+                {/* Email + Phone */}
+                <div className="grid md:grid-cols-2 gap-6 w-full">
+                  <div className="space-y-2 text-left w-full">
+                    <label className="text-sm font-medium text-gray-700 ml-1">
+                      Email <span className="text-red-500 font-bold">*</span>
                     </label>
                     <input
                       name="email"
@@ -393,44 +456,44 @@ const Contact = ({ data }) => {
                     />
                     {errors.email && <span className="text-red-500 text-sm mt-1 ml-1 block">{errors.email}</span>}
                   </div>
+                  <div className="space-y-2 text-left w-full">
+                    <label className="text-sm font-medium text-gray-700 ml-1">
+                      Phone <span className="text-gray-400 font-normal">(optional)</span>
+                    </label>
+                    <input
+                      name="phone"
+                      type="tel"
+                      placeholder="+61 4XX XXX XXX"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:border-primary focus:ring-primary/20 bg-gray-50/50 focus:bg-white focus:ring-2 transition-all outline-none"
+                    />
+                  </div>
                 </div>
 
+                {/* Description */}
                 <div className="space-y-2 text-left w-full">
                   <label className="text-sm font-medium text-gray-700 ml-1">
-                    Subject <span className="text-red-500 font-bold">*</span>
-                  </label>
-                  <input
-                    name="subject"
-                    type="text"
-                    placeholder="How can we help?"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    className={`w-full px-5 py-4 rounded-xl border ${errors.subject ? 'border-red-500 focus:ring-red-500/20' : 'border-gray-200 focus:border-primary focus:ring-primary/20'} bg-gray-50/50 focus:bg-white focus:ring-2 transition-all outline-none`}
-                  />
-                  {errors.subject && <span className="text-red-500 text-sm mt-1 ml-1 block">{errors.subject}</span>}
-                </div>
-
-                <div className="space-y-2 text-left w-full">
-                  <label className="text-sm font-medium text-gray-700 ml-1">
-                    Message <span className="text-red-500 font-bold">*</span>
+                    Description <span className="text-red-500 font-bold">*</span>
                   </label>
                   <textarea
-                    name="message"
+                    name="description"
                     rows="5"
                     placeholder="Tell us about your project..."
-                    value={formData.message}
+                    value={formData.description}
                     onChange={handleChange}
-                    className={`w-full px-5 py-4 rounded-xl border ${errors.message ? 'border-red-500 focus:ring-red-500/20' : 'border-gray-200 focus:border-primary focus:ring-primary/20'} bg-gray-50/50 focus:bg-white focus:ring-2 transition-all outline-none resize-none`}
+                    className={`w-full px-5 py-4 rounded-xl border ${errors.description ? 'border-red-500 focus:ring-red-500/20' : 'border-gray-200 focus:border-primary focus:ring-primary/20'} bg-gray-50/50 focus:bg-white focus:ring-2 transition-all outline-none resize-none`}
                   />
-                  {errors.message && <span className="text-red-500 text-sm mt-1 ml-1 block">{errors.message}</span>}
+                  {errors.description && <span className="text-red-500 text-sm mt-1 ml-1 block">{errors.description}</span>}
                 </div>
 
-                <button
+                {/* <button
                   type="submit"
-                  className="w-full bg-primary text-white py-4 rounded-xl font-semibold text-lg hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 active:scale-[0.98] bg-gradient-to-r hover:from-primary hover:to-blue-600 mt-4"
+                  className="w-full bg-primary text-white py-4 rounded-xl font-semibold text-lg hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 active:scale-[0.98] bg-gradient-to-r hover:from-primary hover:to-secondary mt-4"
                 >
                   Send Message
-                </button>
+                </button> */}
+                <ButtonLink title="Send Message" onClick={handleSubmit} />
               </form>
             </div>
           </motion.div>

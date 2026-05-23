@@ -44,7 +44,6 @@ const Industries = ({ industries }) => {
     <section className="relative overflow-hidden section border-y border-border/50">
       <div className="container">
         <SectionHeader
-          subtitle={industries.subtitle}
           title={industries.title}
           description={industries.description}
         />
