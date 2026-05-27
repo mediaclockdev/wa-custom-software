@@ -6,7 +6,7 @@ description: High-performance mobile app development for Perth and Western Austr
 
 banner:
   title: "Mobile App </br> Development in Perth"
-  image: /images/service/mobile-app-development/hero.jpg
+  image: /images/service/mobile-app-development/hero1.jpg
   link:
     label: Talk to Our Experts
     href: /contact
@@ -31,12 +31,12 @@ services:
     - icon: smartphone
       title: Android App Development
       content: We create high-performance Android apps that meet your company's needs, using modern languages like Kotlin along with Java. The Perth office of our Android development team ensures that each application is safe as well as scalable and designed to work seamlessly across the entire Android operating system.
-      url: /images/service/mobile-app-development/android-development.jpg
+      url: /images/service/mobile-app-development/android-development.webp
 
     - icon: tablet
       title: iPhone App Development
       content: We have iOS app developers specialize with Swift and Objective-C and create custom iPhone as well as iPad applications that are engineered to provide superior performance, speed as well as user-experience. If you're aiming at consumer markets or internal business processes our iOS solutions provide extraordinary performance.
-      url: /images/service/mobile-app-development/iphone-development.png
+      url: /images/service/mobile-app-development/iphone-development.jpg
 
     - icon: layers
       title: Flutter App Development

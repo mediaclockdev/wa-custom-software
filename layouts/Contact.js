@@ -22,31 +22,32 @@ const SERVICE_OPTIONS = [
 ];
 
 const contactSchema = yup.object().shape({
-  selectedServices: yup
-    .array()
-    .min(1, "Please select at least one service"),
+  selectedServices: yup.array().min(1, "Please select at least one service"),
   name: yup
     .string()
     .trim()
     .required("Name is required")
     .matches(/[a-zA-Z]/, "Name must contain at least one letter")
-    .matches(/^[a-zA-Z]+([\s\-'][a-zA-Z]+)*$/, "Name can only contain letters, spaces, hyphens, and apostrophes"),
-  companyName: yup
-    .string()
-    .trim(),
+    .matches(
+      /^[a-zA-Z]+([\s\-'][a-zA-Z]+)*$/,
+      "Name can only contain letters, spaces, hyphens, and apostrophes",
+    ),
+  companyName: yup.string().trim(),
   email: yup
     .string()
     .trim()
     .required("Email is required")
     .email("Invalid email address"),
-  phone: yup
-    .string()
-    .trim(),
+  phone: yup.string().trim(),
   description: yup
     .string()
     .trim()
     .required("Description is required")
-    .test("not-only-whitespace", "Description is required", (val) => val && val.trim().length > 0),
+    .test(
+      "not-only-whitespace",
+      "Description is required",
+      (val) => val && val.trim().length > 0,
+    ),
 });
 
 const fadeUp = {
@@ -192,11 +193,18 @@ const Contact = ({ data }) => {
           </motion.h1>
 
           <p className="text-gray-600 text-lg mt-4 leading-relaxed max-w-2xl mx-auto">
-            {banner?.description?.replace(" We work with businesses across Perth and Western Australia.", "") || "Get in touch to discuss your IT, software development, web development, or digital marketing requirements."}
+            {banner?.description?.replace(
+              " We work with businesses across Perth and Western Australia.",
+              "",
+            ) ||
+              "Get in touch to discuss your IT, software development, web development, or digital marketing requirements."}
             <br />
             <br />
-            {(banner?.description?.includes("We work with businesses") || true) && (
-              <span className="font-semibold text-primary">We work with businesses across Perth and Western Australia.</span>
+            {(banner?.description?.includes("We work with businesses") ||
+              true) && (
+              <span className="font-semibold text-primary">
+                We work with businesses across Perth and Western Australia.
+              </span>
             )}
           </p>
         </motion.div>
@@ -209,7 +217,9 @@ const Contact = ({ data }) => {
               title: "Office Address",
               size: 34,
               link: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(contact_info?.address ? contact_info.address.replace(/<[^>]*>/g, "") : "41 Clearview Avenue, Yokine, Western Australia 6060")}`,
-              content: contact_info?.address ? markdownify(contact_info.address, "span") : (
+              content: contact_info?.address ? (
+                markdownify(contact_info.address, "span")
+              ) : (
                 <>
                   41 Clearview Avenue <br />
                   Yokine, Western Australia 6060
@@ -220,10 +230,12 @@ const Contact = ({ data }) => {
               Icon: FaClock,
               title: "Business Hours",
               size: 28,
-              content: contact_info?.business_hours ? markdownify(contact_info.business_hours, "span") : (
+              content: contact_info?.business_hours ? (
+                markdownify(contact_info.business_hours, "span")
+              ) : (
                 <>
                   Monday to Friday <br />
-                  9:00 AM – 6:00 PM AST
+                  9:00 – 6:00
                 </>
               ),
             },
@@ -244,7 +256,7 @@ const Contact = ({ data }) => {
                       </span>
                     </a>
                   )}
-                  
+
                   <a
                     href={`mailto:${contact_info?.email || config.contact_info.email}`}
                     className="flex items-start mt-0.5 justify-center gap-2 hover:text-primary transition-colors duration-300"
@@ -277,7 +289,10 @@ const Contact = ({ data }) => {
                 />
               )}
               <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-5 transition-all duration-500  group-hover:scale-110 group-hover:-rotate-3 group-hover:shadow-md bg-gradient-to-br group-hover:from-secondary group-hover:to-primary">
-                <item.Icon size={item.size} className="text-primary group-hover:text-white transition-colors duration-500" />
+                <item.Icon
+                  size={item.size}
+                  className="text-primary group-hover:text-white transition-colors duration-500"
+                />
               </div>
               <h3 className="font-semibold text-2xl mb-3 text-gray-900">
                 {item.title}
@@ -291,7 +306,6 @@ const Contact = ({ data }) => {
 
         {/* Main Section - Stacked and Centered */}
         <div className="max-w-4xl mx-auto flex flex-col gap-8 items-center">
-
           {/* Top - Services (Centered & Horizontal Flow) */}
           <motion.div
             variants={containerVariants}
@@ -300,9 +314,7 @@ const Contact = ({ data }) => {
             viewport={{ once: true }}
             className="w-full text-center"
           >
-            <h3 className="text-3xl font-bold mb-6">
-              How Can We Help You?
-            </h3>
+            <h3 className="text-3xl font-bold mb-6">How Can We Help You?</h3>
 
             <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
               {(services || []).map((item, index) => (
@@ -346,7 +358,9 @@ const Contact = ({ data }) => {
 
             <div className="rounded-[2.5rem] bg-white p-4 md:p-14 shadow-[0_20px_60px_rgb(0,0,0,0.06)] border border-gray-100 relative z-10 w-full animate-fade-in-up text-center">
               <h3 className="text-3xl font-bold mb-2">Drop Your Message</h3>
-              <p className="text-gray-500 mb-4">We usually respond within 24 hours.</p>
+              <p className="text-gray-500 mb-4">
+                We usually respond within 24 hours.
+              </p>
 
               {isSuccess && (
                 <motion.div
@@ -355,11 +369,23 @@ const Contact = ({ data }) => {
                   className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-white/95 backdrop-blur-sm rounded-[2.5rem]"
                 >
                   <div className="w-20 h-20 bg-green-100 text-green-500 rounded-full flex items-center justify-center mb-4">
-                    <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    <svg
+                      className="w-10 h-10"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M5 13l4 4L19 7"
+                      />
                     </svg>
                   </div>
-                  <h4 className="text-2xl font-bold text-gray-900 mb-2">Message Sent!</h4>
+                  <h4 className="text-2xl font-bold text-gray-900 mb-2">
+                    Message Sent!
+                  </h4>
                   <p className="text-gray-600 mb-6 text-center max-w-sm">
                     Thank you for reaching out. We will get back to you shortly.
                   </p>
@@ -367,7 +393,14 @@ const Contact = ({ data }) => {
                     type="button"
                     onClick={() => {
                       setIsSuccess(false);
-                      setFormData({ selectedServices: [], name: "", companyName: "", email: "", phone: "", description: "" });
+                      setFormData({
+                        selectedServices: [],
+                        name: "",
+                        companyName: "",
+                        email: "",
+                        phone: "",
+                        description: "",
+                      });
                     }}
                     className="px-8 py-3 bg-gray-900 text-white rounded-xl font-medium hover:bg-gray-800 transition-colors"
                   >
@@ -376,28 +409,27 @@ const Contact = ({ data }) => {
                 </motion.div>
               )}
 
-              <form
-                onSubmit={handleSubmit}
-                className="space-y-6"
-                noValidate
-              >
+              <form onSubmit={handleSubmit} className="space-y-6" noValidate>
                 {/* Service Selection */}
                 <div className="space-y-3 text-left w-full">
                   <label className="text-sm font-medium text-gray-700 ml-1">
-                    What services do you need? <span className="text-red-500 font-bold">*</span>
+                    What services do you need?{" "}
+                    <span className="text-red-500 font-bold">*</span>
                   </label>
                   <div className="flex flex-wrap gap-3">
                     {SERVICE_OPTIONS.map((service) => {
-                      const isSelected = formData.selectedServices.includes(service);
+                      const isSelected =
+                        formData.selectedServices.includes(service);
                       return (
                         <button
                           key={service}
                           type="button"
                           onClick={() => toggleService(service)}
                           className={`px-5 py-2.5 rounded-full text-sm md:text-base font-medium border transition-all duration-300 cursor-pointer
-                            ${isSelected
-                              ? 'bg-gradient-to-r from-primary to-secondary text-white border-transparent shadow-md scale-[1.03]'
-                              : 'bg-white text-gray-700 border-gray-200 hover:border-primary/40 hover:shadow-sm'
+                            ${
+                              isSelected
+                                ? "bg-gradient-to-r from-primary to-secondary text-white border-transparent shadow-md scale-[1.03]"
+                                : "bg-white text-gray-700 border-gray-200 hover:border-primary/40 hover:shadow-sm"
                             }`}
                         >
                           {isSelected && <span className="mr-1.5">✓</span>}
@@ -406,7 +438,11 @@ const Contact = ({ data }) => {
                       );
                     })}
                   </div>
-                  {errors.selectedServices && <span className="text-red-500 text-sm mt-1 ml-1 block">{errors.selectedServices}</span>}
+                  {errors.selectedServices && (
+                    <span className="text-red-500 text-sm mt-1 ml-1 block">
+                      {errors.selectedServices}
+                    </span>
+                  )}
                 </div>
 
                 {/* Name + Company Name */}
@@ -421,9 +457,13 @@ const Contact = ({ data }) => {
                       placeholder="John Doe"
                       value={formData.name}
                       onChange={handleChange}
-                      className={`w-full px-5 py-4 rounded-xl border ${errors.name ? 'border-red-500 focus:ring-red-500/20' : 'border-gray-200 focus:border-primary focus:ring-primary/20'} bg-gray-50/50 focus:bg-white focus:ring-2 transition-all outline-none`}
+                      className={`w-full px-5 py-4 rounded-xl border ${errors.name ? "border-red-500 focus:ring-red-500/20" : "border-gray-200 focus:border-primary focus:ring-primary/20"} bg-gray-50/50 focus:bg-white focus:ring-2 transition-all outline-none`}
                     />
-                    {errors.name && <span className="text-red-500 text-sm mt-1 ml-1 block">{errors.name}</span>}
+                    {errors.name && (
+                      <span className="text-red-500 text-sm mt-1 ml-1 block">
+                        {errors.name}
+                      </span>
+                    )}
                   </div>
                   <div className="space-y-2 text-left w-full">
                     <label className="text-sm font-medium text-gray-700 ml-1">
@@ -452,13 +492,20 @@ const Contact = ({ data }) => {
                       placeholder="john@example.com"
                       value={formData.email}
                       onChange={handleChange}
-                      className={`w-full px-5 py-4 rounded-xl border ${errors.email ? 'border-red-500 focus:ring-red-500/20' : 'border-gray-200 focus:border-primary focus:ring-primary/20'} bg-gray-50/50 focus:bg-white focus:ring-2 transition-all outline-none`}
+                      className={`w-full px-5 py-4 rounded-xl border ${errors.email ? "border-red-500 focus:ring-red-500/20" : "border-gray-200 focus:border-primary focus:ring-primary/20"} bg-gray-50/50 focus:bg-white focus:ring-2 transition-all outline-none`}
                     />
-                    {errors.email && <span className="text-red-500 text-sm mt-1 ml-1 block">{errors.email}</span>}
+                    {errors.email && (
+                      <span className="text-red-500 text-sm mt-1 ml-1 block">
+                        {errors.email}
+                      </span>
+                    )}
                   </div>
                   <div className="space-y-2 text-left w-full">
                     <label className="text-sm font-medium text-gray-700 ml-1">
-                      Phone <span className="text-gray-400 font-normal">(optional)</span>
+                      Phone{" "}
+                      <span className="text-gray-400 font-normal">
+                        (optional)
+                      </span>
                     </label>
                     <input
                       name="phone"
@@ -474,7 +521,8 @@ const Contact = ({ data }) => {
                 {/* Description */}
                 <div className="space-y-2 text-left w-full">
                   <label className="text-sm font-medium text-gray-700 ml-1">
-                    Description <span className="text-red-500 font-bold">*</span>
+                    Description{" "}
+                    <span className="text-red-500 font-bold">*</span>
                   </label>
                   <textarea
                     name="description"
@@ -482,9 +530,13 @@ const Contact = ({ data }) => {
                     placeholder="Tell us about your project..."
                     value={formData.description}
                     onChange={handleChange}
-                    className={`w-full px-5 py-4 rounded-xl border ${errors.description ? 'border-red-500 focus:ring-red-500/20' : 'border-gray-200 focus:border-primary focus:ring-primary/20'} bg-gray-50/50 focus:bg-white focus:ring-2 transition-all outline-none resize-none`}
+                    className={`w-full px-5 py-4 rounded-xl border ${errors.description ? "border-red-500 focus:ring-red-500/20" : "border-gray-200 focus:border-primary focus:ring-primary/20"} bg-gray-50/50 focus:bg-white focus:ring-2 transition-all outline-none resize-none`}
                   />
-                  {errors.description && <span className="text-red-500 text-sm mt-1 ml-1 block">{errors.description}</span>}
+                  {errors.description && (
+                    <span className="text-red-500 text-sm mt-1 ml-1 block">
+                      {errors.description}
+                    </span>
+                  )}
                 </div>
 
                 {/* <button

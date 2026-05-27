@@ -35,7 +35,7 @@ services:
     - icon: smartphone
       title: Responsive & Mobile-First Builds
       content: Today’s users surf across a variety of devices, meaning that your site should be able to adapt quickly. Mobile-first design ensures an easy structure and modern design, as well as interactive elements and seamless user experience on any size screen.
-      url: /images/service/web-design/responsive.jpg
+      url: /images/service/web-design/responsive.png
 
     - icon: shopping-cart
       title: E-commerce & CMS Development

@@ -2,6 +2,7 @@
 banner:
   title: "WA Development </br> in Perth"
   description: We provide web, mobile app and IT services in Perth. With 10+ years of experience, we build secure, scalable and high-performing digital solutions for long-term business growth.
+  image: "/images/hero/hero.jpeg"
   link:
     label: Get in Touch
     href: "tel:+1234567890"

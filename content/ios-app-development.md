@@ -51,7 +51,7 @@ services:
     - icon: settings
       title: App Maintenance & Version Upgrades
       content: Post-launch, we offer full maintenance for iOS apps—ensuring compatibility with new iOS releases, performing security updates, fixing bugs, and optimizing performance so your app remains ahead of the curve.
-      url: /images/service/ios-development/maintain.png
+      url: /images/service/ios-development/maintain.jpg
 
     - icon: briefcase
       title: Enterprise & Consumer iOS Solutions

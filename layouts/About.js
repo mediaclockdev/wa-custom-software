@@ -12,7 +12,7 @@ const About = ({ data }) => {
 
   return (
     <section>
-      <Hero banner={banner} isParticle={false} />
+      <Hero banner={banner} variant="about" />
       <AboutSection about={about} />
       <ServiceFeatures services={services} />
       <PageProcess process={process} />

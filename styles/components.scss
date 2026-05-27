@@ -496,6 +496,27 @@
   }
 }
 
+/* ================================
+   HERO FLOATING ANIMATION
+   GPU-accelerated CSS animation for smooth
+   floating without compositing layer conflicts.
+================================ */
+
+.hero-float {
+  animation: heroFloat 7s ease-in-out infinite;
+}
+
+@keyframes heroFloat {
+  0%, 100% { transform: translate3d(0, -8px, 0); }
+  50% { transform: translate3d(0, 8px, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-float {
+    animation: none;
+  }
+}
+
 //fade
 // .fade-up, .fade-left {
 //   opacity: 0;
@@ -504,3 +525,4 @@
 // .fade-left {
 //   opacity: 0;
 // }
+

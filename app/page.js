@@ -16,7 +16,7 @@ const Home = async () => {
   return (
     <GSAPWrapper>
       <SeoMeta title="Home" />
-      <Hero banner={banner} isParticle={true} />
+      <Hero banner={banner} />
       <Features features={features} />
       <ServicePanel services={services} />
       <PageProcess process={process} />

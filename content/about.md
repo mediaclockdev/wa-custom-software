@@ -6,7 +6,7 @@ description: Learn more about Western Australia Software Development Company, a 
 
 banner:
   title: "About <br /> Us"
-  image: /images/service/hero/aboutbg.png
+  image: /images/about/about.jpeg
   content: Western Australia Software Development Company offers professional digital and IT services that help businesses
   link:
     label: Contact Us
@@ -30,7 +30,7 @@ services:
   list:
     - title: Software & Web Development
       content: We help businesses build and expand their online presence by developing custom websites and web-based apps that are designed to meet business objectives.
-      url: /images/about/software.jpg
+      url: /images/about/software.png
 
     - title: Mobile Application Development
       content: We create mobile apps which support efficiency, automation and growth of businesses. We focus on usability in real-world situations.

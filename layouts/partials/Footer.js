@@ -43,9 +43,13 @@ const Footer = () => {
   const services =
     servicesData?.groups
       ?.flatMap((group) => group.items)
-      .filter((item) => featuredServices.includes(item.url)) || [];
+      .filter((item) => featuredServices.includes(item.url))
+      .sort(
+        (a, b) =>
+          featuredServices.indexOf(a.url) - featuredServices.indexOf(b.url),
+      ) || [];
 
-      console.log("services ",services)
+  console.log("services ", services);
 
   return (
     <footer className="container relative bg-gradient-to-b bg-white">
@@ -54,7 +58,6 @@ const Footer = () => {
 
       <div className="container relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6 py-4">
-
           {/* About + Social */}
           <motion.div
             variants={fadeUp}
@@ -153,7 +156,6 @@ const Footer = () => {
                   className="group relative inline-block leading-relaxed text-gray-800 hover:text-primary transition-colors duration-300"
                 >
                   {markdownify(location)}
-                  <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full" />
                 </a>
               </li>
 
@@ -168,7 +170,6 @@ const Footer = () => {
                     className="group relative inline-block hover:text-primary text-gray-800 transition duration-300"
                   >
                     {phone}
-                    <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full" />
                   </Link>
                 </li>
               )}
@@ -184,7 +185,6 @@ const Footer = () => {
                     className="group relative inline-block hover:text-primary text-gray-800 transition duration-300"
                   >
                     {email}
-                    <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full" />
                   </Link>
                 </li>
               )}

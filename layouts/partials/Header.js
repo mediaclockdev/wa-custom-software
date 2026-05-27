@@ -77,7 +77,7 @@ const Header = () => {
       >
         <nav className="navbar w-full bg-white py-2 px-3 md:px-4 rounded-full border border-slate-300 relative flex flex-nowrap items-center justify-between">
           <div className="order-0 flex-shrink-0">
-            <Logo src={logo} className="max-w-[130px] sm:max-w-none !h-auto object-contain" />
+            <Logo src={logo} />
           </div>
 
           <ul className="hidden xl:flex items-center gap-4 order-1 text-black">

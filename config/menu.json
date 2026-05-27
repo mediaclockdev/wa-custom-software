@@ -29,11 +29,11 @@
         {
           "title": "Other Services",
           "items": [
-            { "name": "Digital Marketing", "url": "/digital-marketing" },
             {
               "name": "Custom Software Development",
               "url": "/custom-software-development"
-            }
+            },
+            { "name": "Digital Marketing", "url": "/digital-marketing" }
           ]
         }
       ]

@@ -6,7 +6,7 @@ description: Custom Android app development services in Perth for secure, scalab
 
 banner:
   title: "Android App Development </br> in Perth"
-  image: /images/service/android-development/hero.jpg
+  image: /images/service/android-development/hero1.jpg
   link:
     label: Start Your Project
     href: /contact
