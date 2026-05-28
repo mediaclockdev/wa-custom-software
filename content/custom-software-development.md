@@ -20,7 +20,7 @@ brands:
 
 intro:
   title: We Build High-Performance Custom Software
-  description: We are Western Australia Development Company, we are a specialist in the delivery of customized software that is high-performance and meets the ever-changing demands of Perth companies. No matter if you're a new business looking to bring your idea to life, a well-established company that is looking to improve internal processes or a business that is modernising an outdated system, our team develops reliable, secure, reliable, and effective software solutions that are designed to facilitate the long-term growth of your business.</br> </br> With a local team that is dedicated and a dedication to quality, we will work together with clients from conception to finalization, making sure that your customized software will yield measurable results and a high Return on Investment. Our method combines technical knowledge as well as collaborative processes. An in-depth knowledge of Western Australia's business environment.
+  description: We are WA Development Company, we are a specialist in the delivery of customized software that is high-performance and meets the ever-changing demands of Perth companies. No matter if you're a new business looking to bring your idea to life, a well-established company that is looking to improve internal processes or a business that is modernising an outdated system, our team develops reliable, secure, reliable, and effective software solutions that are designed to facilitate the long-term growth of your business.</br> </br> With a local team that is dedicated and a dedication to quality, we will work together with clients from conception to finalization, making sure that your customized software will yield measurable results and a high Return on Investment. Our method combines technical knowledge as well as collaborative processes. An in-depth knowledge of Western Australia's business environment.
 
 services:
   title: Our Custom Software Development Services
@@ -92,7 +92,7 @@ why:
 
 process:
   title: Our Approach to Custom Software Development
-  description: At Western Australia Development Company, we prioritise strong client relationships and a smooth project experience from start to finish
+  description: At WA Development Company, we prioritise strong client relationships and a smooth project experience from start to finish
   steps:
     - title: Discovery Phase
       content: We engage in detailed consultations to understand your objectives, pain points, and project expectations. Your insights guide our strategy and ensure the solution we build aligns perfectly with your business.

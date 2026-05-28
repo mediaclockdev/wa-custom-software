@@ -22,7 +22,7 @@ brands:
 intro:
   title: Expert Android App Developers in Perth, Australia
   description: |
-    In Western Australia Development Company, we are experts in developing quality, user-focused Android applications that aid businesses to expand, innovate, and remain relevant in a constantly changing digital world. With Android running the majority of smartphones around the world, Perth businesses are increasingly using customized Android applications to broaden their reach, improve customer engagement, and improve processes.<br> </br>Our team of Perth based Android developers bring an extensive technical background, the latest Android development techniques and a dedication to quality to each project. If you're a start-up developing your first app or an established company looking for an scalable Android options, we create solutions that match your goals and make a an impact on your business.
+    In WA Development Company, we are experts in developing quality, user-focused Android applications that aid businesses to expand, innovate, and remain relevant in a constantly changing digital world. With Android running the majority of smartphones around the world, Perth businesses are increasingly using customized Android applications to broaden their reach, improve customer engagement, and improve processes.<br> </br>Our team of Perth based Android developers bring an extensive technical background, the latest Android development techniques and a dedication to quality to each project. If you're a start-up developing your first app or an established company looking for an scalable Android options, we create solutions that match your goals and make a an impact on your business.
 
 services:
   title: Android App Development Services in Perth

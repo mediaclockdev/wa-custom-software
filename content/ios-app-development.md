@@ -22,7 +22,7 @@ brands:
 intro:
   title: iOS App Developers in Perth, Australia
   description: |
-    At Western Australia Development Company, we specialise in building premium iOS applications that empower Perth-based businesses to reach the high-value Apple ecosystem. While global Android holds the largest market share, iOS remains the second most widely used mobile platform and continues to provide strong monetisation and user-loyalty opportunities.<br> </br>Our Perth-based team is experienced in the unique requirements of the Apple ecosystem native iOS development, App Store deployment, Swift/Objective-C architecture, and ongoing support. Whether you’re launching a new app or migrating an existing Android project into iOS, we provide a full suite of services tailored to the Western Australian market and beyond.
+    At WA Development Company, we specialise in building premium iOS applications that empower Perth-based businesses to reach the high-value Apple ecosystem. While global Android holds the largest market share, iOS remains the second most widely used mobile platform and continues to provide strong monetisation and user-loyalty opportunities.<br> </br>Our Perth-based team is experienced in the unique requirements of the Apple ecosystem native iOS development, App Store deployment, Swift/Objective-C architecture, and ongoing support. Whether you’re launching a new app or migrating an existing Android project into iOS, we provide a full suite of services tailored to the Western Australian market and beyond.
 
 services:
   title: iOS App Development Services in Perth

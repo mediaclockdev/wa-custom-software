@@ -1,27 +1,27 @@
 ---
-title: About Western Australia Software Development Company
+title: About WA Software Development Company
 layout: about
-seo_title: About Western Australia Software Development Company | Perth IT Experts
-description: Learn more about Western Australia Software Development Company, a trusted Perth-based IT and software development provider offering web development, mobile apps, automation and digital solutions across Western Australia.
+seo_title: About WA Software Development Company | Perth IT Experts
+description: Learn more about WA Software Development Company, a trusted Perth-based IT and software development provider offering web development, mobile apps, automation and digital solutions across WA.
 
 banner:
   title: "About <br /> Us"
   image: /images/about/about.jpeg
-  content: Western Australia Software Development Company offers professional digital and IT services that help businesses
+  content: WA Software Development Company offers professional digital and IT services that help businesses
   link:
     label: Contact Us
     href: "tel:+61410445566"
-  description: Western Australia Software Development Company offers digital and IT services that help businesses increase the online visibility of their business, automate manual tasks and use effective technology solutions. We collaborate with companies across Perth as well as Western Australia, delivering practical and flexible digital solutions
+  description: WA Software Development Company offers digital and IT services that help businesses increase the online visibility of their business, automate manual tasks and use effective technology solutions. We collaborate with companies across Perth as well as Western Australia, delivering practical and flexible digital solutions
 
 intro:
   title: iOS App Developers in Perth, Australia
   description: |
-    At Western Australia Development Company, we specialise in building premium iOS applications that empower Perth-based businesses to reach the high-value Apple ecosystem. While global Android holds the largest market share, iOS remains the second most widely used mobile platform and continues to provide strong monetisation and user-loyalty opportunities.<br> </br>Our Perth-based team is experienced in the unique requirements of the Apple ecosystem native iOS development, App Store deployment, Swift/Objective-C architecture, and ongoing support. Whether you’re launching a new app or migrating an existing Android project into iOS, we provide a full suite of services tailored to the Western Australian market and beyond.
+    At WA Development Company, we specialise in building premium iOS applications that empower Perth-based businesses to reach the high-value Apple ecosystem. While global Android holds the largest market share, iOS remains the second most widely used mobile platform and continues to provide strong monetisation and user-loyalty opportunities.<br> </br>Our Perth-based team is experienced in the unique requirements of the Apple ecosystem native iOS development, App Store deployment, Swift/Objective-C architecture, and ongoing support. Whether you’re launching a new app or migrating an existing Android project into iOS, we provide a full suite of services tailored to the Western Australian market and beyond.
 
 #about
 about:
   title: Professional IT Solutions in Western Australia
-  description: Western Australia Software Development Company is led by Kiran Kumar Patel, delivering professional IT solutions including web application development, mobile application development, business automation and digital marketing services.
+  description: WA Software Development Company is led by Kiran Kumar Patel, delivering professional IT solutions including web application development, mobile application development, business automation and digital marketing services.
   content: With more than eight years of industry experience, we support small and large businesses seeking reliable, secure and scalable IT solutions tailored to their operational requirements.
 
 #services

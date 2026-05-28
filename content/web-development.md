@@ -20,7 +20,7 @@ brands:
 
 intro:
   title: Perth’s Trusted Web Development Agency
-  description: The team at Western Australia Development Company, we're not just an agency for web development we are designers, engineers and digital problem solvers dedicated to creating powerful web-based experiences for businesses in Perth as well as Western Australia. Our strategy is built on collaboration, innovation and technological excellence. We design and build contemporary, flexible, and scalable websites and web-based applications that are tailored to your individual needs and built to expand with your company's growth.<br> </br>In everything from custom-designed web design to large scale platforms we are focused on providing digital solutions that are flawless now and will continue to add value for years to come. When you partner with us, you'll be working with a Perth-based team dedicated to your success over the long term.
+  description: The team at WA Development Company, we're not just an agency for web development we are designers, engineers and digital problem solvers dedicated to creating powerful web-based experiences for businesses in Perth as well as Western Australia. Our strategy is built on collaboration, innovation and technological excellence. We design and build contemporary, flexible, and scalable websites and web-based applications that are tailored to your individual needs and built to expand with your company's growth.<br> </br>In everything from custom-designed web design to large scale platforms we are focused on providing digital solutions that are flawless now and will continue to add value for years to come. When you partner with us, you'll be working with a Perth-based team dedicated to your success over the long term.
 
 subIntro:
   title: Driving Digital Success Through Custom Web Development
@@ -61,7 +61,7 @@ services:
       url: /images/service/web-development/responsive.png
 
 why:
-  title: Why Choose Western Australia Development Company
+  title: Why Choose WA Development Company
   list:
     - title: Perth-Based Expertise
       content: Our local team understands the unique needs of Western Australian businesses, enabling us to deliver solutions that support growth in both local and national markets.

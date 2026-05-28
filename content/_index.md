@@ -25,7 +25,7 @@ services:
         - Web Development Solutions
         - Secure and Scalable Website Builds
 
-    - title: IT Services in Perth, Western Australia
+    - title: IT Services in Perth, WA
       description: We provide reliable and cost-effective IT services in Perth, helping businesses stay connected, efficient, and prepared for future technology needs. With over 12 years of experience, our IT solutions are designed to support daily operations and long-term planning.
       items:
         - Reliable IT Support
