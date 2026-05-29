@@ -1,7 +1,5 @@
-import { Resend } from "resend";
 import { NextResponse } from "next/server";
-
-const resend = new Resend(process.env.RESEND_API);
+import nodemailer from "nodemailer";
 
 export async function POST(request) {
   try {
@@ -31,35 +29,80 @@ export async function POST(request) {
         ? selectedServices.join(", ")
         : "Not specified";
 
-    // Send email via Resend
-    const { data, error } = await resend.emails.send({
-      from: "WA Software Contact Form <onboarding@resend.dev>",
-      to: ["darshit@mediaclock.com.au"],
+    const message = {
+      from: process.env.SMTP_EMAIL,
+      to: process.env.SMTP_EMAIL,
       replyTo: email,
       subject: `New Contact Form Submission from ${name}`,
       html: `
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Company:</strong> ${companyName}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone || "Not provided"}</p>
-        <p><strong>Services:</strong> ${servicesText}</p>
-        <p><strong>Message:</strong></p>
-        <p style="white-space: pre-wrap;">${description}</p>
+        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; background-color: #f9fafb; padding: 20px; border-radius: 12px;">
+          <div style="background-color: #ffffff; padding: 30px; border-radius: 8px; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+            <h2 style="color: #111827; margin-top: 0; margin-bottom: 24px; font-size: 24px; border-bottom: 2px solid #3b82f6; padding-bottom: 12px;">
+              New Contact Inquiry
+            </h2>
+            
+            <div style="margin-bottom: 20px;">
+              <p style="margin: 0 0 10px; font-size: 15px; color: #4b5563;">
+                <strong style="color: #111827; display: inline-block; width: 100px;">Name:</strong> 
+                ${name}
+              </p>
+              <p style="margin: 0 0 10px; font-size: 15px; color: #4b5563;">
+                <strong style="color: #111827; display: inline-block; width: 100px;">Company:</strong> 
+                ${companyName || "N/A"}
+              </p>
+              <p style="margin: 0 0 10px; font-size: 15px; color: #4b5563;">
+                <strong style="color: #111827; display: inline-block; width: 100px;">Email:</strong> 
+                <a href="mailto:${email}" style="color: #3b82f6; text-decoration: none;">${email}</a>
+              </p>
+              <p style="margin: 0 0 10px; font-size: 15px; color: #4b5563;">
+                <strong style="color: #111827; display: inline-block; width: 100px;">Phone:</strong> 
+                ${phone || "Not provided"}
+              </p>
+              <p style="margin: 0 0 10px; font-size: 15px; color: #4b5563;">
+                <strong style="color: #111827; display: inline-block; width: 100px;">Services:</strong> 
+                <span style="background-color: #eff6ff; color: #1d4ed8; padding: 4px 10px; border-radius: 9999px; font-size: 13px; font-weight: 500;">${servicesText}</span>
+              </p>
+            </div>
+
+            <div style="margin-top: 30px;">
+              <h3 style="color: #111827; font-size: 16px; margin-bottom: 12px;">Message:</h3>
+              <div style="background-color: #f3f4f6; padding: 20px; border-radius: 6px; border-left: 4px solid #3b82f6; color: #374151; font-size: 15px; line-height: 1.6; white-space: pre-wrap;">${description}</div>
+            </div>
+            
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e7eb; text-align: center;">
+              <p style="color: #9ca3af; font-size: 13px; margin: 0;">
+                This email was generated from your website's contact form.
+              </p>
+            </div>
+          </div>
+        </div>
       `,
+      headers: {
+        "X-Entity-Ref-Id": "contact-form-submission",
+      },
+    };
+
+    var transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.SMTP_EMAIL,
+        pass: process.env.SMTP_PASSWORD,
+      },
     });
 
-    if (error) {
-      console.error("Resend error:", error);
+    try {
+      await transporter.sendMail(message);
+
       return NextResponse.json(
-        { error: "Failed to send email. Please try again later." },
+        { message: "Email sent successfully" },
+        { status: 200 },
+      );
+    } catch (error) {
+      return NextResponse.json(
+        { error: "Failed to send email." },
         { status: 500 },
       );
     }
-
-    return NextResponse.json(
-      { message: "Email sent successfully", id: data?.id },
-      { status: 200 },
-    );
   } catch (error) {
     console.error("API route error:", error);
     return NextResponse.json(
