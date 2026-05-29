@@ -454,8 +454,8 @@ const Contact = ({ data }) => {
                           className={`inline-flex items-center justify-center w-full sm:w-auto text-center px-5 py-2.5 rounded-full text-sm md:text-base font-medium border transition-all duration-300 cursor-pointer
                             ${
                               isSelected
-                                ? "bg-gradient-to-r from-primary to-secondary text-white border-transparent shadow-md scale-[1.03]"
-                                : "bg-white text-gray-700 border-gray-200 hover:border-primary/40 hover:shadow-sm"
+                                ? "border-primary text-primary bg-primary/5 ring-1 ring-primary/30 shadow-sm"
+                                : "bg-white text-gray-700 border-gray-200 hover:border-primary/40 hover:bg-gray-50"
                             }`}
                         >
                           {isSelected && <span className="mr-1.5">✓</span>}
