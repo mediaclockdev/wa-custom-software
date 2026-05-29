@@ -27,9 +27,9 @@ const BlogPagination = async ({ params }) => {
   return (
     <GSAPWrapper>
       <SeoMeta title={title} />
-      <section className="section pt-0">
+      <section className="section pt-4">
         <Banner title={title} />
-        <Breadcrumbs />
+        {/* <Breadcrumbs /> */}
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center pb-6">
             {currentPosts.map((post, i) => (

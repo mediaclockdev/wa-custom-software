@@ -10,7 +10,7 @@ banner:
   link:
     label: Start Your Project
     href: /contact
-  description: Our Perth web design services focus on delivering high-quality, visually appealing websites that drive conversions and support long-term growth.
+  description: Our Perth-based web design services focus on delivering high-quality, visually appealing websites that drive conversions and support long-term growth.
 
 brands:
   - /images/brands/01-colored.png
@@ -21,7 +21,7 @@ brands:
 
 intro:
   title: Affordable Web Design in Perth
-  description: Get more customers to your site, increase conversions, and enhance your brand's image with a high-quality web layout in Perth. Western Australian brings together design strategy, strategy, and performance to build websites to provide real business results. We collaborate with Perth businesses to help them turn their ideas into captivating and user-friendly websites that load quickly and rank well. They also convert.
+  description: Get more customers to your site, increase conversions, and enhance your brand's image with a high-quality web layout in Perth. WA brings together design strategy, strategy, and performance to build websites to provide real business results. We collaborate with Perth businesses to help them turn their ideas into captivating and user-friendly websites that load quickly and rank well. They also convert.
 
 services:
   title: Web Design Services in Perth
@@ -29,7 +29,7 @@ services:
   list:
     - icon: pen-tool
       title: Custom Website Design
-      content: Western Australian designs fully customized websites that are built around your brand's identity, goals and customer journey. Each website is unique and designed by a talented team of experts with a wide range of experience across different sectors.
+      content: WA designs fully customized websites that are built around your brand's identity, goals and customer journey. Each website is unique and designed by a talented team of experts with a wide range of experience across different sectors.
       url: /images/service/web-design/custom.jpg
 
     - icon: smartphone
@@ -39,7 +39,7 @@ services:
 
     - icon: shopping-cart
       title: E-commerce & CMS Development
-      content: If you are launching a brand web-based store for the first time, or enhancing an existing site, Western Australian builds an scalable eCommerce as well as CMS solutions. Perth agencies usually offer custom-built solutions within 8 to 16 weeks, based on the size and complexity, and we use the same tested method.
+      content: If you are launching a brand web-based store for the first time, or enhancing an existing site, WA builds an scalable eCommerce as well as CMS solutions. Perth agencies usually offer custom-built solutions within 8 to 16 weeks, based on the size and complexity, and we use the same tested method.
       url: /images/service/web-design/cms.jpg
 
     - icon: zap
@@ -51,10 +51,10 @@ why:
   title: Why Perth Businesses Choose Our Web Design Team
   list:
     - title: Local Expertise & Market Knowledge
-      content: Perth businesses are operating in a highly competitive digital environment. The Australian online design and development sector expected to generate A$679.51 million by 2024, and predicted to expand at 10.2 percent CAGR and a strategically designed web presence is more crucial than ever. A localized design will ensure that your business's image is reflected by Western Australian customers while meeting the expectations of the industry, and requirements. This is something that Western Australian specialises in.
+      content: Perth businesses are operating in a highly competitive digital environment. The Australian online design and development sector expected to generate A$679.51 million by 2024, and predicted to expand at 10.2 percent CAGR and a strategically designed web presence is more crucial than ever. A localized design will ensure that your business's image is reflected by WA customers while meeting the expectations of the industry, and requirements. This is something that WA specialises in.
 
     - title: Designed to Convert Not Just Look Good
-      content: A successful website should be able to perform, look attractive. The most successful Perth agencies insist that the design should be focused on function and a great UX and SEO-friendly structure, making sure that every pixel serves a specific an objective. Mobile-friendly, fast-loading design is vital to keep customers engaged and generating conversions. And this is integrated in all Western Australian project.
+      content: A successful website should be able to perform, look attractive. The most successful Perth agencies insist that the design should be focused on function and a great UX and SEO-friendly structure, making sure that every pixel serves a specific an objective. Mobile-friendly, fast-loading design is vital to keep customers engaged and generating conversions. And this is integrated in all WA project.
 
     - title: SEO-Optimised Structure from Day One
       content: We build websites with a strong SEO foundation, including clean code, structured data, and optimised page architecture. This ensures better visibility on search engines, improved indexing, and long-term organic growth without relying solely on paid traffic.
@@ -81,9 +81,9 @@ faq:
     - q: How much does a professional website cost?
       a: Professional websites typically range from A$5,000 to A$10,000+, with larger or eCommerce sites costing more.
     - q: Do you create mobile-friendly websites?
-      a: Yes. Every Western Australian website is responsive and mobile-first to ensure a seamless user experience.
+      a: Yes. Every WA website is responsive and mobile-first to ensure a seamless user experience.
     - q: What makes a great Perth website?
       a: High speed, intuitive navigation, mobile optimisation, strong calls-to-action, fresh design, and structured content  all emphasised in your uploaded material.
     - q: Do you help with SEO and digital marketing?
-      a: Absolutely. Western Australian provides web design, digital marketing, branding, and SEO services to help Australian businesses get found online.
+      a: Absolutely. WA provides web design, digital marketing, branding, and SEO services to help Australian businesses get found online.
 ---

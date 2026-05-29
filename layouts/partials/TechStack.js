@@ -23,7 +23,6 @@ const TechStack = ({ technologies }) => {
   return (
     <section className="relative overflow-hidden section border-y border-border/50">
       <div className="container">
-
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -43,7 +42,6 @@ const TechStack = ({ technologies }) => {
           viewport={{ once: true }}
           className="w-full"
         >
-
           <Swiper
             className="!px-1 pb-12 lg:!px-4 lg:-mx-4"
             modules={[Pagination, Autoplay]}
@@ -64,11 +62,14 @@ const TechStack = ({ technologies }) => {
                 <motion.div
                   variants={{
                     hidden: { opacity: 0, y: 15 },
-                    show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+                    show: {
+                      opacity: 1,
+                      y: 0,
+                      transition: { duration: 0.5, ease: "easeOut" },
+                    },
                   }}
                   className="group relative h-full overflow-hidden bg-white/70 backdrop-blur-md p-8 rounded-2xl border border-gray-100 hover:border-gray-200 shadow-sm transition-all duration-500 hover:-translate-y-1"
                 >
-
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                   <div className="relative z-10">
@@ -88,7 +89,9 @@ const TechStack = ({ technologies }) => {
                             key={j}
                             className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white border border-gray-100 shadow-sm hover:border-primary/40 hover:bg-primary/[0.02] hover:shadow-md transition-all duration-300 text-gray-600 hover:text-primary cursor-default group/tech"
                           >
-                            {Icon && <Icon className="text-lg transition-transform duration-300 group-hover/tech:scale-110" />}
+                            {Icon && (
+                              <Icon className="text-xl transition-transform duration-300 group-hover/tech:scale-110" />
+                            )}
                             <span className="text-[14px] font-semibold tracking-wide">
                               {tech}
                             </span>
@@ -101,7 +104,6 @@ const TechStack = ({ technologies }) => {
               </SwiperSlide>
             ))}
           </Swiper>
-
         </motion.div>
       </div>
     </section>

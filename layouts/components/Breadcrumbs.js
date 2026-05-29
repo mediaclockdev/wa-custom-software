@@ -14,7 +14,7 @@ const Breadcrumbs = ({ customTitle }) => {
   return (
     <nav aria-label="Breadcrumb" className="py-4">
       <div className="container">
-        <div className="overflow-x-auto no-scrollbar pb-2 -mb-2">
+        <div className="overflow-x-auto no-scrollbar -mb-2">
           <ol className="inline-flex items-center space-x-1 md:space-x-2 text-sm font-medium bg-white/60 backdrop-blur-md px-4 md:px-5 py-2 md:py-2.5 rounded-full border border-gray-100 shadow-[0_4px_20px_rgb(0,0,0,0.02)] min-w-max">
             <li className="inline-flex items-center">
               <Link
@@ -32,7 +32,10 @@ const Breadcrumbs = ({ customTitle }) => {
               const url = `/${pathParts.slice(0, index + 1).join("/")}`;
 
               // If the URL ends up being /posts/page, we don't want to link to a broken page or show it
-              if (part === "page" || (!isNaN(part) && pathParts[index - 1] === "page")) {
+              if (
+                part === "page" ||
+                (!isNaN(part) && pathParts[index - 1] === "page")
+              ) {
                 return null;
               }
 
@@ -45,7 +48,8 @@ const Breadcrumbs = ({ customTitle }) => {
               }
 
               // Capitalize
-              displayName = displayName.charAt(0).toUpperCase() + displayName.slice(1);
+              displayName =
+                displayName.charAt(0).toUpperCase() + displayName.slice(1);
 
               // Use the actual blog title for the last element if provided
               if (isLast && customTitle) {

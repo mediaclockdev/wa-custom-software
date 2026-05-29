@@ -91,7 +91,7 @@ why:
       content: From updates to performance monitoring, we provide ongoing support to keep your software secure, stable, and aligned with your evolving requirements.
 
 process:
-  title: Our Approach to Custom Software Development
+  title: Our Custom Software Development Process
   description: At WA Development Company, we prioritise strong client relationships and a smooth project experience from start to finish
   steps:
     - title: Discovery Phase
@@ -128,7 +128,7 @@ industries:
 
 technologies:
   title: Technologies We Use
-  description: We utilise industry-standard, widely adopted technologies 
+  description: We utilise industry-standard, widely adopted technologies
 
   groups:
     - title: Languages

@@ -51,9 +51,7 @@ const PostSingle = ({ frontmatter, content, recentPosts }) => {
                     </p>
                   </div>
                 </div>
-                <div
-                  className="content mb-4 mt-5 text-left prose-h2:mb-2 prose-h2:mt-4 lg:prose-h2:mt-6 prose-h2:text-2xl lg:prose-h2:text-3xl prose-p:text-lg prose-ul:mt-1 prose-li:cursor-default prose-li:text-gray-700 prose-li:marker:text-gray-700 prose-ul:mb-1 prose-h3:mb-0 prose-blockquote:my-2 prose-p:mt-0 prose-p:mb-0 prose-li:my-1 prose-hr:my-5"
-                >
+                <div className="content mb-4 mt-5 text-left prose-h2:mb-2 prose-h2:mt-4 lg:prose-h2:mt-6 prose-h2:text-2xl lg:prose-h2:text-3xl prose-p:text-lg prose-ul:mt-1 prose-li:cursor-default prose-li:text-gray-700 prose-li:marker:text-gray-700 prose-ul:mb-1 prose-h3:mb-0 prose-blockquote:my-2 prose-p:mt-0 prose-p:mb-0 prose-li:my-1 prose-hr:my-5">
                   <MDXContent content={content} />
                 </div>
               </div>

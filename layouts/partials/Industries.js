@@ -78,13 +78,11 @@ const Industries = ({ industries }) => {
 
               return (
                 <SwiperSlide key={i} className="!h-auto">
-                  <div
-                    className="group relative flex flex-col h-full items-center gap-4 p-5 lg:p-6 rounded-2xl overflow-hidden bg-white/70 backdrop-blur-md border border-gray-100 hover:border-gray-200 shadow-sm transition-all duration-500"
-                  >
+                  <div className="group relative flex flex-col h-full items-center gap-4 p-5 lg:p-6 rounded-2xl overflow-hidden bg-white/70 backdrop-blur-md border border-gray-100 hover:border-gray-200 shadow-sm transition-all duration-500">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0" />
 
                     <div className="relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary/5 to-secondary/5 text-primary transition-all duration-500 group-hover:text-white group-hover:scale-110 group-hover:-rotate-3 group-hover:shadow-md group-hover:from-secondary group-hover:to-primary">
-                      <Icon size={24} />
+                      <Icon size={26} />
                     </div>
 
                     <h3 className="relative z-10 font-semibold text-gray-800 text-xl leading-snug group-hover:text-primary transition-colors">

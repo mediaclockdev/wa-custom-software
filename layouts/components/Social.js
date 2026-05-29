@@ -30,6 +30,7 @@ import {
   IoLogoYoutube,
   IoMail,
 } from "react-icons/io5";
+import { AiFillGoogleCircle } from "react-icons/ai";
 
 const Social = ({ source, className }) => {
   const {
@@ -63,6 +64,7 @@ const Social = ({ source, className }) => {
     address,
     skype,
     website,
+    google,
   } = source;
   return (
     <ul className={className}>
@@ -413,6 +415,18 @@ const Social = ({ source, className }) => {
             rel="noopener noreferrer nofollow"
           >
             <IoLocation />
+          </a>
+        </li>
+      )}
+      {google && (
+        <li className="inline-block">
+          <a
+            aria-label="google"
+            href={google}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            <AiFillGoogleCircle />
           </a>
         </li>
       )}

@@ -11,7 +11,7 @@ import Link from "next/link";
 import { markdownify } from "@lib/utils/textConverter";
 import { useState } from "react";
 import * as yup from "yup";
-import ButtonLink from "./components/ui/ButtonLink";
+
 
 const SERVICE_OPTIONS = [
   "Custom Software Development",
@@ -22,7 +22,7 @@ const SERVICE_OPTIONS = [
 ];
 
 const contactSchema = yup.object().shape({
-  selectedServices: yup.array().min(1, "Please select at least one service"),
+  selectedServices: yup.array(),
   name: yup
     .string()
     .trim()
@@ -32,7 +32,7 @@ const contactSchema = yup.object().shape({
       /^[a-zA-Z]+([\s\-'][a-zA-Z]+)*$/,
       "Name can only contain letters, spaces, hyphens, and apostrophes",
     ),
-  companyName: yup.string().trim(),
+  companyName: yup.string().trim().required("Company Name is required"),
   email: yup
     .string()
     .trim()
@@ -69,6 +69,8 @@ const Contact = ({ data }) => {
   });
   const [errors, setErrors] = useState({});
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   const handleChange = (e) => {
     let value = e.target.value;
@@ -111,20 +113,44 @@ const Contact = ({ data }) => {
     e.preventDefault();
     setErrors({});
     setIsSuccess(false);
+    setSubmitError("");
 
     try {
       await contactSchema.validate(formData, { abortEarly: false });
-      setIsSuccess(true);
     } catch (err) {
       if (err instanceof yup.ValidationError) {
         const fieldErrors = {};
         err.inner.forEach((error) => {
-          if (error.path) {
+          if (error.path && !fieldErrors[error.path]) {
             fieldErrors[error.path] = error.message;
           }
         });
         setErrors(fieldErrors);
       }
+      return;
+    }
+
+    // Validation passed — send to API
+    setIsLoading(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        setSubmitError(data.error || "Something went wrong. Please try again.");
+        return;
+      }
+
+      setIsSuccess(true);
+    } catch (err) {
+      setSubmitError("Failed to send message. Please check your connection and try again.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -251,7 +277,7 @@ const Contact = ({ data }) => {
                       className="flex items-start justify-center gap-2 hover:text-primary transition-colors duration-300"
                     >
                       <span className="text-gray-800 break-all">
-                        <span className="hidden lg:inline">Phone: </span>
+                        {/* <span className="hidden lg:inline">Phone: </span> */}
                         {contact_info.phone}
                       </span>
                     </a>
@@ -259,10 +285,10 @@ const Contact = ({ data }) => {
 
                   <a
                     href={`mailto:${contact_info?.email || config.contact_info.email}`}
-                    className="flex items-start mt-0.5 justify-center gap-2 hover:text-primary transition-colors duration-300"
+                    className="flex items-start justify-center gap-2 hover:text-primary transition-colors duration-300"
                   >
                     <span className="text-gray-800 break-all">
-                      <span className="hidden lg:inline">Email: </span>
+                      {/* <span className="hidden lg:inline">Email: </span> */}
                       {contact_info?.email || config.contact_info.email}
                     </span>
                   </a>
@@ -412,9 +438,8 @@ const Contact = ({ data }) => {
               <form onSubmit={handleSubmit} className="space-y-6" noValidate>
                 {/* Service Selection */}
                 <div className="space-y-3 text-left w-full">
-                  <label className="text-sm font-medium text-gray-700 ml-1">
+                  <label className="text-md font-medium text-gray-700 ml-1">
                     What services do you need?{" "}
-                    <span className="text-red-500 font-bold">*</span>
                   </label>
                   <div className="flex flex-wrap gap-3">
                     {SERVICE_OPTIONS.map((service) => {
@@ -438,11 +463,6 @@ const Contact = ({ data }) => {
                       );
                     })}
                   </div>
-                  {errors.selectedServices && (
-                    <span className="text-red-500 text-sm mt-1 ml-1 block">
-                      {errors.selectedServices}
-                    </span>
-                  )}
                 </div>
 
                 {/* Name + Company Name */}
@@ -467,7 +487,8 @@ const Contact = ({ data }) => {
                   </div>
                   <div className="space-y-2 text-left w-full">
                     <label className="text-sm font-medium text-gray-700 ml-1">
-                      Company Name
+                      Company Name{" "}
+                      <span className="text-red-500 font-bold">*</span>
                     </label>
                     <input
                       name="companyName"
@@ -475,8 +496,13 @@ const Contact = ({ data }) => {
                       placeholder="Your Company"
                       value={formData.companyName}
                       onChange={handleChange}
-                      className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:border-primary focus:ring-primary/20 bg-gray-50/50 focus:bg-white focus:ring-2 transition-all outline-none"
+                      className={`w-full px-5 py-4 rounded-xl border ${errors.companyName ? "border-red-500 focus:ring-red-500/20" : "border-gray-200 focus:border-primary focus:ring-primary/20"} bg-gray-50/50 focus:bg-white focus:ring-2 transition-all outline-none`}
                     />
+                    {errors.companyName && (
+                      <span className="text-red-500 text-sm mt-1 ml-1 block">
+                        {errors.companyName}
+                      </span>
+                    )}
                   </div>
                 </div>
 
@@ -539,13 +565,52 @@ const Contact = ({ data }) => {
                   )}
                 </div>
 
-                {/* <button
+                {/* Submit Error */}
+                {submitError && (
+                  <div className="w-full p-4 rounded-xl bg-red-50 border border-red-200 text-red-600 text-sm text-center">
+                    {submitError}
+                  </div>
+                )}
+
+                <button
                   type="submit"
-                  className="w-full bg-primary text-white py-4 rounded-xl font-semibold text-lg hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 active:scale-[0.98] bg-gradient-to-r hover:from-primary hover:to-secondary mt-4"
+                  disabled={isLoading}
+                  className={`relative overflow-hidden inline-flex items-center justify-center px-8 py-4 rounded-full bg-gradient-to-r from-primary to-secondary text-white text-lg font-medium tracking-wide transition-all duration-300 group ${
+                    isLoading
+                      ? "opacity-80 cursor-not-allowed"
+                      : "hover:shadow-lg hover:-translate-y-0.5 active:scale-[0.98]"
+                  }`}
                 >
-                  Send Message
-                </button> */}
-                <ButtonLink title="Send Message" onClick={handleSubmit} />
+                  {isLoading ? (
+                    <>
+                      <svg
+                        className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        />
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                        />
+                      </svg>
+                      <span>Sending...</span>
+                    </>
+                  ) : (
+                    <span>Send Message</span>
+                  )}
+                  {/* Shine layer */}
+                  <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent group-hover:translate-x-full transition-transform duration-700" />
+                </button>
               </form>
             </div>
           </motion.div>

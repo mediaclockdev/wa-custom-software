@@ -37,7 +37,7 @@ services:
 
     - icon: smartphone
       title: WordPress Web Development
-      content: We are Perth WordPress specialists, we create and build unique WordPress websites that blend flexibility with security. Our designers create customized themes with powerful plugins, SEO-friendly designs, and user-friendly backend systems that ensure your team can manage your content. We also optimize for performance security, speed, and speed.
+      content: We are Perth-based WordPress specialists, we create and build unique WordPress websites that blend flexibility with security. Our designers create customized themes with powerful plugins, SEO-friendly designs, and user-friendly backend systems that ensure your team can manage your content. We also optimize for performance security, speed, and speed.
       url: /images/service/web-development/wordpress.jpg
 
     - icon: cpu

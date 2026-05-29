@@ -34,5 +34,5 @@ contact_info:
   mobile: "0480 080 232"
   email: "info@wasoftware.com.au"
   address: "41 Clearview Avenue <br /> Yokine, Western Australia 6060"
-  business_hours: "Monday to Friday <br /> 9:00 – 6:00"
+  business_hours: "Monday to Friday <br /> 9:00 AM – 6:00 PM"
 ---
