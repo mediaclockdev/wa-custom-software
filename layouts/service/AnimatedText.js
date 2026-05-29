@@ -34,7 +34,7 @@ export const AnimatedText = ({ text = "", delay = 0 }) => {
       className="inline"
     >
       {words.map((word, i) => (
-        <span key={i} className="inline-block whitespace-nowrap">
+        <span key={i} className="inline-block max-w-full">
           {word.split("").map((char, j) => (
             <motion.span key={j} variants={child} className="inline-block">
               {char}

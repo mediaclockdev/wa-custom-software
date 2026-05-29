@@ -12,7 +12,6 @@ import { markdownify } from "@lib/utils/textConverter";
 import { useState } from "react";
 import * as yup from "yup";
 
-
 const SERVICE_OPTIONS = [
   "Custom Software Development",
   "MVP or Prototype",
@@ -148,7 +147,9 @@ const Contact = ({ data }) => {
 
       setIsSuccess(true);
     } catch (err) {
-      setSubmitError("Failed to send message. Please check your connection and try again.");
+      setSubmitError(
+        "Failed to send message. Please check your connection and try again.",
+      );
     } finally {
       setIsLoading(false);
     }
@@ -450,7 +451,7 @@ const Contact = ({ data }) => {
                           key={service}
                           type="button"
                           onClick={() => toggleService(service)}
-                          className={`px-5 py-2.5 rounded-full text-sm md:text-base font-medium border transition-all duration-300 cursor-pointer
+                          className={`inline-flex items-center justify-center w-full sm:w-auto text-center px-5 py-2.5 rounded-full text-sm md:text-base font-medium border transition-all duration-300 cursor-pointer
                             ${
                               isSelected
                                 ? "bg-gradient-to-r from-primary to-secondary text-white border-transparent shadow-md scale-[1.03]"
