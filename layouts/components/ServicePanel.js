@@ -37,7 +37,7 @@ const ServicePanel = ({ services }) => {
           description={services.description}
         />
 
-        <div className="lg:hidden space-y-8">
+        <div className="lg:hidden space-y-4 lg:space-y-8">
           {services.list.map((service, index) => (
             <div key={index} className="rounded-xl border border-gray-200 p-6">
               <h3 className="text-2xl font-semibold text-[#24326A] mb-3">

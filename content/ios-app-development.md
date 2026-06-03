@@ -35,7 +35,7 @@ services:
 
     - icon: pen-tool
       title: UI and UX Design for iOS
-      content: We design apps with Apple’s Human Interface Guidelines in mind—clean, intuitive, and user-friendly. Our design process emphasises accessibility, gesture-based navigation, and a polished look suitable for the premium iOS audience.
+      content: We design apps with Apple’s Human Interface Guidelines in mind — clean, intuitive, and user-friendly. Our design process emphasises accessibility, gesture-based navigation, and a polished look suitable for the premium iOS audience.
       url: /images/service/ios-development/uiux.jpg
 
     - icon: refresh-cw
@@ -50,12 +50,12 @@ services:
 
     - icon: settings
       title: App Maintenance & Version Upgrades
-      content: Post-launch, we offer full maintenance for iOS apps—ensuring compatibility with new iOS releases, performing security updates, fixing bugs, and optimizing performance so your app remains ahead of the curve.
+      content: Post-launch, we offer full maintenance for iOS apps — ensuring compatibility with new iOS releases, performing security updates, fixing bugs, and optimizing performance so your app remains ahead of the curve.
       url: /images/service/ios-development/maintain.jpg
 
     - icon: briefcase
       title: Enterprise & Consumer iOS Solutions
-      content: We deliver iOS apps for both consumer-facing and enterprise applications—whether you need a retail app for iOS users or an internal business tool for iPads across your workforce in Perth and WA.
+      content: We deliver iOS apps for both consumer-facing and enterprise applications — whether you need a retail app for iOS users or an internal business tool for iPads across your workforce in Perth and WA.
       url: /images/service/ios-development/enterprise.jpg
 
 why:
@@ -69,9 +69,9 @@ why:
     - title: Transparent Processes & Pricing
       content: From initial consultation to deployment, we maintain clear communication. You’ll see detailed timelines, transparent budgets and no hidden costs.
     - title: Agile Delivery, High Quality
-      content: Using agile methodologies, we iterate quickly while maintaining high code quality, security standards and performance benchmarks. You’ll get a roadmap, milestone updates and thorough QA..
+      content: Using agile methodologies, we iterate quickly while maintaining high code quality, security standards and performance benchmarks. You’ll get a roadmap, milestone updates and thorough QA.
     - title: Long-Term Support
-      content: We don’t just deliver the app and walk away—we support it. With version updates, user-analytics review, and feature enhancements, we help your iOS solution evolve with your business.
+      content: We don’t just deliver the app and walk away — we support it. With version updates, user-analytics review, and feature enhancements, we help your iOS solution evolve with your business.
 
 process:
   title: Our iOS App Development Roadmap
@@ -84,9 +84,9 @@ process:
     - title: Development Phase
       content: We use Swift (or Objective-C if required) and Apple’s frameworks such as SwiftUI, Combine, Core M,ARKit, and more. Clean architecture ensures your app is stable, maintainable and suited for future updates.
     - title: Testing & QA
-      content: We test on multiple devices (iPhone, iPad) and iOS versions—performing functional testing, UI/UX testing, performance profiling and security audits. We aim for an app that performs as expected under all conditions.
+      content: We test on multiple devices (iPhone, iPad) and iOS versions — performing functional testing, UI/UX testing, performance profiling and security audits. We aim for an app that performs as expected under all conditions.
     - title: App Store Launch
-      content: We guide you through the full submission process—preparing your app bundle, metadata, screenshots, age ratings, App Store guidelines compliance, and coordinate with Apple Play review.
+      content: We guide you through the full submission process — preparing your app bundle, metadata, screenshots, age ratings, App Store guidelines compliance, and coordinate with Apple Play review.
     - title: Post-Launch Evolution
       content: Once live, we monitor performance, gather analytics, respond to user feedback, push updates for new iOS versions and add features as your business grows.
 
@@ -149,13 +149,13 @@ faq:
     - q: Why choose iOS over Android or vice-versa?
       a: iOS tends to deliver higher app-store revenue per user, has a more consistent ecosystem (iOS versions/ devices) and strong brand-loyalty. While Android has wider reach globally, iOS still represents a lucrative segment in premium markets.
     - q: Will you support my app after launch?
-      a: Yes. We offer ongoing maintenance for iOS apps—version updates, bug-fixes, new features, device compatibility and performance optimisation.
+      a: Yes. We offer ongoing maintenance for iOS apps — version updates, bug-fixes, new features, device compatibility and performance optimisation.
     - q: Do you develop apps for both iPhone and iPad?
       a: Yes. We build universal iOS apps that adapt to both iPhone and iPad screens, ensuring optimal user experience across device types.
     - q: What about App Store submission?
       a: Yes. We handle app packaging, metadata, assets, compliance checks, and launch coordination.
     - q: Can you integrate my iOS app with my existing backend or services?
-      a: Absolutely. We connect your iOS application with CRMs, payment gateways, ERPs, cloud services, third-party APIs and more—ensuring seamless data flow and system interoperability.
+      a: Absolutely. We connect your iOS application with CRMs, payment gateways, ERPs, cloud services, third-party APIs and more — ensuring seamless data flow and system interoperability.
     - q: What industries do you specialise in?
       a: We have extensive experience across industries such as healthcare, education, real-estate, retail, hospitality, transport, finance and start-ups tailoring apps to each sector’s unique demands.
 ---

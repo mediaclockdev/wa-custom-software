@@ -63,7 +63,7 @@ why:
   description: Our company is committed to providing high-quality Android app solutions backed by industry best practices and local expertise
   list:
     - title: Perth-Based and Locally Reliable
-      content: We are a local team, meaning you can collaborate with us directly—face-to-face, online, or onsite ensuring clear communication and tailored project management.
+      content: We are a local team, meaning you can collaborate with us directly — face-to-face, online, or onsite ensuring clear communication and tailored project management.
     - title: Extensive Android Expertise
       content: We believe in open communication and transparent cost structures. You’ll receive accurate estimates, detailed timelines, and regular progress updates throughout the development process.
     - title: Transparent Workflow and Pricing
@@ -78,7 +78,7 @@ process:
   description: Our structured roadmap ensures that your app is developed systematically, efficiently, and with complete clarity at every stage.
   steps:
     - title: Discovery & Blueprint Phase
-      content: We begin with a detailed consultation—either in-person or virtually—to understand your app concept, business needs, user goals, and technical requirements.
+      content: We begin with a detailed consultation — either in-person or virtually — to understand your app concept, business needs, user goals, and technical requirements.
     - title: Designing the User Experience
       content: Our design team creates wireframes, prototypes, and polished UI/UX layouts. You’ll have full insight and approval at every stage before development begins.
     - title: Building the Application
@@ -86,7 +86,7 @@ process:
     - title: Testing & Quality Assurance
       content: We perform thorough testing across multiple devices and Android versions to ensure flawless performance. This includes functional testing, UI testing, performance testing, and security audits.
     - title: Launching on the Google Play Store
-      content: We prepare everything needed for a smooth launch—app bundles, metadata, screenshots, compliance checks, and Play Store submission.
+      content: We prepare everything needed for a smooth launch — app bundles, metadata, screenshots, compliance checks, and Play Store submission.
     - title: Post-Launch Updates & Enhancements
       content: After launch, we provide continuous updates, new features, design improvements, and technical support to keep your app competitive.
 

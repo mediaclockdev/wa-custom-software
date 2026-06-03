@@ -1,6 +1,5 @@
 import Pagination from "@components/Pagination";
 import config from "@config/config.json";
-import Banner from "@layouts/components/Banner";
 import Cta from "@layouts/components/Cta";
 import GSAPWrapper from "@layouts/components/GSAPWrapper";
 import SeoMeta from "@layouts/partials/SeoMeta";
@@ -28,7 +27,11 @@ const BlogPagination = async ({ params }) => {
     <GSAPWrapper>
       <SeoMeta title={title} />
       <section className="section pt-4">
-        <Banner title={title} />
+        <div className="container">
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-900 tracking-tight">
+            {title}
+          </h1>
+        </div>
         {/* <Breadcrumbs /> */}
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center pb-6">

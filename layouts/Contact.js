@@ -439,7 +439,7 @@ const Contact = ({ data }) => {
               <form onSubmit={handleSubmit} className="space-y-6" noValidate>
                 {/* Service Selection */}
                 <div className="space-y-3 text-left w-full">
-                  <label className="text-md font-medium text-gray-700 ml-1">
+                  <label className="text-sm font-medium text-gray-700 ml-1">
                     What services do you need?{" "}
                   </label>
                   <div className="flex flex-wrap gap-3">
@@ -537,7 +537,7 @@ const Contact = ({ data }) => {
                     <input
                       name="phone"
                       type="tel"
-                      placeholder="+61 4XX XXX XXX"
+                      placeholder="0412 345 678"
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:border-primary focus:ring-primary/20 bg-gray-50/50 focus:bg-white focus:ring-2 transition-all outline-none"

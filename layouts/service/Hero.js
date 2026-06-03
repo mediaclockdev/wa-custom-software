@@ -66,9 +66,9 @@ export default function Hero({ banner, variant = "home" }) {
 
       {/* Title */}
       <motion.h1
-        className={`font-extrabold text-gray-900 leading-[1.1] tracking-tight max-w-3xl break-words ${
+        className={`font-extrabold text-gray-900 leading-[1.1] tracking-tight max-w-3xl ${
           isHome
-            ? "text-5xl md:text-6xl lg:text-[4.25rem]"
+            ? "text-[44px] sm:text-5xl md:text-6xl lg:text-[4.25rem]"
             : "text-5xl md:text-6xl lg:text-[4.25rem]"
         }`}
       >

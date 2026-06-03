@@ -16,7 +16,7 @@ const ServiceValue = ({ value }) => {
           description={value.description}
         />
 
-        <div className="animate mt-10 md:mt-12 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="animate mt-10 md:mt-12 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-2 lg:mb-0">
           {value.list.map((item, i) => {
             const Icon = icons[i] || FaCogs;
 
