@@ -10,7 +10,7 @@ banner:
   content: WA Software Development Company offers professional digital and IT services that help businesses
   link:
     label: Contact Us
-    href: "tel:+61410445566"
+    href: "tel:0480080232"
   description: WA Software Development Company offers digital and IT services that help businesses increase the online visibility of their business, automate manual tasks and use effective technology solutions. We collaborate with companies across Perth as well as Western Australia, delivering practical and flexible digital solutions
 
 intro:
@@ -63,7 +63,7 @@ process:
 #clients
 clients:
   title: Supporting Businesses Across Western Australia
-  href: "tel:+1234567890"
+  href: "tel:0480080232"
   list:
     - Small businesses looking to build an online presence
     - Businesses seeking custom software and automation

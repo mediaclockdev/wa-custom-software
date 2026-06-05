@@ -1,36 +1,33 @@
 import {
-  IoCall,
-  IoGlobeOutline,
-  IoLocation,
-  IoLogoBehance,
-  IoLogoBitbucket,
-  IoLogoCodepen,
-  IoLogoDiscord,
-  IoLogoDribbble,
-  IoLogoFacebook,
-  IoLogoFoursquare,
-  IoLogoGithub,
-  IoLogoGitlab,
-  IoLogoInstagram,
-  IoLogoLinkedin,
-  IoLogoMedium,
-  IoLogoPinterest,
-  IoLogoReddit,
-  IoLogoRss,
-  IoLogoSkype,
-  IoLogoSlack,
-  IoLogoSnapchat,
-  IoLogoSoundcloud,
-  IoLogoTiktok,
-  IoLogoTumblr,
-  IoLogoTwitter,
-  IoLogoVimeo,
-  IoLogoVk,
-  IoLogoWhatsapp,
-  IoLogoYoutube,
-  IoMail,
-} from "react-icons/io5";
-import { AiFillGoogleCircle } from "react-icons/ai";
+  FaFacebook,
+  FaXTwitter,
+  FaInstagram,
+  FaYoutube,
+  FaLinkedin,
+  FaGithub,
+  FaGitlab,
+  FaDiscord,
+  FaSlack,
+  FaMedium,
+  FaCodepen,
+  FaBitbucket,
+  FaDribbble,
+  FaBehance,
+  FaPinterest,
+  FaSoundcloud,
+  FaTumblr,
+  FaReddit,
+  FaVk,
+  FaWhatsapp,
+  FaSnapchat,
+  FaVimeo,
+  FaTiktok,
+  FaFoursquare,
+  FaSkype,
+  FaRss,
+  FaGoogle,
+} from "react-icons/fa6";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaGlobe } from "react-icons/fa";
 
 const Social = ({ source, className }) => {
   const {
@@ -76,7 +73,7 @@ const Social = ({ source, className }) => {
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoFacebook />
+            <FaFacebook />
           </a>
         </li>
       )}
@@ -88,7 +85,7 @@ const Social = ({ source, className }) => {
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoTwitter />
+            <FaXTwitter />
           </a>
         </li>
       )}
@@ -100,7 +97,7 @@ const Social = ({ source, className }) => {
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoInstagram />
+            <FaInstagram />
           </a>
         </li>
       )}
@@ -112,7 +109,7 @@ const Social = ({ source, className }) => {
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoYoutube />
+            <FaYoutube />
           </a>
         </li>
       )}
@@ -124,7 +121,7 @@ const Social = ({ source, className }) => {
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoLinkedin />
+            <FaLinkedin />
           </a>
         </li>
       )}
@@ -136,7 +133,7 @@ const Social = ({ source, className }) => {
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoGithub />
+            <FaGithub />
           </a>
         </li>
       )}
@@ -148,7 +145,7 @@ const Social = ({ source, className }) => {
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoGitlab />
+            <FaGitlab />
           </a>
         </li>
       )}
@@ -160,7 +157,7 @@ const Social = ({ source, className }) => {
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoDiscord />
+            <FaDiscord />
           </a>
         </li>
       )}
@@ -172,7 +169,7 @@ const Social = ({ source, className }) => {
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoSlack />
+            <FaSlack />
           </a>
         </li>
       )}
@@ -184,7 +181,7 @@ const Social = ({ source, className }) => {
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoMedium />
+            <FaMedium />
           </a>
         </li>
       )}
@@ -196,7 +193,7 @@ const Social = ({ source, className }) => {
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoCodepen />
+            <FaCodepen />
           </a>
         </li>
       )}
@@ -208,7 +205,7 @@ const Social = ({ source, className }) => {
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoBitbucket />
+            <FaBitbucket />
           </a>
         </li>
       )}
@@ -220,7 +217,7 @@ const Social = ({ source, className }) => {
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoDribbble />
+            <FaDribbble />
           </a>
         </li>
       )}
@@ -232,7 +229,7 @@ const Social = ({ source, className }) => {
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoBehance />
+            <FaBehance />
           </a>
         </li>
       )}
@@ -244,7 +241,7 @@ const Social = ({ source, className }) => {
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoPinterest />
+            <FaPinterest />
           </a>
         </li>
       )}
@@ -256,7 +253,7 @@ const Social = ({ source, className }) => {
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoSoundcloud />
+            <FaSoundcloud />
           </a>
         </li>
       )}
@@ -268,7 +265,7 @@ const Social = ({ source, className }) => {
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoTumblr />
+            <FaTumblr />
           </a>
         </li>
       )}
@@ -280,7 +277,7 @@ const Social = ({ source, className }) => {
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoReddit />
+            <FaReddit />
           </a>
         </li>
       )}
@@ -292,7 +289,7 @@ const Social = ({ source, className }) => {
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoVk />
+            <FaVk />
           </a>
         </li>
       )}
@@ -304,7 +301,7 @@ const Social = ({ source, className }) => {
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoWhatsapp />
+            <FaWhatsapp />
           </a>
         </li>
       )}
@@ -316,7 +313,7 @@ const Social = ({ source, className }) => {
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoSnapchat />
+            <FaSnapchat />
           </a>
         </li>
       )}
@@ -328,7 +325,7 @@ const Social = ({ source, className }) => {
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoVimeo />
+            <FaVimeo />
           </a>
         </li>
       )}
@@ -340,7 +337,7 @@ const Social = ({ source, className }) => {
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoTiktok />
+            <FaTiktok />
           </a>
         </li>
       )}
@@ -352,7 +349,7 @@ const Social = ({ source, className }) => {
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoFoursquare />
+            <FaFoursquare />
           </a>
         </li>
       )}
@@ -364,7 +361,7 @@ const Social = ({ source, className }) => {
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoSkype />
+            <FaSkype />
           </a>
         </li>
       )}
@@ -376,7 +373,7 @@ const Social = ({ source, className }) => {
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <IoGlobeOutline />
+            <FaGlobe />
           </a>
         </li>
       )}
@@ -388,21 +385,21 @@ const Social = ({ source, className }) => {
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <IoLogoRss />
+            <FaRss />
           </a>
         </li>
       )}
       {email && (
         <li className="inline-block">
           <a aria-label="email" href={`mailto:${email}`}>
-            <IoMail />
+            <FaEnvelope />
           </a>
         </li>
       )}
       {phone && (
         <li className="inline-block">
           <a aria-label="telephone" href={`tel:${phone}`}>
-            <IoCall />
+            <FaPhoneAlt />
           </a>
         </li>
       )}
@@ -414,7 +411,7 @@ const Social = ({ source, className }) => {
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <IoLocation />
+            <FaMapMarkerAlt />
           </a>
         </li>
       )}
@@ -426,7 +423,7 @@ const Social = ({ source, className }) => {
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <AiFillGoogleCircle />
+            <FaGoogle />
           </a>
         </li>
       )}

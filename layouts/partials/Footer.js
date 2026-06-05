@@ -190,10 +190,10 @@ const Footer = () => {
               )}
             </ul>
 
-            <div className="mt-6">
+            <div className="mt-4">
               <Social
                 source={social}
-                className="flex items-center justify-start gap-4 text-2xl  hover:[&>*]:text-primary transition-all duration-300"
+                className="flex items-center justify-start gap-3 text-2xl hover:[&>*]:text-primary transition-all duration-300"
               />
             </div>
           </motion.div>

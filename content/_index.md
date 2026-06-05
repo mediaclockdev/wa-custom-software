@@ -5,7 +5,7 @@ banner:
   image: "/images/hero/hero.jpeg"
   link:
     label: Get in Touch
-    href: "tel:+1234567890"
+    href: "tel:0480080232"
 
 #services
 services:
