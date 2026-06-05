@@ -149,7 +149,7 @@ export default function Hero({ banner, variant = "home" }) {
       />
 
       <div
-        className={`container relative z-10 mx-auto px-4 grid lg:grid-cols-2 gap-12 lg:gap-8 items-center`}
+        className={`container relative z-10 mx-auto px-4 grid lg:grid-cols-2 gap-4 lg:gap-8 place-items-center`}
       >
         {isHome ? (
           <>
@@ -180,7 +180,7 @@ function HomeImage({ banner }) {
       initial={{ opacity: 0, x: 40, scale: 0.95 }}
       animate={{ opacity: 1, x: 0, scale: 1 }}
       transition={{ duration: 1.2, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-      className="hidden lg:flex relative w-full justify-center items-center"
+      className="flex lg:mt-0 relative w-full justify-center items-center"
     >
       <div className="relative w-full aspect-[4/3] xl:aspect-[16/11] group z-10">
         {/* Gradient accent rectangle — offset behind the image */}
@@ -221,7 +221,7 @@ function AboutImage({ banner }) {
       initial={{ opacity: 0, x: -40, scale: 0.95 }}
       animate={{ opacity: 1, x: 0, scale: 1 }}
       transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-      className="hidden lg:flex relative w-full justify-center items-center"
+      className="flex lg:mt-0 relative w-full justify-center items-center"
     >
       <div className="relative w-full group z-10 flex gap-4 items-stretch">
         {/* Image — taller aspect for about */}
@@ -248,7 +248,7 @@ function AboutImage({ banner }) {
    ───────────────────────────────────────────── */
 function NoImage() {
   return (
-    <div className="hidden lg:flex relative w-full aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-xl border border-gray-100 bg-slate-50 items-center justify-center">
+    <div className="flex mt-10 lg:mt-0 relative w-full aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-xl border border-gray-100 bg-slate-50 items-center justify-center">
       <div className="text-gray-400 font-medium tracking-wide">
         No Image Provided
       </div>

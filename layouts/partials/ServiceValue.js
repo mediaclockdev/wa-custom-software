@@ -5,6 +5,7 @@ import { FaCogs, FaChartLine, FaExpandArrowsAlt } from "react-icons/fa";
 
 const icons = [FaCogs, FaChartLine, FaExpandArrowsAlt];
 
+
 const ServiceValue = ({ value }) => {
   if (!value) return null;
 

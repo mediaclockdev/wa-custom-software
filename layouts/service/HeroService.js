@@ -28,7 +28,7 @@ export default function HeroService({ banner, title: propTitle, description: pro
     <section className="relative py-6 lg:pb-8 overflow-hidden bg-gradient-to-b from-slate-50 to-white border-b border-gray-100">
 
       <div className="container relative z-10 mx-auto">
-        <div className="grid lg:grid-cols-2 gap-6 items-center">
+        <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 items-center">
 
           {/* LEFT: Text (Half width) */}
           <motion.div
@@ -79,7 +79,7 @@ export default function HeroService({ banner, title: propTitle, description: pro
             initial={{ opacity: 0, x: 40, scale: 0.95 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
             transition={{ duration: 1.2, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="hidden lg:flex relative w-full justify-center lg:justify-end items-center"
+            className="flex lg:mt-0 relative w-full justify-center lg:justify-end items-center"
           >
             {image ? (
               <div className="relative w-full aspect-[4/3] lg:aspect-[4/3] xl:aspect-[16/11] group perspective-[1000px] z-10">
