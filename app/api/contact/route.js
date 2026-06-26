@@ -31,7 +31,7 @@ export async function POST(request) {
 
     const message = {
       from: process.env.SMTP_EMAIL,
-      to: process.env.SMTP_EMAIL,
+      to: process.env.RECEIVER_EMAIL || process.env.SMTP_EMAIL,
       replyTo: email,
       subject: `New Contact Form Submission from ${name}`,
       html: `
