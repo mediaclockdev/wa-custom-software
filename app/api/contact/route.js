@@ -82,6 +82,34 @@ export async function POST(request) {
       },
     };
 
+    const acknowledgementMessage = {
+      from: process.env.SMTP_EMAIL,
+      to: email,
+      subject: `Thank you for contacting us, ${name}!`,
+      html: `
+        <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; background-color: #f9fafb; padding: 20px; border-radius: 12px;">
+          <div style="background-color: #ffffff; padding: 30px; border-radius: 8px; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+            <h2 style="color: #111827; margin-top: 0; margin-bottom: 24px; font-size: 24px; border-bottom: 2px solid #3b82f6; padding-bottom: 12px;">
+              Thank you for reaching out!
+            </h2>
+            
+            <p style="color: #4b5563; font-size: 16px; line-height: 1.6;">
+              Hi ${name},
+            </p>
+            <p style="color: #4b5563; font-size: 16px; line-height: 1.6;">
+              We have received your message and our team will get back to you as soon as possible.
+            </p>
+            
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e7eb; text-align: center;">
+              <p style="color: #9ca3af; font-size: 13px; margin: 0;">
+                This is an automated message confirming receipt of your inquiry.
+              </p>
+            </div>
+          </div>
+        </div>
+      `,
+    };
+
     var transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -91,7 +119,10 @@ export async function POST(request) {
     });
 
     try {
-      await transporter.sendMail(message);
+      await Promise.all([
+        transporter.sendMail(message),
+        transporter.sendMail(acknowledgementMessage),
+      ]);
 
       return NextResponse.json(
         { message: "Email sent successfully" },
